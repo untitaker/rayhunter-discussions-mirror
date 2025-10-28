@@ -1,0 +1,9 @@
+# GitHub Pages configuration
+# This file ensures proper deployment settings
+
+source:
+  branch: main
+  path: /
+
+# Pages will be served from the uploaded artifact
+# No additional configuration needed

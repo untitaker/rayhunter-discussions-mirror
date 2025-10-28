@@ -1,0 +1,76 @@
+name: Sync Discussions
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # Daily at 6 AM UTC
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Checkout data branch
+        run: |
+          git checkout data 2>/dev/null || git checkout --orphan data
+          git reset --hard
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build github-discussions-mirror
+        run: cargo install github-discussions-mirror
+
+      - name: Sync discussions
+        run: |
+          github-discussions-mirror sync \
+            -t ${{ secrets.GITHUB_TOKEN }} \
+            -r efforg/rayhunter \
+            -o ./data
+
+      - name: Generate static site
+        run: |
+          github-discussions-mirror generate \
+            -i ./data \
+            -o ./site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Update data branch
+        run: |
+          git add data/
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update discussions data $(date -u +%Y-%m-%d)" || exit 0
+          git push origin data --force
