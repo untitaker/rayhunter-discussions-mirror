@@ -55,6 +55,11 @@ jobs:
             -i ./data \
             -o ./site
 
+      - name: Check for broken links
+        uses: untitaker/hyperlink@0.1.32
+        with:
+          args: ./site/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
