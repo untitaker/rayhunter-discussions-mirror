@@ -47,6 +47,7 @@ jobs:
           github-discussions-mirror sync \
             -t ${{ secrets.GITHUB_TOKEN }} \
             -r efforg/rayhunter \
+            --download-images \
             -o ./data
 
       - name: Generate static site
