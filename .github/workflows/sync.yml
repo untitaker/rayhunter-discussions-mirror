@@ -27,20 +27,16 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
 
-      - name: Checkout data branch
+      - name: Restore data from data branch
         run: |
-          git checkout data 2>/dev/null || git checkout --orphan data
-          git reset --hard
+          git fetch origin data --depth=1
+          git checkout origin/data -- data
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Build github-discussions-mirror
-        run: cargo install github-discussions-mirror
+      - name: Install github-discussions-mirror
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: github-discussions-mirror
 
       - name: Sync discussions
         run: |
@@ -75,6 +71,8 @@ jobs:
 
       - name: Update data branch
         run: |
+          git checkout --orphan data
+          git reset
           git add data/
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
