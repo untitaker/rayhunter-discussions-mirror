@@ -1,0 +1,241 @@
+{
+  "id": "D_kwDOKrJqmc4AijC_",
+  "number": 672,
+  "title": "LINUX MINT instead of UBUNTU?",
+  "body": "Can I use Linux Mint in place of Ubuntu to install? Sorry if this has already been answered. Thank you.",
+  "author": {
+    "login": "brujo1312",
+    "avatar_url": "https://avatars.githubusercontent.com/u/239450024?v=4",
+    "url": "https://github.com/brujo1312"
+  },
+  "created_at": "2025-10-21T21:47:16Z",
+  "updated_at": "2025-11-03T17:27:13Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/672",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4RId",
+      "body": "the installer should generally work on all Linuxes, but at the same time we can't help with all of them. Linux Mint will probably work.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-10-22T11:36:04Z",
+      "updated_at": "2025-10-22T11:36:05Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ]
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A4sMi",
+      "body": "Whether Linux Mint or Ubuntu the main things are look and feel for what ever you like, Linux gives you personal choice. I switching from Ubuntu if that is the question one can install as something else choosing / mount point and not to reformat.  ",
+      "author": {
+        "login": "papa5926",
+        "avatar_url": "https://avatars.githubusercontent.com/u/168790242?v=4",
+        "url": "https://github.com/papa5926"
+      },
+      "created_at": "2025-11-03T17:27:13Z",
+      "updated_at": "2025-11-03T17:27:14Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ]
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A4RId",
+    "body": "the installer should generally work on all Linuxes, but at the same time we can't help with all of them. Linux Mint will probably work.",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2025-10-22T11:36:04Z",
+    "updated_at": "2025-10-22T11:36:05Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false,
+    "reactions": [
+      {
+        "content": "THUMBS_UP",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "THUMBS_DOWN",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "LAUGH",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HOORAY",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "CONFUSED",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HEART",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "ROCKET",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "EYES",
+        "total_count": 0,
+        "users": []
+      }
+    ]
+  },
+  "answer_chosen_at": "2025-10-22T11:50:13Z",
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ]
+}

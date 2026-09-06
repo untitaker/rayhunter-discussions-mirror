@@ -1,0 +1,245 @@
+{
+  "id": "D_kwDOKrJqmc4Ajlx0",
+  "number": 766,
+  "title": "TPLink Stuck 'This doesn't look like a v3 device... Please open above URL in your browser and log into the router to continue.'",
+  "body": "Hey! I'm sorry if this is a repeat or ridiculous question. I've sourced a ZTE MF971V that I was hoping would work and saw that most EU devices should be okay on tplink installation settings.\r\nI get the following message when connecting via telnet doesn't work:\r\n```\r\nThis doesn't look like a v3 device, trying web-based exploit\r\nListening on http://127.0.0.1:4000\r\nPlease open above URL in your browser and log into the router to continue.\r\n```\r\nI log in but it doesn't do anything. It might just be this router isn't compatible but wondered if anyone had any thoughts or ideas to try and fix it? Thank you!",
+  "author": {
+    "login": "ineedferrets",
+    "avatar_url": "https://avatars.githubusercontent.com/u/16561902?u=dada8c8877f791bcc265174b2c12141b7729f67f&v=4",
+    "url": "https://github.com/ineedferrets"
+  },
+  "created_at": "2026-01-10T16:47:51Z",
+  "updated_at": "2026-01-10T18:33:10Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/766",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6_WN",
+      "body": "no, we don't support any ZTE device. we support the exact models in the docs and nothing else",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-10T16:49:28Z",
+      "updated_at": "2026-01-10T16:49:28Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A6_W4",
+      "body": "> that most EU devices should be okay on tplink installation settings.\r\n\r\nthe ZTE devices display does look somewhat similar to early TP-Link m7350 devices so it's possible that one could implement support for it with minimal effort. but in principle it's just a different device and therefore unsupported ",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-10T16:55:51Z",
+      "updated_at": "2026-01-10T16:55:51Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A6_WN",
+    "body": "no, we don't support any ZTE device. we support the exact models in the docs and nothing else",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2026-01-10T16:49:28Z",
+    "updated_at": "2026-01-10T16:49:28Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false,
+    "reactions": [
+      {
+        "content": "THUMBS_UP",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "THUMBS_DOWN",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "LAUGH",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HOORAY",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "CONFUSED",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HEART",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "ROCKET",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "EYES",
+        "total_count": 0,
+        "users": []
+      }
+    ],
+    "upvote_count": 0
+  },
+  "answer_chosen_at": "2026-01-10T18:33:10Z",
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

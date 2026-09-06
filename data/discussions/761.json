@@ -1,0 +1,198 @@
+{
+  "id": "D_kwDOKrJqmc4AjjUg",
+  "number": 761,
+  "title": "Daily Redline",
+  "body": "### Prerequisites\n\n- [x] I have read [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md)\n\n### Bug Report Details\n\nRayHunter v.0.8.0\nLocation. MT USA\nCapture Dates : Almost Daily. Latest Capture 1/6/26\nDevice: Orbic RC400L\n\nAlmost daily redline at various times late evenings to early mornings. \n\nSee link for further information: RayHunter Possible Catches.\nhttps://youtube.com/shorts/YlmYuIorSeg?feature=share\n\nPossible bug or redline fault. \n",
+  "author": {
+    "login": "Jeremiah-oAT",
+    "avatar_url": "https://avatars.githubusercontent.com/u/193830082?u=bf3f6b6936a0c4320a15e08b133cde69a657274f&v=4",
+    "url": "https://github.com/Jeremiah-oAT"
+  },
+  "created_at": "2026-01-06T16:53:17Z",
+  "updated_at": "2026-01-08T16:19:12Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/761",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZEOg",
+      "name": "bug",
+      "color": "d73a4a",
+      "description": "Something isn't working"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A65Uq",
+      "body": "That your device turns red everyday may or may not be a bug (so I'm moving this to discussion for now), but it's still better to file this via Signal [as outlined in the FAQ](https://efforg.github.io/rayhunter/faq.html#help-rayhunters-line-is-redorangeyellowdotteddashed-what-should-i-do) rather than to post this sensitive data on GitHub.\n\nCan you describe what kind of SIM card you're using?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-07T23:14:39Z",
+      "updated_at": "2026-01-07T23:14:39Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A67K8",
+          "body": "Sounds good. I'll move over to Signal. Thank you. As for sims I've tried with an inactive Verizon sim, an Active Verizon sim and currently using an active Hologram IOT sim with limited data just for notifs. Which I haven't gotten any yet regardless of settings. Each sim I've tried has had the same results. ",
+          "author": {
+            "login": "Jeremiah-oAT",
+            "avatar_url": "https://avatars.githubusercontent.com/u/193830082?u=bf3f6b6936a0c4320a15e08b133cde69a657274f&v=4",
+            "url": "https://github.com/Jeremiah-oAT"
+          },
+          "created_at": "2026-01-08T16:19:12Z",
+          "updated_at": "2026-01-08T16:19:12Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

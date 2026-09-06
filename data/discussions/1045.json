@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AmgEv",
+  "number": 1045,
+  "title": "WebDAV upload in Nextcloud with restricted credentials",
+  "body": "Just wanted to write this down for people who use Nextcloud: You don't have to give Rayhunter your fully-privileged user/password for uploading recordings.\r\n\r\n[It's a bit buried in the docs](https://docs.nextcloud.com/server/latest/user_manual/en/files/access_webdav.html#accessing-public-shares-over-webdav), but you can share a folder with password-protection, and that password can be used to access that folder over WebDAV too.\r\n\r\nIf you have a sharelink for a folder like `https://example.com/s/ABCDEF`, then Rayhunter's config will look like this:\r\n\r\n```\r\nurl: https://example.com/public.php/dav/files/ABCDEF/\r\nusername: ABCDEF\r\npassword: optionally, the password defined when generating the sharelink\r\n```\r\n\r\nYour regular username or password don't appear at all in the config. Note that the URL also doesn't contain `remote.php` like usual, but `public.php` instead.",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-05-19T12:25:00Z",
+  "updated_at": "2026-05-19T12:25:00Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1045",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

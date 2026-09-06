@@ -1,0 +1,28 @@
+{
+  "id": "D_kwDOKrJqmc4AhOyq",
+  "number": 532,
+  "title": "Working network time sync on Orbic RC400L",
+  "body": "It is possible to get the accurate network time from the Orbic RC400L through the /dev/smd8 and /dev/smd11 devices with AT commands.  Specifically using rootshell  (elevated permissions are required) for access to the devices.\r\n\r\nThe specific working command is:\r\necho -e \"AT+CCLK?\\r\" > /dev/smd8 & cat /dev/smd8\r\n\r\nWhich will return the time in the following format:\r\n+CCLK: \"25/04/10,22:15:36+32\"\r\n\r\nA working script to set the time can be found at https://github.com/drinkingc0ffee/Orbic-Scripts/\r\n\r\n",
+  "author": {
+    "login": "drinkingc0ffee",
+    "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+    "url": "https://github.com/drinkingc0ffee"
+  },
+  "created_at": "2025-08-10T22:17:48Z",
+  "updated_at": "2025-08-11T00:09:21Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/532",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

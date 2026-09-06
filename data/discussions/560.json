@@ -1,0 +1,81 @@
+{
+  "id": "D_kwDOKrJqmc4Ahf_c",
+  "number": 560,
+  "title": "would a MiFi Inseego M2100 be able to be modified?",
+  "body": "just recently was given one of these because verizon wouldn't buy it back from them, and i wanted to see about putting rayhunter on here, but im not really sure where to start and wanted some guidance, and maybe some steps on how to get it loaded on there?",
+  "author": {
+    "login": "TheHonoredDrunkShoko",
+    "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+    "url": "https://github.com/TheHonoredDrunkShoko"
+  },
+  "created_at": "2025-08-22T23:48:51Z",
+  "updated_at": "2025-10-06T17:37:20Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/560",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2JZj",
+      "body": "I'd read this thread and linked discussions to get an idea \r\n\r\nhttps://github.com/EFForg/rayhunter/discussions/484\r\n\r\nhttps://github.com/EFForg/rayhunter/discussions/517",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-22T23:51:42Z",
+      "updated_at": "2025-08-22T23:52:31Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3c8Z",
+      "body": "so ive done some looking for a long while and it doesn't seem like there's a way to get adb access to the device, for other devices like the MiFi 8800L the mifilink program works, but the M2100 uses 130 byte (possibly) encrypted reports to get it to switch to a COM port...so im not really sure where to go since im not very educated on this stuff.\r\n\r\nif anyone has any ideas on what to do to crack into this thing let me know, just be patient with me please!",
+      "author": {
+        "login": "TheHonoredDrunkShoko",
+        "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+        "url": "https://github.com/TheHonoredDrunkShoko"
+      },
+      "created_at": "2025-09-28T23:45:22Z",
+      "updated_at": "2025-09-28T23:47:08Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3kEG",
+      "body": "See #615, I have succeeded in rooting a similar device, the problem is that it has the new version of the diag protocol which we will have to work on support for. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-10-01T17:08:25Z",
+      "updated_at": "2025-10-01T17:08:27Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

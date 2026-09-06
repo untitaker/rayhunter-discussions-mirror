@@ -1,0 +1,769 @@
+{
+  "id": "D_kwDOKrJqmc4Aj8Iv",
+  "number": 842,
+  "title": "USB tethering not working",
+  "body": "I just bought and flashed my device, but USB tethering is not working after installing Rayhunter. I have tethering enabled in the device settings, and I ran this command from the guide: `./installer util shell \"echo 9 > /usrdata/mode.cfg\"`, which returns the below error:\r\n```\r\nerror: unexpected argument 'echo 9 > /usrdata/mode.cfg' found\r\n\r\nUsage: installer util shell\r\n\r\nFor more information, try '--help'.\r\n```\r\n\r\nInstead, I was able to drop a shell to the device by running `./installer util --orbic-shell --admin-password 'mypassword'`, then run `echo 9 > /usrdata/mode.cfg` and rebooting the device. When it restarts, USB tethering is not working. I really want to get USB tethering to work so I can completely disable WiFi on my device to save some battery and keep from broadcasting a WiFi network everywhere I go.\r\n\r\nEdit: I THINK my issue is due to an older firmware version that may not work with tethering. On the other hand, if you flash your device in USB mode and have ADB installed, you can use the below command to forward port 8080 to your local device so you can still access the webUI while plugged in to USB.\r\n\r\n```\r\nadb forward tcp:8080 tcp:8080\r\n```\r\nThen just go to `localhost:8080` in your browser.",
+  "author": {
+    "login": "Smith8154",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+    "url": "https://github.com/Smith8154"
+  },
+  "created_at": "2026-02-03T04:33:56Z",
+  "updated_at": "2026-02-04T01:09:24Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/842",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A70rL",
+      "body": "if you installed orbic using `./installer orbic` (not `orbic-usb`) that FAQ entry is not relevant. USB tethering should already work out of the box, but if it doesn't then that's an issue with the stock device that we can't do much about.\r\n\r\nI fixed the docs in https://github.com/EFForg/rayhunter/pull/844",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-03T10:27:07Z",
+      "updated_at": "2026-02-03T10:27:07Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A71WR",
+          "body": "Thanks for the doc update! I read somewhere that tethering requires software version 1.2.1 or later, but my device shipped with version 1.2.0. Would updating the firmware to 1.2.1 cause any compatibility issues with Rayhunter?",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-03T15:18:02Z",
+          "updated_at": "2026-02-03T15:18:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71Wk",
+          "body": "no, i don't think so",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-03T15:20:30Z",
+          "updated_at": "2026-02-03T15:20:30Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71e6",
+          "body": "Well, the update utility didn't work for me. Apparently it has to specifically be on version 1.1.5 for the utility to work. Otherwise, you have to have an active data connection so you can download the update over LTE. In my testing, even though I flashed the device over WiFi, I am able to run `adb forward tcp:8080 tcp:8080` to tunnel the webUI over USB to my laptop, which is good enough for me. The issue is, when I run `adb shell` to get a shell on the device, then run `/bin/rootshell -c \"sed -i 's/<wlan><Feature><state>1<\\/state>/<wlan><Feature><state>0<\\/state>/g' /usrdata/data/usr/wlan/wlan_conf_6174.xml && reboot\"` to try and disable WLAN, I get this error: `/bin/sh: /bin/rootshell: not found`, presumably since I didn't flash the device with ADB in the first place. Not sure how to go about switching to ADB mode, as when I run the installer with the `orbic-usb` option, I get an error.\r\n\r\n```\r\nWARNING: The orbic USB installer is not recommended for most usecases. Consider using ./installer orbic instead, unless you want ADB access for other purposes.\r\nForcing a switch into the debug mode to enable ADB\r\nDevice already in command mode. Doing nothing...\r\nADB enabled, waiting for reboot... \r\nFailed to install rayhunter on the Orbic RC400L (USB installer)\r\n\r\nCaused by:\r\n    0: Timeout waiting for Orbic to reconnect\r\n    1: deadline has elapsed\r\n```",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-03T16:14:42Z",
+          "updated_at": "2026-02-03T16:14:42Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71fS",
+          "body": "if you used the orbic installer then you are already root. you can run the sed and reboot commands directly",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-03T16:16:28Z",
+          "updated_at": "2026-02-03T16:16:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71g4",
+          "body": "When I run the SED command in `adb shell` I get this error.\r\n\r\n```\r\n/ $ sed -i 's/<wlan><Feature><state>1<\\/state>/<wlan><Feature><state>0<\\/state>/\r\ng' /usrdata/data/usr/wlan/wlan_conf_6174.xml\r\nsed: can't create temp file '/usrdata/data/usr/wlan/wlan_conf_6174.xmlREsH9G': Permission denied\r\n```\r\n\r\nI have also tried to edit the file directly in VI, but I get a permission denied message when trying to save it.",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-03T16:24:49Z",
+          "updated_at": "2026-02-03T16:25:34Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71hR",
+          "body": "can you try to remount the system partition like so: `mount -o remount,rw /system` -- or maybe the `/` path.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-03T16:27:42Z",
+          "updated_at": "2026-02-03T16:27:42Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71ht",
+          "body": "I must be root.\r\n\r\n```\r\n/ $ mount -o remount,rw /system\r\nmount: you must be root\r\n```",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-03T16:30:37Z",
+          "updated_at": "2026-02-03T16:30:37Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71iS",
+          "body": "oh this is adb shell. you'd have to run that over `./installer util orbic-shell` where you will infact be root",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-03T16:34:01Z",
+          "updated_at": "2026-02-03T16:34:01Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A71jK",
+          "body": "I tried running the SED command from the `orbic-shell` as well, but it didn't work. Since that shell doesn't give you feedback, I went back to the adb shell and looked at the file and confirmed that it had not changed.\r\n\r\nAlso, if I disable the WLAN while connected to the WLAN, and being connected to the WLAN is the only way to re-enable WLAN, that would be a bit of an issue. I don't really ever plan on using the WLAN on the device, but I think I would need that access to update Rayhunter in the future.",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-03T16:40:05Z",
+          "updated_at": "2026-02-03T16:40:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A72UR",
+          "body": "I uninstalled Rayhunter, then reinstalled using USB mode so I could get a root ADB shell. It would be nice if there was a way to \"upgrade\" from the standard WiFi installer to USB mode. Best I can tell, all it really does extra is copy over the `rootshell` file into `/bin`. Right now, if you run the USB installer, you just get an error.",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-04T00:55:59Z",
+          "updated_at": "2026-02-04T00:55:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A72VM",
+      "body": "I THINK my issue is my older firmware version. I am on version 1.2.0, and I came across an article that mentioned that USB tethering is only possible in version 1.2.1 and newer. Verizon has a [webpage](https://www.verizon.com/support/verizon-orbic-speed-mobile-hotspot-update-instructions/) that mentions a firmware update tool, but that tool appears to specifically only work if your device is on version 1.1.5, which must be the case because it repeatedly failed for me, and it is Windows only (barf). Since my device does not have an active cellular connection, I am unable to use the built in tools to update the firmware. If anyone knows of an alternate way to update that does not require a cellular connection, please let me know. Otherwise, I did order a SIM from Telnyx, mainly to use for nfty, but I was going to try upgrading the firmware that way (likely at great expense, since data is charged per-mb).",
+      "author": {
+        "login": "Smith8154",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+        "url": "https://github.com/Smith8154"
+      },
+      "created_at": "2026-02-04T01:06:24Z",
+      "updated_at": "2026-02-04T01:06:24Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

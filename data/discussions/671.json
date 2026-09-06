@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AijCW",
+  "number": 671,
+  "title": "Wonderful TY",
+  "body": "![PXL_20251021_210250849~2.jpg](https://github.com/user-attachments/assets/94a9de49-2f8c-455e-92e9-edb58e8eeb14)\n\n\n\n\nJust wanted to say I've installed RayHunter on a Tmobile TMOHS1 using ADB and my one and only Windows PC (bc it was the closest machine in the lab and I was looking for a challenge - call me a masochist).\nIt went seamlessly 5 minutes tops it took longer to change the admin password\n\nKudos TY well done!\n\nIf you ever need any help lmk I'd place my hands to kb for EFF anytime 😉\n",
+  "author": {
+    "login": "GrayHatGuy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64990378?u=77c5db236255bc5e49b41fd38783d22761eed0fc&v=4",
+    "url": "https://github.com/GrayHatGuy"
+  },
+  "created_at": "2025-10-21T21:31:07Z",
+  "updated_at": "2025-11-03T22:46:04Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/671",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4sxy",
+      "body": "Thanks and I'm glad you like the project! ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-11-03T22:46:04Z",
+      "updated_at": "2025-11-03T22:46:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ]
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 1,
+      "users": [
+        "cooperq"
+      ]
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AgIEg",
+  "number": 371,
+  "title": "Release 0.3.3 Testing",
+  "body": "How much testing has v0.3.3 undergone with the Orbic?  Has it been picking up Stingrays? If so is there a particular SIM (service provider, etc) that was shown to be working with the Orbic?",
+  "author": {
+    "login": "drinkingc0ffee",
+    "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+    "url": "https://github.com/drinkingc0ffee"
+  },
+  "created_at": "2025-06-05T15:49:33Z",
+  "updated_at": "2025-06-05T16:14:40Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/371",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AzDCO",
+      "body": "any sim should work on the orbic device. The release just came out yesterday so there isn't much data yet but the heuristics haven't changed so it should be as effective as previous versions. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-06-05T16:14:40Z",
+      "updated_at": "2025-06-05T16:15:28Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}

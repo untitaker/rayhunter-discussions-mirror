@@ -1,0 +1,305 @@
+{
+  "id": "D_kwDOKrJqmc4AlalD",
+  "number": 972,
+  "title": "Any roadmap plans for microcontroller boards with cell modems?",
+  "body": "I am wondering if we might ever get Rayhunter to operate on something like a LILYGO T-Call A7670 4G 2G ESP32 dev board, etc. I envision turning up a few in my neighborhood, perhaps powered via solar/batteries, that could monitor for attacks and then do something with their GPIOs; flash an LED, etc.",
+  "author": {
+    "login": "suomi35",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+    "url": "https://github.com/suomi35"
+  },
+  "created_at": "2026-04-01T17:59:18Z",
+  "updated_at": "2026-05-19T21:43:22Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/972",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A_Wss",
+      "body": "I'd love to play around with it but unless the t-call happens to run a qualcomm baseband or has some other way to get a raw feed of the cellular data its unlikely. That said I'm obsessed with ESP-32 as a platform and would love to have a way to connect an ESP-32 to rayhunter. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-04-17T22:45:55Z",
+      "updated_at": "2026-04-17T22:45:55Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A_YBd",
+      "body": "This board might be capable: https://github.com/QuickSpot/walter-documentation",
+      "author": {
+        "login": "suomi35",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+        "url": "https://github.com/suomi35"
+      },
+      "created_at": "2026-04-18T15:29:07Z",
+      "updated_at": "2026-04-18T15:29:07Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A_eMm",
+          "body": "This board isn't a good fit because the modem only supports NB-IOT and LTE-M which are IOT standards and not general telephony. ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2026-04-20T16:42:31Z",
+          "updated_at": "2026-04-20T16:42:31Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BAx_F",
+      "body": "With the latest release (v0.11.1), one can now configure wifi client mode to have the device connect _to_ something, allowing it to then send ntfy pushes. This resolved my use case.\r\n\r\nPhone in my pocket, Orbic somewhere on my person, tethered to my phone via wifi hotspot. Any detections are shipped to ntfy, where my phone (and other devices elsewhere) pickup the alert. Quite neat 😄",
+      "author": {
+        "login": "suomi35",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+        "url": "https://github.com/suomi35"
+      },
+      "created_at": "2026-05-19T21:43:21Z",
+      "updated_at": "2026-05-19T21:43:21Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

@@ -1,0 +1,309 @@
+{
+  "id": "D_kwDOKrJqmc4AjyRL",
+  "number": 799,
+  "title": "Got a red line (LTE SIB 6/7 Downgrade v1) today in a European capital",
+  "body": "Hi guys,\r\n\r\nFirst of all, thanks for this great project. Much appreciated!\r\n\r\nI've been walking around a European capital with my rayhunter on a TP Link M7350 running v0.9.0 for a few weeks.\r\nToday I got my first critical alert when out to lunch but I believe it is most likely a false positive.\r\n\r\nThe alert (8 of them in a row) was triggered by the LTE SIB 6/7 Downgrade v1 heuristics, and it specifically mentions \"LTE cell advertised a 3G cell for priority 0 reselection\". The reasons I suspect this is a false positive:\r\n\r\n1) The cell network in that specific area has always been pretty bad so perhaps it would make sense for the network to try to push my device from 4G to 3G since LTE/4G is very weak there?\r\n\r\n2) AFAIK 3G supports mutual auth so it is not vulnerable to stingrays. If it were truly an attack wouldn't they jam/downgrade my phone to 2G?\r\n\r\nAnyway, I thought that sharing real world testing info could be helpful to the project. Happy to provide the pcap files to the team if they think it would be useful.\r\n\r\nCheers,\r\nPeter",
+  "author": {
+    "login": "petervnv",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+    "url": "https://github.com/petervnv"
+  },
+  "created_at": "2026-01-23T18:20:32Z",
+  "updated_at": "2026-02-11T13:16:40Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/799",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7cqQ",
+      "body": "I believe this is the same discussion as https://github.com/EFForg/rayhunter/issues/784 -- I have this heuristic disabled via config for this reason. IIRC parts of the heuristic assumes you are in a country without 2G, i.e. the US.\r\n\r\n> AFAIK 3G supports mutual auth so it is not vulnerable to stingrays. If it were truly an attack wouldn't they jam/downgrade my phone to 2G?\r\n\r\nGood question, tbh I don't know either. @cooperq ?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-23T18:38:22Z",
+      "updated_at": "2026-01-23T18:38:22Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "petervnv"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A7l1S",
+      "body": "Peter can you send me this pcap file to my work signal: @cooperq.01 ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-01-27T20:09:46Z",
+      "updated_at": "2026-01-27T20:09:46Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8Eax",
+          "body": "Sorry, just saw your reply now.\r\nLet me see if I can still find the pcap and I will send it to you.\r\n\r\nThanks",
+          "author": {
+            "login": "petervnv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+            "url": "https://github.com/petervnv"
+          },
+          "created_at": "2026-02-09T17:39:49Z",
+          "updated_at": "2026-02-09T17:39:49Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8Hy2",
+      "body": "We have fixed the false positive that @untitaker mentions above. This heuristic can be safely enabled in EU again. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-10T19:16:21Z",
+      "updated_at": "2026-02-10T19:16:21Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "petervnv"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

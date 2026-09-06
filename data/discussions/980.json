@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Alo6p",
+  "number": 980,
+  "title": "TP-Link M7350 v8 my additions .sh",
+  "body": "Hi everyone. \r\nMy device is TP-Link M7350 8.0.2 Build 230911 Rel.33n\r\nRayhunter v0.10.2\r\n\r\nI decided to make some additions for myself. Maybe someone will find it useful.\r\nImplementation: wifi_toggle.sh is launched that monitors the menu button press. Hold the menu button for 4 seconds. Wi-Fi is turned off. send_alert.sh is launched that monitors the log file. If an error occurs, it sends an SMS with the error to a number.\r\nWi-Fi is turned on in the same way (hold the menu button for 4 seconds).\r\nTelnet starts working after 4-5 minutes after booting.\r\n\r\n**1. Lines are added to the launch.**\r\nsleep 120\r\n    ( /bin/sh /data/rayhunter/wifi_toggle.sh ) > /dev/null 2>&1 &\r\nand\r\npkill -f /data/rayhunter/wifi_toggle.sh > /dev/null 2>&1 || true\r\n\r\n<details>\r\n<summary>/etc/init.d/rayhunter_daemon</summary>\r\n\r\n```\r\nstart)\r\n    echo -n \"Starting rayhunter: \"\r\n    # Below line may be replaced by the installer with device-specific startup commands, such as mounting the SD card.\r\n    (mount /dev/mmcblk0p1 /media/card || true) 2>&1 | tee /tmp/rayhunter-mount.log\r\n    start-stop-daemon -S -b --make-pidfile --pidfile /tmp/rayhunter.pid \\\r\n    --startas /bin/sh -- -c \"RUST_LOG=info exec /data/rayhunter/rayhunter-daemon /data/rayhunter/config.toml > /data/rayhunter/rayhunter.log 2>&1\"\r\n\r\n    sleep 120\r\n    ( /bin/sh /data/rayhunter/wifi_toggle.sh ) > /dev/null 2>&1 &\r\n\r\n    echo \"done\"\r\n    ;;\r\n  stop)\r\n    echo -n \"Stopping rayhunter: \"\r\n    start-stop-daemon -K -p /tmp/rayhunter.pid\r\n    pkill -f /data/rayhunter/wifi_toggle.sh > /dev/null 2>&1 || true\r\n    echo \"done\"\r\n```\r\n</details>\r\n\r\n**2. Create two files (in this case on a memory card)**\r\n\r\n<details>\r\n<summary>wifi_toggle.sh</summary>\r\n\r\n```\r\n#!/bin/sh\r\n\r\nDEV=\"/dev/input/event1\"\r\nT_START=0\r\n\r\necho \"[$(date +%T)] СИСТЕМА УДЕРЖАНИЯ 3 СЕК (Raw Mode) ЗАПУЩЕНА\"\r\necho \"Использую устройство: $DEV\"\r\n\r\n# Бесконечный цикл чтения по 16 байт (размер одного события в Linux)\r\nwhile true; do\r\n    # Читаем ровно 16 байт и переводим в понятные цифры\r\n    # Мы берем 5-ю колонку (тип), 6-ю (код) и 7-ю (значение)\r\n    EVENT=$(dd if=$DEV bs=16 count=1 2>/dev/null | hexdump -e '8/2 \"%04x \"')\r\n    \r\n    # Извлекаем код кнопки и состояние (нажата/отпущена)\r\n    # Формат вывода hexdump: ... TYPE CODE VAL ...\r\n    TYPE=$(echo $EVENT | awk '{print $5}')\r\n    CODE=$(echo $EVENT | awk '{print $6}')\r\n    VAL=$(echo $EVENT | awk '{print $7}')\r\n\r\n    # Нас интересует только кнопка Menu (код 0067)\r\n    if [ \"$CODE\" = \"0067\" ] && [ \"$TYPE\" = \"0001\" ]; then\r\n        \r\n        # Нажатие (VAL=0001)\r\n        if [ \"$VAL\" = \"0001\" ]; then\r\n            T_START=$(date +%s)\r\n            echo \"--> Нажал...\"\r\n            \r\n        # Отпускание (VAL=0000)\r\n        elif [ \"$VAL\" = \"0000\" ] && [ \"$T_START\" -ne 0 ]; then\r\n            NOW=$(date +%s)\r\n            DUR=$((NOW - T_START))\r\n            echo \"--> Отпустил (держал $DUR сек.)\"\r\n\r\n            if [ \"$DUR\" -ge 3 ]; then\r\n                echo \"[!!!] ЦЕЛЬ ДОСТИГНУТА: Переключаю Wi-Fi\"\r\n                \r\n                if ifconfig wlan0 | grep -q \"UP\"; then\r\n                    echo \"WIFI OFF\"\r\n                    ifconfig wlan0 down\r\n\t\t\t\t\t( /bin/sh /data/rayhunter/send_alert.sh ) > /dev/null 2>&1 &\r\n                else\r\n                    echo \"WIFI ON\"\r\n                    ifconfig wlan0 up\r\n\t\t\t\t\tpkill -f /data/rayhunter/send_alert.sh > /dev/null 2>&1 || true\r\n                fi\r\n            fi\r\n            T_START=0\r\n        fi\r\n    fi\r\ndone\r\n```\r\n</details>\r\n\r\n<details>\r\n<summary>send_alert.sh</summary>\r\n\r\n```\r\n#!/bin/sh\r\n\r\n# === НАСТРОЙКИ ===\r\nPHONE=\"+7123456789\"\r\nMODEM=\"/dev/smd7\"\r\nLOG_DIR=\"/media/card/qmdl\"\r\n\r\necho \"[$(date +%T)] СИСТЕМА СЛЕЖКИ ЗА ПРОЦЕССОМ ЗАПУЩЕНА\"\r\n\r\nwhile true; do\r\n    # 1. Находим текущий PID Райхантера\r\n    RPID=$(pidof rayhunter-daemon)\r\n    \r\n    if [ -z \"$RPID\" ]; then\r\n        echo \"[$(date +%T)] Жду запуска процесса rayhunter-daemon...\"\r\n        sleep 5\r\n        continue\r\n    fi\r\n\r\n    # 2. Узнаем, какой именно файл .ndjson сейчас открыт процессом\r\n    # Мы смотрим, куда указывает ссылка в файловой системе процесса\r\n    ACTIVE_FILE=$(ls -l /proc/$RPID/fd/ 2>/dev/null | grep \"\\.ndjson\" | head -1 | awk '{print $NF}')\r\n\r\n    if [ -z \"$ACTIVE_FILE\" ]; then\r\n        echo \"[$(date +%T)] Процесс жив, но файл лога еще не открыт. Жду...\"\r\n        sleep 2\r\n        continue\r\n    fi\r\n\r\n    echo \"----------------------------------------------------\"\r\n    echo \"[$(date +%T)] АКТИВНЫЙ ФАЙЛ ОБНАРУЖЕН: $ACTIVE_FILE\"\r\n    echo \"----------------------------------------------------\"\r\n\r\n    # 3. Запускаем фоновый \"сторож\", который убьет tail, если файл сменится\r\n    (\r\n        while true; do\r\n            sleep 3\r\n            # Проверяем, какой файл активен сейчас\r\n            NEW_ACTIVE=$(ls -l /proc/$RPID/fd/ 2>/dev/null | grep \"\\.ndjson\" | head -1 | awk '{print $NF}')\r\n            \r\n            # Если файл сменился или процесс исчез\r\n            if [ \"$NEW_ACTIVE\" != \"$ACTIVE_FILE\" ]; then\r\n                echo \"\"\r\n                echo \"[SYSTEM] Внимание! Райхантер переключился на новый файл или перезапустился.\"\r\n                # Убиваем tail, чтобы выйти из цикла чтения\r\n                pkill -P $$ tail 2>/dev/null\r\n                exit\r\n            fi\r\n        done\r\n    ) &\r\n    WATCHDOG_PID=$!\r\n\r\n    # 4. Читаем активный файл\r\n    tail -n 0 -f \"$ACTIVE_FILE\" 2>/dev/null | while read -r LINE\r\n    do\r\n        # Точка для визуального контроля\r\n        printf \".\"\r\n\r\n        case \"$LINE\" in \r\n            *event_type*|*level*|*Warning*|*High*|*Medium*)\r\n                echo \"\"\r\n                EV_TYPE=$(echo \"$LINE\" | sed -n 's/.*\"\\(event_type\\|level\\)\":\"\\([^\"]*\\)\".*/\\2/p')\r\n                MSG=$(echo \"$LINE\" | sed -n 's/.*\"message\":\"\\([^\"]*\\)\".*/\\1/p')\r\n\r\n                [ -z \"$EV_TYPE\" ] && EV_TYPE=\"Alert\"\r\n                [ -z \"$MSG\" ] && MSG=\"Security Event\"\r\n\r\n                echo \"[$(date +%T)] СОБЫТИЕ: [$EV_TYPE] $MSG\"\r\n                \r\n                # Отправка СМС\r\n                chat '' 'AT' 'OK' 'AT+CMGF=1' 'OK' 'AT+CMGS=\"'$PHONE'\"' '>' \"$EV_TYPE: $MSG $(printf '\\x1a')\" 'OK' < $MODEM > $MODEM\r\n                \r\n                sleep 10\r\n                ;;\r\n        esac\r\n    done\r\n\r\n    # Очистка после смены файла\r\n    kill $WATCHDOG_PID 2>/dev/null\r\n    echo \"[$(date +%T)] Переподключение к новому активному дескриптору...\"\r\n    sleep 2\r\ndone\r\n```\r\n</details>\r\n<details>\r\n  <summary>Screenshot</summary>\r\n  \r\n  ![Screenshot_2026-04-12-08-13-01-443_com android mms-edit](https://github.com/user-attachments/assets/edf23fd3-522f-4cda-b5b2-5f5adbed5865)\r\n  \r\n  ![IMG_20260412_081401](https://github.com/user-attachments/assets/be3183b2-8c42-49dc-a90b-20b06fe3c61e)\r\n\r\n</details>\r\n",
+  "author": {
+    "login": "atamankba3ap-wq",
+    "avatar_url": "https://avatars.githubusercontent.com/u/264802395?v=4",
+    "url": "https://github.com/atamankba3ap-wq"
+  },
+  "created_at": "2026-04-12T05:37:50Z",
+  "updated_at": "2026-04-12T05:37:50Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/980",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

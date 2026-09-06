@@ -1,0 +1,362 @@
+{
+  "id": "D_kwDOKrJqmc4Aj64a",
+  "number": 840,
+  "title": "Attach request without any authentication and IMSI revealed and sent over in plaintext.",
+  "body": "Recently I've been getting these the past few weeks . I don't see it everyday just a few days out the week now. No warning from the orbic device or rayhunter dashboard. I travel a lot with the device and haven't got 1 warning from it before, so I'm skeptical if its able to send warnings correctly but it does produce results of activity in pcap\r\n \r\n<img width=\"1125\" height=\"611\" alt=\"IMG_2175\" src=\"https://github.com/user-attachments/assets/f47b3add-4d0a-42d4-8581-02a5dfc1de13\" />\r\n\r\n\r\n",
+  "author": {
+    "login": "roadrunner365",
+    "avatar_url": "https://avatars.githubusercontent.com/u/258690391?v=4",
+    "url": "https://github.com/roadrunner365"
+  },
+  "created_at": "2026-02-02T00:07:29Z",
+  "updated_at": "2026-02-05T18:57:04Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/840",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A72J6",
+      "body": "@untitaker any insight? 🙏",
+      "author": {
+        "login": "roadrunner365",
+        "avatar_url": "https://avatars.githubusercontent.com/u/258690391?v=4",
+        "url": "https://github.com/roadrunner365"
+      },
+      "created_at": "2026-02-03T22:38:21Z",
+      "updated_at": "2026-02-03T22:38:21Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A74c_",
+      "body": "This is a false positive that happens sometimes with non activated SIM cards, it's one I see a lot, specifically the reason 'eps and non eps services not allowed' is the tower saying 'I can't provide you service' \r\nThe reason you don't see a warning for it is because we don't have a heuristic for an IMSI attach request, we used to but it generated a ton of false positives since this is unfortunately something that happens semi-regularly. We now look for an identity-request(IMSI) from the tower instead. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-04T19:32:02Z",
+      "updated_at": "2026-02-04T19:32:02Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A75AL",
+      "body": "Hey Cooper,\r\n\r\nI really appreciate your help, and thanks for clearing that up for me.\r\n\r\nI’ve been running the Rayhunter Orbic device for almost a year now. I\r\ntravel across the country frequently, and I carry it with me pretty much\r\nreligiously. About halfway through the year, after spending several weeks\r\nin cities that are considered “hot zones” where IMSI catchers are\r\nreportedly used heavily and got no warnings, I started to wonder whether my\r\ndevice was functioning properly.\r\n\r\nBecause of that, I purchased a second Orbic, installed the latest Rayhunter\r\nrelease, and ran it daily for another six months. During that entire\r\nperiod, I didn’t receive any warnings or alerts.\r\n\r\nRecently, I decided to use the analyzer/checker to review the combined logs\r\nfrom both devices. I have hundreds of logs, and the analyzer flagged over\r\n60 entries with warnings, including many suspicious cell IDs.\r\n\r\nMy question is: do you think the analyzer or checker could be producing\r\nfalse positives, or otherwise misinterpreting the data?\r\n\r\nThanks again for your time and insight. I really appreciate it.\r\n\r\n\r\n\r\nOn Wed, Feb 4, 2026 at 3:32 PM Cooper Quintin ***@***.***>\r\nwrote:\r\n\r\n> Closed #840 <https://github.com/EFForg/rayhunter/discussions/840> as\r\n> resolved.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/840>, or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/B5VU2V6ACZO5ERCCKGQDTKT4KJJI5AVCNFSM6AAAAACTT24EJSVHI2DSMVQWIX3LMV45UABFIRUXGY3VONZWS33OIV3GK3TUHI5E433UNFTGSY3BORUW63R3GIZTQOJSGY3Q>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***\r\n> com>\r\n>\r\n",
+      "author": {
+        "login": "roadrunner365",
+        "avatar_url": "https://avatars.githubusercontent.com/u/258690391?v=4",
+        "url": "https://github.com/roadrunner365"
+      },
+      "created_at": "2026-02-04T23:47:40Z",
+      "updated_at": "2026-02-04T23:47:40Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A75JA",
+      "body": "One quick follow-up I realized I forgot to ask in my last email.\r\n\r\nIs it possible that the warnings flagged by the analyzer could be the\r\nresult of *passive* IMSI detection rather than active IMSI catcher\r\nbehavior? I’m trying to understand whether passive collection or monitoring\r\ncould explain the suspicious cell IDs showing up in the logs.\r\n\r\n\r\n---------- Forwarded message ---------\r\nFrom: Jimmy ***@***.***>\r\nDate: Wed, Feb 4, 2026 at 6:47 PM\r\nSubject: Re: [EFForg/rayhunter] Attach request without any authentication\r\nand IMSI revealed and sent over in plaintext. (Discussion #840)\r\nTo: EFForg/rayhunter <\r\n***@***.***>\r\n\r\n\r\nHey Cooper,\r\n\r\nI really appreciate your help, and thanks for clearing that up for me.\r\n\r\nI’ve been running the Rayhunter Orbic device for almost a year now. I\r\ntravel across the country frequently, and I carry it with me pretty much\r\nreligiously. About halfway through the year, after spending several weeks\r\nin cities that are considered “hot zones” where IMSI catchers are\r\nreportedly used heavily and got no warnings, I started to wonder whether my\r\ndevice was functioning properly.\r\n\r\nBecause of that, I purchased a second Orbic, installed the latest Rayhunter\r\nrelease, and ran it daily for another six months. During that entire\r\nperiod, I didn’t receive any warnings or alerts.\r\n\r\nRecently, I decided to use the analyzer/checker to review the combined logs\r\nfrom both devices. I have hundreds of logs, and the analyzer flagged over\r\n60 entries with warnings, including many suspicious cell IDs.\r\n\r\nMy question is: do you think the analyzer or checker could be producing\r\nfalse positives, or otherwise misinterpreting the data?\r\n\r\nThanks again for your time and insight. I really appreciate it.\r\n\r\n\r\n\r\nOn Wed, Feb 4, 2026 at 3:32 PM Cooper Quintin ***@***.***>\r\nwrote:\r\n\r\n> Closed #840 <https://github.com/EFForg/rayhunter/discussions/840> as\r\n> resolved.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/840>, or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/B5VU2V6ACZO5ERCCKGQDTKT4KJJI5AVCNFSM6AAAAACTT24EJSVHI2DSMVQWIX3LMV45UABFIRUXGY3VONZWS33OIV3GK3TUHI5E433UNFTGSY3BORUW63R3GIZTQOJSGY3Q>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***\r\n> com>\r\n>\r\n",
+      "author": {
+        "login": "roadrunner365",
+        "avatar_url": "https://avatars.githubusercontent.com/u/258690391?v=4",
+        "url": "https://github.com/roadrunner365"
+      },
+      "created_at": "2026-02-05T00:51:00Z",
+      "updated_at": "2026-02-05T00:51:00Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A77dM",
+      "body": "when you talk about the analyzer which analyzer are you talking about? Rayhunter-check?  If you are getting warnings from that tool you can send the recordings to our EFF signal account for analysis. [ElectronicFrontierFoundation.90](https://signal.me/#eu/HZbPPED5LyMkbTxJsG2PtWc2TXxPUR1OxBMcJGLOPeeCDGPuaTpOi5cfGRY6RrGf)",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-05T18:57:03Z",
+      "updated_at": "2026-02-05T18:57:03Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

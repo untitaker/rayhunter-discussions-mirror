@@ -1,0 +1,305 @@
+{
+  "id": "D_kwDOKrJqmc4Aojkl",
+  "number": 1111,
+  "title": "Wifi hotspots with 5g?",
+  "body": "I know there aren't any rayhunter supported hospots currently listed that support 5g (unless I missed something?) but does anyone know if there are any 5g devices being worked on / actively ported presently? If not I would like to find a device for porting rayhunter. I was thinking about the Orbic Speed X 5G, although it only suppots wifi6 which is a bit of a shame. I'd prefer one with at least wifi 6e. If anyone has any suggestions on what device to use please let me know. Thank you.\r\n\r\nAlso wondering if I have a 5g sim card in the device can rayhunter work at the same time as the devices is working as a 5g hotspot, or can you only use the devices either for running rayhunter or as a hotspot but not concurrently? Thanks.",
+  "author": {
+    "login": "madmystic",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1436583?v=4",
+    "url": "https://github.com/madmystic"
+  },
+  "created_at": "2026-08-17T10:33:38Z",
+  "updated_at": "2026-08-17T17:08:47Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1111",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BE3F8",
+      "body": "For the US: https://github.com/EFForg/rayhunter/discussions/615 -- @wgreenberg has started an effort at https://github.com/EFForg/rayhunter/tree/inseego but it's not seen activity in a while\r\n\r\nFor the EU: I'm looking at TP-Link M8550 in the next 1-2 months\r\n\r\nWe're not in a rush since those devices are still too expensive anyway\r\n\r\n> Also wondering if I have a 5g sim card in the device can rayhunter work at the same time as the devices is working as a 5g hotspot, or can you only use the devices either for running rayhunter or as a hotspot but not concurrently? Thanks.\r\n\r\nI'm pretty sure that you're going to be able to use both at the same time.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-08-17T11:40:18Z",
+      "updated_at": "2026-08-17T11:40:18Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BE3tZ",
+          "body": "Thank you very much for the reply. You're right the TP-Link M8550 at $300 on amazon is very expensive. I was looking at the ZTE MU5001, which is around half the price. Seems to meet all the criteria for porting. Think I will give that one ago. Thanks though for your reply, appreciate the feedback.",
+          "author": {
+            "login": "madmystic",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1436583?v=4",
+            "url": "https://github.com/madmystic"
+          },
+          "created_at": "2026-08-17T16:53:58Z",
+          "updated_at": "2026-08-17T16:53:58Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BE3tl",
+          "body": "https://github.com/EFForg/rayhunter/discussions/788 the problem is there is no preexisting root for this device",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-08-17T16:55:15Z",
+          "updated_at": "2026-08-17T16:55:15Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BE3w3",
+      "body": "That's not a problem, that's a challenge! And challenge accepted. I'll have a go and let you know if I manage to root it. Might be a month or two before I get round to it though.",
+      "author": {
+        "login": "madmystic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1436583?v=4",
+        "url": "https://github.com/madmystic"
+      },
+      "created_at": "2026-08-17T17:08:47Z",
+      "updated_at": "2026-08-17T17:09:38Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

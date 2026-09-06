@@ -1,0 +1,137 @@
+{
+  "id": "D_kwDOKrJqmc4Aj5C_",
+  "number": 828,
+  "title": "Support for GL.iNet GL-X750 Spitz created",
+  "body": "I'm not a good coder, so I have had Claude make working support for the [GL.iNet GL-X750](https://www.gl-inet.com/products/gl-x750/).\r\n\r\n<img width=\"370\" height=\"504\" alt=\"X750V2_main\" src=\"https://github.com/user-attachments/assets/9e96fa4c-ad3a-4b67-bd97-36536a1201fd\" />\r\n\r\nThe reason for adding the support for this is because I didn't find any supported routers that could be powered 100% at the time without the battery ballooning (I'm in Europe, so I only have access to European frequencies).\r\n\r\nI also added two new detection methods:\r\n\r\n- IMSI-Exposing Reject/Detach Heuristic — Flags individual NAS reject/detach messages with cause codes that force GUTI deletion (e.g. Attach Reject with \"Illegal UE\", MT Detach with \"re-attach not required\", Authentication Reject). Informational severity.\r\n\r\n- IMSI Exposure Rate Heuristic — Tracks the rate of IMSI-exposing messages over a 100-message sliding window. Normal LTE networks show <3% incidence. Warns at >=5% (Medium) and >=15% (High). \r\n\r\nSince the GL-X750 is very much different than many other models, I had to implement two \"hacks\" when it comes to Ntfy support and SD-card:\r\n\r\n- The Ntfy is now a service that lives on the external OpenWRT system. It listens for alerts from the Rayhunter software and sends it at a given interval. This is because the Rayhunter on this device doesn't have internet access (which the OpenWrt has).\r\n\r\n- The saving to SD-card feature has a cron job that copies data from the Rayhunter memory to the SD-card at an interval. This is because the way Rayhunter lives on the Router Modem it cannot access the /dev/sda device.\r\n\r\n\r\nIf you want to try it, you need follow there steps:\r\n\r\n1. Buy the router\r\n2. Install a memory card and a sim card in the router (with out PIN code)\r\n3. Connect to the router (either Wifi or Ethernet)\r\n4. Go to the Routers webpage at http://192.168.8.1 and make a password (this will also be the root password)\r\n5. Verify you have ssh access to the device as root\r\n6. Download and run the Powershell script from Releases (this can be easily converted to bash if necessary). The computer running needs in some way internet access since it downloads and transfers all the necessary files to the router in order to inject the daemon to modem.\r\n7. Hopefully the script works\r\n8. Navigate to http://192.168.8.1:8080\r\n\r\nDisclaimer:\r\nAs noted, this is very much Claude coded, also since I don't own a Stingray, I cannot verify that anything actually works.\r\n\r\nYou can find my fork at:\r\nhttps://github.com/chaugan/rayhunter\r\n",
+  "author": {
+    "login": "chaugan",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17846743?v=4",
+    "url": "https://github.com/chaugan"
+  },
+  "created_at": "2026-01-30T13:11:57Z",
+  "updated_at": "2026-02-03T18:53:44Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/828",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A71zD",
+      "body": "Thanks @chaugan, this is useful should we decide to support the device at some point",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-03T18:53:44Z",
+      "updated_at": "2026-02-03T18:53:44Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

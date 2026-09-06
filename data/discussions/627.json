@@ -1,0 +1,104 @@
+{
+  "id": "D_kwDOKrJqmc4AiJnw",
+  "number": 627,
+  "title": "Introducing “Rayhunter + Tailscale + Telegram” for the TP‑Link M7350 V9 🚀",
+  "body": "#### Hello Rayhunter community 👋\r\n\r\nI’m pleased to share a companion project I built that runs alongside **Rayhunter** to enable secure remote access and boot-time alerts on the TP-Link M7350 V9, using **Tailscale** and **Telegram**.\r\n\r\n📦 Project repo: [MHSEA / Rayhunter‑Tailscale‑Telegram](https://github.com/MHSEA/Rayhunter-Tailscale-Telegram)\r\n\r\n---\r\n\r\n### 🔧 Why I Built This\r\n\r\nRayhunter is a fantastic tool. However, monitoring the device remotely, particularly when it's behind CGNAT, makes it difficult to retrieve logs after boot or determine the device's status (such as IP address, uptime, and warnings) when not physically present.\r\n\r\nBy integrating **Tailscale** and **Telegram**, my goals were to:\r\n\r\n- ✅ Automatically start Tailscale on boot and generate logs  \r\n- ✅ Enable secure remote access via Tailscale  \r\n- ✅ Receive a Telegram alert with IP addresses, device status, and uptime\r\n\r\n<img width=\"622\" height=\"372\" alt=\"Telegram alert preview\" src=\"https://github.com/user-attachments/assets/2905eea3-001b-4fc7-bf59-0adc92cffd10\" />\r\n\r\n\r\n---\r\n\r\n### 💬 Feedback & Requests\r\n\r\nI’d love to hear from the community:\r\n\r\n- Suggestions for improving reliability, error handling, or security  \r\n- Ideas for new features (e.g. integration with the Rayhunter web UI)  \r\n- Bug reports or compatibility feedback from other supported devices \r\n\r\n---\r\n\r\nThanks to the EFF and the Rayhunter community for building the foundation.\r\n**Special thanks to [@simonft](https://github.com/simonft)** for the [idea and inspiration](https://github.com/EFForg/rayhunter/discussions/535).\r\n\r\nLooking forward to your thoughts, questions, and contributions 🙏  \r\n— **MHSEA**",
+  "author": {
+    "login": "MHSEA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/12767335?u=5903337be5092d321cb3bff500cd22b2778e9bb9&v=4",
+    "url": "https://github.com/MHSEA"
+  },
+  "created_at": "2025-09-27T17:32:17Z",
+  "updated_at": "2025-10-01T16:27:15Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/627",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A3biu",
+      "body": "nice! i looked at the code and it seems that you only need to replace `/media/sdcard` with `/data/rayhunter` to make this work on older TP-Link versions and the Orbic. `/data/rayhunter` should be a symlink to `/media/sdcard` or `/media/card` depending on version so it should work regardless.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-09-27T19:14:10Z",
+      "updated_at": "2025-09-27T19:14:11Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3fEe",
+      "body": "Thanks for taking the time to check out the code, really appreciate it! That’s a great tip about using ```/data/rayhunter``` as a symlink for broader compatibility. I’ll look at incorporating that into the next update to better support older TP-Link models and the Orbic. As the M7350 V9 is the only model I have on hand, I’m not too familiar with the structure of other TP-Link or supported devices.\r\n\r\nI’m also planning to release another version of the script that uses [ntfy.sh](https://ntfy.sh/) for notifications as an alternative to Telegram. It should be a great option for those who prefer a lighter or self-hosted setup.",
+      "author": {
+        "login": "MHSEA",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12767335?u=5903337be5092d321cb3bff500cd22b2778e9bb9&v=4",
+        "url": "https://github.com/MHSEA"
+      },
+      "created_at": "2025-09-29T18:55:55Z",
+      "updated_at": "2025-09-29T18:57:11Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3fEp",
+      "body": "ntfy.sh support is built into ray hunter (you can scroll to the bottom to configure it). but it notifies on different things than your script",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-09-29T18:57:34Z",
+      "updated_at": "2025-09-29T18:57:34Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3i9n",
+      "body": "Thanks for sharing!\r\nFor me, the real advantage of using a Telegram bot instead of ntfy would be being able to interact with Rayhunter remotely without needing Tailscale, and being able to retrieve alert content and PCAPs. But that requires more work and integration into the Rayhunter code (at least to capture alerts).",
+      "author": {
+        "login": "Jane6442",
+        "avatar_url": "https://avatars.githubusercontent.com/u/226875147?v=4",
+        "url": "https://github.com/Jane6442"
+      },
+      "created_at": "2025-10-01T09:14:20Z",
+      "updated_at": "2025-10-01T09:14:21Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3j_V",
+      "body": "Cool project, but I don't think I would merge this into main. Telegram is horrendously insecure and I don't want to encourage people to use it at all. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-10-01T16:27:15Z",
+      "updated_at": "2025-10-01T16:27:15Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

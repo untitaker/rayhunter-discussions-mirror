@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AnVaW",
+  "number": 1076,
+  "title": "Feel free to use my flasher for easy firmware install!",
+  "body": "https://github.com/RadDad87/RayHunter-Web-Flasher",
+  "author": {
+    "login": "RadDad87",
+    "avatar_url": "https://avatars.githubusercontent.com/u/142544102?v=4",
+    "url": "https://github.com/RadDad87"
+  },
+  "created_at": "2026-06-24T08:04:34Z",
+  "updated_at": "2026-06-24T08:04:34Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1076",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

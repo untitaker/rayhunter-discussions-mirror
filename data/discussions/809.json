@@ -1,0 +1,73 @@
+{
+  "id": "D_kwDOKrJqmc4Aj0zX",
+  "number": 809,
+  "title": "Rayhunter companion: Android app to install and manage orbic/tplink devices",
+  "body": "https://codeberg.org/untitaker/rayhunter-companion\r\n\r\napks: https://codeberg.org/untitaker/rayhunter-companion/releases\r\n\r\n> This app allows you to store a list of WiFi networks that run [Rayhunter](https://github.com/EFForg/rayhunter), and connect to any of them to open Rayhunter's admin UI in a WebView.\r\n\r\n> Once you are connected to a device, Rayhunter Companion will show a permanent notification reflecting the state of the green/red line on the device (THIS IS CURRENTLY UNRELIABLE)\r\n\r\n> The app also includes experimental functionality to run the installer directly from the phone against a given device. This only works for network-based installers (tplink, orbic), but not for example orbic-usb or uz801.\r\n\r\n**This is not an official app, and entirely experimental.** It also will lag behind on the latest release of rayhunter, as the release process is manual.",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-01-26T17:25:36Z",
+  "updated_at": "2026-01-26T17:25:36Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/809",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 1,
+      "users": [
+        "ppival"
+      ]
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Aj_ea",
+  "number": 861,
+  "title": "Support NETGEAR - AirCard 815S",
+  "body": "Could rayhunter be ported to the Netgear AirCard 815S? I did some searches and price seems completive on the used market for about $20-30 USD (ebay). New prices on amazon are about $100 USD\r\n\r\nKey specs. (disclaimer specs pulled using gemini). \r\n\r\nI've not been able to find any documentation or forum posts indicating /dev/diag is exposed.\r\n\r\nNetgear AirCard 815S (also known as the AT&T Unite Explore)\r\n\r\nModem & Cellular Network Specs\r\nModel: Netgear AirCard AC815S (AT&T Unite Explore)\r\nCellular Technology: 4G LTE Advanced Category 9\r\nProcessor/Chipset: Qualcomm MDM9240\r\nCarrier Aggregation: 2-band and 3-band aggregation (up to 40 MHz)\r\nSupported Bands: 4G LTE Bands 1, 2, 3, 4, 5, 7, 12, 17, 29, 30\r\n3G/2G: HSPA+ 850/1900/2100MHz, GSM/EDGE Quad Band\r\nMax Theoretical Speeds: Up to 450 Mbps download, 50 Mbps upload\r\nAntenna Ports: 2x TS-9 connectors for external MIMO antennas \r\n\r\nWiFi Specs\r\nStandards: WiFi 802.11ac, 2x2 MIMO\r\nFrequencies: Dual-Band 2.4/5 GHz (simultaneous or standalone)\r\n\r\nMemory & Storage\r\nRAM: 1GB LPDDR2\r\nStorage: 2GB NAND Flash\r\nExpansion: Some models feature MicroSD card support up to 32GB (note: some documentation indicates no SD slot) ",
+  "author": {
+    "login": "ne0phaze",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31215914?u=71b0e66541ee0eacd1689cd4f3c2e73770dd841c&v=4",
+    "url": "https://github.com/ne0phaze"
+  },
+  "created_at": "2026-02-05T23:57:55Z",
+  "updated_at": "2026-02-05T23:57:55Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/861",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

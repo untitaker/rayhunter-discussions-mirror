@@ -1,0 +1,363 @@
+{
+  "id": "D_kwDOKrJqmc4AkAdW",
+  "number": 863,
+  "title": "Orbic 400L - No Default Route Detected error message",
+  "body": "I bought the Orbic 400L from ebay (and installed rayhunter myself) and it seems to have come with an outdated sim card.  I tried test mode and I got only 1 cell tower connection.  I then took a sprint sim card from an old iphone and i got 187 towers using that, but the warning still shows.  I'm wondering what is wrong with the initial sim card and if the other sim card im using is functioning properly.  I looked through the read me and the forum but i couldnt find anything on this so apologies if this is covered somewhere.  Any insight on this would be greatly appreciated, I have 4 of these that I'm trying to get up and running for various friends who may be likely to encounter stingrays.  I've attached a screenshot of what I'm seeing for reference.\r\n\r\nEdited to clarify i installed rayhunter from the latest release on github - not a preinstalled device from ebay\r\n\r\n<img width=\"3839\" height=\"2159\" alt=\"Screenshot 2026-02-06 131255\" src=\"https://github.com/user-attachments/assets/c98d2e2c-ce31-4ed5-9425-cf92ff606445\" />\r\n",
+  "author": {
+    "login": "dugcomp",
+    "avatar_url": "https://avatars.githubusercontent.com/u/36974013?v=4",
+    "url": "https://github.com/dugcomp"
+  },
+  "created_at": "2026-02-06T20:53:04Z",
+  "updated_at": "2026-02-06T21:16:57Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/863",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7-h4",
+      "body": "the latest version of rayhunter has removed that warning again due to too many false positives. please don't buy the preinstalled devices from ebay (they are severely overpriced) and instead familiarize yourself with how to install rayhunter yourself so you're able to receive updates",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-06T20:55:21Z",
+      "updated_at": "2026-02-06T20:55:21Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7-iz",
+          "body": "sorry i didn't make this clear in my initial post, i bought the devices for about $20 a piece and installed the software from the latest stable release here on github.  It seems the warning was accurate for the sim that came with the orbic because in test mode it wasnt finding towers despite me being in an urban area.  I'm looking for any info on certain sim cards having issues or if im perhaps missing something with configuration to get it working with the original sim card it came with",
+          "author": {
+            "login": "dugcomp",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36974013?v=4",
+            "url": "https://github.com/dugcomp"
+          },
+          "created_at": "2026-02-06T21:06:44Z",
+          "updated_at": "2026-02-06T21:06:44Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7-i8",
+          "body": "okay right. so focussing on the number of cell towers coming out of the test heuristic, I don't think there's any reason to believe that one sim is worse than the other. for as long as you're getting any tower at all and reception, it'll be alright.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-06T21:09:18Z",
+          "updated_at": "2026-02-06T21:09:18Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7-jc",
+          "body": "its possible im misunderstanding the test heuristic.  The way im understanding it currently is that the number of warnings should be roughly equal to the number of unique towers it connects to.  Sitting in the same spot (at my pc), one sim card found 172 in about 30 seconds while the other found only 1.  Am I misunderstanding how the warnings relate to tower count?  It seems odd to me the behavior is so different between two sim cards unless there is an issue with one of them.\r\n\r\nThanks for the quick responses btw",
+          "author": {
+            "login": "dugcomp",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36974013?v=4",
+            "url": "https://github.com/dugcomp"
+          },
+          "created_at": "2026-02-06T21:14:11Z",
+          "updated_at": "2026-02-06T21:14:11Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7-jp",
+          "body": "if the carriers between the two sims are different it's fairly plausible that some towers only can be connected via one carrier. but I'm not 100% sure what kind of sim comes with the orbic. I would say covering multiple popular carriers in any area is desirable over picking the singular best one",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-06T21:16:57Z",
+          "updated_at": "2026-02-06T21:16:57Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

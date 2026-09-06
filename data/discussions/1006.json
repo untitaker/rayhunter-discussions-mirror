@@ -1,0 +1,188 @@
+{
+  "id": "D_kwDOKrJqmc4Al9_b",
+  "number": 1006,
+  "title": "UZ801: Images of working devices",
+  "body": "Since there is a variety of \"UZ801\" type LTE sticks, and we don't know how to spot a working one, let's start a thread where everybody posts their device that worked with uz801. Maybe this way people can make a more educated guess as to whether a specific aliexpress listing will work.\r\n\r\n<details><summary> **outside** </summary>\r\n\r\n<img width=\"3072\" height=\"4096\" alt=\"IMG_20260426_191924\" src=\"https://github.com/user-attachments/assets/9850c001-657f-44e5-b433-2ab2db0c5969\" />\r\n<img width=\"4096\" height=\"3072\" alt=\"IMG_20260426_192006\" src=\"https://github.com/user-attachments/assets/0ea5d638-a82d-4d97-964f-656aa62de528\" />\r\n<img width=\"4096\" height=\"3072\" alt=\"IMG_20260426_191933\" src=\"https://github.com/user-attachments/assets/5cbfe180-e00b-4031-afc7-357f79f66843\" />\r\n\r\n</details>\r\n\r\n<details><summary> **teardown** </summary>\r\n\r\n<img width=\"4096\" height=\"3072\" alt=\"IMG_20260426_192054\" src=\"https://github.com/user-attachments/assets/aa819876-3ec6-40a1-b713-1f405a9ef7c2\" />\r\n<img width=\"3072\" height=\"4096\" alt=\"IMG_20260426_192227\" src=\"https://github.com/user-attachments/assets/6a9caefb-f2ce-417c-9225-16f9a5dc4d8f\" />\r\n<img width=\"4096\" height=\"3072\" alt=\"IMG_20260426_192106\" src=\"https://github.com/user-attachments/assets/02c97810-aa09-4560-a07f-c2096068ea43\" />\r\n\r\n</details>\r\n\r\nNote that aliexpress listings come and go, so collecting links seems pointless.",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-04-26T17:24:47Z",
+  "updated_at": "2026-07-09T09:52:43Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1006",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BAXx0",
+      "body": "The same as above but white casing.\r\nWeb UI Model: V2.3.12\r\nPCB: FY_UZ801_V3.2\r\n<details>\r\n  <summary>**outside and teardown**</summary>\r\n\r\n<img width=\"676\" height=\"755\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9fcdf064-0dcd-423a-b161-166476e7b386\" />\r\n\r\n\r\n\r\nThis was from Shopee PH listing.",
+      "author": {
+        "login": "r1bnc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+        "url": "https://github.com/r1bnc"
+      },
+      "created_at": "2026-05-11T04:20:36Z",
+      "updated_at": "2026-05-11T04:22:27Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BDE0x",
+      "body": "Red and white casing. Installer worked fine.\r\nWeb UI Model: V2.3.15.1\r\nPCB: FY_UZ801_V3.31\r\n<details>\r\n  <summary>**outside and teardown**</summary>\r\n  \r\n<img width=\"885\" height=\"454\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fccd1abd-d930-460c-a9ec-e405da0aaa44\" />\r\n\r\nThis was from Shopee PH listing.",
+      "author": {
+        "login": "r1bnc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+        "url": "https://github.com/r1bnc"
+      },
+      "created_at": "2026-07-09T09:52:43Z",
+      "updated_at": "2026-07-09T09:52:43Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

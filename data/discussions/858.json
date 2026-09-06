@@ -1,0 +1,595 @@
+{
+  "id": "D_kwDOKrJqmc4Aj_bH",
+  "number": 858,
+  "title": "Add Support NETGEAR - MR1100",
+  "body": "Could rayhunter be ported to the Netgear MR1100? I pulled some key specs. I show some discussion on the MR1100 that /dev/diag should be exposed.\r\n\r\nhttps://mt-tech.fi/en/enable-diag-on-netgear-mr1100/\r\n\r\nChipset: [Qualcomm MDM9x50 / MDM9250]\r\nMemory: 512 MiB RAM / 512 MiB NAND Flash\r\nWiFi Chipset: Qualcomm Atheros QCA6174A (2x2:2) and QCA9377 (1x1:1)\r\nWiFi Standards: Dual-band/Dual-Concurrent Wi-Fi 802.11 b/g/n 2.4 GHz and 802.11 a/n/ac 5 GHz (Wi-Fi 5)\r\nCellular Technology: LTE CAT 16, 4-band Carrier Aggregation, 4x4 MIMO\r\nSpeed: Max 1 Gbps download, 150 Mbps upload\r\n\r\nPorts: 1x Gigabit Ethernet LAN port, 1x USB-C port, 1x USB-A port (for media/charging), Dual TS-9 external 3G/4G antenna connectors\r\n\r\nStorage Expansion: MicroSD slot with Media Server/NAS capabilities\r\n",
+  "author": {
+    "login": "ne0phaze",
+    "avatar_url": "https://avatars.githubusercontent.com/u/31215914?u=71b0e66541ee0eacd1689cd4f3c2e73770dd841c&v=4",
+    "url": "https://github.com/ne0phaze"
+  },
+  "created_at": "2026-02-05T22:44:48Z",
+  "updated_at": "2026-08-18T02:48:05Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/858",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A78Cy",
+      "body": "i think it can be done, the main issue is the price. it's a bit expensive for devs to just buy for fun",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-05T22:51:05Z",
+      "updated_at": "2026-02-05T22:51:05Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A78C9",
+          "body": "I can see that as true, but I have one and it's just collecting dust. Best tech is what you have. :-) Is there anything you would need from me to get details to see if its possible?",
+          "author": {
+            "login": "ne0phaze",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31215914?u=71b0e66541ee0eacd1689cd4f3c2e73770dd841c&v=4",
+            "url": "https://github.com/ne0phaze"
+          },
+          "created_at": "2026-02-05T22:53:55Z",
+          "updated_at": "2026-02-05T22:53:55Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A78DK",
+          "body": "I could expose a linux box for you and anyone else that would like to take a chance on it, no harm if you brick it, I'm not using it atm. ",
+          "author": {
+            "login": "ne0phaze",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31215914?u=71b0e66541ee0eacd1689cd4f3c2e73770dd841c&v=4",
+            "url": "https://github.com/ne0phaze"
+          },
+          "created_at": "2026-02-05T22:56:56Z",
+          "updated_at": "2026-02-05T22:56:56Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A78Ef",
+          "body": "I mean to say that I'm almost certain it will work, but it's not obvious to me why rayhunter should support it:\r\n\r\n* Adding such a device without a dedicated maintainer who owns the device is not sustainable.\r\n* Since it's expensive, not many people will have it.\r\n\r\nFor many other devices either one of the two is true:\r\n\r\n* There is a dedicated maintainer who shows up and fixes bugs\r\n* The device is strategically important because it's widely available or cheap\r\n\r\nThere are exceptions but they didn't start out this way",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-05T23:13:33Z",
+          "updated_at": "2026-02-05T23:13:33Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A78Fl",
+          "body": "fare enough, I get that coming from a devs prospective. And appreciate the honesty for likelihood for official support.  BTW is there any guides to building community supported firmwares on devices that don't meet the threshold for official support? Forgive if this is already an option, I just found out about this project today.",
+          "author": {
+            "login": "ne0phaze",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31215914?u=71b0e66541ee0eacd1689cd4f3c2e73770dd841c&v=4",
+            "url": "https://github.com/ne0phaze"
+          },
+          "created_at": "2026-02-05T23:30:07Z",
+          "updated_at": "2026-02-05T23:30:07Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A78Fs",
+          "body": "@ne0phaze I think there is nothing wrong with you writing the support yourself and upstreaming it into rayhunter for as long as you're able to fix bugs yourself. All of our tier 2 devices are maintained this way.\r\n\r\nUnfortunately there's no guide for this, there are a few forum posts about new devices that I would recommend to read for inspiration though.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-05T23:32:11Z",
+          "updated_at": "2026-02-05T23:32:11Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BEJaN",
+          "body": "I have one I am willing to donate.  I will be at Def Con 34 (Aug 7-9, 2026) and able to hand it over.",
+          "author": {
+            "login": "stevendholden-stack",
+            "avatar_url": "https://avatars.githubusercontent.com/u/285495503?v=4",
+            "url": "https://github.com/stevendholden-stack"
+          },
+          "created_at": "2026-08-01T15:33:09Z",
+          "updated_at": "2026-08-01T15:33:09Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BEyby",
+          "body": "@stevendholden-stack did you end up handing it off to EFF folks at defcon? if not you could send it per mail, I could take a look. feel free to join mattermost (see docs) for coordinating or drop me an email at markus@unterwaditzer.net",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-08-15T16:53:07Z",
+          "updated_at": "2026-08-15T16:53:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BE5A-",
+          "body": "> @stevendholden-stack did you end up handing it off to EFF folks at defcon? if not you could send it per mail, I could take a look. feel free to join mattermost (see docs) for coordinating or drop me an email at [markus@unterwaditzer.net](mailto:markus@unterwaditzer.net)\r\n\r\nYes ... I was able to hand it off to a developer at DEF CON that I connected with via Reddit",
+          "author": {
+            "login": "stevendholden-stack",
+            "avatar_url": "https://avatars.githubusercontent.com/u/285495503?v=4",
+            "url": "https://github.com/stevendholden-stack"
+          },
+          "created_at": "2026-08-18T02:48:05Z",
+          "updated_at": "2026-08-18T02:48:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}
