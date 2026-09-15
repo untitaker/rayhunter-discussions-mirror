@@ -1,0 +1,1197 @@
+{
+  "id": "D_kwDOKrJqmc4Ag-0M",
+  "number": 484,
+  "title": "Inquiry About Rayhunter Support for GrapheneOS and Mudi V2 Devices",
+  "body": "### What problem does this feature solve or what does it enhance?\n\nHello Rayhunter Team,\n\nI’ve been following the Rayhunter project with great interest and appreciate the work you’re doing to bring open-source IMSI-catcher detection to privacy-conscious users.\n\nI wanted to ask if there are any plans to develop a mobile version of Rayhunter that could run directly on GrapheneOS (Pixel phones) or on Android devices in general.\n\nAdditionally, I’m curious whether there is any intention to port or adapt Rayhunter for use on the GL.iNet Mudi V2 (GL-E750V2) travel router, which runs OpenWRT and includes LTE modem support. This would greatly extend the utility of the tool for off-grid and mobile users.\n\nI’d love to hear if this kind of support is being considered, or if there are any technical barriers that currently prevent this.\n\nThank you again for your work in this space. Looking forward to your response\n\n### Proposed Solution\n\nAndroid application/version\n\n### Alternatives Considered\n\n_No response_",
+  "author": {
+    "login": "apolloracer",
+    "avatar_url": "https://avatars.githubusercontent.com/u/222788781?v=4",
+    "url": "https://github.com/apolloracer"
+  },
+  "created_at": "2025-07-28T01:00:32Z",
+  "updated_at": "2026-02-10T10:11:59Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/484",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZESg",
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    },
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1Dmh",
+      "body": "Hi, there are two separate requests here, so I'll move this to the discussion area.\n\n* Regarding android support, this has been considered, but has never been picked up, mostly due to a lack of experience with android development. It would require a rooted phone too.\n\n* Regarding the GL-Inet Mudi V2: It depends on the brand of the LTE modem that is being used here. I see that it uses a qualcomm chip for WiFi. See https://efforg.github.io/rayhunter/supported-devices.html#adding-new-devices.\n\nLike in https://github.com/EFForg/rayhunter/discussions/479, adding new devices is no problem if there are no technical blockers, and if there is a contributor who will add and maintain it.\n\nif you want somebody else to do the work, you need to make a case for it. This is a bit too vague:\n\n> This would greatly extend the utility of the tool for off-grid and mobile users.\n\nWhy would I pick this device instead of the other ones we already support? I see the GL-Inet costs 180 EUR while the other devices (Orbic, TP-Link) cost less than half that amount. Is it because of VPN support?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-28T09:53:59Z",
+      "updated_at": "2025-07-28T09:54:11Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1DoL",
+      "body": "Well, I typed up a long response to this but when I went to hit \"submit\", Github ate my comment because the issue had been locked and converted to a discussion.\r\n\r\nBasically:\r\nYes, it looks like the Mudi device can probably run Rayhunter. It seems like it uses a Quectel EM060K module which has a Qualcomm Snapdragon X12 modem. However, the device is expensive so it's not going to be a priority for core developers. That shouldn't stop anyone from developing support for it, though.\r\n\r\nRegarding the second question,\r\nGraphene's security model is not going to allow application access to the modem/diagnostic messages. A rooted Android with a Qualcomm modem that exposes Diag messages could probably run Rayhunter.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-28T10:01:06Z",
+      "updated_at": "2025-07-28T10:01:07Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1DpZ",
+          "body": "You can check if the phone exposes Qualcomm Diag protocol messages by running QCSuper on a machine and plugging a phone or hotspot in over USB. You may need to use AT commands to enable diag messages, this is often device specific. Use the `rayhunter-check` binary available if you build from source to run Rayhunter's heuristics on captured Diag messages and pcaps.",
+          "author": {
+            "login": "oopsbagel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+            "url": "https://github.com/oopsbagel"
+          },
+          "created_at": "2025-07-28T10:07:11Z",
+          "updated_at": "2025-07-28T10:07:12Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2RFK",
+      "body": "The GL-Inet Mudi is one of the only mobile 4G modem/routers that allows default access to AT commands, which, with most Quelctel modems, makes it possible to modify the IMEI.\r\nThis is made even easier with [blue-merle](https://github.com/srlabs/blue-merle), which allows you to change the IMEI with a simple toggle.\r\nRay Hunter can be very useful in a repressive environment, when you are an activist and part of a group targeted by the state in which you live, to highlight targeted surveillance. However, in such a context, it is far preferable to use a disposable SIM card with an associated IMEI if you absolutely need 4G. The routers currently supported by Ray Hunter do not seem to allow the IMEI to be changed, which makes its use in an environment where there is a risk of targeted surveillance inadvisable.\r\n\r\n",
+      "author": {
+        "login": "Jane6442",
+        "avatar_url": "https://avatars.githubusercontent.com/u/226875147?v=4",
+        "url": "https://github.com/Jane6442"
+      },
+      "created_at": "2025-08-26T20:24:13Z",
+      "updated_at": "2025-08-26T20:39:28Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2RFf",
+          "body": "thank you for this context, this makes a lot of sense. i wish there was a cheaper device supported by an e2e solution like blue-merle.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-26T20:26:43Z",
+          "updated_at": "2025-08-26T20:26:43Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2RcF",
+      "body": "The Mudi looks like a cool device, and I would be happy to have Rayhunter support for it. It's slightly out of my budget to buy on my own so I won't be able to prioritize it for now. But if someone wants to either send me one or has one themslves and wants to hack on it I would be very happy with that. If I received one I would make it a top priority to add support for the device. \r\n\r\nCons: Expense\r\nPros: global band support ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-08-27T00:25:18Z",
+      "updated_at": "2025-08-27T00:25:19Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2T8S",
+          "body": "I agree that is too expensive for wide adoption. Perhaps a better idea would be to find a 4G router for which the IMEI can be modified using AT commands. I'm not sure to understand why it is possible with all Quelctel modules I tested, and not possible with raw Qualcomm modem",
+          "author": {
+            "login": "Jane6442",
+            "avatar_url": "https://avatars.githubusercontent.com/u/226875147?v=4",
+            "url": "https://github.com/Jane6442"
+          },
+          "created_at": "2025-08-27T21:00:04Z",
+          "updated_at": "2025-08-27T21:00:04Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2Wrv",
+          "body": "it would be really cool to find a cheaper device that had global band support as well. For me that would be the top priority. ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-08-28T18:48:55Z",
+          "updated_at": "2025-08-28T18:48:56Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2Wr2",
+          "body": "i thought the tplink supported all regions? it's just that it's hard to get. but yeah, not all bands",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-28T18:49:55Z",
+          "updated_at": "2025-08-28T18:49:56Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 1,
+          "users": [
+            "Jane6442"
+          ]
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 4
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2Wyr",
+      "body": "There is another pro for this device. It is powerfull enough to run VPN. You can connect it (upstream connection) to mobile network, Ethernet (there is additional cable with USB Ethernet dongle), AND Wifi. It has big battery, display and I think it also supports eSIM.\r\n\r\nIf router is connected to VPN, you can connect to it via VPN. That means Rayhunter interface would be available remotely via VPN. You can put it somewhere, connect it to Wifi, get Ntfy notification and access web interface via VPN or Tor (it has Tor support too!). \r\n\r\nProbably it would be possible to add Yubikey support or something similar for login auth or unlocking internal storage.\r\n\r\nAnd yes, it also has SD card (1TB extendible storage). ",
+      "author": {
+        "login": "MatejKovacic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3339198?u=cabb25f233a032a2e61dd63685a7220ce5bcfd8a&v=4",
+        "url": "https://github.com/MatejKovacic"
+      },
+      "created_at": "2025-08-28T19:53:43Z",
+      "updated_at": "2025-08-28T20:01:55Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2Wy_",
+          "body": "it seems somebody made tailscale on orbic work: https://github.com/EFForg/rayhunter/discussions/535\r\n\r\nbut maybe the speed is much lower",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-28T19:56:49Z",
+          "updated_at": "2025-08-28T19:56:49Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A42MP",
+          "body": "Seems like this only works for the v9, as the other versions I looked at don't have _tun_ module.\r\nI tried to cross compile it for the running kernel, but it gives segfault when loading on the tplink :-(\r\n",
+          "author": {
+            "login": "tamtam-bot",
+            "avatar_url": "https://avatars.githubusercontent.com/u/238109177?v=4",
+            "url": "https://github.com/tamtam-bot"
+          },
+          "created_at": "2025-11-07T12:15:12Z",
+          "updated_at": "2025-11-07T12:15:13Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3Ohq",
+      "body": "So I just got this device and realized way too late that 1) this thing does not have an ARM CPU, but MIPS 2) that MIPS is a Tier 3 target in Rust.\r\n\r\nSo even just compiling the daemon for this target is going to be challenging.\r\n\r\notherwise, like GL-Inet Beryl AX, this is a standard OpenWRT device. It may be nicer to make rayhunter installable via opkg, instead of writing an installer.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-09-22T14:30:32Z",
+      "updated_at": "2025-09-22T14:30:34Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A3PLp",
+          "body": "So i have it compiled for MIPS now but am struggling to find `/dev/diag` or a way to activate it: https://github.com/EFForg/rayhunter/pull/613\r\n\r\nyou can find `rayhunter-daemon-mips` here: https://github.com/EFForg/rayhunter/actions/runs/17926140544",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-09-22T19:39:39Z",
+          "updated_at": "2025-09-22T19:39:40Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 2,
+              "users": [
+                "Idk-techatall",
+                "MHSEA"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A42Dc",
+          "body": "Seems like there's no easy way to activate /dev/diag.\r\nBut maybe /dev/diag isn't really necessary:\r\n\r\nhttps://docs.gl-inet.com/router/en/4/tutorials/get_module_logs/\r\n\r\nDoes this help?\r\nI'd really love to see rayhunter running on the GL routers.",
+          "author": {
+            "login": "tamtam-bot",
+            "avatar_url": "https://avatars.githubusercontent.com/u/238109177?v=4",
+            "url": "https://github.com/tamtam-bot"
+          },
+          "created_at": "2025-11-07T11:03:14Z",
+          "updated_at": "2025-11-07T12:56:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A43J1",
+          "body": "this looks super promising! ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-11-07T19:14:07Z",
+          "updated_at": "2025-11-07T19:14:08Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A763p",
+          "body": "Hi all, any luck running it on the GL routers? @cooperq I'm willing to send you one if you can make it work?",
+          "author": {
+            "login": "pickled-monk",
+            "avatar_url": "https://avatars.githubusercontent.com/u/150456412?v=4",
+            "url": "https://github.com/pickled-monk"
+          },
+          "created_at": "2026-02-05T15:24:41Z",
+          "updated_at": "2026-02-05T15:24:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A77cY",
+          "body": "We haven't looked into the module logs yet, so no idea if it would work or not. I don't have a device to test on and even if you send me one I can't garantee I will be able to get it to work. ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2026-02-05T18:49:37Z",
+          "updated_at": "2026-02-05T18:49:37Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8GYe",
+          "body": "Thanks! if you need one lmk pls, willing to contribute if it helps any. ",
+          "author": {
+            "login": "pickled-monk",
+            "avatar_url": "https://avatars.githubusercontent.com/u/150456412?v=4",
+            "url": "https://github.com/pickled-monk"
+          },
+          "created_at": "2026-02-10T10:11:59Z",
+          "updated_at": "2026-02-10T10:11:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 3
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 4
+}

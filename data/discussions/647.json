@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4Aia1d",
+  "number": 647,
+  "title": "Identity Request heuristic (IMSI/IMEI): LTE-only or also GSM/UMTS? (TP-Link M7310, v0.7.0",
+  "body": "Does Rayhunter’s *Identity Request heuristic* (IMSI/IMEI) trigger only for *LTE NAS Identity Request* events, or can it also detect identity requests on *2G (GSM)* / *3G (UMTS)*?\r\n\r\n*My setup*\r\n- Rayhunter: v0.7.0\r\n- Device: TP-Link M7310 (EU v2.0)\r\n- Hotspot network prefs: 3G/4G/5G (no 2G option)\r\n- Heuristics enabled: Identity Request, 2G Redirect, LTE SIB6/7 Downgrade, Null Cipher, NAS Null Cipher, Incomplete SIB (plus Test Heuristic briefly)\r\n",
+  "author": {
+    "login": "Respilot",
+    "avatar_url": "https://avatars.githubusercontent.com/u/177826860?v=4",
+    "url": "https://github.com/Respilot"
+  },
+  "created_at": "2025-10-13T16:18:05Z",
+  "updated_at": "2025-10-16T22:16:48Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/647",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4Fw4",
+      "body": "It is only for identity requests in 4g and not 3g/2g since we don't have parsers for those protocols. but we do have a separate heursitic that will alert about a downgrade to 3g/2g. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-10-16T22:16:48Z",
+      "updated_at": "2025-10-16T22:16:49Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

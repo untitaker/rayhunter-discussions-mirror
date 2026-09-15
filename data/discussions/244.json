@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AfJV7",
+  "number": 244,
+  "title": "Are positive warnings expected in certain scenarios?",
+  "body": "Are there any instances where one might expect an analyzer to log a positive warning / alert? For example, if you are running Rayhunter on the Orbic during SIM activation with a carrier? When roaming? Are there other possible \"expected\" warning use cases that are less likely to be due to a nefarious actor?\r\n\r\nI am hoping someone with a bit more experience in this area of research could share some insight or reference material. \r\n\r\nThanks!",
+  "author": {
+    "login": "m0xsec",
+    "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+    "url": "https://github.com/m0xsec"
+  },
+  "created_at": "2025-04-04T01:24:05Z",
+  "updated_at": "2025-04-04T03:18:55Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/244",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AwhqX",
+      "body": "One example sounds like it might be covered here - https://github.com/EFForg/rayhunter/issues/210",
+      "author": {
+        "login": "m0xsec",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+        "url": "https://github.com/m0xsec"
+      },
+      "created_at": "2025-04-04T03:18:55Z",
+      "updated_at": "2025-04-04T03:18:56Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AoT2J",
+  "number": 1103,
+  "title": "Easy way to root Alcatel & TCL hotspots?",
+  "body": "It has been talked about previously here but thanks to the work of [Alex Studer ](https://alex.studer.dev/2021/01/04/mw41-1) I was able to root a [TCL Linkzone 5G  UW](https://us.tcl.com/products/linkzone-5g-uw) (MW513UW) pretty easily, it is maybe an interesting device being 5G, Qualcomm, and on the 2nd hand market for about $60 USD. \r\n\r\nUnfortunately it does not have a `/dev/diag` device, I know the [porting guide](https://efforg.github.io/rayhunter/porting.html) has some criteria that would like to be met and there is a branch of the code that is in development to support newer devices. I do have a Rayhunter fork I am working on to incorporate these new diagnostic tools also, but haven't spent much time looking into the specifics of any other requirements.\r\n\r\nAt any rate this utility is pretty small and simple, hopefully it will help other people root their devices:\r\nhttps://github.com/erikwilson/TCL-debug-switch",
+  "author": {
+    "login": "erikwilson",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1999874?u=fa4dd1d4b2976d2e4c6b44abadfeca0d1ef815b3&v=4",
+    "url": "https://github.com/erikwilson"
+  },
+  "created_at": "2026-08-07T04:03:09Z",
+  "updated_at": "2026-08-07T04:03:09Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1103",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

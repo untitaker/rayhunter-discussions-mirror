@@ -1,0 +1,137 @@
+{
+  "id": "D_kwDOKrJqmc4AioNS",
+  "number": 681,
+  "title": "TP-Link M7300",
+  "body": "I have tried to install rayhunter on the TP-Link M7300, Firmware Version: 1.0.5 Build 151210 Rel.1019n\r\n\r\n<img width=\"590\" height=\"443\" alt=\"image\" src=\"https://github.com/user-attachments/assets/95d70a75-6aa0-4e31-8cf3-52f9c868d06f\" />\r\n\r\nhttps://www.tp-link.com/baltic/home-networking/mifi/m7300/\r\n\r\nThe installer of rayhunter 0.7.1 worked out of the box, and treated the device as if it was TP-Link M7350 hardware revision v3.\r\n\r\n```\r\n$ ./installer tplink\r\nLaunching telnet on the device\r\nDetected hardware revision v3, successfully opened telnet\r\nConnecting via telnet to 192.168.0.1\r\nMounting sdcard on /media/card\r\nSending file /media/card/config.toml ... ok\r\nSending file /media/card/rayhunter-daemon ... ok\r\nSending file /etc/init.d/rayhunter_daemon ... ok\r\nDone. Rebooting device. After it's started up again, check out the web interface at http://192.168.0.1:8080\r\n```\r\n\r\nLEDs are not supported as a status indicator. Since there is no display, the display task panicks. But rayhunter's web UI stays running and seems to work. The diag device initializes successfully.\r\n\r\nEDIT TEST 3",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2025-10-27T20:24:55Z",
+  "updated_at": "2026-09-05T21:00:54Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/681",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BF18O",
+      "body": "i re-tested this device and it appears there is no output from diag at all.\r\n\r\ndiag does exist and the ioctl doesn't fail, but no qmdl msgs at all",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-09-05T21:00:54Z",
+      "updated_at": "2026-09-05T21:00:54Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

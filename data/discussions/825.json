@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Aj4pr",
+  "number": 825,
+  "title": "Netgear Aircard 797S",
+  "body": "Has anyone tried to install Rayhunter on a Netgear AirCard 797S? I have one I would love to repurpose. Thanks!",
+  "author": {
+    "login": "Artimas",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8929695?v=4",
+    "url": "https://github.com/Artimas"
+  },
+  "created_at": "2026-01-30T04:38:34Z",
+  "updated_at": "2026-01-30T04:38:34Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/825",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

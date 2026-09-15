@@ -1,0 +1,189 @@
+{
+  "id": "D_kwDOKrJqmc4Amlsh",
+  "number": 1053,
+  "title": "Limiting power consumption?",
+  "body": "I notice my orbic doesnt last especially long on battery (although most of this time ive had the stock sim card in it and it hasnt been connected to service, so maybe its advertising constantly)\r\n\r\n\r\nCurious if theres anything I can do through the root shell or rayhunter settings to disable unnecessary features and reduce power consumption",
+  "author": {
+    "login": "MoralCode",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+    "url": "https://github.com/MoralCode"
+  },
+  "created_at": "2026-05-22T16:41:07Z",
+  "updated_at": "2026-05-23T00:49:24Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1053",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BA7_f",
+      "body": "we have not investigated power consumption at all. I personally have the tplink wired up to a powerbank because the batteries are shit, especially on used devices.\r\n\r\na real analysis (ideally using multimeter to figure out power draw) would be very welcome.\r\n\r\nmy guess is that disabling display functionality (display mode) in config will help a bit.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-05-22T17:11:30Z",
+      "updated_at": "2026-05-22T17:11:30Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BA9Or",
+          "body": "ive seen like DSLR cameras that you can buy adapters for that basically just wire up the battery pins to a power brick to convert wall power to the correct thing. I wonder if someone could 3d print a case to fit seemingly standardized battery bay of an orbic, attach contacts to it, and use it as a way to power it from a bench supply and/or a battery while providing measurement points\r\n\r\nseems like whoever was investigating tailscale support suggested disabling certain processes to save RAM, so maybe that could be a good first test to see how much impact disabling those things has on battery (maybe turning off wifi would be a bigger  savings though)",
+          "author": {
+            "login": "MoralCode",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+            "url": "https://github.com/MoralCode"
+          },
+          "created_at": "2026-05-23T00:49:24Z",
+          "updated_at": "2026-05-23T00:49:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

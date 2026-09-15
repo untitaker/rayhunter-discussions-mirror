@@ -1,0 +1,198 @@
+{
+  "id": "D_kwDOKrJqmc4AhcJp",
+  "number": 547,
+  "title": "Running rayhunter on nethunter devices",
+  "body": "I was curious about running rayhunter on a rooted nethunter device (OnePlus 6 A6003) as I knew it provides a /dev/diag device. I already used it in combination with qcsuper. \r\nFor anyone interested in the procedure I write the steps to install rayhunter on the device: \r\n\r\n### 1. build the rayhunter-daemon\r\n\r\nthe musl build will be used to avoid dynamic linking which might not work depending on the nethunter version you are running.\r\n```sh \r\ncd daemon/web\r\nnpm install\r\nnpm run build\r\n\r\nrustup target add aarch64-unknown-linux-musl                                                                                                                                                                           cargo build --bin rayhunter-daemon --release --target aarch64-unknown-linux-musl\r\n```\r\n\r\n### 2. move the binary to the device \r\n\r\n```sh\r\nscp ./target/aarch64-unknown-linux-musl/release/rayhunter-daemon root@<IP>:/usr/local/bin/\r\n```\r\n\r\nmake shure the binary is executable on the device:\r\n```sh\r\nchmod +x /usr/local/bin/rayhunter-daemon\r\n```\r\n\r\n### 3. create a config file (which is needed for the rayhunter-daemon to run)\r\n \r\n create something like ./config.toml and move it to the device\r\n the webinterface will be available at the configured ip:port\r\n\r\n### 4. run the daemon\r\n now you can run the daemon using the terminal app of nethunter oder create a custom command in the nethunter app. (prefered)\r\n\r\n label: rayhunter\r\n\r\n command: /usr/local/bin/rayhunter-daemon /sdcard/rayhunter/config.toml\r\n\r\n send to: kali\r\n\r\n exec mode: background\r\n\r\n runonboot: as you prefer\r\n\r\n if you create a custom command you can also enshure the application is started on boot. \r\n \r\n\r\nI made the needed changes in my fork of the project but didnt add support for automatic deployment via the install routine. \r\nIf you are interested in adding it to the installer I will have a look after it. \r\nIm quite shure this will work for a lot of nethunter installations (with root privilage). So maybe a generic solution is possible. \r\n",
+  "author": {
+    "login": "mbrowars",
+    "avatar_url": "https://avatars.githubusercontent.com/u/74405716?v=4",
+    "url": "https://github.com/mbrowars"
+  },
+  "created_at": "2025-08-20T09:04:55Z",
+  "updated_at": "2026-02-20T13:53:02Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/547",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2KG2",
+      "body": "I see a few different things that could be upstreamed:\r\n\r\n* pre-built binaries for aarch64, I don't think we have those for rayhunter-daemon\r\n* Whatever modifications you needed to make to the project (to the daemon binary?) -- we can put these behind a `device` config flag as we already have for other devices.\r\n* Adding some instructions to the docs for this device\r\n* Adding an actual installer to the docs, though I guess it wouldn't actually root the device and just create some files on the device itself? I think the Pinephone installer already works like that.\r\n\r\nI don't know enough about nethunter but it could be nice to also figure out an installation routine that works on the OnePlus if nethunter is not installed?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-23T14:39:58Z",
+      "updated_at": "2025-08-23T14:40:22Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8jHz",
+      "body": "I'm attempting on Oneplus 7t. I'm getting \"failed to initialize /dev/diag\". Do I need to use qcsuper?",
+      "author": {
+        "login": "TapYinz",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6502269?u=1fc360dd6d46b2acfdc219adb96b6e6977242bde&v=4",
+        "url": "https://github.com/TapYinz"
+      },
+      "created_at": "2026-02-20T13:53:02Z",
+      "updated_at": "2026-02-20T13:53:02Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 2,
+      "users": [
+        "untitaker",
+        "LinuxNetworking2020"
+      ]
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

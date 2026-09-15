@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Ai1LM",
+  "number": 699,
+  "title": "Another variation of the uz801 device is the jz0145.",
+  "body": "The device is on the same platform as uz801 - msm8916.\nRoot is locked, no BusyBox, no initmifiservice.sh.\nRoot was enabled by reassembling the bootloader with root unlocking variables and adding the adb binary from uz801 instead of the native one. As a result, I got full  root access by default.\nI also had to upload busybox from uz801.\nI manually uploaded rayhunter to the device, everything starts up, web interface and logs show no errors. The only thing it doesn't see is the battery, which it persistently reports. All that's left is to finish automating the boot process.\n\n<img width=\"1273\" height=\"674\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/66b57fad-8c88-4f24-be38-8448448e82bf\" />\n<img width=\"1440\" height=\"2560\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ce6ea848-b422-417b-a03b-83c3aa9e15eb\" />\n<img width=\"1424\" height=\"2532\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/daa8221b-3ebe-47dd-8f92-7a6da6f11384\" />",
+  "author": {
+    "login": "pomymane",
+    "avatar_url": "https://avatars.githubusercontent.com/u/217900530?u=5e02d58336a78bd39bd9cba171e25ce34f2c3081&v=4",
+    "url": "https://github.com/pomymane"
+  },
+  "created_at": "2025-11-11T20:56:00Z",
+  "updated_at": "2025-11-11T21:26:57Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/699",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

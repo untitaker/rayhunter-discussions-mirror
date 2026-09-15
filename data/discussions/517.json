@@ -1,0 +1,1602 @@
+{
+  "id": "D_kwDOKrJqmc4AhHGu",
+  "number": 517,
+  "title": "Support for Verizon Jetpack MiFi 7730L?",
+  "body": "Good morning,\r\n\r\nThanks for building this -- very cool. Is it possible to get support for the Verizon Jetpack MiFi 7730L? It seems that it runs a Qualcomm MDM9640. I have one on hand I could test or get information from if you can point me in the right direction (not sure how/what information is necessary.)\r\n\r\nThank you!\r\n\r\nDevice details:\r\nhttps://ss7.vzw.com/is/content/VerizonWireless/Devices/Mifi/userguide/verizon-jetpack-mifi-7730l-ug.pdf\r\n<img width=\"790\" height=\"1050\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e7f149df-f8df-48cb-a937-0f6c4ac3c00f\" />\r\n",
+  "author": {
+    "login": "cvocvo",
+    "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+    "url": "https://github.com/cvocvo"
+  },
+  "created_at": "2025-08-04T14:09:47Z",
+  "updated_at": "2026-02-26T06:44:09Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/517",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1XfV",
+      "body": "I found some info here: https://github.com/EFForg/rayhunter/discussions/484 and some commentary that's insightful.\r\n\r\nI'll close this and re-open if I find anything useful / want to support it.",
+      "author": {
+        "login": "cvocvo",
+        "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+        "url": "https://github.com/cvocvo"
+      },
+      "created_at": "2025-08-04T14:11:50Z",
+      "updated_at": "2025-08-04T14:11:51Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1YFP",
+          "body": "If the install process can be easily automated and rayhunter can get useful information & there's enough storage space, we'd likely be quite happy to support the device. I have a 5530L and a 6620L that I haven't taken a look at yet that probably have a very similar unlocking method & userspace.",
+          "author": {
+            "login": "oopsbagel",
+            "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+            "url": "https://github.com/oopsbagel"
+          },
+          "created_at": "2025-08-04T18:23:02Z",
+          "updated_at": "2025-08-04T18:23:03Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "cvocvo"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1Xfm",
+      "body": "I think it can be kept open if you want. it's hard to tell whether this will work, usually we just poke around and see if there is a way to get adb shell on it somehow. places where to buy these devices cheap would be useful",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-04T14:14:10Z",
+      "updated_at": "2025-08-04T14:14:10Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1XhD",
+          "body": "Looks like they're fairly inexpensive nowadays; I bought one years ago for a trip and it's been kicking around on my desk: https://www.ebay.com/sch/i.html?_nkw=jetpack+7730L&_sacat=0&_from=R40&_sop=15\r\n$15 or so\r\n\r\nIt does support tethering. Is there a good writeup for some step-by-step for how I could check if it's possible to get an ADB shell? I can test/check via Linux or Windows.",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-04T14:23:08Z",
+          "updated_at": "2025-08-04T14:23:08Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1Xht",
+          "body": "not really, no two devices work the same. things that have worked in the past are:\r\n\r\n* looking up `<devicename> + telnet` -- particularly `4pda.to` is full of information for how to root various devices (though if this device only works in the US you might be out of luck there)\r\n* just trying to launch `adb shell` while it's plugged in and seeing what comes up\r\n* trying to talk to it via serial to run commands as root, worked for orbic: https://xdaforums.com/t/resetting-verizon-orbic-speed-rc400l-firmware-flash.4334899/\r\n* for tplink, shell injection in the UI work, i.e. setting the language to `$(busybox telnetd -l /bin/sh)`\r\n\r\nit's a creative process. you might want to read the existing code for the installer in rayhunter for inspiration.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-04T14:26:41Z",
+          "updated_at": "2025-08-04T14:26:42Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1X_q",
+          "body": "adb shell achieved -- I see what you mean about poking around. \r\n\r\n1. Get the latest mifilink.exe from here: https://www.temblast.com/mifilink.htm\r\n2. Boot and plug in the 7730L to your PC\r\n3. Run `.\\mifilink.exe diag` Note that I tried several different numeric options `.\\mifilink.exe 0/1/2/3/4/5/6` and I didn't get any that resulted in ADB access. I had to pull the battery to reset the device quite a few times.\r\n4. Device will reboot\r\n5. Look in device manager under the `Ports (COM & LPT)` and you'll see a new COM port.\r\n6. Connect with Putty to the new COM port, for example mine was COM4 with 115200 for speed.\r\n7. Login with credentials:\r\n```\r\nuser: mifi\r\npass: world2k\r\n```\r\n9. Run this command: `nohup sh -c \"export LD_LIBRARY_PATH=/opt/nvtl/lib; /opt/nvtl/bin/usb_cli stop && /opt/nvtl/bin/usb_cli start FTM\" &` and then the device will reboot. Note that I tried \"LTM\" like the 4pda.to link suggested and that didn't work.\r\n11. Unplug and re-plug the device after it boots\r\n12. adb devices should return the device:\r\n```\r\nList of devices attached\r\n0123456789ABCDEF    device\r\n````\r\n13. `adb shell` and you're in\r\n\r\nNotes: The root password seems to be unknown; once I had adb shell I just ran `su` then `passwd` to change the root password to something else.\r\n\r\nSome references:\r\n- https://xdaforums.com/t/verizon-mifi-8800l-hot-spot-mods-hacking.4323669/page-32\r\n- https://4pda.to/forum/index.php?showtopic=1027100&st=400#entry135725687\r\n\r\nEdit:\r\nBased on the contents of `/opt/nvtl/bin/mifi_rootpass.sh` the root password may be `dijD31` but since I reset mine, I cannot know for sure.\r\n```\r\n/ # nwnvitem -r -e NW_NV_LINUX_ROOT_PASSWORD_I\r\n$1$DP.DezWA$7Zp8FXvbf8.Vjx//dijD31/ #\r\n```",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-04T17:41:10Z",
+          "updated_at": "2025-08-04T17:50:14Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1YAN",
+          "body": "i'm impressed by this turnaround time but also, that list of steps just to get rootshell is long. I feel that it's not viable to maintain a cross-platform installer for it without trying to find a shortcut. some concerns:\r\n\r\n* `mifilink.exe` probably has to be reverse-engineered with ghidra. we can't bundle it in the installer even if we can somehow figure out how to run it on linux.\r\n* Step 6, would have to figure out how to do that programmatically",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-04T17:46:15Z",
+          "updated_at": "2025-08-04T17:46:17Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1YEU",
+          "body": "Yea I agree -- very manual. In lieu of main support, is there a way to test a bit further / try installing rayhunter on the device as a proof of concept?\r\n\r\nI saw some chatter of \"InseegoTool-0.7-jar-with-dependencies.jar\" being able to do what mifilink.exe does, so I pulled a copy of that and looked. (https://www.decompiler.com/jar/c93a4f4589e54e9bb33f7823d9d09961/InseegoTool-0.7-jar-with-dependencies.jar)\r\nFWIW I did look at mifilink.exe as well but I don't really understand it: https://dogbolt.org/?id=1bca6af9-fabb-47b4-a1f8-c11313cb71a7\r\n\r\nWhen the device initially shows up with `mifilink` it reports as:\r\n`Found 1410/b010 MiFi 8x00 (HID)`\r\n\r\nAfter modification it shows up as:\r\n`Found 1410/b021 MiFi 7730 (HID)`\r\n\r\nThis tracks with the java code from what I can tell; it's sending some command to the HID device with this hid4java library: https://github.com/gary-rowe/hid4java\r\n\r\nI think the `DEBUG_MODE` all 0's array is why the 8x00 gets dropped.\r\n```\r\n/*\r\n * Decompiled with CFR 0.153-SNAPSHOT (d6f6758-dirty).\r\n */\r\npackage su.operator555.inseegotool;\r\n\r\nimport org.hid4java.HidDevice;\r\nimport org.hid4java.HidManager;\r\nimport org.hid4java.HidServices;\r\nimport org.hid4java.HidServicesSpecification;\r\nimport su.operator555.inseegotool.Log;\r\n\r\npublic class HIDUtil {\r\n    private final Log log;\r\n    final byte[] DEBUG_MODE = new byte[]{0, 0, 0, 0};\r\n    final byte[] END_USER_MODE = new byte[]{2, 0, 0, 0};\r\n\r\n    public HIDUtil(Log log) {\r\n        this.log = log;\r\n    }\r\n\r\n    public void sendCommand(byte[] action) {\r\n        this.log.i(\"Tryng send command...\");\r\n        this.sendHIDCommand(action);\r\n    }\r\n\r\n    private void sendHIDCommand(byte[] ACTION) {\r\n        byte reportID = 0;\r\n        HidServicesSpecification hidServicesSpecification = new HidServicesSpecification();\r\n        hidServicesSpecification.setAutoStart(false);\r\n        HidServices hidServices = HidManager.getHidServices(hidServicesSpecification);\r\n        hidServices.start();\r\n        this.log.i(\"Start search device...\");\r\n        int i = 0;\r\n        boolean commandExected = false;\r\n        for (HidDevice hidDevice : hidServices.getAttachedHidDevices()) {\r\n            this.log.i(\"[\" + ++i + \"] [0x\" + Integer.toHexString(hidDevice.getVendorId()) + \"]: \" + hidDevice.getManufacturer());\r\n            if (hidDevice.getVendorId() != 5136) continue;\r\n            this.log.i(\"[\" + i + \"]  DEVICE FOUND!!! Trying send command...\");\r\n            hidDevice.open();\r\n            byte[] action = ACTION;\r\n            this.log.i(\"Command write status (size): \" + hidDevice.write(action, action.length, reportID));\r\n            this.log.i(\"Message: \" + hidDevice.getLastErrorMessage());\r\n            this.log.i(\"Sended!!\");\r\n            commandExected = true;\r\n            hidDevice.close();\r\n            break;\r\n        }\r\n        if (!commandExected) {\r\n            this.log.i(\"Device not found...\\nDo you connect modem in charge mode?\");\r\n        }\r\n        hidServices.stop();\r\n    }\r\n}\r\n```",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-04T18:15:40Z",
+          "updated_at": "2025-08-04T18:15:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1a1x",
+          "body": "assuming the proof of concept succeeds and we see meaningful data in the pcap. it seems to me the main issue is how to make the installer simpler and easier to maintain.\r\n\r\nmaybe there is a shell injection vulnerability in the admin UI, similar to tplink? This would solve all problems. Now that you have root access you can find the binaries for the web interface and load them into ghidra.\r\n\r\nI also just ordered a device for myself to play around with it",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-05T09:52:49Z",
+          "updated_at": "2025-08-05T09:52:49Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "cvocvo"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1gOy",
+          "body": "In case you wanted to take a look with ghidra ahead of time, I pulled the `/opt/nvtl/webui` folder. It seems like most things are flowing through `webui.cgi` per all of the redirects in `/opt/nvtl/etc/webui/config.xml`.\r\n[webui.zip](https://github.com/user-attachments/files/21638738/webui.zip)\r\n",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-06T21:30:13Z",
+          "updated_at": "2025-08-06T21:30:14Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2Kl4",
+          "body": "hey i grabbed the mifilink.exe file and my microsoft defender freaked out, is the site compromised or is it just a false flag?",
+          "author": {
+            "login": "TheHonoredDrunkShoko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+            "url": "https://github.com/TheHonoredDrunkShoko"
+          },
+          "created_at": "2025-08-23T22:22:32Z",
+          "updated_at": "2025-08-23T22:22:32Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2KmP",
+          "body": "What's the signature that it detected, @TheHonoredDrunkShoko? Chinese manufacturer utilities often get picked up as malware like Wacatac because they're written in stuff like .NET and use an obfuscator (to avoid theft of trade secrets, I presume) - you guessed it, in this example the obfuscator is the same one used by Wacatac.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-23T22:30:43Z",
+          "updated_at": "2025-08-23T22:30:44Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2Kmt",
+          "body": "looks like you were right, it marked \"Wacatac.H!ml\" as a trojan, glad to know im in the clear to continue. im brand new to this so im not really sure what to look out for and what to ignore, i really appreciate you replying and teaching me!",
+          "author": {
+            "login": "TheHonoredDrunkShoko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+            "url": "https://github.com/TheHonoredDrunkShoko"
+          },
+          "created_at": "2025-08-23T22:38:02Z",
+          "updated_at": "2025-08-23T22:38:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1Yql",
+      "body": "Proof of concept works I think?/The web interface at least loads. I probably didn't do this the right way, but it does seem to be running. \r\nI manually executed the commands on the left to copy the files over and configure the services. For some reason they didn't automatically start after the reboot. I was able to run them however and it loads up the interface!\r\n\r\nInstall / manually started services:\r\n<img width=\"1492\" height=\"499\" alt=\"image\" src=\"https://github.com/user-attachments/assets/26b5d620-afb9-4ec7-a62c-6e68d8ec7ed2\" />\r\n\r\nLoads!\r\n(Sort of interestingly I'm not sure how to get the time set because it doesn't have an active SIM (hah!) so no upstream network connection.)\r\n<img width=\"420\" height=\"914\" alt=\"image\" src=\"https://github.com/user-attachments/assets/99d6f213-eac3-4b07-a0d0-ba3cd247b904\" />\r\n\r\nAttaching the pcap and qmdl files, but not sure there's anything useful in there. Not sure how to actually test if it works.\r\n[16849.zip](https://github.com/user-attachments/files/21585274/16849.zip)",
+      "author": {
+        "login": "cvocvo",
+        "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+        "url": "https://github.com/cvocvo"
+      },
+      "created_at": "2025-08-04T22:07:35Z",
+      "updated_at": "2025-08-04T22:07:35Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1a1k",
+          "body": "that pcap seems to be empty, maybe let it run for longer and with a different SIM? maybe even an active one.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-05T09:52:04Z",
+          "updated_at": "2025-08-05T09:52:04Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1cgE",
+          "body": "Active SIM returned some data! Not sure why the inactive SIM didn't return any data.\r\nActive SIM: \r\n- [5048.zip](https://github.com/user-attachments/files/21605404/5048.zip)\r\n- Has lots of data in the pcap\r\n\r\nInactive SIM (after the active SIM was used): \r\n- [1754419861.zip](https://github.com/user-attachments/files/21605480/1754419861.zip)\r\n- Notably it does have some data in the pcap now!\r\n\r\nYou can see in `rayhunter.log` the cutover when the new SIM came up:\r\n```\r\n[1970-01-01T01:24:12Z INFO  rayhunter::diag_device] retrieving diag logging capabilities...\r\n/ # cat /data/rayhunter/rayhunter.log\r\nR A Y H U N T E R 🐳\r\n[1970-01-01T01:24:12Z INFO  rayhunter_daemon] Using configuration for device: Orbic\r\n[1970-01-01T01:24:12Z INFO  rayhunter::diag_device] Diag device initialization succeeded after 0 retries\r\n[1970-01-01T01:24:12Z INFO  rayhunter::diag_device] retrieving diag logging capabilities...\r\n[1970-01-01T01:44:06Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[1970-01-01T01:44:06Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[1970-01-01T01:44:06Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[1970-01-01T01:44:06Z WARN  asn1_codecs::per::common::decode] Skipped decoding 4 Extensions.\r\n[1970-01-01T01:44:06Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:40:41Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[2025-08-05T18:40:41Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:40:41Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipping Extensions Decoding....\r\n[2025-08-05T18:41:26Z WARN  asn1_codecs::per::common::decode] Skipped decoding 1 Extensions.\r\n```\r\nI can't seem to figure out how to run AT commands or why the daemons don't start on boot. It captures data with an active SIM, and some data with an inactive SIM after the active one was used. I wonder if the issue was partially datetime related when the system didn't have updated time information.",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-05T18:55:35Z",
+          "updated_at": "2025-08-05T18:57:18Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1c2p",
+          "body": "I have an Orbic with a Verizon SIM card that isn't valid, i.e. it is denied attachment to Verizon's network with EPS cause 8 (EPS services and non-EPS services not allowed.) It came with the Orbic when I purchased it from eBay. As per the \"rules\" of the modem, it only attempts to authenticate/attach to the tower once and then never again after getting that message, until it is rebooted.\r\n\r\nDespite this, it is able to get the current time from the towers (probably through SIB8, field lte-rrc.systemTimeInfo - on average, one SIB8 message is sent every few minutes, so you wouldn't get it immediately.) Therefore I doubt it's an issue with the system clock being unset.\r\n\r\n",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-05T21:55:11Z",
+          "updated_at": "2025-08-05T21:55:11Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "cvocvo"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1gPz",
+          "body": "> I can't seem to figure out how to run AT commands\r\n\r\nIf you're still curious, try:\r\n```\r\nadb shell\r\nrootshell # if adb shell isn't root by default\r\necho -e \"AT+COMMAND\\r\\n\\r\\n\" > /dev/smd11\r\n```\r\n\r\nTo see output, run another adb shell in another terminal window and run `cat /dev/smd11` in there.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-06T21:41:16Z",
+          "updated_at": "2025-08-06T21:42:31Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1gQi",
+          "body": "Interesting; seems to be some kind of issue with rootshell. But the AT commands work!\r\n<img width=\"1329\" height=\"551\" alt=\"image\" src=\"https://github.com/user-attachments/assets/10dcd8ef-e8f8-486e-90e7-66c97ff645f3\" />\r\n\r\n\r\n",
+          "author": {
+            "login": "cvocvo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/355711?v=4",
+            "url": "https://github.com/cvocvo"
+          },
+          "created_at": "2025-08-06T21:48:06Z",
+          "updated_at": "2025-08-06T21:48:47Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1gRA",
+          "body": "since you apparently can su from adb shell (according to an earlier comment of yours) I don't think you need the rootshell. that's a binary that's pretty much specific to orbic imo",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-06T21:50:38Z",
+          "updated_at": "2025-08-06T21:50:39Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1gW1",
+          "body": "This is the point where I admit I first thought this was about the Orbic, then I retroactively edited my comments to ensure Orbic-specific stuff is labelled optional, and crossed my fingers hoping it works on other similar devices... 😂😂😂\r\n\r\nBut, yes, this is the way I was doing AT commands on the Orbic, so it will work there too.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-06T22:33:32Z",
+          "updated_at": "2025-08-06T22:33:32Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8xYx",
+          "body": "'' The Jetpack Administrator has turned off access to the factory Reset feature. the physical reset button is also turned off. ''\r\n\r\nI need help. I can't enter my modem password in the interface, and I can't even reset it. I've tried everything, nothing works.\r\n\r\n",
+          "author": {
+            "login": "tesatt282-stack",
+            "avatar_url": "https://avatars.githubusercontent.com/u/257515374?v=4",
+            "url": "https://github.com/tesatt282-stack"
+          },
+          "created_at": "2026-02-26T06:44:09Z",
+          "updated_at": "2026-02-26T06:44:09Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 2,
+          "users": [
+            "untitaker",
+            "tesatt282-stack"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A7kpb",
+      "body": "'' The Jetpack Administrator has turned off access to the factory Reset feature. the physical reset button is also turned off. ''\r\n\r\nI need help. I can't enter my modem password in the interface, and I can't even reset it. I've tried everything, nothing works.",
+      "author": {
+        "login": "tesatt282-stack",
+        "avatar_url": "https://avatars.githubusercontent.com/u/257515374?v=4",
+        "url": "https://github.com/tesatt282-stack"
+      },
+      "created_at": "2026-01-27T11:22:49Z",
+      "updated_at": "2026-01-27T11:22:49Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A765r",
+      "body": "Any update on this? I have a Mifi6620L that I'd like to use with Rayhunter.",
+      "author": {
+        "login": "ChronicNewb",
+        "avatar_url": "https://avatars.githubusercontent.com/u/171839755?u=7a0657aade1753046eb00e3a7ba936567094f50a&v=4",
+        "url": "https://github.com/ChronicNewb"
+      },
+      "created_at": "2026-02-05T15:37:27Z",
+      "updated_at": "2026-02-05T15:37:27Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A766L",
+          "body": "that's a different model i think. we don't have plans to support new devices generally, it happens when there's a large demand for it. instead of asking if there's updates please just upvote the post.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-05T15:40:16Z",
+          "updated_at": "2026-02-05T15:40:45Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8wwf",
+      "body": "Any luck with this? I have a 7730 and would love to give it new life.",
+      "author": {
+        "login": "IggyTheWolf",
+        "avatar_url": "https://avatars.githubusercontent.com/u/71224368?v=4",
+        "url": "https://github.com/IggyTheWolf"
+      },
+      "created_at": "2026-02-25T23:54:34Z",
+      "updated_at": "2026-02-25T23:54:34Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "REOPENED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

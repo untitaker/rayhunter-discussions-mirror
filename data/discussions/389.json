@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AgOAP",
+  "number": 389,
+  "title": "Rebranded Orbic rc400l Kajeet v400",
+  "body": "I have not tested it yet but, the kajeet v400 seems to be exactly the same as the RC400L and would likely work with rayhunter. ",
+  "author": {
+    "login": "bruceschaff",
+    "avatar_url": "https://avatars.githubusercontent.com/u/56944258?v=4",
+    "url": "https://github.com/bruceschaff"
+  },
+  "created_at": "2025-06-12T12:35:56Z",
+  "updated_at": "2025-06-26T17:54:07Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/389",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AzS1A",
+      "body": "yes @cooperq has tried this device and it works, but i think it goes by Kajeet RC400L on ebay",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-06-12T13:06:34Z",
+      "updated_at": "2025-06-12T13:06:35Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

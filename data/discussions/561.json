@@ -1,0 +1,59 @@
+{
+  "id": "D_kwDOKrJqmc4AhiOP",
+  "number": 561,
+  "title": "Rayhunter GUI not decoding Cell ID properly (vs Wireshark)",
+  "body": "I tried out the Test Heuristic and walked around so the device would pick up new cells (and SIB1 messages). It gets the PMLN (MCC/MNC) right in the alert, but the CID is wrong. If I export the PCAP and look in Wireshark (which is off by 1 packet) - I eventually find the right SIB message and the Cell Identifier (I'm using CellMapper.net and the iOS engineering mode to validate the CID in my area).",
+  "author": {
+    "login": "nomoclutch",
+    "avatar_url": "https://avatars.githubusercontent.com/u/144746172?v=4",
+    "url": "https://github.com/nomoclutch"
+  },
+  "created_at": "2025-08-24T15:55:56Z",
+  "updated_at": "2025-08-25T17:58:13Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/561",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2N9x",
+      "body": "this discussion got converted into a bugreport, but somehow github doesn't think it's necessary to link that from the discussion: https://github.com/EFForg/rayhunter/issues/562",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-25T17:14:38Z",
+      "updated_at": "2025-08-25T17:14:39Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2OC3",
+      "body": "LOL … maybe it’s the way I entered the comment? Wish I could be even more\r\nhelp but still learning … very cool project 👍🏽\r\n\r\nOn Mon, Aug 25, 2025 at 1:47 PM Cooper Quintin ***@***.***>\r\nwrote:\r\n\r\n> oh thanks for noticing! And thanks github for sucking.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/561#discussioncomment-14213216>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BCQKNPEOM25L3VGGP4H4LLL3PND27AVCNFSM6AAAAACEVXNNP6VHI2DSMVQWIX3LMV43URDJONRXK43TNFXW4Q3PNVWWK3TUHMYTIMRRGMZDCNQ>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "author": {
+        "login": "nomoclutch",
+        "avatar_url": "https://avatars.githubusercontent.com/u/144746172?v=4",
+        "url": "https://github.com/nomoclutch"
+      },
+      "created_at": "2025-08-25T17:58:13Z",
+      "updated_at": "2025-08-25T17:58:14Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}
