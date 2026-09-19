@@ -1,0 +1,188 @@
+{
+  "id": "D_kwDOKrJqmc4AjLDp",
+  "number": 725,
+  "title": "Simplest way to change the demo mode gif?",
+  "body": "Does anyone have an idea what is the easiest way to change the demo mode gif? I found the images file in the github but I'm not sure what I can change in the install script to make it push another gif to the device or if thats silly and maybe there is a simpler solution. thanks!",
+  "author": {
+    "login": "straythoughts",
+    "avatar_url": "https://avatars.githubusercontent.com/u/68792689?v=4",
+    "url": "https://github.com/straythoughts"
+  },
+  "created_at": "2025-12-07T17:51:33Z",
+  "updated_at": "2025-12-08T18:24:20Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/725",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A5_Ir",
+      "body": "Update: Okay so I'm sure I could probably install from source and switch the gif but I love to do everything the hard way. As it stands I did a bunch of searching and dumped the filesystem and eventually concluded that the orca gif is probably in the rayhunter-daemon binary. I confirmed this using binwalker and I tried to patch the binary and replace it via netcat but all I did was disable rayhunter. Now I'm trying to figure out if I patched it wrong or the issue is something else.",
+      "author": {
+        "login": "straythoughts",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68792689?v=4",
+        "url": "https://github.com/straythoughts"
+      },
+      "created_at": "2025-12-08T18:20:42Z",
+      "updated_at": "2025-12-08T18:20:42Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A5_Jn",
+      "body": "yes it's embedded in the rayhunter-daemon binary, everything is. patching the GIF file can work but i suspect it's important that you don't change the binary size or more specifically the string length.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-12-08T18:24:20Z",
+      "updated_at": "2025-12-08T18:24:20Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

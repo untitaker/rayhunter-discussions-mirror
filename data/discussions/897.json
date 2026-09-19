@@ -1,0 +1,188 @@
+{
+  "id": "D_kwDOKrJqmc4AkMxg",
+  "number": 897,
+  "title": "Feature flag system",
+  "body": "With all the interest in rayhunter, I think it's going to get more important to have some way to gate features on a per-device basis. \r\n\r\nThat way if we have a dev create something and test it on 1 or 2 devices we could merge it in, but have it only enabled on those devices. A feature flag of sorts. That way if there's new devices which can't reliably support a feature we can also turn that off. \r\n\r\n## Here's my pitch\r\nThe approach I've been mulling over is to have a deps.toml which has the device types, features, and dependencies of those features. This enables us to understand two important things. The first is what functionality is dependent on a feature (even if that's a transitive dependency and not direct). Second it gives us a way to list the features in a consistent way. \r\n\r\nNew features are being developed that can't be tested on all 6 supported devices. deps.toml already tracks which features belong to which devices, but nothing enforces this — all device code compiles into every binary and there's no runtime validation. The goal is to make the deps.toml device mapping actionable at both build time and runtime, so features can be progressively enabled per device as they're tested.\r\n\r\nThree layers, implemented incrementally:\r\n1. deps generate:  generates a Rust capability map from deps.toml (source of truth)\r\n2. Cargo device features: #[cfg]-gate device-specific modules (display, battery)\r\n3. Runtime validation: daemon warns/disables features unsupported on the configured device",
+  "author": {
+    "login": "BeigeBox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+    "url": "https://github.com/BeigeBox"
+  },
+  "created_at": "2026-02-16T23:40:16Z",
+  "updated_at": "2026-02-17T19:13:50Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/897",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A8Yib",
+      "body": "For example here's a quick mockup of how this may work https://github.com/EFForg/rayhunter/pull/898",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-02-17T00:45:08Z",
+      "updated_at": "2026-02-17T00:45:08Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8bAj",
+      "body": "This is partially in response to the mockup:\r\n\r\nI think in general I agree with this but I don't think we should compile separate daemon files per device, runtime feature flagging seems enough to me for most cases. I think that if we have features that really do add a large amount of space, we could have `rayhunter-daemon`, `rayhunter-daemon-xl` or something like that, which would end up being much fewer compile-time featureflags.\r\n\r\nI also question if we have to keep this toml file and build all the visualization tooling around it. I think maintaining a feature support matrix as a markdown table in the docs is probably good enough",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-17T19:13:50Z",
+      "updated_at": "2026-02-17T19:13:50Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

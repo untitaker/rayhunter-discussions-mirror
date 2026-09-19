@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Ak4Cz",
+  "number": 956,
+  "title": "Network Assisting API for Rayhunter",
+  "body": "Dear community, I bumped on your project and I belive you are doing great lighthouse job for better mobile customer protection. I was wondering if following mechanism could be of help to make this more efficient. Let's assume the device has an active SIM card. In case the hunter is suspecting that Rouge BTS is trying to kidnap the device it could as the network for additional context of confirmation. Based on your experience what would be the type of information that the network could provide to assist? \r\n",
+  "author": {
+    "login": "tomekgerszberg",
+    "avatar_url": "https://avatars.githubusercontent.com/u/89075472?v=4",
+    "url": "https://github.com/tomekgerszberg"
+  },
+  "created_at": "2026-03-17T06:30:06Z",
+  "updated_at": "2026-03-17T06:30:06Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/956",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

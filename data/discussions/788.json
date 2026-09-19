@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Ajsbr",
+  "number": 788,
+  "title": "ZTE MU5001",
+  "body": "The ZTE MU5001 seems like an interesting device to support.\r\n\r\n* mainly for Europe (US band coverage is weak)\r\n* 150 GBP used, but there's a large used market so price is going to drop further I hope\r\n* **has 5G**\r\n* preexisting hacks: https://github.com/ZTETool/ZTE-MU5001-HACK (no root though)\r\n\r\nI have no idea if the qualcomm chipset it uses has diag though (it's not MDM* type device)\r\n\r\n",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-01-17T15:39:45Z",
+  "updated_at": "2026-01-17T15:39:45Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/788",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

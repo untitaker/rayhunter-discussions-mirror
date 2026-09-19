@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4ApXvF",
+  "number": 1158,
+  "title": "Feature Proposal — Local Wi-Fi Client Identity and Unexpected-Client Event Logging for Orbic RC400L",
+  "body": "I use Rayhunter on a Verizon Orbic RC400L for lawful personal cellular-security monitoring and technical evidence preservation.\r\n\r\nI would like to ask whether Rayhunter could add an optional local Wi-Fi client-monitoring capability for the Orbic RC400L access point.\r\n\r\nMy use case is identifying situations in which the Orbic reports more connected Wi-Fi clients than the device owner expects. The current Orbic display can show the number of connected devices, but the count alone does not identify an additional client or explain why it appeared.\r\n\r\nWould it be technically possible for Rayhunter to obtain information from the Orbic's Wi-Fi/AP client table and preserve Wi-Fi association events?\r\n\r\nPotentially useful information could include:\r\n\r\n- Client MAC address\r\n- Assigned IPv4/IPv6 address\r\n- DHCP hostname or client identifier, when available\r\n- Association and disassociation timestamps\r\n- First-seen and last-seen timestamps\r\n- RSSI or signal strength, if exposed by the RC400L\r\n- Current number of associated Wi-Fi clients\r\n- Optional locally maintained known-device list\r\n- Warning when an unrecognized client associates with the Orbic\r\n- Correlation with the active Rayhunter recording ID\r\n- Exportable JSON or CSV client-event history\r\n\r\nAn example condition would be:\r\n\r\nExpected known clients: 1\r\nObserved clients: 2\r\nUnknown client: detected\r\nFirst seen: [timestamp]\r\nMAC address: [available identifier]\r\nLocal IP: [available identifier]\r\nHostname: [if available]\r\nRayhunter recording ID: [recording ID]\r\n\r\nI understand that an unexpected Wi-Fi client would not, by itself, establish that another device had been cloned, mirrored, or remotely controlled. The purpose of this request is narrower: to preserve technically identifiable evidence whenever the Orbic reports an unexpected additional Wi-Fi client.\r\n\r\nI am using an Orbic RC400L and would be willing to provide non-sensitive device or firmware information and perform controlled testing if this capability is technically feasible.\r\n\r\nIs Wi-Fi station/client information available through the RC400L firmware or another interface accessible to Rayhunter, and would this feature fit within Rayhunter's current or planned Wi-Fi-related work?\r\n\r\n",
+  "author": {
+    "login": "PebblesFaith",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42658881?u=ee3b2ad0786f4a735b0e86a12145d4e00c1ce0d4&v=4",
+    "url": "https://github.com/PebblesFaith"
+  },
+  "created_at": "2026-09-19T01:53:05Z",
+  "updated_at": "2026-09-19T01:53:05Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1158",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
