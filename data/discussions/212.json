@@ -1,0 +1,73 @@
+{
+  "id": "D_kwDOKrJqmc4AfCRQ",
+  "number": 212,
+  "title": "Non US compatible device list?",
+  "body": "I have been reviewing the spec of the Orbic RC400L linked from the article.  Its specs for LTE bands show B13, B2, B4, B5, B6.  Are these limitations part of the Verizon software as the Qualcomm MDM9207 seems to support more LTE bands.\r\nIf not, should non US users look to acquire MDM9207 based devices already compatible in-region and test if rayhunter will load and function?",
+  "author": {
+    "login": "RType23",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14045123?v=4",
+    "url": "https://github.com/RType23"
+  },
+  "created_at": "2025-03-27T11:35:57Z",
+  "updated_at": "2025-07-28T10:12:10Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/212",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AwWaV",
+      "body": "I tried a RC400L in the EU. The Rayhunter firmware does not seem to unlock other bands, activated data-sims won't connect in any way. It does pick up some very basic info on cell sites, but not sure if it functions as intended as I don't come across too many IMSI-catchers in my daily routine. I'm putting some hope in the statement that this should work with other Qualcomm chipsets. I'm trying to get a TP-LINK M3750 (retail about 50,- Euro) to work, but I guess somebody more technical should take I look...\r\n\r\nhttps://static.tp-link.com/upload/product-overview/2023/202305/20230512/M7350(EU)%208.0%20Datasheet.pdf\r\n\r\nAllegedly it runs a MDM9225 (and naturally, as EU-version, able to scan all relevant EU bands)..?",
+      "author": {
+        "login": "MoSqer7",
+        "avatar_url": "https://avatars.githubusercontent.com/u/205593426?v=4",
+        "url": "https://github.com/MoSqer7"
+      },
+      "created_at": "2025-03-31T10:03:04Z",
+      "updated_at": "2025-03-31T10:03:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1Dp8",
+      "body": "https://efforg.github.io/rayhunter/supported-devices.html we now have multiple devices for multiple regions, please see that page for up to date information.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-28T10:11:06Z",
+      "updated_at": "2025-07-28T10:11:07Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A1Dp8",
+    "body": "https://efforg.github.io/rayhunter/supported-devices.html we now have multiple devices for multiple regions, please see that page for up to date information.",
+    "author": {
+      "login": "oopsbagel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+      "url": "https://github.com/oopsbagel"
+    },
+    "created_at": "2025-07-28T10:11:06Z",
+    "updated_at": "2025-07-28T10:11:07Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-07-28T10:12:10Z",
+  "state_reason": "RESOLVED"
+}

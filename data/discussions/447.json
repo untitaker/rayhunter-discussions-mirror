@@ -1,0 +1,134 @@
+{
+  "id": "D_kwDOKrJqmc4AgmS4",
+  "number": 447,
+  "title": "Yet Another Fork - Added more QMDL parsing, added REST API support for GPS data logging",
+  "body": "https://github.com/drinkingc0ffee/rayhunter-enhanced\r\n\r\nI added MCC/MNC Signal Metrics**: RSRP, RSRQ, SINR signal strength measurements to the QMDL parsing to help with using OpenCellID but the database is rubbish.  As the Orbic doesn't appear to support GPS I created a small Android app to capture GPS data and relay it via REST to the Orbic's web server via REST API.  (This requires whatever you are running it on is probably on the mobile hotspot).  Fairly simple and generic (https://github.com/drinkingc0ffee/GPS2REST-Android). \r\n\r\nThe rayhunter fork includes \r\n**GPS Integration**\r\n- **External GPS support** via REST API endpoints\r\n- **Mobile app compatibility** (GPS2REST-Android)\r\n- **Per-scan GPS files** with automatic timestamp correlation\r\n\r\nKey QMDL/Cellular Analysis Enhancements Added:\r\n** Modifications to LTE/4G serving cell, neighbor measurements, GSM/2G cell info, WCDMA/3G data, physical layer measurements\r\n**Added Cellular Parameter Extraction\r\n-  MCC/MNC (Mobile Country/Network Code) \r\n- Cell ID, Physical Cell ID, eNodeB ID\r\n- Location Area Code (LAC), Tracking Area Code (TAC)\r\n- Signal strength (RSRP, RSRQ, SINR)\r\n- Neighbor cell information\r\n- PLMN data (Public Land Mobile Network)\r\n\r\nhttps://github.com/drinkingc0ffee/GPS2REST-Android\r\nA fairly basic Android app that retrieves location data and sends the data to a REST endpoint. In the Orbic case http://192.168.1.1/api/v1/gps\r\n\r\nhttps://github.com/drinkingc0ffee/rayhunter-enhanced\r\nFork with added logging\r\n\r\n",
+  "author": {
+    "login": "drinkingc0ffee",
+    "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+    "url": "https://github.com/drinkingc0ffee"
+  },
+  "created_at": "2025-07-07T00:25:38Z",
+  "updated_at": "2025-10-20T18:27:39Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/447",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A0LXK",
+      "body": "The web interface supports downloading individual GPS logs for each session with the same timestamp as the qmdl and pcap files.",
+      "author": {
+        "login": "drinkingc0ffee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+        "url": "https://github.com/drinkingc0ffee"
+      },
+      "created_at": "2025-07-07T00:38:21Z",
+      "updated_at": "2025-07-07T00:38:22Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0LXf",
+      "body": "the proposed features vaguely make sense to me but the diff in that repo is entirely AI generated. that's not necessarily bad but requires extra scrutiny. I as a layman have a hard time verifying that the qmdl parsing is correct. also there are no changes at all to the web UI or the API, forgot to push?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-07T00:43:41Z",
+      "updated_at": "2025-07-07T00:43:42Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0LZJ",
+      "body": "That's odd.  You might not see the GPS files in the UI if there are no\r\ngenerated logs.  You can tell the version of the UI by looking for \"System\r\nInformation\" \"Rayhunter Version 0.4.1 - Enhanced\"  on the upper right hand\r\nside of the web UI.  Lots of AI was not intended.  I have been toying\r\naround with a few IDEs but I find that the models (Claide, GPT) can go on\r\ncompletely random tangents unrelated to the problem you are trying to\r\nsolve. More than once I found them trying to generate bogus test data on\r\ntheir own.  I checked the QMDL parsing manually.  I used scat (\r\nhttps://github.com/fgsect/scat) as a template.\r\n\r\nOn Sun, Jul 6, 2025 at 8:44 PM Markus Unterwaditzer <\r\n***@***.***> wrote:\r\n\r\n> the proposed features vaguely make sense to me but the diff in that repo\r\n> is entirely AI generated. that's not necessarily bad but requires extra\r\n> scrutiny. I as a layman have a hard time verifying that the qmdl parsing is\r\n> correct. also there are no changes at all to the web UI or the API, forgot\r\n> to push?\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/447#discussioncomment-13678047>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BQL6IJXOC5DGF66WFZGBYW33HG7FFAVCNFSM6AAAAACA42NAZOVHI2DSMVQWIX3LMV43URDJONRXK43TNFXW4Q3PNVWWK3TUHMYTGNRXHAYDINY>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "author": {
+        "login": "drinkingc0ffee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+        "url": "https://github.com/drinkingc0ffee"
+      },
+      "created_at": "2025-07-07T01:09:12Z",
+      "updated_at": "2025-07-07T01:09:12Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0LZU",
+      "body": "okay, I didn't run the code. when this post was published I only saw this commit and reviewed it: https://github.com/drinkingc0ffee/rayhunter-enhanced/commit/1871c840adbbf4deb41bccb65916d1e61aa021eb",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-07T01:11:42Z",
+      "updated_at": "2025-07-07T01:11:42Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0lCn",
+      "body": "I really like these ideas but I share untitakers concerns about AI generated code. I will have a look at this though. I'm not keen on having the mobile app be a part of this repo but I'm fine with it as a standalone repo, and if you get it in the app store I would definitely add it to the docs! ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-07-16T22:01:22Z",
+      "updated_at": "2025-07-16T22:01:22Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0lEo",
+      "body": "It would be really awesome if you could make a pull request with your changes so that we can review it and possibly merge some of them into main.",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-07-16T22:18:27Z",
+      "updated_at": "2025-07-16T22:18:28Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A0uZ_",
+      "body": "I shrunk up my edits to the codebase but you still might not like it.  I\r\nwouldn't recommend including the mobile app as part of the repo as well.  I\r\nmade it because I needed to get GPS data from somewhere. A single purpose\r\napp that gathers GPS and relays to REST fit the bill.\r\n\r\nThe only interface I added into rayhunter for GPS data is a REST API that\r\naccepts latitude and longitude parameters via GET or POST.  It is accessed\r\nat  http://192.168.1.1:8080/api/v1/gps/ and it feeds GPS data to the ndjson\r\nanalysis as well as creates its own logfiles with Orbic generated UNIX\r\ntimestamps and the GPS coordinates.\r\n\r\nAfter the first day of traveling around NYC with the Orbic I found 3 towers\r\nperforming 2G downgrades and one with a confirmed ISMI request .  The data\r\nis basically useless without knowing the locations.  Correlating the data\r\nwith OpenCellID was difficult as the app was not capturing MCC, MNC,\r\nLAC/TAC.  Yes the MCC is just going to be 310 for the US but OpenCellID\r\ndoesn't perform a lookup just on CellID alone. So I basically added parsing\r\nfor all of the information that scat (https://github.com/fgsect/scat) can\r\npull from QMDL files. I find that more information is always better when\r\ntrying to detect an attacker.  The assumption is that as long as you are\r\ncarrying this device around you should expect that others can track your\r\nmovements with both cellular and WiFi. I have considered adding a panic\r\nbutton feature to wipe the data if you are paranoid enough. I don't suppose\r\ntapping SOS on the single button would be very practicable.\r\n\r\nCheers,\r\n-Brandon\r\n\r\n\r\n\r\n\r\nOn Wed, Jul 16, 2025 at 6:01 PM Cooper Quintin ***@***.***>\r\nwrote:\r\n\r\n> I really like these ideas but I share untitakers concerns about AI\r\n> generated code. I will have a look at this though. I'm not keen on having\r\n> the mobile app be a part of this repo but I'm fine with it as a standalone\r\n> repo, and if you get it in the app store I would definitely add it to the\r\n> docs!\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/447#discussioncomment-13783207>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BQL6IJW4GBZ6WXVT32UHWZ33I3DUNAVCNFSM6AAAAACA42NAZOVHI2DSMVQWIX3LMV43URDJONRXK43TNFXW4Q3PNVWWK3TUHMYTGNZYGMZDANY>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "author": {
+        "login": "drinkingc0ffee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+        "url": "https://github.com/drinkingc0ffee"
+      },
+      "created_at": "2025-07-20T06:02:56Z",
+      "updated_at": "2025-07-20T06:02:56Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

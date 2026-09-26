@@ -1,0 +1,1076 @@
+{
+  "id": "D_kwDOKrJqmc4Ahf_c",
+  "number": 560,
+  "title": "would a MiFi Inseego M2100 be able to be modified?",
+  "body": "just recently was given one of these because verizon wouldn't buy it back from them, and i wanted to see about putting rayhunter on here, but im not really sure where to start and wanted some guidance, and maybe some steps on how to get it loaded on there?",
+  "author": {
+    "login": "TheHonoredDrunkShoko",
+    "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+    "url": "https://github.com/TheHonoredDrunkShoko"
+  },
+  "created_at": "2025-08-22T23:48:51Z",
+  "updated_at": "2026-09-24T20:19:09Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/560",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2JZj",
+      "body": "I'd read this thread and linked discussions to get an idea \r\n\r\nhttps://github.com/EFForg/rayhunter/discussions/484\r\n\r\nhttps://github.com/EFForg/rayhunter/discussions/517",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-22T23:51:42Z",
+      "updated_at": "2025-08-22T23:52:31Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 1,
+          "users": [
+            "TheHonoredDrunkShoko"
+          ]
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3c8Z",
+      "body": "so ive done some looking for a long while and it doesn't seem like there's a way to get adb access to the device, for other devices like the MiFi 8800L the mifilink program works, but the M2100 uses 130 byte (possibly) encrypted reports to get it to switch to a COM port...so im not really sure where to go since im not very educated on this stuff.\r\n\r\nif anyone has any ideas on what to do to crack into this thing let me know, just be patient with me please!",
+      "author": {
+        "login": "TheHonoredDrunkShoko",
+        "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+        "url": "https://github.com/TheHonoredDrunkShoko"
+      },
+      "created_at": "2025-09-28T23:45:22Z",
+      "updated_at": "2025-09-28T23:47:08Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3kEG",
+      "body": "See #615, I have succeeded in rooting a similar device, the problem is that it has the new version of the diag protocol which we will have to work on support for. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-10-01T17:08:25Z",
+      "updated_at": "2025-10-01T17:08:27Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A3naj",
+          "body": "how did you send 130 '0's to it? im still very new to all of this, i tried mifilink and i tried using bushound and i was never able to get a COM port to appear",
+          "author": {
+            "login": "TheHonoredDrunkShoko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+            "url": "https://github.com/TheHonoredDrunkShoko"
+          },
+          "created_at": "2025-10-03T01:24:22Z",
+          "updated_at": "2025-10-03T01:26:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A3pBk",
+          "body": "Here's the code I used, with the device on and in charge mode. Your device may have a different vid &| pid \r\n``` rust\r\nuse rusb::{Context, DeviceHandle, GlobalContext};\r\nuse std::time::Duration;\r\n\r\nfn main() -> Result<(), Box<dyn std::error::Error>> {\r\n    let _ctx = Context::new()?;\r\n\r\n    let vid = 0x1410;\r\n    let pid = 0xb010;\r\n\r\n    let handle: DeviceHandle<GlobalContext> =\r\n        rusb::open_device_with_vid_pid(vid, pid).ok_or(\"Device 1410:b010 not found\")?;\r\n\r\n    if handle.kernel_driver_active(0).unwrap_or(false) {\r\n        match handle.detach_kernel_driver(0) {\r\n            Ok(_) => {}\r\n            Err(e) => eprintln!(\"Warning: failed to detach kernel driver: {}\", e),\r\n        }\r\n    }\r\n\r\n    handle.claim_interface(0)?;\r\n\r\n    // Prepare 130 zero bytes\r\n    let data = vec![0u8; 130];\r\n\r\n    let timeout = Duration::from_secs(2);\r\n    let transferred = handle.write_bulk(0x01, &data, timeout)?;\r\n\r\n    println!(\"Sent {} bytes to endpoint 0x01\", transferred);\r\n\r\n    let _ = handle.release_interface(0);\r\n\r\n    Ok(())\r\n}\r\n```",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-10-03T16:06:23Z",
+          "updated_at": "2025-10-03T16:06:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A3pde",
+          "body": "when i run your code it sends them, but all the hotspot does is restart and no new ports open, and nothing appears when i run 'adb devices', im not sure what to do from here.",
+          "author": {
+            "login": "TheHonoredDrunkShoko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228126429?u=59e7f1cc5261d567e4a44c38450d2f0b8a677080&v=4",
+            "url": "https://github.com/TheHonoredDrunkShoko"
+          },
+          "created_at": "2025-10-03T20:27:26Z",
+          "updated_at": "2025-10-03T20:27:27Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A3uSh",
+          "body": "its important that the device be in charge mode not modem mode, but if its not in adb devices even with that I'm not sure what to advise you either since I don't have the 2100. Try running the script a couple more times?",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-10-06T17:37:20Z",
+          "updated_at": "2025-10-06T17:37:21Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BG0Zh",
+      "body": "Hey, y'all.  Thought I'd make a post here as I've been able to successfully flash an M2100 with firmware that has ADB available with Claude code's help.  To be clear, **this device has never been observed working normally on a network**  but it *seems* to be working from what i can tell.\r\n\r\n**Update:**  Here's the fork of the changes I've done so far:  [https://github.com/mallorybowes/rayhunter/tree/m2100-support](https://github.com/mallorybowes/rayhunter/tree/m2100-support)\r\n- Firmware thread:  https://xdaforums.com/t/inseego-8000-88000l-and-m2000-m2100-custom-firmwares.4776756/\r\n- File:    Unlock_only_20260126_M2000_4G_PUBLIC_Mod_OPERATOR_555.zip  sha256:  3021ffe1ee08aa6d8f615ae89375353c0587312d0d3fdf451fe924c15d26fdfe\r\n- Enables:  ADB + service ports by default, SIM unlock, debrand\r\n\r\nI did this on a Linux box even tho the firmware is distributed with a windows bat file.  (it's just adb fastboot so you just need those tools installed to flash the device.)  Be aware: I only flashed SYSTEM and left the Verizon modem partition untouched.  I did this to try and not brick it immediately and it seemed to work.  But not flashing the modem may be causing some of the rayhunter issues I'm seeing.\r\n\r\nOther things to be aware of:\r\n\r\n- the package text says M2000 everywhere.  It doesn't say M2100 is supported other than the author's assertion in the announce post.\r\n- make sure to not dl the Unlock_and_EMEA_args variant as you will lose connectivity if you're not in Europe\r\n- I am no longer on Verizon and my old sim didn't work.  I installed my current provider's data sim (google fi) and it seems to capture traffic but it doesn't register on the cell provider's network.  (T-Mobile in this case)\r\n- the prebuilt rayhunter binary ran unmodified initially and I was kinda excited that it was going to work.  But turned out it had to be patched to get rayhunter to parse RRC packets.  Forced scans seem to be successful.\r\n\r\nBroken things:\r\n\r\n- Modem never registers with state No Service / reg state: 0.  Reject cause code:  0  But a forced scan does show 4 LTE operators in my area so something seems to be working there.\r\n- Start timing seems to be critical.  Rayhunter needs to start within seconds of the boot otherwise, something else just hangs it.  I got around this by adding an /etc/rc3.d/S74rayhunter3 init script which seems to bypass this hang.\r\n- there's a mismatch in the Qualcomm struct.  Rayhunter seems to send an older 12 byte request but the kernel is expecting 24.  This 24 byte layout isn't an inseego thing, it's the standard struct in the msm-4.14 source.  Since rayhunter carries the pre-4.14 struct, it should fail identically on any device of that kernel generation.  We created a patch to be able to open the diag correctly.\r\n- the screen doesn't render anything other than the standard vendor interface.  The web UI does work over adb forward port tunnel (adb forward tcp:8080 tcp:8080, then http://localhost:8080) as well as I had Claude code up an led flash / buzzer alert.  (flashes SOS on an alert as well as sends alerts with modified brightness / frequency tones)\r\n- I would definitely not call this a fully functional build so I'm not recommending anyone go out and buy one of these m2100s.  I'm going to continue to bang on this one and see if I can get some more things working but there's def some things in here that are above my pay grade.\r\n\r\nI had Claude write up a findings / summary file but I don't want to include it here.  At least from my interpretation of EFF's AI rules, since I'm a security engineer and not a programmer, I'll just make the offer that I'm happy to provide all information I have for what I've done with this device so far. \r\n",
+      "author": {
+        "login": "mallorybowes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+        "url": "https://github.com/mallorybowes"
+      },
+      "created_at": "2026-09-23T09:25:21Z",
+      "updated_at": "2026-09-23T18:33:00Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BG0aI",
+          "body": "Apprechiate the writeup! We're fine if you link your AI-forks here. We've just seen in the past that we're expected to triage/read walls of text with little new information, generated by AI, existing threads are derailed with walls of text, or we're asked to review (and maintain) AI-generated code (i.e. more walls of text), hence these rules. If that expectation doesn't exist then it's all good.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-09-23T09:29:40Z",
+          "updated_at": "2026-09-23T09:30:06Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "mallorybowes"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BG0dH",
+          "body": "Awesome!  I'll carry all my work in the fork and not clog the thread with files.  Of the things in the fork tho, the 24-byte struct is the only not-specific-to-this-cursed-device asset.  Maybe it has some value elsewhere?  Anyway, I'll keep the comms local to this thread so others can follow along.  I'll post the links to the fork tomorrow morning.  Thx!",
+          "author": {
+            "login": "mallorybowes",
+            "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+            "url": "https://github.com/mallorybowes"
+          },
+          "created_at": "2026-09-23T09:48:47Z",
+          "updated_at": "2026-09-23T09:48:47Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BG0eA",
+          "body": "> Of the things in the fork tho, the 24-byte struct is the only not-specific-to-this-cursed-device asset\r\n\r\nyes it seems like a general bug. i'm not entirely sure how we can fix it though without breaking other devices that expect 12 bytes. it seems to me we would have to expose an entirely new config option, or a new entry in the Device enum, for a device we don't officially support. if you see an alternative (like trial-and-error at runtime) then feel free to make a patch",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-09-23T09:55:10Z",
+          "updated_at": "2026-09-23T09:55:42Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "mallorybowes"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BG1-Y",
+          "body": "Here's the link to the fork:  [Diffs](https://github.com/EFForg/rayhunter/compare/main...mallorybowes:rayhunter:m2100-support)  I also added it to the parent.  thx for the guidance, @untitaker  I've already found some useful things again this morning so I'm hopeful we can get this device over the hump...",
+          "author": {
+            "login": "mallorybowes",
+            "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+            "url": "https://github.com/mallorybowes"
+          },
+          "created_at": "2026-09-23T18:37:15Z",
+          "updated_at": "2026-09-23T20:04:49Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BG5XK",
+          "body": "Thanks this is super interesting work! Does the m2100 use the USB gadget version of diag or the /dev/diag version? I'm gussing the latter since you said rayhunter works out of the box. Also what bands does m2100 support? Is it US only? ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2026-09-24T17:32:21Z",
+          "updated_at": "2026-09-24T17:32:21Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BG5me",
+          "body": "Thx!  It's been fun tearing apart this old mifi device and seeing if it can be useful again.  On your questions:\r\n\r\n- It's using the straight Qualcomm /dev/diag with some minor changes to account for the 24-byte struct and an 8-byte header.  The 24-byte diag_logging_mode_param_t is mainline msm-4.14 and not a vendor quirk, so it should fail the same way on any 4.14-era device.  (the [patches](https://github.com/EFForg/rayhunter/compare/main...mallorybowes:rayhunter:m2100-support) have the full details.)  I think there might be a way to support 12-byte devices by initially sending 24-byte requests and if they fail, drop to 12-byte and save that value.  That would \"auto-config\" the /dev/diag device and wouldn't interfere with existing 12-byte devices.  I haven't tested this since I don't have another device, but it might work for an upstream commit.\r\n- It's not US-only.  European core is covered but the lack of B8 will affect rural Europe and parts of Asia.  Doesn't look like there will be China / India / Japan support as there are no TDD bands.  I've only tested it in the US.  Bands supported: LTE: B1, B2, B3, B4, B5, B7, B12, B13, B14, B17, B20, B28, B46, B48, B66\r\n- *Big caveat rn:*  5G isn't coming up. The image I flashed is built on a 4G base, but that may not be the whole story.   mode_pref still has the 5GNR bit set, and the NR bands it reports don't include n41 or n71, which are T-Mobile's 5G bands. It's a Verizon device, so it has Verizon's NR profile.  (n2, n5, n48, n66, n78, n258, n260, n261) Either could explain it and I haven't isolated which yet.",
+          "author": {
+            "login": "mallorybowes",
+            "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+            "url": "https://github.com/mallorybowes"
+          },
+          "created_at": "2026-09-24T19:09:10Z",
+          "updated_at": "2026-09-24T19:13:00Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "untitaker"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BG3hW",
+      "body": "So, quick update on the progress today.  Overall, I'm pretty happy...\r\n\r\n> Before I start, @untitaker , if i could ask you about a few things:\r\n> \r\n> - 0xb114 - Assertion failed:  ServingCellTiming.version == 1 is 69% of all frames with this newer struct version.  Not sure if this is normal but RRC isn't blocked so detection works.\r\n> - 0xb063 - second assertion failure, 97 frames and I haven't identified it yet.\r\n> - Also seen UnsupportedGsmtapType(LteMacFramed) 11x and RRC UPER decode errors 4x.  Not sure if this is normal.  If you've seen these frames before, lmk and we might patch to filter them if it turns out to be something wonky with this hardware.  You can check out now as the rest of the update is for the op.  ;-)\r\n\r\nI'm happy to report that the device is 98% functional.  It's registering on the network, seeing traffic, and parsing successfully.  It's currently running on the T-Mobile network (Mint, reg state: 1, LTE).  I did some imei checks with various providers and the only cell provider that would allow the device is T-Mobile-based MVNOs / vendors.  Verizon, ATT would block the access and won't allow it to register.  (I'll update the fork notes with an interesting test to rule out my problematic google fi sim vs hardware rejections that took a day to figure out... :-/ )\r\n\r\nLive capture works (2036 log frames with the bulk being 0xb114 failure msgs above)  Not sure if this is an application-level or related to the hardware yet but will keep exploring.  (98% of RRC OTAs were parsed tho.  Only 4 of 178 seen weren't parsed.)  Zero analyzer hits yet but there's no reason at this point to assume it doesn't work.  (it was working with test frames last night w/o a network so it should be working with one.)\r\n\r\nUnfortunately, I haven't found a way to make the screen usable yet.  Tried 8 different ways to throw data at the screen and it just won't update.  Got a few more things to try and will probably disassemble it tomorrow to look through the hardware to see if there's something I'm missing.  In the meantime, the webui is available through the device's wifi network, over an adb port tunnel through usb, and the led and buzzer have been modified to provide status / alerts.  (the led no longer sends an sos signal on alert but just longer pulses in between the rayhunter heartbeat flash.  if you see the led flashing at full strength about every 3 secs, that means rayhunter is running and parsing.  No flashing, something went wrong so reboot.  Buzzer is now off by default and can be enabled / disabled by double-tapping the power button.)  Tbh, i kinda like the stealthy approach on this device as the screen stays stock / completely usable as there are no tip-offs that it's running something other than the vendor software.  If i can find a way to get rayhunter info to the screen, i may try to see if i can make that a bootable option.\r\n\r\nFinally, speaking of boots, turns out we solved the \"race\" condition from last night where rayhunter couldn't launch after the vendor UI came up.  The device now boots to rc7 (battery charge status) where only 2 other services were launching.  Rayhunter launches in rc7 then switches to rc3 for the vendor UI.  It boots 100% clean now.\r\n\r\nSo, op, if you're still reading this, I won't say this is ready for your device yet but my ultimate deliverable will try and be a scriptable way to install / config these m2100 devices.  Depending on how things go, this will probably always be a unofficial build but I'm pretty sure we can get you something that will work soon.\r\n\r\n",
+      "author": {
+        "login": "mallorybowes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+        "url": "https://github.com/mallorybowes"
+      },
+      "created_at": "2026-09-24T07:37:26Z",
+      "updated_at": "2026-09-24T07:37:26Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BG5YD",
+      "body": "> 0xb114 - Assertion failed: ServingCellTiming.version == 1 is 69% of all frames with this newer struct version. Not sure if this is normal but RRC isn't blocked so detection works. \r\n\r\npresumably the timing advance is a newer version, You could probably just change this assertion but the newer versions of timing advance might fail for fun new reasons. This is probably safe to ignore for now. \r\n\r\n> Also seen UnsupportedGsmtapType(LteMacFramed) 11x and RRC UPER decode errors 4x. Not sure if this is normal. If you've seen these frames before, lmk and we might patch to filter them if it turns out to be something wonky with this hardware. You can check out now as the rest of the update is for the op. ;-)\r\nThis is normal! \r\n\r\nCool work! I'm surprised writing to the framebuffer doesn't work but I bet its because whatever is drawing the screen UI is hogging the buffer. I bet if you killed that process rayhunter ui would work, but I agree the stock UI is probably better anyway. It would be cool to use the buzzer though! \r\n",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-09-24T17:36:37Z",
+      "updated_at": "2026-09-24T17:36:37Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BG5w_",
+          "body": "Haha, yeah, I threw everything I could think of at that fb and still haven't cracked it.  I tried killing the vendor UI right off the bat where I could get the panel to freeze, but the writes to the fb would never show.  If I read back the mmap of the fb, I can see the vendor ui, so I'm pretty sure I'm writing to the right device, but something else is blocking it.  I had Claude loop through ioctls and four came back accepted but didn't do anything (their words):  \r\n\r\n> FBIOPUT_VSCREENINFO with FB_ACTIVATE_FORCE, MSMFB_DISPLAY_COMMIT, FBIORECT_DISPLAY, FBIO_WAITFORVSYNC.  FBIOPAN_DISPLAY gives EINVAL (yres_virtual == yres, no back buffer) and FBIOBLANK gives EINVAL both directions.  strace -f on the vendor UI shows it issues zero ioctls.  \r\n\r\nAlso looked through the FCC teardown of the m2kb (sibling device) and had Claude identify the bits.  They concluded there's no hardware getting in the way on that device so I'm still at a loss, for the most part.  Will keep trying tho.\r\n\r\nAnd yeah, the buzzer is cool and you can send frequencies to play what you want.  It's a passive PWM transducer so it can play monophonic tunes.  The nokia tune sounded fine when I sent it.  Initially, for testing, I was using sos but that's not a good alert signal if you're trying to stay stealth.  So the buzzer is now default off but a double-tap on the power button enables / disables.  (I noticed that rayhunter has a double-tap function as well so will prolly change that eventually.)  Just ran a test to find the loudest frequencies (no volume control) and have updated the patch accordingly.\r\n\r\nAlso, something to be aware of on those 0xb114 assertions:   run.log hit 334 MB exporting a 12mb capture to pcap.  (UBIFS compression is the only reason it fit on a 236 MB fs) The recorder looked like it died on a failed write while the web UI kept serving normally, so nothing indicated recording had stopped.  I confirmed the error logs the entire payload so I might patch to try and keep the logs from doing that again on this device.  Might also file as an issue if it turns out it's not a device-specific thing.  Thx for the info!",
+          "author": {
+            "login": "mallorybowes",
+            "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+            "url": "https://github.com/mallorybowes"
+          },
+          "created_at": "2026-09-24T20:19:09Z",
+          "updated_at": "2026-09-24T20:19:09Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

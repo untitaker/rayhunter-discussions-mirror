@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AkCKg",
+  "number": 871,
+  "title": "Pinephone mainboard v1.1 and EG25-G",
+  "body": "Found a `Pine64 PINEPHONE : BRAVEHEART EDITION Main Board` for $126 USD.\r\n<img width=\"1217\" height=\"864\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fd81ce56-3d3e-453d-b809-cfb3c38a182f\" />\r\n\r\nLooking at the schematic, it exposes antenna, power and USB, and I assume a UART.\r\nAre these enough to get rayhunter going on the main board itself?\r\n\r\nWould any [Quectel EG25-G LTE module](https://www.quectel.com/product/lte-eg25-g/) connected to a microcontroller that exposes a UART also work?",
+  "author": {
+    "login": "Strykar",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2946372?u=bc9517674ee806c9671480c02a69023d53dc27f4&v=4",
+    "url": "https://github.com/Strykar"
+  },
+  "created_at": "2026-02-08T15:39:14Z",
+  "updated_at": "2026-02-09T17:07:38Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/871",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A8EV5",
+      "body": "Interesting find! The PinePhone Braveheart mainboard v1.1 should work for rayhunter, since the EG25-G modem is exactly what rayhunter already targets on the PinePhone. Here's the breakdown:\n\n## What Rayhunter Needs\n\nRayhunter communicates with the Quectel EG25-G modem via **QMI (Qualcomm MSM Interface)** over USB. The key requirements are:\n\n1. **USB connection to the EG25-G** — The modem exposes several USB endpoints (QMI, AT command, NMEA, etc.)\n2. **Linux host** with `libqmi` or direct QMI access\n3. **Power supply** — The EG25-G needs 3.3-4.3V at up to 2A peak during transmission\n\n## PinePhone Mainboard Approach\n\nOn the PinePhone mainboard v1.1, the EG25-G is connected via:\n- **USB 2.0** — This is the primary data interface (QMI + AT commands)\n- **UART** — Used for AT commands and firmware updates (`/dev/ttyUSB2` typically)\n- **GPIO** — Power on/off, reset, airplane mode, status\n\nIf you're running the mainboard standalone (without the LCD/battery/etc.), you'd need:\n\n```\nPower supply (5V via USB-C or battery pads) → Mainboard → EG25-G (internal)\n                                                ↓\n                                          USB host (your computer)\n```\n\nThe simplest approach:\n1. Power the mainboard via USB-C or the battery connector (3.7-4.2V Li-Po pads)\n2. The A64 SoC boots Linux (Mobian, postmarketOS, etc.)\n3. Rayhunter runs on the A64 and talks to the EG25-G over internal USB\n4. Access rayhunter's web UI via USB networking or WiFi\n\n## Standalone EG25-G Module\n\nYes, any Quectel EG25-G module would also work, but with more effort:\n\n1. **Mini PCIe or M.2 breakout board** for the EG25-G (easier than bare module)\n2. Connect USB to your host machine (Raspberry Pi, laptop, etc.)\n3. The EG25-G appears as multiple USB serial devices + QMI endpoint\n4. Run rayhunter on the host, pointing it at the QMI device\n\n```bash\n# Once connected, you should see:\nls /dev/ttyUSB*\n# ttyUSB0 - DM/diagnostic\n# ttyUSB1 - NMEA (GPS)\n# ttyUSB2 - AT commands\n# ttyUSB3 - PPP/data\n\n# QMI device:\nls /dev/cdc-wdm*\n# cdc-wdm0 - QMI interface (this is what rayhunter uses)\n```\n\nThe UART-only approach would be more limited — rayhunter primarily uses QMI for the deep DIAG/diagnostic interface that captures the signaling messages (attach requests, authentication, etc.). AT commands alone won't give you the low-level NAS/RRC messages that rayhunter analyzes for stingray detection.\n\n## Cost-Effective Alternative\n\nIf the $126 PinePhone mainboard is mainly for the EG25-G modem, you can get standalone EG25-G Mini PCIe modules for ~$25-35 on AliExpress and use them with any Linux SBC + USB adapter. But the PinePhone mainboard gives you an all-in-one solution with known-good rayhunter compatibility.",
+      "author": {
+        "login": "bad-antics",
+        "avatar_url": "https://avatars.githubusercontent.com/u/160459796?u=75b11ffc59478325ae1afc3cd3d30888f26011a9&v=4",
+        "url": "https://github.com/bad-antics"
+      },
+      "created_at": "2026-02-09T17:07:37Z",
+      "updated_at": "2026-02-09T17:38:47Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": "spam",
+      "is_minimized": true,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

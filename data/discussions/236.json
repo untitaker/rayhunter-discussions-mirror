@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AfHT8",
+  "number": 236,
+  "title": "Web Interface Clear Log Files",
+  "body": "![adbROOTSHELL](https://github.com/user-attachments/assets/d8c1d16e-7968-4ea8-bba3-960762fbec8f)\r\nWho's running around with a setup to link up and clear log files? You can start/stop logging from web interface but not clear them? I'm not a programmer and most common users aren't going to have the capability to dump these logs when disk gets full. Any plans to implement for normal users the capability to clear these files from the browser or is ADB just the way it's going to be?",
+  "author": {
+    "login": "psthi",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1751077?u=12d02b9873d1179a16990ad6b828c020f51e49db&v=4",
+    "url": "https://github.com/psthi"
+  },
+  "created_at": "2025-04-02T03:35:26Z",
+  "updated_at": "2025-04-23T20:27:14Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/236",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AxUCP",
+      "body": "There's now a \"Delete All Recordings\" button in the web interface.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-04-23T19:57:39Z",
+      "updated_at": "2025-04-23T19:57:40Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}

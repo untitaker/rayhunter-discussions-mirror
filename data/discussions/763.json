@@ -1,0 +1,189 @@
+{
+  "id": "D_kwDOKrJqmc4Ajjcq",
+  "number": 763,
+  "title": "TP-Link M7350 in New Zealand",
+  "body": "Hi, like I assume many in the coming days, heard about this project from Benn Jordan.\r\n\r\n[This github.io page](https://efforg.github.io/rayhunter/supported-devices.html) doesn't seem to have much information for Oceania, or regions otherwise in the pink zone of the map. [This local page](https://cellsites.nz/frequencies.html) indicates that the M7350 fits most bands we use in New Zealand. The product is also sold locally, but [the original non-EFForg repository for M7350 support ](https://github.com/m0veax/rayhunter-tplink-m7350/)said it's unlikely to work in New Zealand... why? Would like to know before I go Rayhunting myself what the context was for this comment, or if I'm misunderstanding telecommunications. \r\n\r\nNew Zealand has an unclear history with IMSI catchers, one local and prominent film (Hunter for the Wilderpeople) features a Stingray. Otherwise, our equivalent of FOIA requests [won't confirm or deny their use locally](https://fyi.org.nz/request/4707-use-of-imsi-catcher-s-in-the-interception-of-metadata). \r\n\r\nThanks.\r\n\r\n",
+  "author": {
+    "login": "respigen",
+    "avatar_url": "https://avatars.githubusercontent.com/u/160985123?u=a32faf524a119f7c03dce85a2aa708d2384816e5&v=4",
+    "url": "https://github.com/respigen"
+  },
+  "created_at": "2026-01-08T03:43:41Z",
+  "updated_at": "2026-01-08T03:50:53Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/763",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A65ph",
+      "body": "if you are able to buy one locally and browse the internet with it, it will work to catch stingrays. but we don't have many data points outside of US and EU and can't guarantee it, nor do we know if it's the most cost effective option for oceania. whether it can connect to the internet might also depend on the carrier you're using in that region.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-08T03:48:15Z",
+      "updated_at": "2026-01-08T03:48:15Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A65p6",
+          "body": "Awesome, thanks for your response. ",
+          "author": {
+            "login": "respigen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/160985123?u=a32faf524a119f7c03dce85a2aa708d2384816e5&v=4",
+            "url": "https://github.com/respigen"
+          },
+          "created_at": "2026-01-08T03:50:53Z",
+          "updated_at": "2026-01-08T03:50:53Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
