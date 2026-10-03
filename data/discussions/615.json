@@ -1,0 +1,28 @@
+{
+  "id": "D_kwDOKrJqmc4AiGHT",
+  "number": 615,
+  "title": "Support Inseego pro x 5g",
+  "body": "This device is running a qualcom snapdragon chipset. It is the device distributed by Calyx to their users. Calyx has expressed interest in having rayhunter support as a feature for their subscribers. \r\nSome nice features of this device:\r\n* global band support\r\n* built in GPS \r\n* audio alerting \r\n\r\nWe were able to root this device by sending 130 '0's to the usb interface to enable ADB mode. ADB gives a root shell by default. \r\n\r\nThis device uses the new userspace diag port /dev/ffs-diag so we will have to figure out how to support that. ",
+  "author": {
+    "login": "cooperq",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+    "url": "https://github.com/cooperq"
+  },
+  "created_at": "2025-09-23T17:05:47Z",
+  "updated_at": "2025-09-23T17:05:48Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/615",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

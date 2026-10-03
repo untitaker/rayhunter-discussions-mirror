@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AgH6A",
+  "number": 368,
+  "title": "REST API and/or documentation",
+  "body": "Does the Rayhunter server have a REST API for querying statuses and history? If not, it would be great to add one so that other connected devices could query the Rayhunter and take action based on the status. ",
+  "author": {
+    "login": "RallyX26",
+    "avatar_url": "https://avatars.githubusercontent.com/u/41084493?u=7a36fa85181947e9b7c74c4683d7a93213dcb900&v=4",
+    "url": "https://github.com/RallyX26"
+  },
+  "created_at": "2025-06-05T13:19:26Z",
+  "updated_at": "2025-06-05T14:44:38Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/368",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AzCzS",
+      "body": "It needs to be documented but there is a Rest API that can be queried. You can see the endpoints here: \r\nhttps://github.com/EFForg/rayhunter/blob/f2b722ad5f863dcb2f19e32e79584459f2d15876/bin/src/daemon.rs#L45-L60",
+      "author": {
+        "login": "alliraine",
+        "avatar_url": "https://avatars.githubusercontent.com/u/57644769?u=cdf905c65a3c02caf22e7cd76ee5fb7942e47d3e&v=4",
+        "url": "https://github.com/alliraine"
+      },
+      "created_at": "2025-06-05T14:44:37Z",
+      "updated_at": "2025-06-05T14:44:38Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

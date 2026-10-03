@@ -1,0 +1,88 @@
+{
+  "id": "D_kwDOKrJqmc4AhAiz",
+  "number": 490,
+  "title": "Disable WiFi orbit?",
+  "body": "It would be great to be able to disable the WiFi on a Rayhunter as I am sure most of us already have crowded enough airwaves as it is due to many WiFi networks in the area, and adding another from the rayhunter isn't ideal. I have an orbic and it seems that WiFi can not be disabled as when I turn off the 5ghz hotspot network the 2.4ghz turns on. I am wondering if there is a update or something for the orbic to be able to disable the WiFi and then enable it when you have something to look at or use usb tether (if that works). Maybe there is another device that allows disabling WiFi?",
+  "author": {
+    "login": "ksullivan86",
+    "avatar_url": "https://avatars.githubusercontent.com/u/34048885?v=4",
+    "url": "https://github.com/ksullivan86"
+  },
+  "created_at": "2025-07-29T21:10:37Z",
+  "updated_at": "2025-07-31T22:00:04Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/490",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1Lq1",
+      "body": "Hi @ksullivan86 , please try these instructions in our FAQ to disable the wifi: https://efforg.github.io/rayhunter/faq.html#how-do-i-disable-the-wifi-hotspot-on-the-orbic-rc400l",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-31T03:25:26Z",
+      "updated_at": "2025-07-31T03:25:28Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1MQs",
+      "body": "I tried running:\r\n installer util shell \"echo 9 > /usrdata/mode.cfg\"\r\ninstaller util shell reboot\r\n\r\nwith ubuntu 24.04 and I got the following error: installer: command not found. I am in the folder with the rayhunter files as ls shows the installer. I have the 0.5.0 version of rayhunter installed\r\n\r\nI tried to mannly add edit mode.cfg but I get permission issues. I tried to use su but it asks for a password and I dont know what to put, I tried the wifi password like the orbic web server but that also didnt work.",
+      "author": {
+        "login": "ksullivan86",
+        "avatar_url": "https://avatars.githubusercontent.com/u/34048885?v=4",
+        "url": "https://github.com/ksullivan86"
+      },
+      "created_at": "2025-07-31T07:57:55Z",
+      "updated_at": "2025-07-31T07:57:56Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1MrP",
+      "body": "you need to run `./installer` instead of `installer`",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-31T09:59:43Z",
+      "updated_at": "2025-07-31T09:59:43Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A1Lq1",
+    "body": "Hi @ksullivan86 , please try these instructions in our FAQ to disable the wifi: https://efforg.github.io/rayhunter/faq.html#how-do-i-disable-the-wifi-hotspot-on-the-orbic-rc400l",
+    "author": {
+      "login": "oopsbagel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+      "url": "https://github.com/oopsbagel"
+    },
+    "created_at": "2025-07-31T03:25:26Z",
+    "updated_at": "2025-07-31T03:25:28Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-07-31T03:33:52Z",
+  "state_reason": "RESOLVED"
+}

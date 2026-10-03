@@ -1,0 +1,81 @@
+{
+  "id": "D_kwDOKrJqmc4Ahnkw",
+  "number": 579,
+  "title": "Support for Novatel T1114 (Verizon MiFi Home)",
+  "body": "### What problem does this feature solve or what does it enhance?\n\nThe Novatel T1114 mobile Hotspot was sold by Verizon as MiFi Home, and supports bands 4 and 13. Similar to the Orbic device it runs something called MiFi OS, and uses a Qualcomm modem. It is potentially better for some uses because it can run off 5v usb, and has ports for external antennas (LTE and 1x voice I believe). There's a micro-usb port underneath a cosmetic panel on the top, but not clear what it's for. \n\nDoes anyone know if there's a way to get root on these (assuming that is needed). I've tried:\n\nlsusb - not shown\nadb devices -not shown \nssh root@[ip] connection refused\nssh admi@ \"\"  \"\"\nssh VerizonBRW@ \"\" \"\" \n\nThere is a way to manually upload firmware updates from the routers web interface. \n\nThere's also a not exposed directory /labtestinfo that on my device (sim card, not activated, antennas not connected) shows the following. (phone number redacted)\n\n===============\nDiagnostic Data\n===============\n\nNAM: N/A\nMobile Directory Number (MDN): 867-5309\nIMSI_S: \nMobile Network Code (MNC): \nMobile Country Code (MCC): \nPrimary CDMA Channel A: 283\nSecondary CDMA Channel A: 691\nPrimary CDMA Channel B: 384\nSecondary CDMA Channel B: 777\nAccess Overload Class (ACCOLC): 2\nRegister On Home SID: Enabled\nRegister On Foreign SID: Enabled\nRegister On Foreign NID: Enabled\nCDMA Band Class: [0_A_SYSTEM] [0_B_AB_GSM850] [1_ALL_BLOCKS] \nLTE Band Class: [E_UTRA_BAND_4] [E_UTRA_BAND_13] \nActive Band: N/A\nSlot Cycle Index: 2\nMIP Mode: MIP preferred\nMIP Registration Retries: 2\nMIP Registration Retries Timeout: 3\nReverse Tunneling: 1\nDNS Primary: N/A\nDNS Secondary: N/A\nSupplemental Channel Request Message (SCRM): 1\nNetwork ID (NID): 0\nError Rate: [CDMA 1x]: N/A [HRPD]: N/A \nRSSI: [0]:-128 [1]:-125 \nEc/Io: [CDMA 1x]:5 [HRPD]:5 \nLatitude: 0\nLongitude: 0\nTx Power (EVDO): 0\nRx Power 0 (EVDO): 0\nRx Power 1 (EVDO): 0\nPacket Zone ID: 0\nCall State: Idle\nDormant State: Unknown\nMAC Index: N/A\nSubnet Mask: N/A\nColor Code: 0\nUATI024: 00000000 00000000 00000000 00000000\nPN Offset: \n\n### Proposed Solution\n\nMake Rayhunter installable on the Novatel T1114, probably by uploading custom firmware through the web ui software update tool. \n\nI can try to provide additional information if anyone knowledgeable on this subject thinks it may be possible. \n\n### Alternatives Considered\n\n_No response_",
+  "author": {
+    "login": "JonGerhardson",
+    "avatar_url": "https://avatars.githubusercontent.com/u/119974184?v=4",
+    "url": "https://github.com/JonGerhardson"
+  },
+  "created_at": "2025-08-28T02:27:52Z",
+  "updated_at": "2025-08-28T22:52:38Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/579",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZESg",
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2XDP",
+      "body": "<img width=\"639\" height=\"545\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7a1e5a78-53c3-4959-a968-4b5eee2781de\" />\n\n![Image](https://github.com/user-attachments/assets/e27abcec-bc8b-4a91-833f-ed4894e949de)\n![Image](https://github.com/user-attachments/assets/28410a66-5068-430d-bb83-71a899a97eaa)",
+      "author": {
+        "login": "JonGerhardson",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119974184?v=4",
+        "url": "https://github.com/JonGerhardson"
+      },
+      "created_at": "2025-08-28T03:27:03Z",
+      "updated_at": "2025-08-28T22:52:40Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2XDQ",
+      "body": "<img width=\"639\" height=\"545\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7ae48d51-fcfb-4365-a39a-e0cd8e5d293a\" />\n\n\n<img width=\"639\" height=\"545\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/59f051e1-bd8d-4806-844b-82413602bc9b\" />\n\n<img width=\"639\" height=\"545\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/19729c2d-e64e-41aa-8468-f4e55664a1a2\" />\n\n",
+      "author": {
+        "login": "JonGerhardson",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119974184?v=4",
+        "url": "https://github.com/JonGerhardson"
+      },
+      "created_at": "2025-08-28T03:28:21Z",
+      "updated_at": "2025-08-28T22:52:41Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2XDR",
+      "body": "https://verizon.manymanuals.com/networking/4g-lte-broadband-router-with-voice/users-guide-43098/download",
+      "author": {
+        "login": "JonGerhardson",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119974184?v=4",
+        "url": "https://github.com/JonGerhardson"
+      },
+      "created_at": "2025-08-28T03:43:34Z",
+      "updated_at": "2025-08-28T22:52:40Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

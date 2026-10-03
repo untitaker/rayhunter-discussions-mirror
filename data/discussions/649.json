@@ -1,0 +1,247 @@
+{
+  "id": "D_kwDOKrJqmc4AicCf",
+  "number": 649,
+  "title": "Support for freetz-ng fritzbox firmware modification on",
+  "body": "First off, thank you for the great talk at Def Con!\r\nI have a FritzBox 6850 5G with a Snapdragon X55 5G modem. I compiled a custom firmware using freetz-ng, so I have root. \r\n\r\nI was just checking and /dev/diag is not available. I checked the kernel config, but couldn't see any way to enable [CONFIG_DIAG_CHAR](https://www.boxmatrix.info/wiki/Property:CONFIG_DIAG_CHAR) and I honestly don't know if that would be necessary. But I found online references, that the device could be exposed over a different name.\r\n\r\nSo after looking I found one suspicious one:\r\n_/dev/mhi_DIAG_\r\n\r\nBut also, when I queried _/dev/usbtty2_, I saw the modem there:\r\n\r\n```\r\nroot@fritz:/home/rayhunter-daemon# echo -e \"ATI\\r\" > /dev/ttyUSB2; cat < /dev/ttyUSB2\r\nQuectel\r\nRM500Q-AE\r\nRevision: RM500QAEAAR13A01M4G\r\nOK\r\n```\r\n\r\nObviously I couldn't run the installer, but after checking out the daemon, I didn't see a way to override the device path in the config.toml.in\r\n\r\nIs this generally something the project would be interested in pursuing? I would offer to create a package for freetz-ng if we can get this running. I probably can also work out the GPIO, to flash a red info light on the box on imsi catcher detection.\r\nThe benefit for these devices is they usually run domestically over longer periods, and not ad hoc. Which could help in reducing false positives, or generally help in long time surveys.\r\n",
+  "author": {
+    "login": "hoinzy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1684934?v=4",
+    "url": "https://github.com/hoinzy"
+  },
+  "created_at": "2025-10-15T00:00:08Z",
+  "updated_at": "2025-12-21T08:28:27Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/649",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4FLT",
+      "body": "> Obviously I couldn't run the installer, but after checking out the daemon, I didn't see a way to override the device path in the config.toml.in\r\n\r\nI think for now you can symlink the device in the place where the daemon expects it, such as `ln -s /dev/mhi_DIAG /dev/diag` and it should work. Otherwise you'd have to patch the code yourself and build rayhunter-daemon from source.\r\n\r\nI think we'd be open to make the path for `/dev/diag` configurable if there's proof it actually helps for a particular device.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-10-16T16:35:36Z",
+      "updated_at": "2025-10-16T16:35:36Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A4ItR",
+          "body": "I was looking into it a bit more and tried your suggestion, but apart from an error in console about a missing battery, nothing is showing. As far as I can tell from the code, this error is not function breaking though, and after reading some more I think the issue lies with the mhi being a newer protocol over pcie, where I need to compile a kernel module to make the /dev/diag convert those signals.\r\n\r\nI'll see what I can do to make that work and keep this discussion updated, but it's probably not going to be something the project is willing to support.",
+          "author": {
+            "login": "hoinzy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1684934?v=4",
+            "url": "https://github.com/hoinzy"
+          },
+          "created_at": "2025-10-18T07:54:37Z",
+          "updated_at": "2025-10-18T07:54:38Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6Zn0",
+          "body": "@hoinzy sorry for bringing this old thread up, but are there any hardware that you know in this project that is mains powered and stationary? I would like a device that can be permenantly powered and maybe also have external antennas for better reception.",
+          "author": {
+            "login": "chaugan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17846743?v=4",
+            "url": "https://github.com/chaugan"
+          },
+          "created_at": "2025-12-21T08:28:27Z",
+          "updated_at": "2025-12-21T08:28:27Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AoPO0",
+  "number": 1099,
+  "title": "NO SERVICE on Orbic RC400L",
+  "body": "Is it normal to see the green line AND \"NO SERVICE\"? Also, what do the different colored lines mean exactly (I haven't seen any besides green yet)",
+  "author": {
+    "login": "JustinStoddard",
+    "avatar_url": "https://avatars.githubusercontent.com/u/36201566?u=5bf91625bd44ab858c44ee00f2a464d19a3f01fb&v=4",
+    "url": "https://github.com/JustinStoddard"
+  },
+  "created_at": "2026-08-04T01:02:08Z",
+  "updated_at": "2026-08-04T01:02:08Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1099",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

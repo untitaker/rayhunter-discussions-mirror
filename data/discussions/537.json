@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AhReK",
+  "number": 537,
+  "title": "Wifi walled garden - Connect to Rayhunter and use Cell for Internet at the same time.",
+  "body": "By default when you connect Android or iOS to a WiFi network it will use the WiFi network as a default route, which means no Internet unless you have cell data on your Orbic.  By using some DHCP and DNS hackery you can use a walled garden where you can access the Orbic on 192.168.1.1 while the rest of your traffic will still go over cellular.\r\n\r\nThis has only been tested on Android devices.\r\n\r\nhttps://github.com/drinkingc0ffee/RayhunterWalledGarden",
+  "author": {
+    "login": "drinkingc0ffee",
+    "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+    "url": "https://github.com/drinkingc0ffee"
+  },
+  "created_at": "2025-08-13T03:02:13Z",
+  "updated_at": "2025-08-14T09:33:52Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/537",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1y0w",
+      "body": "yeah i ran into the same problem. i ended up writing this android app: https://github.com/untitaker/rayhunter-companion\r\n\r\nit has the same goal but without modifying the orbic. instead, it uses android system APIs to ensure data is still routed the phone's SIM, while still connecting to WiFI.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-14T09:33:52Z",
+      "updated_at": "2025-08-14T09:33:52Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

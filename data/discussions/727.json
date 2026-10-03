@@ -1,0 +1,84 @@
+{
+  "id": "D_kwDOKrJqmc4AjLHm",
+  "number": 727,
+  "title": "Help for potentially supported device",
+  "body": "### Prerequisites\n\n- [x] I have read [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md)\n\n### Rayhunter Version\n\nv0.8.0\n\n### Device\n\nOther / I'm not sure\n\n### Installer OS\n\nLinux\n\n### Describe the Issue\n\nhi yall i got a ryoko hotspot it indeed uses android and the qualcomm 9x07 chip but i cannot seem to push it through no matter what i do, does anyone have any suggestions ??? :)\n",
+  "author": {
+    "login": "TheGreatDabsby",
+    "avatar_url": "https://avatars.githubusercontent.com/u/237530051?v=4",
+    "url": "https://github.com/TheGreatDabsby"
+  },
+  "created_at": "2025-12-07T18:57:20Z",
+  "updated_at": "2025-12-07T19:13:39Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/727",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZEOg",
+      "name": "bug",
+      "color": "d73a4a",
+      "description": "Something isn't working"
+    },
+    {
+      "id": "LA_kwDOKrJqmc8AAAACAEqNUg",
+      "name": "installer",
+      "color": "0052cc",
+      "description": "Issues related to the installer"
+    }
+  ],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

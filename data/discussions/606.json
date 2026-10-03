@@ -1,0 +1,35 @@
+{
+  "id": "D_kwDOKrJqmc4AiB_X",
+  "number": 606,
+  "title": "Add support for RayHunter to Waveshare SIM7600G-H",
+  "body": "### What problem does this feature solve or what does it enhance?\n\nThis ticket is a request to add support for RayHunter for the Waveshare SIM7600G-H, which is a popular cellular modem module, and is the built-in cellular-modem option for the ClockworkPi uConsole.\n\nIt seems like the SIM7600G-H is compatible with the ADB bridge, although I am not an expert in usage of ADB in linux.\n\nThis would possibly also involve making a UI element of some sort for supporting linux machines.\n\n### Proposed Solution\n\n* Adding the support for great justice\n\n### Alternatives Considered\n\n* I considered taping my orbic to the back of my uConsole instead, seems kinda bulky",
+  "author": {
+    "login": "JThramer",
+    "avatar_url": "https://avatars.githubusercontent.com/u/887225?u=5d3a68531626b3b0cc2e91d9dc4447c14a241a2e&v=4",
+    "url": "https://github.com/JThramer"
+  },
+  "created_at": "2025-09-18T17:58:39Z",
+  "updated_at": "2025-09-19T16:44:57Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/606",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZESg",
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    }
+  ],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

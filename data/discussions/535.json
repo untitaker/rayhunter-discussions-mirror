@@ -1,0 +1,777 @@
+{
+  "id": "D_kwDOKrJqmc4AhQRG",
+  "number": 535,
+  "title": "Tailscale on the Orbic",
+  "body": "I may write this up in more detail at some point, but leaving a note here now in case it ends up being useful to anyone: I was able to get Tailscale running on the Orbic RC400L using the [arm binaries](https://pkgs.tailscale.com/stable/#static). \r\n\r\nThe main advantage of this is I can access the rayhunter status page without needing the phone or computer to be connected directly or via wifi to the device. Since the sim I'm using in the device has a pretty limited data allotment the alternative is to connect and disconnect from the device wifi each time I want to access anything.",
+  "author": {
+    "login": "simonft",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+    "url": "https://github.com/simonft"
+  },
+  "created_at": "2025-08-11T19:45:26Z",
+  "updated_at": "2026-02-26T23:54:05Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/535",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A2GVz",
+      "body": "oh this is great to know for remote deployments! Now if we could only find cheap sims with data :) ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-08-21T17:58:32Z",
+      "updated_at": "2025-08-21T17:58:33Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2GWJ",
+          "body": "What does cheap mean? I have been using a Tello plan that's $5/month plus a one time $3 cost for the sim.",
+          "author": {
+            "login": "simonft",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+            "url": "https://github.com/simonft"
+          },
+          "created_at": "2025-08-21T18:01:26Z",
+          "updated_at": "2025-08-21T18:01:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2GZH",
+          "body": "oh good to know! That would qualify! ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-08-21T18:25:00Z",
+          "updated_at": "2025-08-21T18:25:01Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3Fne",
+      "body": "I would prefer option to have your own VPN. You need to trust Tailscale regarding the privacy. And they are not immune to court orders. ",
+      "author": {
+        "login": "MatejKovacic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3339198?u=cabb25f233a032a2e61dd63685a7220ce5bcfd8a&v=4",
+        "url": "https://github.com/MatejKovacic"
+      },
+      "created_at": "2025-09-18T09:31:36Z",
+      "updated_at": "2025-09-18T09:31:36Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A3GOD",
+          "body": "The combination of their clients being open source and [Tailnet Lock](https://tailscale.com/kb/1226/tailnet-lock) means I'm somewhat less concerned about privacy and court orders. [Headscale](https://headscale.net/stable/) is also a thing if you want to run your own copy of the server. But I see what you're saying, and to be clear I'm not suggesting we integrate this into Rayhunter officially! ",
+          "author": {
+            "login": "simonft",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+            "url": "https://github.com/simonft"
+          },
+          "created_at": "2025-09-18T13:15:07Z",
+          "updated_at": "2025-09-18T13:15:07Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3YRz",
+      "body": "Can you share more details on how you setup/configured Tailscale (any additional arguments)? Did you have you to run in user space? Trying to do this on the TMOHS1 but the connection keeps dropping every few hours. Thanks! ",
+      "author": {
+        "login": "Mijobar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6438286?u=1fb5f0250c86dd388db3ca3116e833ab3cf78524&v=4",
+        "url": "https://github.com/Mijobar"
+      },
+      "created_at": "2025-09-26T03:17:49Z",
+      "updated_at": "2025-09-26T03:17:50Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A3ZvK",
+          "body": "I don't have any additional arguments, but I do have it running in user space. It did just barely seem to fit in RAM, but it looks like the orbic is more constrained on that front than the TMOHS1.",
+          "author": {
+            "login": "simonft",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+            "url": "https://github.com/simonft"
+          },
+          "created_at": "2025-09-26T14:57:37Z",
+          "updated_at": "2025-09-26T14:57:38Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8WEk",
+          "body": "Also interested in the setup for this. I am getting access denied messages when trying to bind to UDP ports, even with network running in userspace.",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-16T04:16:50Z",
+          "updated_at": "2026-02-16T04:16:50Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8b1t",
+          "body": "If I recall correctly it drops permissions for things run after boot, so I had to add the command to an init script. I think I added a new script and then added the script to this file so it would run at boot:  https://github.com/EFForg/rayhunter/blob/main/dist/scripts/misc-daemon\r\n\r\nWasn't an ideal solution (it would get blown away by later installs) but I'm sure there's a better way.",
+          "author": {
+            "login": "simonft",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+            "url": "https://github.com/simonft"
+          },
+          "created_at": "2026-02-18T03:34:54Z",
+          "updated_at": "2026-02-18T03:34:54Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8xL_",
+      "body": "For anyone who may be interested, I just published a blog post on how I got this working on my device. I was able to install Tailscale and have Rayhunter connect to my self hosted ntfy server so I can receive notifications from the device without having to put ntfy on the public internet. You can also access the webUI from any device on your tailnet. Hope this helps!\r\n\r\nhttps://blog.wsmith.io/posts/orbic-and-tailscale/",
+      "author": {
+        "login": "Smith8154",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+        "url": "https://github.com/Smith8154"
+      },
+      "created_at": "2026-02-26T04:31:30Z",
+      "updated_at": "2026-02-26T04:31:30Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8yc8",
+          "body": "Thanks for writing this up! Tailscale's bandwidth usage was a little more than I was expecting as well, but I'm using Tello's $5 for1gb of data plan which was enough that it wasn't an issue.",
+          "author": {
+            "login": "simonft",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6940?u=87e422ffd7a301cc6abbdb54e480726ba4c4eeca&v=4",
+            "url": "https://github.com/simonft"
+          },
+          "created_at": "2026-02-26T13:55:26Z",
+          "updated_at": "2026-02-26T13:55:26Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8zt1",
+          "body": "Yeah, seems like that may be the way to go. I will look at ordering one of those SIM's instead. I was really thinking the usage would be in the KB range per day, not the MB.",
+          "author": {
+            "login": "Smith8154",
+            "avatar_url": "https://avatars.githubusercontent.com/u/10672359?u=09c83b6bfca232ec568623cb39a1e252cd3000af&v=4",
+            "url": "https://github.com/Smith8154"
+          },
+          "created_at": "2026-02-26T23:54:05Z",
+          "updated_at": "2026-02-26T23:54:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 4,
+      "users": [
+        "cooperq",
+        "m0veax",
+        "MHSEA",
+        "stu-spp"
+      ]
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

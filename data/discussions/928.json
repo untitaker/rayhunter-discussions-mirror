@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AkZu2",
+  "number": 928,
+  "title": "Persistent ADB on wingtech and tmosh1",
+  "body": "Here's a script you can use (once connected to their wifi) to enable adb and make it persistent. There's currently a function of the installer to enable adb but it doesn't persist across reboots.\r\n\r\n```\r\n#!/usr/bin/env bash\r\nset -euo pipefail\r\n\r\nDEVICE=\"\"\r\nADMIN_PASSWORD=\"\"\r\n\r\nusage() {\r\n    echo \"Usage: $0 --device <tmobile|wingtech> --admin-password <ADMIN_PASSWORD>\"\r\n    echo \"\"\r\n    echo \"Enables ADB on a T-Mobile TMOHS1 or Wingtech CT2MHS01 via the web\"\r\n    echo \"exploit, then installs an init script so ADB (composition 9025)\"\r\n    echo \"survives reboots.\"\r\n    echo \"\"\r\n    echo \"The boot USB init (S30usb) forces composition 9057 (RNDIS+ECM, no ADB)\"\r\n    echo \"on every boot. This script adds S31enable_adb to override it with 9025\"\r\n    echo \"(DIAG+ADB+MODEM+NMEA+QMI_RMNET) immediately after.\"\r\n    echo \"\"\r\n    echo \"Prerequisites: must be connected to the device's WiFi hotspot.\"\r\n    exit 1\r\n}\r\n\r\nwhile [[ $# -gt 0 ]]; do\r\n    case \"$1\" in\r\n        --device) DEVICE=\"$2\"; shift 2 ;;\r\n        --admin-password) ADMIN_PASSWORD=\"$2\"; shift 2 ;;\r\n        *) usage ;;\r\n    esac\r\ndone\r\n\r\n[[ -z \"$DEVICE\" ]] && usage\r\n[[ -z \"$ADMIN_PASSWORD\" ]] && usage\r\n\r\ncase \"$DEVICE\" in\r\n    tmobile)  START_ADB_CMD=\"tmobile-start-adb\" ;;\r\n    wingtech) START_ADB_CMD=\"wingtech-start-adb\" ;;\r\n    *) echo \"Unknown device: $DEVICE (expected tmobile or wingtech)\"; exit 1 ;;\r\nesac\r\n\r\necho \"Enabling temporary ADB on $DEVICE...\"\r\ncargo run -p installer -- util \"$START_ADB_CMD\" --admin-password \"$ADMIN_PASSWORD\"\r\n\r\necho \"Waiting for ADB device...\"\r\nfor i in $(seq 1 30); do\r\n    if adb devices 2>/dev/null | grep -q \"device$\"; then\r\n        echo \"ADB connected.\"\r\n        break\r\n    fi\r\n    if [[ $i -eq 30 ]]; then\r\n        echo \"Timed out waiting for ADB device\"\r\n        exit 1\r\n    fi\r\n    sleep 1\r\ndone\r\n\r\necho \"Installing persistent ADB init script...\"\r\nadb shell \"mount -o remount,rw /\"\r\n\r\nadb shell \"printf '#!/bin/sh\\ncase \\\"\\$1\\\" in\\nstart)\\n    /sbin/usb/compositions/9025 n\\n    ;;\\nesac\\n' > /etc/init.d/enable_adb\"\r\n\r\nadb shell \"chmod 755 /etc/init.d/enable_adb\"\r\nadb shell \"ln -sf ../init.d/enable_adb /etc/rcS.d/S31enable_adb\"\r\nadb shell \"mount -o remount,ro /\"\r\n\r\nif adb shell \"test -x /etc/init.d/enable_adb\" 2>/dev/null; then\r\n    echo \"Init script installed.\"\r\nelse\r\n    echo \"Failed to install init script.\"\r\n    exit 1\r\nfi\r\n\r\necho \"Rebooting device...\"\r\nadb reboot\r\n\r\necho \"Waiting for device to come back (up to 90s)...\"\r\nfor i in $(seq 1 90); do\r\n    if adb devices 2>/dev/null | grep -q \"device$\"; then\r\n        echo \"ADB persistent after reboot.\"\r\n        exit 0\r\n    fi\r\n    sleep 1\r\ndone\r\n\r\necho \"Device did not reappear with ADB after reboot.\"\r\necho \"Try power cycling manually and check: adb devices\"\r\nexit 1\r\n```\r\n",
+  "author": {
+    "login": "BeigeBox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+    "url": "https://github.com/BeigeBox"
+  },
+  "created_at": "2026-02-27T02:57:57Z",
+  "updated_at": "2026-02-27T02:57:57Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/928",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
