@@ -1,0 +1,307 @@
+{
+  "id": "D_kwDOKrJqmc4AjX8T",
+  "number": 741,
+  "title": "uC in Orbic RC400L and datasheet?",
+  "body": "Hi!\r\n\r\nWhat uC is in the Orbic RC400L or, if there are a variety, how do I determine which one is in mine?\r\n\r\nA link to the datasheets, please!  I looked for Qualcomm MDM9x07 and MDM9650 (rumored these were the uCs) but did not find either.\r\n\r\nTHANK YOU!!\r\n\r\nGary",
+  "author": {
+    "login": "garyn87048",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14202428?v=4",
+    "url": "https://github.com/garyn87048"
+  },
+  "created_at": "2025-12-22T16:14:49Z",
+  "updated_at": "2025-12-22T18:50:18Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/741",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6cQv",
+      "body": "The EMI shield is soldered, so I haven't inspected the actual chip package yet, but I believe it's an mdm9607. Here is some on target information:\r\n\r\nuname:\r\n```shell\r\nbash-4.3$ uname -a\r\nLinux mdm9607 3.18.48 #1 PREEMPT Thu Oct 8 21:40:29 CST 2020 armv7l GNU/Linux\r\nbash-4.3$\r\n```\r\ncpuinfo:\r\n```shell\r\nbash-4.3$ cat /proc/cpuinfo\r\nprocessor\t: 0\r\nmodel name\t: ARMv7 Processor rev 5 (v7l)\r\nBogoMIPS\t: 38.40\r\nFeatures\t: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae\r\nCPU implementer\t: 0x41\r\nCPU architecture: 7\r\nCPU variant\t: 0x0\r\nCPU part\t: 0xc07\r\nCPU revision\t: 5\r\n\r\nHardware\t: Qualcomm Technologies, Inc MDM9207\r\nRevision\t: 0000\r\nSerial\t\t: 0000000000000000\r\nProcessor\t: ARMv7 Processor rev 5 (v7l)\r\nbash-4.3$\r\n```\r\nvarious procfs / sysfs:\r\n```shell\r\nbash-4.3$ hexdump -C /proc/device-tree/compatible\r\n00000000  71 63 6f 6d 2c 6d 64 6d  39 36 30 37 2d 6d 74 70  |qcom,mdm9607-mtp|\r\n00000010  00 71 63 6f 6d 2c 6d 64  6d 39 36 30 37 00 71 63  |.qcom,mdm9607.qc|\r\n00000020  6f 6d 2c 6d 74 70 00                              |om,mtp.|\r\n00000027\r\nbash-4.3$ hexdump -C /proc/device-tree/model\r\n00000000  51 75 61 6c 63 6f 6d 6d  20 54 65 63 68 6e 6f 6c  |Qualcomm Technol|\r\n00000010  6f 67 69 65 73 2c 20 49  6e 63 2e 20 4d 44 4d 20  |ogies, Inc. MDM |\r\n00000020  39 36 30 37 20 4d 54 50  00                       |9607 MTP.|\r\n00000029\r\nbash-4.3$ hexdump -C /sys/devices/soc0/soc_id\r\n00000000  32 39 37 0a                                       |297.|\r\n00000004\r\nbash-4.3$ hexdump -C /sys/devices/soc0/image_variant\r\n00000000  4c 41 41 54 41 4e 41 5a  41 0a                    |LAATANAZA.|\r\n0000000a\r\nbash-4.3$ hexdump -C /sys/devices/soc0/machine\r\n00000000  4d 44 4d 39 32 30 37 0a                           |MDM9207.|\r\n00000008\r\nbash-4.3$ hexdump -C /sys/devices/soc0/build_id\r\n00000000  39 78 30 37 41 2d 4c 41  41 54 41 4e 41 5a 41 2d  |9x07A-LAATANAZA-|\r\n00000010  34 30 30 30 30 30 30 30  0a                       |40000000.|\r\n00000019\r\nbash-4.3\r\n```\r\n\r\nOfficial datasheets are under NDA, but the pinephone [device tree](https://github.com/SoMainline/linux/blob/1a674af2625ba214b641b488c7868ef5ced1adb0/arch/arm/boot/dts/qcom-mdm9607.dtsi) can serve as a functional datasheet:\r\n\r\nhttps://osmocom.org/projects/quectel-modems/wiki/Pine64_Pinephone\r\n\r\n",
+      "author": {
+        "login": "stu-spp",
+        "avatar_url": "https://avatars.githubusercontent.com/u/140655677?u=081ca933a5c2c89e829166ef1c8e422c90fbf5e3&v=4",
+        "url": "https://github.com/stu-spp"
+      },
+      "created_at": "2025-12-22T17:15:28Z",
+      "updated_at": "2025-12-22T17:15:28Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6cVP",
+          "body": "thank you!\r\n",
+          "author": {
+            "login": "garyn87048",
+            "avatar_url": "https://avatars.githubusercontent.com/u/14202428?v=4",
+            "url": "https://github.com/garyn87048"
+          },
+          "created_at": "2025-12-22T17:51:59Z",
+          "updated_at": "2025-12-22T17:51:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6cWS",
+          "body": "it's a mdm9207 and I believe the FCC report would contain this information\r\n\r\nEDIT here are internal photos https://fcc.report/FCC-ID/2ABGH-RC400L/4714662",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-12-22T18:03:32Z",
+          "updated_at": "2025-12-22T18:06:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "garyn87048"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6cac",
+          "body": "wow!  Nice teardown!  And, thank you too!",
+          "author": {
+            "login": "garyn87048",
+            "avatar_url": "https://avatars.githubusercontent.com/u/14202428?v=4",
+            "url": "https://github.com/garyn87048"
+          },
+          "created_at": "2025-12-22T18:50:17Z",
+          "updated_at": "2025-12-22T18:50:17Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

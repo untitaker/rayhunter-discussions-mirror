@@ -1,0 +1,368 @@
+{
+  "id": "D_kwDOKrJqmc4Aj2YF",
+  "number": 818,
+  "title": "Installation on TP-Link 7350 without SD-Card",
+  "body": "I finished the installation without SD-card, it looks recording and analyzation works fine. What is the need of the sd-card?",
+  "author": {
+    "login": "Chabippe",
+    "avatar_url": "https://avatars.githubusercontent.com/u/212981450?u=67931aa7f4efb272ecb33891fe059cc22c0e5362&v=4",
+    "url": "https://github.com/Chabippe"
+  },
+  "created_at": "2026-01-28T03:48:15Z",
+  "updated_at": "2026-01-28T19:48:25Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/818",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7ncJ",
+      "body": "On a few devices there is not enough disk space to upgrade rayhunter beyond the first installation, or the device will run out of disk space after a few recordings. Enforcing the sdcard seemed like a simpler thing than to try and support users who want to migrate their data from internal storage to the sdcard.\r\n\r\nexample of where this pans out on other devices: https://github.com/EFForg/rayhunter/issues/733",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-28T11:58:10Z",
+      "updated_at": "2026-01-28T11:58:56Z",
+      "is_answer": true,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7oRH",
+          "body": "Thanks for reaction.\n\nHmmm, storage looks fine for me - just 27% used (19.6M used / 53.5M available). What is the average size of a recording? Or what was the threshold to move the installation to a sd-card?",
+          "author": {
+            "login": "Chabippe",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212981450?u=67931aa7f4efb272ecb33891fe059cc22c0e5362&v=4",
+            "url": "https://github.com/Chabippe"
+          },
+          "created_at": "2026-01-28T17:47:10Z",
+          "updated_at": "2026-01-28T17:47:10Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7oSA",
+          "body": "Back then I didn't know, for tplink it's probably fair to change this. SD cards themselves have been flaky, as sometimes they don't mount on boot.\r\n\r\nIt will probably also become less relevant once we a way to drain old recordings out of the device: https://github.com/EFForg/rayhunter/issues/819\r\n\r\nIf you accumulate recordings over time, migrating to an SD card is somewhat tricky and not something we support.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-28T17:53:51Z",
+          "updated_at": "2026-01-28T17:55:53Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Chabippe"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7ohV",
+          "body": "I will observe available storage further and in case there will be a new function in a future version (to delete old and/or copy) then I am on a save side...\n\nAnd in emergency cases I will check how to deinstall and reinstall via a sd-Card. Thanks.",
+          "author": {
+            "login": "Chabippe",
+            "avatar_url": "https://avatars.githubusercontent.com/u/212981450?u=67931aa7f4efb272ecb33891fe059cc22c0e5362&v=4",
+            "url": "https://github.com/Chabippe"
+          },
+          "created_at": "2026-01-28T19:48:25Z",
+          "updated_at": "2026-01-28T19:48:25Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "Chabippe"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A7ncJ",
+    "body": "On a few devices there is not enough disk space to upgrade rayhunter beyond the first installation, or the device will run out of disk space after a few recordings. Enforcing the sdcard seemed like a simpler thing than to try and support users who want to migrate their data from internal storage to the sdcard.\r\n\r\nexample of where this pans out on other devices: https://github.com/EFForg/rayhunter/issues/733",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2026-01-28T11:58:10Z",
+    "updated_at": "2026-01-28T11:58:56Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false,
+    "reactions": [
+      {
+        "content": "THUMBS_UP",
+        "total_count": 1,
+        "users": [
+          "Chabippe"
+        ]
+      },
+      {
+        "content": "THUMBS_DOWN",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "LAUGH",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HOORAY",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "CONFUSED",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HEART",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "ROCKET",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "EYES",
+        "total_count": 0,
+        "users": []
+      }
+    ],
+    "upvote_count": 0
+  },
+  "answer_chosen_at": "2026-01-28T19:43:10Z",
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

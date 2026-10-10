@@ -1,0 +1,51 @@
+{
+  "id": "D_kwDOKrJqmc4AiHJr",
+  "number": 618,
+  "title": "Possiblity of disabling 1 more core on the uz801",
+  "body": "### What problem does this feature solve or what does it enhance?\n\nThe docs mentions \"even with 2 disabled cores there is plenty of compute overhead\".\nThis would enable a better battery life by a major fraction.\n\n### Proposed Solution\n\nMy model came with only 1 core active and seems to be working perfectly fine.\nIf I run `cat /proc/stat | grep cpu`:\n```\ncpu  7716 128 9199 16881 1515 0 28 0 0 0\ncpu0 6256 80 7771 14748 1157 0 23 0 0 0\ncpu1 1460 48 1428 2133 358 0 5 0 0 0\n```\nIt shows ~54% utilization. Additionally, if i run `cat /proc/interrupts`, all processes are already running on core 0, and if i run:\n- `cat /sys/devices/system/cpu/cpu1/online` returns 0\n- `cat /sys/devices/system/cpu/cpu0/online` returns 1\nSo only cpu0 is online.\n\nNonetheless, my stick seems to be working perfectly fine.\nOn a system with core 1 enabled, you should be able to disable it using `echo 0 > /sys/devices/system/cpu/cpu1/online`.\n\n### Alternatives Considered\n\n_No response_",
+  "author": {
+    "login": "GhostDog98",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46546505?v=4",
+    "url": "https://github.com/GhostDog98"
+  },
+  "created_at": "2025-09-24T04:25:07Z",
+  "updated_at": "2025-09-24T17:43:53Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/618",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZESg",
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A3Ueq",
+      "body": "ok thank you. feel free to add to the docs. i'll move this to the discussion area",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-09-24T17:43:31Z",
+      "updated_at": "2025-09-24T17:43:44Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

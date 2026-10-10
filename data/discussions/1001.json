@@ -1,0 +1,1064 @@
+{
+  "id": "D_kwDOKrJqmc4Al8Bi",
+  "number": 1001,
+  "title": "We need an officially supported ITU Region 3 device, propose candidates here.",
+  "body": "Right now we don't have any officially supported ITU region 3 (southeast asia) device. The pinephone and UZ801 are both functional but aren't really great candidates for mainline support for various reasons, please submit ideas for devices we could support here. Devices should be roughly similar in capabilities to the orbic or TP-link, rootable, and have a qualcomm chip. ",
+  "author": {
+    "login": "cooperq",
+    "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+    "url": "https://github.com/cooperq"
+  },
+  "created_at": "2026-04-24T19:06:17Z",
+  "updated_at": "2026-06-24T18:33:16Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1001",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A_wJJ",
+      "body": "The TP-Link M7350 is confirmed to work in australia, it's just not economical (similar situation in US I think?)",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-04-25T15:02:01Z",
+      "updated_at": "2026-04-25T15:02:10Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BAEJp",
+      "body": "These devices are pretty common here but there's a lot of variations, some has screens and some LEDs only. They have the same chipset as UZ801 but supports more bands. They don't have \"5G\" support (wifi 5GHz nor 5G network).\r\n\r\n<img width=\"426\" height=\"224\" alt=\"image\" src=\"https://github.com/user-attachments/assets/734f6b7b-d343-4df0-8f4d-8c1a5e41e919\" />\r\n",
+      "author": {
+        "login": "r1bnc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+        "url": "https://github.com/r1bnc"
+      },
+      "created_at": "2026-05-03T07:37:39Z",
+      "updated_at": "2026-05-03T07:37:39Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BAExv",
+          "body": "see https://github.com/EFForg/rayhunter/discussions/771\r\n\r\nI ordered two of those and I think they have the same issue as the UZ801, too many variations and the installer doesn't work half the time. I think we need to get better at identifying working variants of UZ801 see #1006 ",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-05-03T15:46:49Z",
+          "updated_at": "2026-05-03T15:46:49Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BALWQ",
+          "body": "Which devices did you get? The one I got is M9S LCD (Black), there is no label on the PCB of the exact device product name.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-06T06:13:17Z",
+          "updated_at": "2026-05-06T06:13:17Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAWsY",
+          "body": "it looks identical to me:\r\n\r\n<img width=\"300\" alt=\"IMG_20260510_163519\" src=\"https://github.com/user-attachments/assets/cfe4c892-9736-4303-bcd1-c7590d501c85\" />\r\n\r\nexcept the print is different. the aliexpress listing is long gone, the model is called \"A8-E\". it does not work with this installer, even after removing the USB vendor ID filtering in the installer.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-05-10T14:37:31Z",
+          "updated_at": "2026-05-10T14:37:31Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAXPc",
+          "body": "Is the chipset the same as UZ801 (mdm8916)? I think we have this in our local market.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-10T20:50:41Z",
+          "updated_at": "2026-05-10T20:50:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAXQU",
+          "body": "yes it's `msm8916` (msm, not mdm), but the ADB shell isn't root and there doesn't seem to be an obvious way to get root. so copying the files fails, and even if that succeeds, starting the daemon will fail. `/dev/diag` is present.\r\n\r\nThe patch I had to apply to get that far was\r\n\r\n```diff\r\ndiff --git a/installer/src/uz801.rs b/installer/src/uz801.rs\r\nindex 559635b..d32536d 100644\r\n--- a/installer/src/uz801.rs\r\n+++ b/installer/src/uz801.rs\r\n@@ -108,7 +108,7 @@ async fn wait_for_adb() -> Result<ADBUSBDevice> {\r\n\r\n         // UZ801 USB vendor and product IDs.\r\n         // TODO: Research if other variants use different IDs.\r\n-        match ADBUSBDevice::new(0x05c6, 0x90b6) {\r\n+        match ADBUSBDevice::new(0x05c6, 0x9024) {\r\n             Ok(mut device) => {\r\n                 // Test ADB connection\r\n                 if test_adb_connection(&mut device).await.is_ok() {\r\n```",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-05-10T21:03:12Z",
+          "updated_at": "2026-05-10T21:04:47Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAX_Y",
+          "body": "I assume this command didn't work to gain root? `setprop service.adb.root 1; busybox killall adbd`\r\ndo you know what the model written on the PCB? Might get a similar unit for testing but. do we open a new discussion for these MiFi devices as they have different model name but similar to UZ801 (M9s, A8, MF800, H807) some has LCD display and others only LEDs.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-11T06:22:45Z",
+          "updated_at": "2026-05-11T06:22:45Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAYg3",
+          "body": "interesting yeah, that worked. didn't know about that trick! daemon starts up fine when run manually from the shell, the installer crashed halfway through trying to modify files for autostart. after poking around a bit it doesn't seem like there's an obvious spot to hook autostart into, and most of the system is mounted read-only with `mount -o remount,rw` not working.\r\n\r\n* no `/system/bin/init*` (and read-only anyway)\r\n* no `/etc/init*` (and read-only anyway)\r\n\r\nHere is a photo of the PCB as requested, it's not uz801 at all:\r\n\r\n<img height=200 alt=\"IMG_20260511_114401\" src=\"https://github.com/user-attachments/assets/eed795dd-19bb-4012-9424-163936318cab\" />\r\n\r\n",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-05-11T09:51:53Z",
+          "updated_at": "2026-05-11T09:55:56Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAZQg",
+          "body": "Thanks, this is the same internals on my M9S. I'll revert back to the stock firmware and check if I can get Rayhunter running.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-11T15:06:57Z",
+          "updated_at": "2026-05-11T15:06:57Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAdRt",
+          "body": "I attempted manual install of Rayhunter and used UZ801 as config device type, it works. **/system** can be mounted with rw.\r\nAdded 30s sleep after the system post boot `/system/etc/init.qcom.post_boot.sh`  before running the rayhunter daemon for it to capture data or else it will be 0 bytes. I haven't checked on the battery percentage and the display support. \r\nSteps followed: https://github.com/EFForg/rayhunter/discussions/479#discussioncomment-14246127",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-12T20:48:35Z",
+          "updated_at": "2026-05-12T20:48:35Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAdR1",
+          "body": "interesting, `mount -o remount,rw` does not work on my device... :grimacing: i dread the idea of supporting this level of hardware diversity",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-05-12T20:50:16Z",
+          "updated_at": "2026-05-12T20:50:16Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAdU8",
+          "body": "I ordered a similar device such as yours, and I'll let you know if the /system cannot also be remounted.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-12T21:16:36Z",
+          "updated_at": "2026-05-12T21:16:36Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BAseC",
+      "body": "<img width=\"630\" height=\"300\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d6f36208-4953-438f-800f-601102e07951\" />\r\n\r\nCalled M6, same internals as M9S but no LCD. ",
+      "author": {
+        "login": "r1bnc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+        "url": "https://github.com/r1bnc"
+      },
+      "created_at": "2026-05-18T09:56:42Z",
+      "updated_at": "2026-05-18T09:56:42Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BAxfr",
+          "body": "So it sounds like the m6/m9s is a good device for us to target, no?",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2026-05-19T17:49:41Z",
+          "updated_at": "2026-05-19T17:49:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BAxuH",
+          "body": "> So it sounds like the m6/m9s is a good device for us to target, no?\r\n\r\nYes, manually running Rayhunter works on these two and also they seem to come from the same ODM based on the IMEI and PCB markings. If I get another device, I'll post it here.",
+          "author": {
+            "login": "r1bnc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+            "url": "https://github.com/r1bnc"
+          },
+          "created_at": "2026-05-19T19:28:27Z",
+          "updated_at": "2026-05-19T19:28:27Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BCeF0",
+      "body": "I have ordered an m9s, since it seems like a good device, I will test it and post here\r\n",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-06-24T18:33:15Z",
+      "updated_at": "2026-06-24T18:33:15Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "r1bnc"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

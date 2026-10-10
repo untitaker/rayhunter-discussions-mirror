@@ -1,0 +1,595 @@
+{
+  "id": "D_kwDOKrJqmc4AjwYm",
+  "number": 796,
+  "title": "ntfy Notifications",
+  "body": "I just got Rayhunter installed and am wanting to setup the ntfy notifications so that if it detects something it can just alert me without me having to monitor the device. I made my ntfy server and put the URL into the webportal and it accepted it and tried the \"test heuristic\" which did spit out warnings on the web portal but nothing got pushed over to my phone. Is there something else I'm missing or need to do?",
+  "author": {
+    "login": "RyChin123",
+    "avatar_url": "https://avatars.githubusercontent.com/u/49250876?v=4",
+    "url": "https://github.com/RyChin123"
+  },
+  "created_at": "2026-01-21T22:31:17Z",
+  "updated_at": "2026-01-23T18:47:08Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/796",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7cow",
+      "body": "What ntfy client are you using? I had the same problem with the ntfy iOS client but when I switched to Android I got the alerts right away.\r\n\r\nThis is not a rayhunter bug. It is a bug in the poorly written iOS ntfy client.\r\n\r\nHope this helps",
+      "author": {
+        "login": "petervnv",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+        "url": "https://github.com/petervnv"
+      },
+      "created_at": "2026-01-23T18:22:32Z",
+      "updated_at": "2026-01-23T18:22:32Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7cpL",
+          "body": "I'm on android and rayhunter accepted the nfty URL when I input it. But to make sure I understand correctly that should notify my phone when my phone isn't connected to the rayhunter right?",
+          "author": {
+            "login": "RyChin123",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49250876?v=4",
+            "url": "https://github.com/RyChin123"
+          },
+          "created_at": "2026-01-23T18:27:38Z",
+          "updated_at": "2026-01-23T18:27:38Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cpl",
+          "body": "Yes, they are 2 separate things. As long as the rayhunter device has internet connection it should send a POST message (IIRC) to your ntfy server. That in turn will send a notification to your ntfy app.",
+          "author": {
+            "login": "petervnv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+            "url": "https://github.com/petervnv"
+          },
+          "created_at": "2026-01-23T18:31:28Z",
+          "updated_at": "2026-01-23T18:31:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cpw",
+          "body": "Hmm wonder why it wasn't posting then...unless it doesn't have connection? But when I connect to it it seems everything is running how it should. But i don't have like an actual data plan on this. It came with a sim card but based off everything I saw it was showing how others were showing",
+          "author": {
+            "login": "RyChin123",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49250876?v=4",
+            "url": "https://github.com/RyChin123"
+          },
+          "created_at": "2026-01-23T18:33:50Z",
+          "updated_at": "2026-01-23T18:33:50Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cql",
+          "body": "That SIM card probably doesn't have data working",
+          "author": {
+            "login": "petervnv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+            "url": "https://github.com/petervnv"
+          },
+          "created_at": "2026-01-23T18:40:55Z",
+          "updated_at": "2026-01-23T18:40:55Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cqv",
+          "body": "So I need a sim that's attached to a plan?",
+          "author": {
+            "login": "RyChin123",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49250876?v=4",
+            "url": "https://github.com/RyChin123"
+          },
+          "created_at": "2026-01-23T18:42:21Z",
+          "updated_at": "2026-01-23T18:42:21Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cq5",
+          "body": "you absolutely need a proper data connection if you want the orbic to connect to ntfy.sh, as that notification just goes over the internet to that service. if you don't use ntfy.sh then you don't need data.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-23T18:44:54Z",
+          "updated_at": "2026-01-23T18:44:54Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7cq_",
+          "body": "If you want to receive the ntfy notifications I believe that's the only way for it to work. How else would the rayhunter device connect to the internet to send the POST message?",
+          "author": {
+            "login": "petervnv",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6282595?v=4",
+            "url": "https://github.com/petervnv"
+          },
+          "created_at": "2026-01-23T18:45:33Z",
+          "updated_at": "2026-01-23T18:45:33Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7crL",
+          "body": "Gotchya. So if I don't care for the ntfy notifications it doesn't need to have data. If I do want that I basically need to pay for the data line. Makes sense but I was having a hard time finding documtation about it. Seems like most people just connect to it to check it out",
+          "author": {
+            "login": "RyChin123",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49250876?v=4",
+            "url": "https://github.com/RyChin123"
+          },
+          "created_at": "2026-01-23T18:47:08Z",
+          "updated_at": "2026-01-23T18:47:08Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
