@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AkGRP",
+  "number": 879,
+  "title": "New hardware Orbic R100ML5",
+  "body": "just picked one of these up and was hoping to be able to get rayhunter onto it.   not finding anything on the site, what information do you need about the device to get started?  Trying to locate a set of  USB drivers that will work with it, and/or instructions for getting it into a mode I can access it from the USB\r\n\r\nModem Chipset: Qualcomm SD X55\r\nMIMO Support: 4x4 (Downlink), None (Uplink)\r\nLTE-A Carrier Aggregation: Yes\r\nLTE Performance Category: Cat 20\r\nMax Theoretical Speeds: 600 Mbps Download, 75 Mbps Upload",
+  "author": {
+    "login": "Tekvektor",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46121147?v=4",
+    "url": "https://github.com/Tekvektor"
+  },
+  "created_at": "2026-02-12T02:04:48Z",
+  "updated_at": "2026-02-13T02:08:05Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/879",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A8O8T",
+      "body": "This is not something we are likely to work on any time soon, as none of us have the hardware and supporting this hardware isn't a priority for us, but if someone wants to give it a shot you have my blessing. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-13T02:08:05Z",
+      "updated_at": "2026-02-13T02:08:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

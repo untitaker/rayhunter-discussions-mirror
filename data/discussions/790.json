@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AjtXY",
+  "number": 790,
+  "title": "Orbic RC400L STL",
+  "body": "Hi!   Does anyone know of a stl/model to transplant the rc400l's pcb into?  Id like to swap out the 3000 mah battery for two 18650's and I have zero cad experience.  any help is greatly appreciated!",
+  "author": {
+    "login": "pmiller8",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42552311?v=4",
+    "url": "https://github.com/pmiller8"
+  },
+  "created_at": "2026-01-19T01:54:14Z",
+  "updated_at": "2026-01-19T01:54:14Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/790",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

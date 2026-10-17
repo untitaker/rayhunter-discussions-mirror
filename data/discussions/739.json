@@ -1,0 +1,1196 @@
+{
+  "id": "D_kwDOKrJqmc4AjXLP",
+  "number": 739,
+  "title": "Support for Rayhunter on Verizon Orbic Speed 5G R500L5 🙏",
+  "body": "I have a Verizon Orbic Speed 5G R500L5 that I use as a controlled environment for wifi experiments. I would like to get Rayhunter going on it but if I install it, it installs and reboots but doesn’t load the webUI and it doesn’t load the colored bar at the top of the screen. The device features a touchscreen and has a very nice UI as-is. If Rayhunter could work on this, perhaps there’s a way to add the UI for Rayhunter on the actual device too. Below are pictures post install with and without a SIM card (not activated)\r\n![image](https://github.com/user-attachments/assets/69caf6fe-9fa6-4dc8-a423-5d2e7f5b97f0)\r\n![image](https://github.com/user-attachments/assets/6121344d-76ad-4a96-893d-e42ad0763671)\r\n![image](https://github.com/user-attachments/assets/92f59239-d4ab-4606-91fa-38a33f68833e)\r\n",
+  "author": {
+    "login": "GhosTech-IT",
+    "avatar_url": "https://avatars.githubusercontent.com/u/205315540?u=0fe694a56e7069cecb54472bddbb7a1895ff54c7&v=4",
+    "url": "https://github.com/GhosTech-IT"
+  },
+  "created_at": "2025-12-21T22:53:36Z",
+  "updated_at": "2026-09-04T13:31:16Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/739",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6af9",
+      "body": "does rayhunters web UI load and it's just the green bar missing, or does Rayhunter not start at all? can you obtain rayhunters logs by getting a shell on the device?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-12-21T22:56:21Z",
+      "updated_at": "2025-12-21T22:56:21Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6agE",
+          "body": "WebUI does not function. I have not tried to get a shell going to see the logs. I will have to learn how to do that and then I will get back to you if I can figure it out. On it now.",
+          "author": {
+            "login": "GhosTech-IT",
+            "avatar_url": "https://avatars.githubusercontent.com/u/205315540?u=0fe694a56e7069cecb54472bddbb7a1895ff54c7&v=4",
+            "url": "https://github.com/GhosTech-IT"
+          },
+          "created_at": "2025-12-21T22:59:18Z",
+          "updated_at": "2025-12-21T22:59:18Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6agL",
+          "body": "depending on how you installed it. if you used the USB installer then you can use adb shell. if you used the orbic network installer, there is \"installer util orbic-start-telnet\" and then \"nc 192.168.1.1 24\"",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-12-21T23:00:58Z",
+          "updated_at": "2025-12-21T23:00:58Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6ah6",
+          "body": "This is the process I used:\r\n<img width=\"1920\" height=\"1080\" alt=\"Screenshot1\" src=\"https://github.com/user-attachments/assets/2e3220cb-5732-4c11-8f79-5da07494402b\" />\r\n<img width=\"1920\" height=\"1080\" alt=\"Screenshot2\" src=\"https://github.com/user-attachments/assets/010fda76-c96b-4495-aeea-4965c881461e\" />\r\n[Screenshot3.pdf](https://github.com/user-attachments/files/24281827/Screenshot3.pdf)\r\n",
+          "author": {
+            "login": "GhosTech-IT",
+            "avatar_url": "https://avatars.githubusercontent.com/u/205315540?u=0fe694a56e7069cecb54472bddbb7a1895ff54c7&v=4",
+            "url": "https://github.com/GhosTech-IT"
+          },
+          "created_at": "2025-12-21T23:24:54Z",
+          "updated_at": "2025-12-21T23:24:54Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Dark-Mater"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6aiB",
+          "body": "Orbic did reboot before I connected and tried to access 192.168.1.1:8080",
+          "author": {
+            "login": "GhosTech-IT",
+            "avatar_url": "https://avatars.githubusercontent.com/u/205315540?u=0fe694a56e7069cecb54472bddbb7a1895ff54c7&v=4",
+            "url": "https://github.com/GhosTech-IT"
+          },
+          "created_at": "2025-12-21T23:26:35Z",
+          "updated_at": "2025-12-21T23:26:35Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Dark-Mater"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6aiI",
+          "body": "why is screenshot3 a pdf?",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-12-21T23:28:08Z",
+          "updated_at": "2025-12-21T23:28:08Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6ajr",
+          "body": "I'm not exactly sure..",
+          "author": {
+            "login": "GhosTech-IT",
+            "avatar_url": "https://avatars.githubusercontent.com/u/205315540?u=0fe694a56e7069cecb54472bddbb7a1895ff54c7&v=4",
+            "url": "https://github.com/GhosTech-IT"
+          },
+          "created_at": "2025-12-21T23:57:03Z",
+          "updated_at": "2025-12-21T23:57:03Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BEHmC",
+          "body": "Ooh I wanna play. Getting root shell rn bc this hw could make such a badass Rh stack that seems to have fallen right back *toward* Benn J's '25 X-mas gift price range, and I hear lore in '26 now that the board's client capabilities may be in sight? That piques my interest in keeping the thing, because I already know that even our old 400 model can spot and publish stealth jets doing radar avoidance drills and that makes for cellular disturbance behavior that is extremely fun to log!\r\n\r\nI ordered this one by *mistake* well after BJ's shopping vid had already surged Orbic prices, and paid a lot more like a hundred bucks for it before I ever realized I was after an RC400L. Seller was *not* having any of it. I will attain root shell and bring new life... 🤞\r\n<img width=\"3072\" height=\"4080\" alt=\"1000003126\" src=\"https://github.com/user-attachments/assets/fdb5faa9-f660-489b-9d53-33adb2bcdaae\" />\r\n\r\n",
+          "author": {
+            "login": "reusernametaken",
+            "avatar_url": "https://avatars.githubusercontent.com/u/305989698?v=4",
+            "url": "https://github.com/reusernametaken"
+          },
+          "created_at": "2026-07-31T18:38:03Z",
+          "updated_at": "2026-07-31T18:38:03Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A6pIR",
+      "body": "i recently got one of these devices. using `./installer util orbic-shell --admin-password [PASS]` works to give me a root shell and all files are installed correctly. running `/data/rayhunter/rayhunter-daemon` shows the \"R A Y H U N T E R\" output but no indicator or web ui.\r\n\r\nturning debug mode on in config.toml works and the web ui starts so i think the process is crashing somewhere along the way.",
+      "author": {
+        "login": "falxie",
+        "avatar_url": "https://avatars.githubusercontent.com/u/94479957?u=4a3d689ecf19c45f3df4d58917db641b13764cb2&v=4",
+        "url": "https://github.com/falxie"
+      },
+      "created_at": "2025-12-30T05:52:11Z",
+      "updated_at": "2025-12-30T05:52:11Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6pMg",
+          "body": "i compiled the rootshell ran rayhunter-daemon, this is the error:\r\n`[2024-11-15T14:10:17Z ERROR rayhunter::diag_device] Failed to initialize diag device after 30s: Failed to initialize /dev/diag: DIAG_IOCTL_SWITCH_LOGGING ioctl failed with error code -1\r\nError: DiagInitError(InitializationFailed(\"DIAG_IOCTL_SWITCH_LOGGING ioctl failed with error code -1\"))`",
+          "author": {
+            "login": "falxie",
+            "avatar_url": "https://avatars.githubusercontent.com/u/94479957?u=4a3d689ecf19c45f3df4d58917db641b13764cb2&v=4",
+            "url": "https://github.com/falxie"
+          },
+          "created_at": "2025-12-30T07:03:27Z",
+          "updated_at": "2025-12-30T07:03:27Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Dark-Mater"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6tUY",
+          "body": "that's a generic message telling you the ioctl parameters are wrong. if you search for this error in the codebase you'll find that different devices initialize with different parameters. I guess we'll have to figure out which params this device takes ",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-02T09:55:16Z",
+          "updated_at": "2026-01-02T09:55:16Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "Dark-Mater"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 1,
+              "users": [
+                "GhosTech-IT"
+              ]
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8TfF",
+      "body": "I also have one of these ORBIC R500L5 5G models.\r\nIs there any work being done to get the installer to work on these?\r\nIs there anything Ii can do to assist someone in this endeavor?",
+      "author": {
+        "login": "Dark-Mater",
+        "avatar_url": "https://avatars.githubusercontent.com/u/96679167?v=4",
+        "url": "https://github.com/Dark-Mater"
+      },
+      "created_at": "2026-02-15T03:40:13Z",
+      "updated_at": "2026-02-15T03:40:13Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8Tf5",
+          "body": "Current Software Version: \tORB500L5_V2.0.4.1_BVZRT\r\nCurrent Hardware Version: \tV1.2",
+          "author": {
+            "login": "Dark-Mater",
+            "avatar_url": "https://avatars.githubusercontent.com/u/96679167?v=4",
+            "url": "https://github.com/Dark-Mater"
+          },
+          "created_at": "2026-02-15T03:53:36Z",
+          "updated_at": "2026-02-15T03:53:36Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 1,
+              "users": [
+                "GH0ST3CH"
+              ]
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 1,
+          "users": [
+            "GH0ST3CH"
+          ]
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8_DP",
+      "body": "I'm also having the same issue\r\n\r\nCurrent Software Version: ORB500L5_V2.0.3.9.BVZRT\r\nUpdate status: 200\r\n\r\nI don't have an active subscription to update.\r\n",
+      "author": {
+        "login": "KristoferBe",
+        "avatar_url": "https://avatars.githubusercontent.com/u/138752036?v=4",
+        "url": "https://github.com/KristoferBe"
+      },
+      "created_at": "2026-03-03T16:12:20Z",
+      "updated_at": "2026-03-03T16:12:20Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A9JUk",
+      "body": "This would be an interesting thing to work on, but my plate is full at the moment.",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-03-07T00:05:59Z",
+      "updated_at": "2026-03-07T00:05:59Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BEL3l",
+      "body": "<img width=\"1697\" height=\"952\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b8a22ef1-4a03-44f0-9e33-a7044ab4cdd0\" />\r\nI've made some progress on this. Lets see if I can take it home\r\nI at least got the webgui running. \r\n\r\nStorage is of some concern on these. It's pretty small... No sd card expansion either...\r\nI've compiled the binary with all possible optimizations and it only gets us an additional 2mb.\r\n\r\nThe startup script init.d previously done doesn't work on the rc500l, it uses systemd.\r\n\r\nBattery level detection I haven't been able to figure out yet.\r\n\r\nI'm still working on the diagcommands. I've looked up all the supported options for the chipset and am brute forcing which work right now. Something like 1k combinations so it isn't that bad. It's currently preventing me from starting any actual scans.\r\n\r\nBut heck what do I know about this repo. I'm just trying over here lol",
+      "author": {
+        "login": "simeononsecurity",
+        "avatar_url": "https://avatars.githubusercontent.com/u/4913771?u=249ab8267305a8ac10e6eb8c8183e6a1b2aaadfb&v=4",
+        "url": "https://github.com/simeononsecurity"
+      },
+      "created_at": "2026-08-02T23:17:32Z",
+      "updated_at": "2026-08-03T00:02:03Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BEMIO",
+          "body": "<img width=\"1710\" height=\"860\" alt=\"image\" src=\"https://github.com/user-attachments/assets/59e237d4-9fed-43bf-82f2-836d54528dcd\" />\r\nOh gosh this is stressing my skills but I got it executing and recording finally. Also service autostart is working.\r\n\r\n\r\nEdit: I failed to get the diag commands correct. pcaps are all empty as a result. Had to use AI way too much to get where I'm at now. So backtracking.\r\n",
+          "author": {
+            "login": "simeononsecurity",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4913771?u=249ab8267305a8ac10e6eb8c8183e6a1b2aaadfb&v=4",
+            "url": "https://github.com/simeononsecurity"
+          },
+          "created_at": "2026-08-03T02:38:13Z",
+          "updated_at": "2026-08-03T05:11:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BEMes",
+      "body": "Oh. My. Gosh. This is fantastic!! You're debugging v0.11.2 on an R500L5\r\nright?? I wonder how many contenders they have for their next portover.\r\nExcellent work friend. 👏\r\n\r\nOn Sun, Aug 2, 2026 at 8:38 PM SimeonOnSecurity ***@***.***>\r\nwrote:\r\n\r\n> image.png (view on web)\r\n> <https://github.com/user-attachments/assets/59e237d4-9fed-43bf-82f2-836d54528dcd>\r\n> Oh gosh this is stressing my skills but I got it executing and recording\r\n> finally\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/739?email_source=notifications&email_token=CI6QQQSL7RWQV3VI2H5CLOL5H73KZA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCNZYG42TINZQUZZGKYLTN5XKM3LBNZ2WC3FFMV3GK3TUVRTG633UMVZF6Y3MNFRWW#discussioncomment-17875470>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/CI6QQQQFLO7XP3VRVOT4HLT5H73KZAVCNFSNUABHKJSXA33TNF2G64TZHM3TCNRTGM2TONRZHNCGS43DOVZXG2LPNY5TSMRWHE4TMN5BOYBA>\r\n> .\r\n> Triage notifications, keep track of coding agent tasks and review pull\r\n> requests on the go with GitHub Mobile for iOS\r\n> <https://github.com/notifications/mobile/ios/CI6QQQSDKXRTHUKPTHZF4OL5H73KZA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCNZYG42TINZQUZZGKYLTN5XKM3LBNZ2WC3FFMV3GK3TUVJTG633UMVZF62LPOM>\r\n> and Android\r\n> <https://github.com/notifications/mobile/android/CI6QQQUXZMWCIRO5TCVJPID5H73KZA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCNZYG42TINZQUZZGKYLTN5XKM3LBNZ2WC3FFMV3GK3TUVZTG633UMVZF6YLOMRZG62LE>.\r\n> Download it today!\r\n> You are receiving this because you are subscribed to this thread.Message\r\n> ID: ***@***.***>\r\n>\r\n",
+      "author": {
+        "login": "reusernametaken",
+        "avatar_url": "https://avatars.githubusercontent.com/u/305989698?v=4",
+        "url": "https://github.com/reusernametaken"
+      },
+      "created_at": "2026-08-03T06:12:29Z",
+      "updated_at": "2026-08-03T06:12:29Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "simeononsecurity"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BFxTh",
+      "body": "I've been working on the same R500L5 (SDX55) and wanted to share what I've found and fixed so far. I could use some guidance on the rest.  I'd rather not open a large PR on a half-finished transport if there's a simpler path.\r\n\r\nThe R500L5's diag data plane is bound to a disconnected USB gadget (`diag_mdm`). The control plane works over QRTR, but `/dev/diag` drops modem-bound log traffic because there's no USB host cable. That's why rayhunter installs and runs but never sees `0x10` LTE RRC/ML1 frames — empty pcaps, same as @simeononsecurity saw.\r\n\r\nThere are two separate problems here. One is the message transport:\r\n\r\n`DIAG_IOCTL_SWITCH_LOGGING` failure (the `-1` error):\r\nThe X55/4.14 driver wants a 24-byte `diag_logging_mode_param_t`, not the legacy 9-byte one. The combined multi-proc switch (`device_mask=0x3`) fails because proc 1's re-translation of the already-switched proc 0 returns `-EINVAL`. Fix: two sequential per-proc ioctls on one fd (proc 0 with `APSS|MPSS`, then proc 1). Verified on device: `diag-init` completes, logging mode reaches MULTI (3), session mask `0x81` on both procs.\r\n\r\n`capacity overflow` panic in `MessagesContainer`:\r\nThe parser treated every response as `[data_type][num_data][{len,data}...]`, so the modem's `0x100 DCI_LOG_MASKS` / `0x200 DCI_EVENT_MASKS` responses (mask tables, not message lists) read a garbage count and overflowed. Replaced with a bounded parser that also skips the `remote_token` prefix. Five unit tests; the daemon now idles cleanly through init.\r\n\r\n## Still broken — where I need guidance\r\n\r\nThe data plane itself. I built a QRTR (`AF_QIPCRTR`) transport to the modem diag command service (node 3 / port 14) with EFS2 read/write, planning to flip the DCI gate (`/nv/item_files/services/diag/DCI_disable` to 0). But:\r\n\r\n- EFS2 reads of `DCI_disable` still return `ENOENT`, and a write to `DCI_disable.conf` \"reports\" success with no effect.\r\n- No DCI MHI channel in the device tree, so it's unclear the data plane can come up at all without firmware-side changes.\r\n\r\nOpen questions:\r\n\r\n1. Kernel/DT omission (fixable in the driver) or modem firmware limitation (dead end)?\r\n2. Is QRTR + EFS2 the right lever, or is there a known-correct way to bring up the X55 data plane?\r\n3. Worth a PR at all — and if so, split (small parser fix first, transport as follow-up)? The full change is ~950 lines which is well over the 400-line contribution guidance... and the transport half is still experimental.\r\n\r\nBranch is at `cturner/rayhunter` on `r500l5-x55-diag` if anyone wants to look.",
+      "author": {
+        "login": "cturner",
+        "avatar_url": "https://avatars.githubusercontent.com/u/88383?u=21af7e55adf6e00eaca0b0c58ac4384bf6c94141&v=4",
+        "url": "https://github.com/cturner"
+      },
+      "created_at": "2026-09-04T13:31:16Z",
+      "updated_at": "2026-09-04T22:40:38Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": "low-quality",
+      "is_minimized": true,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 1,
+      "users": [
+        "Dark-Mater"
+      ]
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 3
+}
