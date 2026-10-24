@@ -1,0 +1,118 @@
+{
+  "id": "D_kwDOKrJqmc4AfIQu",
+  "number": 239,
+  "title": "QMDL v.s PCAP",
+  "body": "Hello,\r\n\r\nLooking for clarification regarding exporting QMDL and PCAPs - are the PCAPs just converted from the QMDL format or would using a tool like `scat` to convert QMDL to PCAP yield different and/or additional data?\r\n\r\nLove this project, thank you for all the work on this!! ",
+  "author": {
+    "login": "m0xsec",
+    "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+    "url": "https://github.com/m0xsec"
+  },
+  "created_at": "2025-04-03T00:19:38Z",
+  "updated_at": "2025-04-23T19:55:38Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/239",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4Awed5",
+      "body": "I used a pcap diff tool to compare the exported PCAP and the resulting PCAP by using `scat` to read the QMDL file. The file sizes are different, and the pcap diff tool noted some packet differences in one instance: \r\n\r\n```\r\nReading file ..\\rayhunter_captures\\exported.pcap:\r\nFound 627 packets\r\n\r\nReading file ..\\rayhunter_captures\\qmdl_scat.pcap:\r\nFound 627 packets\r\n\r\nDiffing packets: not seq ack, no ip id, no checksum, \r\n\r\nFound 38 different packets\r\n\r\nWriting ..\\rayhunter_captures\\diff_e3.pcap\r\n```\r\n\r\nI tested using these tools:\r\n* scat - https://github.com/fgsect/scat\r\n* pcap-diff - https://github.com/isginf/pcap-diff ",
+      "author": {
+        "login": "m0xsec",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+        "url": "https://github.com/m0xsec"
+      },
+      "created_at": "2025-04-03T01:02:31Z",
+      "updated_at": "2025-04-03T01:02:32Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AweeL",
+      "body": "File size differences:\r\n\r\n| Bytes| File|\r\n|--------|--------|\r\n| 61896 | exported.pcap|\r\n| 59708 | qmdl_scat.pcap| \r\n",
+      "author": {
+        "login": "m0xsec",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+        "url": "https://github.com/m0xsec"
+      },
+      "created_at": "2025-04-03T01:05:45Z",
+      "updated_at": "2025-04-03T01:05:46Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AwhSl",
+      "body": "@wgreenberg Sorry for the tag - wanted your thoughts on this. I was thinking of opening an issue but not sure if it warrants one as this might just be a knowledge gap on my end ",
+      "author": {
+        "login": "m0xsec",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100277081?u=8c739159642320156b7030c3dbc2a1db053c4fd1&v=4",
+        "url": "https://github.com/m0xsec"
+      },
+      "created_at": "2025-04-03T22:09:44Z",
+      "updated_at": "2025-04-03T22:09:45Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxT7l",
+      "body": "Just seeing this now -- the pcap can be considered a strict superset of the information contained in the qmdl.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-04-23T19:03:25Z",
+      "updated_at": "2025-04-23T19:03:26Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxUB9",
+      "body": "ack, i missed the notification from your tag, sorry @m0xsec! my guess as to why scat's PCAPs are different is that they're possibly storing different data in the GSMTAP headers, though it's a little surprising that theirs is smaller than ours. does the diff file clarify what the difference is?",
+      "author": {
+        "login": "wgreenberg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/626277?u=448d64d55b1e3e12c28fe7a150be60b4728bd5fc&v=4",
+        "url": "https://github.com/wgreenberg"
+      },
+      "created_at": "2025-04-23T19:55:38Z",
+      "updated_at": "2025-04-23T19:55:39Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4AxT7l",
+    "body": "Just seeing this now -- the pcap can be considered a strict superset of the information contained in the qmdl.",
+    "author": {
+      "login": "oopsbagel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+      "url": "https://github.com/oopsbagel"
+    },
+    "created_at": "2025-04-23T19:03:25Z",
+    "updated_at": "2025-04-23T19:03:26Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-04-23T19:03:31Z",
+  "state_reason": null
+}

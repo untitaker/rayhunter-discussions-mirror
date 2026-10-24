@@ -1,0 +1,247 @@
+{
+  "id": "D_kwDOKrJqmc4Aj57K",
+  "number": 832,
+  "title": "Contents of wt_version (TMOHS1)",
+  "body": "[The Rayhunter page for the TMOHS1](https://efforg.github.io/rayhunter/tmobile-tmohs1.html) asks for the contents of my `/etc/wt_version`, so here it is.\r\n\r\n```cat /etc/wt_version\r\nWT_INNER_VERSION=SW_Q89527AA1_V032_M11_TMO_USR_MP\r\nWT_PRODUCTION_VERSION=TMOHS1_0.04.18\r\n\r\nWT_HARDWARE_VERSION=89527_1_11\r\nWT_CUSTOMER_NAME=TMobile\r\nWT_PRODUCT_PROJECT=Q89527AA1\r\n```\r\n\r\nAs far as I can tell, Rayhunter 0.9.0 is running on here just fine.",
+  "author": {
+    "login": "nitrate92",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46730268?u=ce26cd8eecf2260bada8db330392e8ca2bd6d926&v=4",
+    "url": "https://github.com/nitrate92"
+  },
+  "created_at": "2026-01-31T17:01:00Z",
+  "updated_at": "2026-02-04T20:27:02Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/832",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7wjk",
+      "body": "I am connected via wifi but still getting connect to hot using wifi or usb!!!???\r\n\r\nC:\\rayhunter-v0.9.0-windows-x86_64\\rayhunter-v0.9.0-windows-x86_64>installer tmobile --admin-password ******5\r\nStarting telnet ... Failed to install rayhunter on the Tmobile TMOHS1. Make sure your computer is connected to the hotspot using USB tethering or WiFi.\r\n\r\nCaused by:\r\n    0: login did not return a token in response\r\n    1: error decoding response body\r\n    2: missing field `token` at line 1 column 24",
+      "author": {
+        "login": "mharris3823",
+        "avatar_url": "https://avatars.githubusercontent.com/u/9710634?u=d510d60f75af08cb10406f4a87a70c0c50f809d3&v=4",
+        "url": "https://github.com/mharris3823"
+      },
+      "created_at": "2026-02-01T16:52:34Z",
+      "updated_at": "2026-02-01T16:55:53Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": "off-topic",
+      "is_minimized": true,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A74eU",
+      "body": "@untitaker is this useful to you?",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-04T19:39:49Z",
+      "updated_at": "2026-02-04T19:39:49Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A74kJ",
+          "body": "the relevant parts of the docs were written by @oopsbagel , i don't know why that sentence is there",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-04T20:27:02Z",
+          "updated_at": "2026-02-04T20:27:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

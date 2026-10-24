@@ -1,0 +1,421 @@
+{
+  "id": "D_kwDOKrJqmc4Aj-Lp",
+  "number": 849,
+  "title": "Add basic HTTP auth",
+  "body": "I would like to add basic HTTP auth to the endpoints and the UI. I can get this done pretty quick.\r\n\r\n### Reason needed\r\nThis is a concern since every device that has connected to the wifi will essentially remember the password forever and there's no way to revoke access. A compromised device that once accessed it can't be prevented from messing with the rayhunter.\r\n\r\n### Proposed Changes\r\nAdd to the configuration section in the GUI an area\r\n\r\n- A toggle whether a password is required\r\n- Ability to set password\r\n- Ability to update password\r\n- Ability to set password timeout (enforced on rayhunter)\r\n\r\nOn the backend endpoints it would enforce the password (if enabled). Basic http auth is compatible with pretty much everything including CURL.",
+  "author": {
+    "login": "BeigeBox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+    "url": "https://github.com/BeigeBox"
+  },
+  "created_at": "2026-02-04T21:10:15Z",
+  "updated_at": "2026-02-05T17:11:35Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/849",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A74p1",
+      "body": "This would be useless without also having HTTPS support. That is a prerequisite for any type of password protection. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-02-04T21:20:30Z",
+      "updated_at": "2026-02-04T21:20:30Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A74qB",
+      "body": "previous conversation: https://github.com/EFForg/rayhunter/issues/22",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-04T21:22:18Z",
+      "updated_at": "2026-02-04T21:22:18Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A74sy",
+      "body": "Based off the conversation @untitaker mentioned then it seems like adding TLS support even with a locally generated self signed root CA we could get some protection. That would at least prevent leaking the credential, plus there's some CSRF issues while there's no auth which could have an attacker on another tab make a call to delete recordings or do all sorts of stuff.",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-02-04T21:47:45Z",
+      "updated_at": "2026-02-04T21:47:45Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A74s0",
+      "body": "Any objections to me starting with adding TLS support then?",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-02-04T21:48:10Z",
+      "updated_at": "2026-02-04T21:48:10Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A76w6",
+          "body": "@BeigeBox\r\n\r\nI am concerned that with the self-signed cert it will just condition users to ignore those warnings without adding much security.\r\n\r\nLike mentioned in the other issue, right now our security boundary is the WiFi network itself, and so in order to revoke access you just gotta change the wifi password.\r\n\r\n**I don't agree that a password is useless without TLS**. A device having access to the WiFi network does not automatically mean it's able to observe all packets within that network. A device may run malicious software that doesn't have the right permissions to capture packets, but still is able to send network requests.\r\n\r\nBut: Most of the devices we install rayhunter on have glaring security holes, and letting a malicious device onto its WiFi network is going to be problem in other ways. We use those security holes to install rayhunter.\r\n\r\nSo I think it'll not fix much in this situation, and I don't think it's worth the effort.\r\n\r\nInstead we should probably figure out if we can disable the WiFi AP in a cross-platform way, which would fix a ton of issues at once (detectability of rayhunter devices too). It seems people already do that and connect via USB tethering only.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-05T14:42:22Z",
+          "updated_at": "2026-02-05T14:42:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A77L_",
+          "body": "Well, I got bored last night and did end up adding TLS functionality to my fork. \r\n\r\nAt the moment it generates certs when the user selects the configuration option. \r\n\r\nIn the future I'll add in an upload to the configuration where they could provide their own certs. Reason being is this is especially useful if the user is using a local DNS server (or hardcoded hosts record) to resolve the host/domain name. For example I want to grab a cert that I was issued for one of my domains, so the cert validates on any machine on the network using my custom DNS resolver which has some hard coded resolutions). In that case they could have valid certs which don't throw an error. I hope you'll consider it's inclusion, it's not vibe coded slop and I tried to cover all angles including documentation completely. \r\n\r\nEDIT: The TLS feature is off by default, and the user would have to turn it on themselves, so there's little risk to it's inclusion in my opinion.\r\n\r\nGood call on the issue of disabling the wifi ap. After I finish the TLS (and if you'll approve the scope of work for authentication/authorization) I could spike on that next.",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-05T17:11:35Z",
+          "updated_at": "2026-02-05T19:33:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

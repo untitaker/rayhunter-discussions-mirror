@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4ApR6r",
+  "number": 1152,
+  "title": "Alcatel LinkZone MW41MP Support",
+  "body": "Had this device in my ewaste box. It was unlocked it somehow a few years ago by getting a code, but I don't remember how. Rayhunter is running on it now. AI built most of it.  \r\n\r\n[FCC Info](https://fccid.io/2ACCJB071)\r\n[installer](https://github.com/andylittle/rayhunter/tree/mw41-installer)",
+  "author": {
+    "login": "andylittle",
+    "avatar_url": "https://avatars.githubusercontent.com/u/12177246?u=340ff8b29dc4f53dca4a9444c862670d4f133efb&v=4",
+    "url": "https://github.com/andylittle"
+  },
+  "created_at": "2026-09-15T16:01:04Z",
+  "updated_at": "2026-09-15T16:01:04Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1152",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

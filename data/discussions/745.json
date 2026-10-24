@@ -1,0 +1,247 @@
+{
+  "id": "D_kwDOKrJqmc4AjaEo",
+  "number": 745,
+  "title": "I think I bricked my device",
+  "body": "So this is all on me, 100% (and maybe chatgtp). I am only writing this to describe my experience and also a little bit as I am confused how it could have happened since to my understanding nothing was pushed to the device due to a checksum mismatch.\r\n\r\nI recently heard of this project and was excited to try it out. I was off work for a few days so I had time to play. I was going to just get an Orbic but then I remembered having a hotspot sitting in a drawer for a while and decided to check what it was and it was a Moxee K779HSDL and to my surprise it was supported.\r\n\r\nInstall was super easy and I had a working device, minus the green/red indication bar. I found an issue where someone found a fix and implemented it and it worked, but due to holidays was not currently being worked on. Well, I got some time on my hands and this looks easy enough I thought, so I figured would give it a go. \r\n\r\nI should have just left well enough alone because it became evident quickly that I had no idea what I was doing. Probably compounded by fact that I am using a M1 Mac. So as one does in these situations, I consulted chatgtp who for the next, I would rather not say amount of time, just lead me around in circles between docker and some other stuff that I honestly don't even care to go back and check what it was.\r\n\r\nAfter much coaxing I seemed to have a completed build. All seemed well until while trying to push it through I got a checksum error that I assumed prevented anything from being pushed through. I kept trying to get gtp to lead me the right way but no matter what I did, always a checksum error.\r\n\r\nBut as far as I know, the device up to this point was working. So I decided to try and just flash the original from the installer because in that issue I read there was also a note about storage space and was wondering if that was my issue. Again, I should have just left well enough alone, but I tried to push the original through using the release installer and got the same checksum error. So I did something stupid(er) and used the reset button on the device. And that's when it all broke. \r\n\r\nThings I can tell that are different:\r\n\r\n1. It no longer says No Service on the screen. Just 0.0/0.0 KB\r\n2. The little circle that shows how many connected wifi devices are gone, usually would show 0 if nothing.\r\n3. If I go to device info, its all blank\r\n4. Same as 2.4 and 5G wireless settings\r\n5. WPS settings (not that I would use), but shows WPS DeActive\r\n6. Device is no longer broadcasting a network my computer sees\r\n\r\nAssumption:\r\n\r\nSince I can't connect to wifi, I can't even use the install tool to push a new firmware as the device wont be detected and even though it boots and I can cycle through menus its essentially bricked as all the settings have been lost and as far as I can tell, nothing I can do to fix.\r\n\r\nConclusion:\r\n\r\nAgain, 100% my fault. I own that. I am just reaching out in case this can be recovered. But really, because I don't understand what exactly did this. wouldn't the checksum mismatch error have prevented my customized firmware from being pushed through.\r\n\r\nI don't think there is anything actionable here, so I did this as a discussion. ",
+  "author": {
+    "login": "geoffmcc",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17417840?u=bad4f0122d89df0a2282e1e03df21d50b1e2d0ab&v=4",
+    "url": "https://github.com/geoffmcc"
+  },
+  "created_at": "2025-12-25T15:25:30Z",
+  "updated_at": "2025-12-25T15:43:23Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/745",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6heI",
+      "body": "not sure but I think your internal storage might just be full, and that's why installation fails. I'd try to get a shell on the device (installer util orbic-start-telnet, then use nc to connect to port 24), then delete the /data/rayhunter folder and hope that clears up some disk space. chatgpt can probably help you with commands to figure out how much disk space you're using.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-12-25T15:30:57Z",
+      "updated_at": "2025-12-25T15:30:57Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6hfJ",
+          "body": "When I read #733 I thought reset was the easier of the two options. But since I did that, I can no longer connect to the hotspot via wifi. So now any time I try do do anything with installer I just get\r\n\r\nNo session cookie received. ",
+          "author": {
+            "login": "geoffmcc",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17417840?u=bad4f0122d89df0a2282e1e03df21d50b1e2d0ab&v=4",
+            "url": "https://github.com/geoffmcc"
+          },
+          "created_at": "2025-12-25T15:43:23Z",
+          "updated_at": "2025-12-25T15:43:23Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A6heL",
+      "body": "See also https://github.com/EFForg/rayhunter/issues/733",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-12-25T15:31:23Z",
+      "updated_at": "2025-12-25T15:31:23Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

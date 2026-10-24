@@ -1,0 +1,363 @@
+{
+  "id": "D_kwDOKrJqmc4AiUyR",
+  "number": 638,
+  "title": "Request for Information: Does Rayhunter work offline?",
+  "body": "I'm interested in this project very much so but I'm holding back as I can't seem to find much information in regard to whether or not the software works offline? \n\nI feel like being able to travel with an Orbic, given its 4400mah battery, with Rayhunter installed would be the ideal setup, no?",
+  "author": {
+    "login": "BugZappa",
+    "avatar_url": "https://avatars.githubusercontent.com/u/112329763?v=4",
+    "url": "https://github.com/BugZappa"
+  },
+  "created_at": "2025-10-07T23:43:14Z",
+  "updated_at": "2025-12-01T18:52:44Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/638",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A3zXo",
+      "body": "Sorry but can you clarify what you mean by offline in this case? If you mean does the software work without an active sim card in the device the answer is yes. (you still need some sort of sim card though.) If that's not what you mean please clarify. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-10-08T16:22:41Z",
+      "updated_at": "2025-10-08T16:22:42Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A3zYm",
+          "body": "> Sorry but can you clarify what you mean by offline in this case? If you mean does the software work without an active sim card in the device the answer is yes. (you still need some sort of sim card though.) If that's not what you mean please clarify. \n\nApologies I should've been more clear, I was more inquiring in the requirement for an active internet connection (Wi-Fi/Ethernet) - If the software does require constant internet access would a SIM card with a Data Plan suffice? ",
+          "author": {
+            "login": "BugZappa",
+            "avatar_url": "https://avatars.githubusercontent.com/u/112329763?v=4",
+            "url": "https://github.com/BugZappa"
+          },
+          "created_at": "2025-10-08T16:28:03Z",
+          "updated_at": "2025-10-08T16:28:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A3zZG",
+          "body": "the software only runs on wireless hotspots which generally don't have a wifi/ethernet connection, so no that is not required. It is also not required to have an active SIM as described here in our FAQ: https://efforg.github.io/rayhunter/faq.html#do-i-need-an-active-sim-card-to-use-rayhunter",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-10-08T16:32:02Z",
+          "updated_at": "2025-10-08T16:32:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 1
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A5pYw",
+          "body": "Piggy backing on this since it's a bit of an offline question - does the device automatically start a recording if a 'red line' event were to be detected? ",
+          "author": {
+            "login": "FrankenWompus",
+            "avatar_url": "https://avatars.githubusercontent.com/u/140133512?v=4",
+            "url": "https://github.com/FrankenWompus"
+          },
+          "created_at": "2025-11-29T13:37:22Z",
+          "updated_at": "2025-11-29T13:37:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A5tPN",
+          "body": "The device is always recording the connection between itself and the cell tower as long as rayhunter is running. ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-12-01T18:52:44Z",
+          "updated_at": "2025-12-01T18:52:45Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

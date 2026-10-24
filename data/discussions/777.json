@@ -1,0 +1,662 @@
+{
+  "id": "D_kwDOKrJqmc4Ajoby",
+  "number": 777,
+  "title": "Any other ways to see when an Orbic 400L is triggered?",
+  "body": "I have an Orbic 400L with a Verizon SIM card. I do not have service with Verizon so my Rayhunter instance does not have access to the internet. As such, the only way I can know about the presence of an attacker is by periodically pressing the power button to check the display.\r\n\r\nI opened the unit, hoping to find some pads on the board that I might be able to exploit for adding an LED or a vibrator, but could not find any that made sense. Anyone know if this has been investigated before?",
+  "author": {
+    "login": "suomi35",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+    "url": "https://github.com/suomi35"
+  },
+  "created_at": "2026-01-13T23:38:13Z",
+  "updated_at": "2026-09-06T02:53:52Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/777",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7F10",
+      "body": "there's currently no way without a working SIM card. #114 was researching ways of notifying but in the end we only shipped ntfy.sh support which does require an internet connection.\r\n\r\nyou can use another device to connect to the rayhunter web UI periodically to poll for status changes. but this would require a lot of coding.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-13T23:40:50Z",
+      "updated_at": "2026-01-13T23:40:50Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7F3j",
+          "body": "I think I will explore that 'poll with another device' option. Maybe cook up a simple Android app.\r\nThank you!",
+          "author": {
+            "login": "suomi35",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+            "url": "https://github.com/suomi35"
+          },
+          "created_at": "2026-01-14T00:12:35Z",
+          "updated_at": "2026-01-14T00:12:35Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7F3m",
+          "body": "I started on an android app, but notifications are currently broken. I mainly use it to open the web interface right now. https://codeberg.org/untitaker/rayhunter-companion",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-14T00:13:51Z",
+          "updated_at": "2026-01-14T00:13:51Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 2,
+              "users": [
+                "suomi35",
+                "t-molder"
+              ]
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 1,
+          "users": [
+            "suomi35"
+          ]
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BCtSd",
+      "body": "Would it not be possible to have the webUI send push notifications on warnings? \r\nAs far as I have been able to find ntfy will not work with a prepaid sim that doesn't have a data plan. \r\nBut ideally it would be possible to be notified of hot stingrays in your area, without requiring a sim that's tied to your bank account, or staring at the mifi router all the time.",
+      "author": {
+        "login": "t-molder",
+        "avatar_url": "https://avatars.githubusercontent.com/u/67382928?u=9325fb85c9a98cdc159c66f1a00d945efe00974a&v=4",
+        "url": "https://github.com/t-molder"
+      },
+      "created_at": "2026-06-30T16:30:33Z",
+      "updated_at": "2026-06-30T16:30:33Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BCtmE",
+          "body": "I have found that with the new [WiFi Client Mode](https://efforg.github.io/rayhunter/configuration.html#wifi-client-mode) feature, you can turn up the hotspot on your mobile phone, have the Orbic connect to it, and then the Orbic can publish notifications to ntfy. You then configure your phone as a subscriber (or any other device) and you're set 😎 ",
+          "author": {
+            "login": "suomi35",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+            "url": "https://github.com/suomi35"
+          },
+          "created_at": "2026-06-30T18:35:04Z",
+          "updated_at": "2026-06-30T18:35:04Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BCt0p",
+          "body": "Sadly that looks to only be a feature in those U.S. mifi devices. Or at least, I haven't been able to find it in my tp-link's web UI/companion app. ",
+          "author": {
+            "login": "t-molder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/67382928?u=9325fb85c9a98cdc159c66f1a00d945efe00974a&v=4",
+            "url": "https://github.com/t-molder"
+          },
+          "created_at": "2026-06-30T20:32:45Z",
+          "updated_at": "2026-06-30T20:32:45Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BCuPs",
+          "body": "Ah damnit! I was thinking you were also using an Orbic, my apologies. I don't have TP Link to test here, unfortunately.",
+          "author": {
+            "login": "suomi35",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+            "url": "https://github.com/suomi35"
+          },
+          "created_at": "2026-07-01T00:55:05Z",
+          "updated_at": "2026-07-01T00:55:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BCv_W",
+          "body": "Some tp-link devices appear to have 'repeater mode' 'range extender mode' or 'WDS bridging' but that mainly looks like a home router functionality. The interfaces for the M7350 provide no such option. I have however managed to get telnet access into the M7350V7, now I just have to figure out if there's any way to get those functions via CLI.",
+          "author": {
+            "login": "t-molder",
+            "avatar_url": "https://avatars.githubusercontent.com/u/67382928?u=9325fb85c9a98cdc159c66f1a00d945efe00974a&v=4",
+            "url": "https://github.com/t-molder"
+          },
+          "created_at": "2026-07-01T14:03:14Z",
+          "updated_at": "2026-07-01T14:03:14Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BF2hU",
+      "body": "I had AI configure a raspberry pi3 like so:\r\n\r\n> the Orbic connects to it over USB as a private network (orbic0, 192.168.3.2 ↔ 192.168.3.1) with no default route, so the modem never carries the Pi's traffic. On it, a Python bridge does two things — it polls Rayhunter's HTTP API every 30 seconds for health the device can't report about itself (daemon dead, capture stalled, disk filling, battery/unplugged), and it runs a small HTTP listener impersonating an ntfy server so Rayhunter pushes cell-site warnings to it the instant a heuristic fires. Both feed MQTT on your Home Assistant broker, where 19 auto-discovered entities appear as the device \"Rayhunter (Orbic)\". Alongside that, an rclone WebDAV server gives Rayhunter somewhere to upload finished recordings over the USB link — archived to /var/lib/rayhunter-archive, never over cellular. Claude Opus 5\r\n\r\n<img width=\"431\" height=\"531\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e6f88763-d04b-4272-a064-618ec71c9d60\" />\r\n",
+      "author": {
+        "login": "andylittle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12177246?u=340ff8b29dc4f53dca4a9444c862670d4f133efb&v=4",
+        "url": "https://github.com/andylittle"
+      },
+      "created_at": "2026-09-06T02:37:38Z",
+      "updated_at": "2026-09-06T02:37:38Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BF2i_",
+          "body": "Very cool!",
+          "author": {
+            "login": "suomi35",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1065935?u=97d15b77ddca755b36e086f3bb0ea3b978e0c8f7&v=4",
+            "url": "https://github.com/suomi35"
+          },
+          "created_at": "2026-09-06T02:53:52Z",
+          "updated_at": "2026-09-06T02:53:52Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 1,
+          "users": [
+            "suomi35"
+          ]
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

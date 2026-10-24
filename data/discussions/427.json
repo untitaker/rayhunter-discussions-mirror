@@ -1,0 +1,59 @@
+{
+  "id": "D_kwDOKrJqmc4Aga-O",
+  "number": 427,
+  "title": "Create known Stingray site to allow testing of rayhunter devices",
+  "body": "Would it be possible to set up a known/friendly stingray device at announced places/times so that users can test their rayhunters? Feels like a very useful way to solve questions like \"do Orbics work with stock Verizon SIM cards\" and \"did I install the software correctly.\"\r\n\r\nOtherwise I fear you're setting up users to purchase and walk/drive around with unknowingly bricked devices returning false negatives.",
+  "author": {
+    "login": "p17-stack",
+    "avatar_url": "https://avatars.githubusercontent.com/u/218115979?v=4",
+    "url": "https://github.com/p17-stack"
+  },
+  "created_at": "2025-06-26T15:45:21Z",
+  "updated_at": "2025-07-31T03:37:21Z",
+  "closed": true,
+  "locked": true,
+  "url": "https://github.com/EFForg/rayhunter/discussions/427",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A0kTg",
+      "body": "I concur that would be a great idea. Any Suggestions?",
+      "author": {
+        "login": "IamOneInx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148105364?v=4",
+        "url": "https://github.com/IamOneInx"
+      },
+      "created_at": "2025-07-16T17:16:49Z",
+      "updated_at": "2025-07-16T17:16:50Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1Lr1",
+      "body": "Unfortunately, this would be illegal under US law, to operate an unlicensed cell phone base station.\r\n\r\nIf you see a green bar at the top of your Orbic's screen and you can access the Rayhunter web interface following the instructions in our documentation, Rayhunter is working correctly.\r\n\r\nWe've received accurate reports from users with the stock Verizon SIM cards.\r\n\r\nWe appreciate your enthusiasm for this project -- happy (ray)hunting!",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-31T03:36:46Z",
+      "updated_at": "2025-07-31T03:36:47Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}
