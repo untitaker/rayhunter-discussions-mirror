@@ -1,0 +1,249 @@
+{
+  "id": "D_kwDOKrJqmc4AmihL",
+  "number": 1048,
+  "title": "SIM cards for notifications only - mostly working",
+  "body": "When I learned that rayhunter added support for ntfy notifications, i have wanted to set that up\r\n\r\nbut I also want to be cheap.\r\n\r\nMy understanding is that these notifications likely only need a few KB of data per notification at most. Im not a super heavy user so even a few MB will probably last me ages.\r\n\r\nI have been on a quest for a carrier that lets me prepay for an amount of data and then use it however slowly i want. Most carriers dont do this without imposing a monthly fee of some kind.\r\n\r\nI have discovered the keyword to look for when searching is \"lifetime data\" cell providers. I have personally picked Keepgo as a US based one that sells physical SIM cards, but this decision was informed by Gemini's chatbot, so please do your own research and find a carrier for your area/that you trust\r\n\r\n\r\nim currently working on trying to get it activated. suspecting my Orbic might be locked. Will try and post updates here in case people find this useful\r\n\r\nCurrent symptom is that the admin settings page says that the carrier is verizon and it doesnt seem to like when i try to manually change those options to any other carrier",
+  "author": {
+    "login": "MoralCode",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+    "url": "https://github.com/MoralCode"
+  },
+  "created_at": "2026-05-20T23:28:44Z",
+  "updated_at": "2026-05-22T17:21:07Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1048",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BA1uW",
+      "body": "Looks like others got there first with both the carrier changeover steps (my research indicates that carrier locking is basically a software thing) and also someone happens to also use the same Keepgo carrier: https://gist.github.com/trevormjaymes/45ab8e596bf3a1ba858ef92e6b27909b?permalink_comment_id=6086612#gistcomment-6086612",
+      "author": {
+        "login": "MoralCode",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+        "url": "https://github.com/MoralCode"
+      },
+      "created_at": "2026-05-21T00:15:19Z",
+      "updated_at": "2026-05-21T00:15:19Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BA706",
+      "body": "ok, I was able to get it working per the comments i left on the gist.\r\n\r\nalso using opendns.com (free account) as a way to attempt to limit the domains that can be accessed over my limited hotspot data to only the needed ones (opendns, my SIM provider, and ntfy.sh). they dont seem to have a \"block everything\" option though so i just checked all the boxes and added special exceptions",
+      "author": {
+        "login": "MoralCode",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+        "url": "https://github.com/MoralCode"
+      },
+      "created_at": "2026-05-22T16:24:47Z",
+      "updated_at": "2026-05-22T16:24:47Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BA71Q",
+          "body": "enabling the stats logging on openDNS shows that the device is trying to connect to `mobile.vzw.com`... might be interesting to dig in and see what its trying to do ",
+          "author": {
+            "login": "MoralCode",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17362949?u=dd3406f979f8b5a115baa11c62080fdcfc5ae707&v=4",
+            "url": "https://github.com/MoralCode"
+          },
+          "created_at": "2026-05-22T16:26:24Z",
+          "updated_at": "2026-05-22T16:26:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 1,
+      "users": [
+        "untitaker"
+      ]
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

@@ -1,0 +1,542 @@
+{
+  "id": "D_kwDOKrJqmc4AhD-I",
+  "number": 507,
+  "title": "SIM card required?",
+  "body": "Is a SIM with an active plan required for RayHunter to work?\n\nThank....",
+  "author": {
+    "login": "LurkingFear",
+    "avatar_url": "https://avatars.githubusercontent.com/u/168562328?u=cc1b1297ee3e04c9d2e499cba087fcab6189c45c&v=4",
+    "url": "https://github.com/LurkingFear"
+  },
+  "created_at": "2025-08-02T13:39:13Z",
+  "updated_at": "2026-08-07T20:49:25Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/507",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1TUs",
+      "body": "SIM, yes. Active plan, no.\r\n\r\nI am oversimplifying here, but this should still get the point across: The SIM is only necessary to give your modem an identity so that towers can talk to it. Towers *do* talk to your equipment, even if it isn't a subscriber of that mobile operator.",
+      "author": {
+        "login": "Tunas1337",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+        "url": "https://github.com/Tunas1337"
+      },
+      "created_at": "2025-08-02T23:12:53Z",
+      "updated_at": "2025-08-02T23:12:54Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1Xd3",
+          "body": "I think this is a really straightforward answer and we should add it in the docs.\r\n\r\nWe have had those questions before but got lost in nuance because _technically_ it depends on providers. For example:\r\n\r\n* SIM is definitely required.\r\n* Active plan _may be_ required depending on the region and carrier, but _probably_ not. For example, i have a non-activated sim card here that produces a ton of false positive warnings due to not being activated.\r\n* Sometimes people ask this question for the wrong reason. For example they bought a device with the wrong frequency bands and wonder why it can't connect, thinking a new SIM will help here.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-04T14:01:55Z",
+          "updated_at": "2025-08-04T14:01:55Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "virtadpt"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1Zp_",
+          "body": "Yes, please.",
+          "author": {
+            "login": "virtadpt",
+            "avatar_url": "https://avatars.githubusercontent.com/u/639730?v=4",
+            "url": "https://github.com/virtadpt"
+          },
+          "created_at": "2025-08-05T05:15:32Z",
+          "updated_at": "2025-08-05T05:15:33Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1a2_",
+          "body": "FAQ is here in case anybody wants to update it https://efforg.github.io/rayhunter/faq.html#do-i-need-an-active-sim-card-to-use-rayhunter",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-05T09:57:35Z",
+          "updated_at": "2025-08-05T09:57:36Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1cgO",
+          "body": "hm, here is a counterpoint that an active simcard is sometimes required: https://github.com/EFForg/rayhunter/discussions/517#discussioncomment-14010372",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-08-05T18:56:36Z",
+          "updated_at": "2025-08-05T18:56:37Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1f0v",
+          "body": "I wonder what changed or initialized after the active SIM was inserted to make the modem output data...",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-06T18:05:17Z",
+          "updated_at": "2025-08-06T18:05:17Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 2,
+          "users": [
+            "LurkingFear",
+            "GeneralDussDuss"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8lC_",
+      "body": "Rayhunter installed OK on several Verizon Orbic Speed hot spots using un-activated Mint trial sim cards. WiFi installation failed possibly due to trial sims issues but orbic-usb ran fine from a Linux Mint 22.1 system. They appear to operate normally capturing non-warning and test session packets but haven't been used against actual IMSI catchers yet.",
+      "author": {
+        "login": "EnthusedUser",
+        "avatar_url": "https://avatars.githubusercontent.com/u/262924887?v=4",
+        "url": "https://github.com/EnthusedUser"
+      },
+      "created_at": "2026-02-21T12:33:00Z",
+      "updated_at": "2026-02-21T12:33:48Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BEbYa",
+      "body": "I installed the latest version via MacOS on an Orbic RC400L with NO SIM.  The install was completed OK, no warnings.  Green line after reboot.  I enabled \"Test Heuristic\", and did receive a warning (dotted yellow).  Logs show a SIB1 message every 4 minutes, with a what appears to be a Verizon (311-480) CID.  \r\n\r\nThe screen shows NO SIM, and there is physical slot is empty.  So it is clearly working with no sim to some extent.  I would assume that I would miss certain heuristics?  ",
+      "author": {
+        "login": "chrisnoonsed",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202021615?v=4",
+        "url": "https://github.com/chrisnoonsed"
+      },
+      "created_at": "2026-08-07T20:49:25Z",
+      "updated_at": "2026-08-07T20:49:25Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 3
+}

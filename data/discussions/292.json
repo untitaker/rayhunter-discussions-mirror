@@ -1,0 +1,66 @@
+{
+  "id": "D_kwDOKrJqmc4AfaI3",
+  "number": 292,
+  "title": "Please Support MW70VK",
+  "body": "I confirmed that the MW70VK works with version 0.2.5 using the following URL. However, the latest version seems to have some device-specific branches, and I wasn’t sure how to apply it.\r\n\r\nURL : https://github.com/ross-bradley/Rayhunter-MW70VK\r\n\r\nWould someone be able to take care of this?\r\n\r\nIt’s not a page I wrote myself, so I’m not sure if it’s appropriate for me to make this request, but in version 0.2.5, when I click on “Download pcap,” RayHunter stops due to an error in parsing the pcap file. Since the latest version includes improved error handling, I’d really like to try it.\r\n\r\nThe model is inexpensive and seems to have a certain level of demand due to its Band support.\r\n\r\nI hope you’ll consider it.\r\n",
+  "author": {
+    "login": "SimpleSampleTemple",
+    "avatar_url": "https://avatars.githubusercontent.com/u/208778340?v=4",
+    "url": "https://github.com/SimpleSampleTemple"
+  },
+  "created_at": "2025-04-23T08:35:34Z",
+  "updated_at": "2025-07-28T10:37:46Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/292",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AxSXh",
+      "body": "work is happening around the Tp-Link M7350 for Europe. most likely the linked guide still works if you use the orbic-specific binary in latest builds.\r\n\r\nI can only find the Alcatel model on ebay but nowhere else, where did you buy it?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-04-23T08:44:30Z",
+      "updated_at": "2025-04-23T08:44:31Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1DuI",
+      "body": "Thanks for bringing this to our attention and testing that the device worked for you. I've reached out to the developer about adding official support here: https://github.com/ross-bradley/Rayhunter-MW70VK/issues/1",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-28T10:37:46Z",
+      "updated_at": "2025-07-28T10:37:46Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

@@ -1,0 +1,479 @@
+{
+  "id": "D_kwDOKrJqmc4AkBYe",
+  "number": 867,
+  "title": "Reducing Vibe Coded Slop PRs",
+  "body": "**Here's a proposal to reduce the amount of vibe coded poor quality PRs**\r\n\r\nEssentially it's making the `CLAUDE.MD`, and copilot markdown files which exist in specific locations within the repo where those tools first look when starting a new session. Those could include instructions to read the `CONTRIBUTING.MD`, along with other relevant files. If it's the first time the user encountered this, it could go through some basic questions about how the user is planning to contribute, and emphasize some points such as testing, as well as making sure features are actually requested/desired rather than just throwing together a giant PR for a feature that's never been discussed at all.\r\n\r\nAfter that first convo it could create a file (just a baisic `touch explained.md` which would be in the git ignore) to let the LLM know to not prompt that again. It would also contain some basic info on building, layout of the codebase, etc. \r\n\r\nI figure it's a win-win. Higher quality PRs, and anyone using those agents gets some basic overview of the codebase without having to scan the whole thing. \r\n\r\nAny objections to the plan?",
+  "author": {
+    "login": "BeigeBox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+    "url": "https://github.com/BeigeBox"
+  },
+  "created_at": "2026-02-07T18:57:38Z",
+  "updated_at": "2026-02-10T00:06:47Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/867",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7__Z",
+      "body": "I use Claude myself and it would interfere with my usage to mess with agents.md. I think we need to update CONTRIBUTING.md for sure. I have a draft for this but I need to still find the right wording. if you have something for this though, go ahead with it.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-07T19:42:04Z",
+      "updated_at": "2026-02-07T19:42:04Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8AF1",
+          "body": "That's a fair point, how about this?\r\n\r\nWhat if we had a lightweight CLAUDE.md file which just told the agent to read CONTRIBUTING.md since you're already updating that. If there's a conflict with someone who already has CLAUDE.md it'll just ask to merge when you pull it. In that case move your CLAUDE.md to CLAUDE.local.md and try again. If you make changes to CLAUDE.local.md that is used in addition to CLAUDE.md, and you don't have to worry about accidentally merging your changes into the branch.",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-07T20:55:42Z",
+          "updated_at": "2026-02-07T20:56:44Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8AF6",
+          "body": "https://code.claude.com/docs/en/memory",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-07T20:57:24Z",
+          "updated_at": "2026-02-07T20:57:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8AGb",
+          "body": "Let me put it another way. I think we should place the responsibility of reading contributing.md on the user, instead of trying to configure their tools for them to generate good PRs. If Claude produces nonsense then we'll just close the PR, as it's the users fault and not Claudes.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-07T21:03:02Z",
+          "updated_at": "2026-02-07T21:03:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8AGh",
+          "body": "That's fair, my primary concern is how much time is wasted looking over those PRs that people create. An ounce of prevention and all, that's what I was thinking.",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-07T21:05:07Z",
+          "updated_at": "2026-02-07T21:05:07Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8AIL",
+          "body": "I have posted what I think the stance should be here: https://github.com/EFForg/rayhunter/issues/868\r\n\r\n> ultimately you have to understand and review what you're submitting\r\n\r\nI'm thinking for now it has to be another checkbox item. Most importantly, the main problem (to me) is not that a PR starts out as slop, but that the review process doesn't bring improvements. I have no problem with the initial diff being slop (for a PoC) for as long as the PR author recognizes this after review and is able to clean it up without being pushed too much.\r\n\r\nfor the PRs that are entirely _nonfunctional_ slop, these are easy to spot and reject.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-07T21:23:24Z",
+          "updated_at": "2026-02-07T21:24:16Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8FIB",
+      "body": "I did put together a script which runs all the formatting just now, and uses `act` to run the checks which occur when there's a PR locally, so we can test before opening a PR then having something crop up. Any interest in adding that to like a scripts folder in the code for other devs to also leverage?",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-02-10T00:06:47Z",
+      "updated_at": "2026-02-10T00:06:47Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

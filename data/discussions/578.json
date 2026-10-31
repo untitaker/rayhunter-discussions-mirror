@@ -1,0 +1,28 @@
+{
+  "id": "D_kwDOKrJqmc4AhngN",
+  "number": 578,
+  "title": "Support for 4G LTE USB Dongle W/Quectel IoT/M2M-optimized LTE Cat 4 EC25-AF",
+  "body": "Sorry about the massive title ,\r\nBut Im hoping that you guys might look into this device : https://ebay.us/m/GeQdT6\r\nAnd include support as it's running the same chip in the pine phone and has a lovely serial port included on the side for easy access... Could be a winner 🙂\r\nKind regards and high hopes :\r\nPhri3d",
+  "author": {
+    "login": "Phri3d",
+    "avatar_url": "https://avatars.githubusercontent.com/u/40252067?v=4",
+    "url": "https://github.com/Phri3d"
+  },
+  "created_at": "2025-08-28T20:26:05Z",
+  "updated_at": "2025-08-28T20:26:42Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/578",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

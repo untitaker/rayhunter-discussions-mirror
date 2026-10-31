@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AjYer",
+  "number": 743,
+  "title": "INSEEGO M3000",
+  "body": "Support for  INSEEGO M3000 currently used for Verizon and T-Mobile.  ",
+  "author": {
+    "login": "shawnboyhall78",
+    "avatar_url": "https://avatars.githubusercontent.com/u/246199982?v=4",
+    "url": "https://github.com/shawnboyhall78"
+  },
+  "created_at": "2025-12-23T09:16:53Z",
+  "updated_at": "2025-12-23T17:03:42Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/743",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6eW3",
+      "body": "I can't use it in Canada?\r\n\r\nOn Tue, Dec 23, 2025, 03:17 shawnboyhall78 ***@***.***> wrote:\r\n\r\n> Support for INSEEGO M3000 currently used for Verizon and T-Mobile.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/EFForg/rayhunter/discussions/743>, or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AXEB7476WVS5HF52L74OWMT4DECB7AVCNFSM6AAAAACP2RLVWCVHI2DSMVQWIX3LMV43ERDJONRXK43TNFXW4OZZGI3TKMZQG4>\r\n> .\r\n> You are receiving this because you are subscribed to this thread.Message\r\n> ID: ***@***.***>\r\n>\r\n",
+      "author": {
+        "login": "MeaTShanK",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97001459?v=4",
+        "url": "https://github.com/MeaTShanK"
+      },
+      "created_at": "2025-12-23T17:03:42Z",
+      "updated_at": "2025-12-23T17:03:42Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
