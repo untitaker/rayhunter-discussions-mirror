@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AjtJC",
+  "number": 789,
+  "title": "Support for Netgear/Sierra 770S AirCard 4G Mobile Hotspot",
+  "body": "This device has a full-size SIM slot, option for 2× external antennas, and a color LCD touchscreen.\r\n\r\nI am unsure of the specs (processor, ram, OS, etc.). Here are some references:\r\n\r\n- https://www.downloads.netgear.com/files/aircard/4112754%20AirCard%2077xS%20User%20Guide%20v2%20-%20webready.pdf\r\n- https://www.4gltemall.com/sierra-770s-wireless-aircard-4g-mobile-hotspot.html\r\n\r\nI can help test the device if necessary.\r\n\r\n![2026-01-17-18-46-03-672-blur](https://github.com/user-attachments/assets/65896a33-458c-4035-b84e-02b700d2d5e1)\r\n![2026-01-18-12-04-33-696-blur](https://github.com/user-attachments/assets/3edff2f8-d454-46a7-9f41-c137ed04c5e2)\r\n![2026-01-18-12-05-03-742](https://github.com/user-attachments/assets/46a582b6-0844-4e1a-a0e0-94a5a731ffa2)\r\n![2026-01-17-18-36-44-771-blur](https://github.com/user-attachments/assets/8076bc7c-5b1a-4850-be55-c95ab702d3f6)\r\n![2026-01-17-18-36-52-662-blur](https://github.com/user-attachments/assets/6a6c2010-394d-41d0-ae3a-a476b53b28ee)\r\n![2026-01-17-18-36-57-018](https://github.com/user-attachments/assets/7b3e607d-2b56-48dd-ae3d-02eb58e67b50)\r\n![2026-01-17-18-37-05-600](https://github.com/user-attachments/assets/6273e75f-6d14-42d1-992a-1edbd88d5fe4)\r\n\r\n\r\n\r\n",
+  "author": {
+    "login": "piranhaphish",
+    "avatar_url": "https://avatars.githubusercontent.com/u/22088189?u=e917fac8c31c2f6e7937cae6bb3895ba75cb8575&v=4",
+    "url": "https://github.com/piranhaphish"
+  },
+  "created_at": "2026-01-18T18:16:18Z",
+  "updated_at": "2026-01-18T20:30:34Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/789",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

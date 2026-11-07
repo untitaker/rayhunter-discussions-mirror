@@ -1,0 +1,74 @@
+{
+  "id": "D_kwDOKrJqmc4AhT4Z",
+  "number": 540,
+  "title": "Help with windows installer plz",
+  "body": "P ~ \\downloads\\rayhunter-v0.5.1-windows-x86_64> ./installer.exe orbic\r\n./installer.exe : The term './installer.exe' is not recognized as the\r\nname of a cmdlet, function, script file, or operable program. Check the\r\nspelling of the name, or if a path was included, verify that the path is\r\ncorrect and try again.\r\nAt line:1 char:1\r\n+ ./installer.exe orbic\r\n+ ~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ObjectNotFound: (./installer.exe:String) [\r\n   ], CommandNotFoundException\r\n    + FullyQualifiedErrorId : CommandNotFoundException",
+  "author": {
+    "login": "Babyleggs",
+    "avatar_url": "https://avatars.githubusercontent.com/u/142527530?v=4",
+    "url": "https://github.com/Babyleggs"
+  },
+  "created_at": "2025-08-14T18:51:19Z",
+  "updated_at": "2025-10-08T14:55:11Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/540",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A10UX",
+      "body": "Hi, you are hitting a bug. The `installer` file needs to be renamed to `installer.exe`, it's wrongly named in the current release. this will be fixed in the next release\r\n\r\nsee https://github.com/EFForg/rayhunter/issues/521",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-14T19:08:31Z",
+      "updated_at": "2025-08-14T19:08:32Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3duM",
+      "body": "Hey. If you are still having a problem with Windows install,  I am selling the Orbics with RayHunter preloaded on Ebay for 25.00. Just saying. LINK REMOVED ",
+      "author": {
+        "login": "Singlej241979",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222353193?v=4",
+        "url": "https://github.com/Singlej241979"
+      },
+      "created_at": "2025-09-29T08:33:43Z",
+      "updated_at": "2025-09-29T08:39:16Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3v-P",
+      "body": "Install over network. So easy you'll kick yourself in the butt once you see how easy it goes. ",
+      "author": {
+        "login": "Singlej241979",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222353193?v=4",
+        "url": "https://github.com/Singlej241979"
+      },
+      "created_at": "2025-10-07T11:43:01Z",
+      "updated_at": "2025-10-07T11:43:02Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}

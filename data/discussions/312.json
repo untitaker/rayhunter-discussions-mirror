@@ -1,0 +1,58 @@
+{
+  "id": "D_kwDOKrJqmc4Afveh",
+  "number": 312,
+  "title": "Display installed version?",
+  "body": "Is it possible to display the current version of rayhunter installed?  Either on device or from the computer installed?  ",
+  "author": {
+    "login": "jlariviere1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/29808661?v=4",
+    "url": "https://github.com/jlariviere1"
+  },
+  "created_at": "2025-05-14T00:59:58Z",
+  "updated_at": "2025-05-16T01:38:40Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/312",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AyIK3",
+      "body": "The version is displayed on the Rayhunter webpage.",
+      "author": {
+        "login": "gaykitty",
+        "avatar_url": "https://avatars.githubusercontent.com/u/126119280?u=b43e3444cb2cd85e6760f999d624748d26af8f02&v=4",
+        "url": "https://github.com/gaykitty"
+      },
+      "created_at": "2025-05-14T06:49:15Z",
+      "updated_at": "2025-05-14T06:49:17Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4AyIK3",
+    "body": "The version is displayed on the Rayhunter webpage.",
+    "author": {
+      "login": "gaykitty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126119280?u=b43e3444cb2cd85e6760f999d624748d26af8f02&v=4",
+      "url": "https://github.com/gaykitty"
+    },
+    "created_at": "2025-05-14T06:49:15Z",
+    "updated_at": "2025-05-14T06:49:17Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-05-16T01:38:40Z",
+  "state_reason": null
+}

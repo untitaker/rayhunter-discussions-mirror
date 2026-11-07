@@ -1,0 +1,28 @@
+{
+  "id": "D_kwDOKrJqmc4AhRda",
+  "number": 536,
+  "title": "Wifi QR code to connect to the Orbic",
+  "body": "A Rust application that displays WiFi QR codes on the Orbic's screen for you to connect your device to the Orbic's wifi network.   The Orbic is limited to a 128x128 display. So it does require a short SSID and PW.  The app runs continuously in the background and displays a scannable QR code for 30 seconds when the menu button is held down from 1.5-6 seconds.\r\n\r\nhttps://github.com/drinkingc0ffee/OrbicWifiQR",
+  "author": {
+    "login": "drinkingc0ffee",
+    "avatar_url": "https://avatars.githubusercontent.com/u/202892326?v=4",
+    "url": "https://github.com/drinkingc0ffee"
+  },
+  "created_at": "2025-08-13T02:38:55Z",
+  "updated_at": "2025-08-13T02:38:56Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/536",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

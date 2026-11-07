@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AfKyc",
+  "number": 249,
+  "title": "Using WSL2 and USBIPD-WIN to bridge USB into a WSL instance to install via windows",
+  "body": "### Notes:\r\n`PS>` denotes an administrative powershell prompt\r\n`$` denotes Ubuntu prompt in WSL\r\n\r\n### Specs\r\nI used latest stable WSL2:\r\n```\r\nPS> wsl --version\r\nWSL version: 2.4.13.0\r\nKernel version: 5.15.167.4-1\r\nWSLg version: 1.0.65\r\nMSRDC version: 1.2.5716\r\nDirect3D version: 1.611.1-81528511\r\nDXCore version: 10.0.26100.1-240331-1435.ge-release\r\nWindows version: 10.0.26120.3653\r\n```\r\n\r\nWith Ubuntu 24.04:\r\n```\r\n$ lsb_release -a\r\nNo LSB modules are available.\r\nDistributor ID: Ubuntu\r\nDescription:    Ubuntu 24.04.2 LTS\r\nRelease:        24.04\r\nCodename:       noble\r\n```\r\n\r\n### Steps I followed (adapted from [here](https://learn.microsoft.com/en-us/windows/wsl/connect-usb#attach-a-usb-device))\r\n\r\n1. Install USBIPD (in an _administrator_ Posh terminal) \r\n```\r\nPS> winget install --interactive --exact dorssel.usbipd-win\r\n```\r\n2. Install prereqs on Ubuntu\r\n```\r\n$ sudo apt install linux-tools-generic hwdata adb usbutils\r\n```\r\n3. Plug in USB to RC400L and power on.  After you hear the windows new device sound, list the usb devices:\r\n```\r\nPS> usbipd list\r\nConnected:\r\nBUSID  VID:PID    DEVICE                                                        STATE\r\n2-1    0bda:5852  Realtek Bluetooth Adapter                                     Not shared\r\n2-2    048d:c103  USB Input Device                                              Not shared\r\n2-3    048d:c985  USB Input Device                                              Not shared\r\n4-1    05c6:f601  MDM9207-MTP _SN:115642E9, Android Composite ADB Interface     Shared\r\n6-1    046d:c52b  Logitech USB Input Device, USB Input Device                   Not shared\r\n6-4    04f2:b7b6  Integrated Camera, Camera DFU Device, Tobii Experience        Not shared\r\n```\r\n4. Note the BUSID of the `MDM9207-MTP _SN:115642E9, Android Composite ADB Interface` device.  It may also register as `Remote NDIS based Internet Sharing Device` (the second one I used looked like this)\r\n5. Bind the device:\r\n```\r\nPS> usbipd bind --busid <bus id from above>\r\n```\r\n6. Attach the device to your running WSL session:\r\n```\r\nPS> usbipd attach --wsl --busid <bus id from above>\r\nusbipd: info: Using WSL distribution 'Ubuntu-24.04' to attach; the device will be available in all WSL 2 distributions.\r\nusbipd: info: Detected networking mode 'nat'.\r\nusbipd: info: Using IP address 172.28.96.1 to reach the host.\r\n```\r\n7. Inside the un-tarred rayhunter release folder, run the install script\r\n```\r\n~/rayhunter$ ./install.sh\r\nUsing adb at /usr/bin/adb\r\nForce a switch into the debug mode to enable ADB\r\nadb enabled, waiting for reboot... it's alive!\r\nwaiting for atfwd_daemon to startup... done!\r\n./rootshell: 1 file pushed, 0 skipped. 1059.3 MB/s (688868 bytes in 0.001s)\r\nuid=0(root) gid=0(root)\r\nwe have root!\r\n./config.toml.example: 1 file pushed, 0 skipped. 6.6 MB/s (389 bytes in 0.000s)\r\n./rayhunter-daemon: 1 file pushed, 0 skipped. 3.4 MB/s (4613352 bytes in 1.310s)\r\n./scripts/rayhunter_daemon: 1 file pushed, 0 skipped. 4.0 MB/s (580 bytes in 0.000s)\r\n./scripts/misc-daemon: 1 file pushed, 0 skipped. 25.1 MB/s (2302 bytes in 0.000s)\r\nwaiting for reboot... \r\n```\r\n8. When the device restarts and windows makes the usb connect sounds again, re-attach the USB port to Linux\r\n```\r\nPS> usbipd attach --wsl --busid 4-1\r\n```\r\n9. Back in Ubuntu, script will detect the device again and continue:\r\n```\r\n~/rayhunter$ ./install.sh\r\nUsing adb at /usr/bin/adb\r\nForce a switch into the debug mode to enable ADB\r\nadb enabled, waiting for reboot... it's alive!\r\nwaiting for atfwd_daemon to startup... done!\r\n./rootshell: 1 file pushed, 0 skipped. 1059.3 MB/s (688868 bytes in 0.001s)\r\nuid=0(root) gid=0(root)\r\nwe have root!\r\n./config.toml.example: 1 file pushed, 0 skipped. 6.6 MB/s (389 bytes in 0.000s)\r\n./rayhunter-daemon: 1 file pushed, 0 skipped. 3.4 MB/s (4613352 bytes in 1.310s)\r\n./scripts/rayhunter_daemon: 1 file pushed, 0 skipped. 4.0 MB/s (580 bytes in 0.000s)\r\n./scripts/misc-daemon: 1 file pushed, 0 skipped. 25.1 MB/s (2302 bytes in 0.000s)\r\nwaiting for reboot... done!\r\nchecking for rayhunter server...success!\r\nyou can access rayhunter at http://localhost:8080\r\n```\r\n\r\nHappy hunting!",
+  "author": {
+    "login": "adamskt",
+    "avatar_url": "https://avatars.githubusercontent.com/u/105415?u=da9d21f77f2ed389cbfffad1e756c33b4f9aed76&v=4",
+    "url": "https://github.com/adamskt"
+  },
+  "created_at": "2025-04-06T02:13:47Z",
+  "updated_at": "2025-04-21T03:04:15Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/249",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AxMB1",
+      "body": "I noticed trying to get this working this weekend (ultimately successfully), that it appearing as the \"ADB Interface\" rather than the stock device name assumes you've already forced adb. Also working in an AlmaLinux9 WSL2 terminal I had to unmask and start udev with appropriate rules to get it to show up.",
+      "author": {
+        "login": "s7726",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1107801?v=4",
+        "url": "https://github.com/s7726"
+      },
+      "created_at": "2025-04-21T03:04:14Z",
+      "updated_at": "2025-04-21T03:04:16Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

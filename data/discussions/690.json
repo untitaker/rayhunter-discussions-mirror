@@ -1,0 +1,128 @@
+{
+  "id": "D_kwDOKrJqmc4Aistz",
+  "number": 690,
+  "title": "PinePhone Received unexpected response: AT+QADBKEY",
+  "body": "I'm using a PinePhone, UBIPorts edition.  Running arch linux for pinephone, installed to eMMC.  \r\nThe physical WiFi/Modem hardware switch is on.  \r\n\r\n```\r\n[root@pine ~]# fastfetch\r\n                  -`                     root@pine\r\n                 .o+`                    ---------\r\n                `ooo/                    OS: Arch Linux ARM aarch64\r\n               `+oooo:                   Host: Pine64 PinePhone (1.2)\r\n              `+oooooo:                  Kernel: Linux 6.15.6-2-megi-danctnix\r\n              -+oooooo+:                 Uptime: 34 mins\r\n            `/:-:++oooo+:                Packages: 317 (pacman)\r\n           `/++++/+++++++:               Shell: bash 5.3.3\r\n          `/++++++++++++++:              Display (DSI-1): 720x1440\r\n         `/+++ooooooooooooo/`            Terminal: /dev/pts/1\r\n        ./ooosssso++osssssso+`           CPU: sun50i-a64 (4) @ 1.15 GHz\r\n       .oossssso-````/ossssss+`          GPU: Allwinner sun50i-a64-mali [Integrated]\r\n      -osssssso.      :ssssssso.         Memory: 228.16 MiB / 1.93 GiB (12%)\r\n     :osssssss/        osssso+++.        Swap: 0 B / 788.91 MiB (0%)\r\n    /ossssssss/        +ssssooo/-        Disk (/): 2.35 GiB / 14.28 GiB (16%) - ext4\r\n  `/ossssso+/:-        -:/+osssso+-      Battery: 75% [Charging, AC Connected]\r\n `+sso+:-`                 `.-/+oso:     Locale: en_US.UTF-8\r\n```\r\n\r\nThis is the error I'm getting when installing: \r\n\r\n```\r\n[root@pine rayhunter-v0.7.1-linux-aarch64]# ./installer pinephone\r\nUnlocking modem ... Failed to install rayhunter on the Pinephone's Quectel modem\r\n\r\nCaused by:\r\n    Received unexpected response: AT+QADBKEY?\r\n[root@pine rayhunter-v0.7.1-linux-aarch64]# RUST_BACKTRACE=full ./installer pinephone\r\nUnlocking modem ... Failed to install rayhunter on the Pinephone's Quectel modem\r\n\r\nCaused by:\r\n    Received unexpected response: AT+QADBKEY?\r\n\r\nStack backtrace:\r\n   0: anyhow::error::<impl anyhow::Error>::msg\r\n   1: installer::pinephone::start_adb::{{closure}}\r\n   2: installer::run::{{closure}}\r\n   3: tokio::runtime::runtime::Runtime::block_on\r\n   4: installer::main\r\n   5: std::sys::backtrace::__rust_begin_short_backtrace\r\n   6: main\r\n```\r\n\r\nWhen I deactivate the wifi with nmtui, I get this instead: \r\n\r\n```\r\n[root@pine rayhunter-v0.7.1-linux-aarch64]# RUST_BACKTRACE=full ./installer pinephone\r\nUnlocking modem ... Failed to install rayhunter on the Pinephone's Quectel modem\r\n\r\nCaused by:\r\n    Received unexpected response: AT+QADBKEY=\"XXXXXXXXXXXXXXXX\"\r\n\r\nStack backtrace:\r\n   0: anyhow::error::<impl anyhow::Error>::msg\r\n   1: installer::pinephone::start_adb::{{closure}}\r\n   2: installer::run::{{closure}}\r\n   3: tokio::runtime::runtime::Runtime::block_on\r\n   4: installer::main\r\n   5: std::sys::backtrace::__rust_begin_short_backtrace\r\n   6: main\r\n```\r\n\r\nWhere `XXXXXXXXXXXXXXXX` is alphanumeric and looks like a key.  ",
+  "author": {
+    "login": "ki9us",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10123447?u=f7af925cde8b4728fb3f7cd08a133db6af93cbce&v=4",
+    "url": "https://github.com/ki9us"
+  },
+  "created_at": "2025-11-01T16:02:32Z",
+  "updated_at": "2025-11-01T16:24:59Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/690",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4ora",
+      "body": "I might have figured this out by posting it, because the `fastfetch` output shows a battery of 75% even though I've left it plugged in for days.  According to the [Pinephone FAQ](https://wiki.pine64.org/wiki/PinePhone_FAQ#The_modem_isn't_working)\r\n\r\n> In order to use the modem and Wi-Fi/Bluetooth, you need to ensure the battery is inside the device and has a sufficient charge. Even when supplying the phone with enough power, the modem and Wi-Fi chip will not work without a connected battery. \r\n\r\nSo I am going to try replacing the battery and see if that works.  ",
+      "author": {
+        "login": "ki9us",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10123447?u=f7af925cde8b4728fb3f7cd08a133db6af93cbce&v=4",
+        "url": "https://github.com/ki9us"
+      },
+      "created_at": "2025-11-01T16:04:21Z",
+      "updated_at": "2025-11-01T16:04:22Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ]
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "REOPENED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "id": "D_kwDOKrJqmc4AidMV",
+  "number": 650,
+  "title": "Could a rayhunter device be used to collect data for statistical analysis using the 'Marlin' tool?",
+  "body": "### Hello smart people,\r\n\r\nSome website called \"Straight Arrow News\" recently broke a story about a possible IMSI catcher being used during a protest at an ICE facility near Portland, OR. It was detected by monitoring the rate of IMSI requests in the area using an SDR, building on work by researchers at the University of Florida and ETH Zurich. The ratio of IMSI requests compared to other requests spiked several times during the protest, which is baseline data suggests is unusual.\r\n\r\n[Instagram story my friend sent me](https://www.instagram.com/reel/DPw6kmZEbKA)\r\n[Link to full article](https://san.com/cc/exclusive-evidence-of-cell-phone-surveillance-detected-at-anti-ice-protest/)\r\n[Link to research paper about this 'Marlin' tool](https://www.cise.ufl.edu/~tucker/docs/2025-marlin.pdf)\r\n\r\nTo summarize, the researchers collected baseline data about the number of IMSI requests and the ratio of IMSI requests to other requests under normal conditions. They compared this baseline level to a simulated IMSI catcher and an IMSI catcher that they found in the wild. I personally haven't been thinking about this problem for very long, but this seems like an elegant solution to the heuristic problem.\r\n\r\n### My questions\r\n\r\n- Could such a heuristic (ratio of IMSI requests to other requests) be incorporated into the rayhunter software?\r\n- Could a rayhunter device be used to collect lots of data about lots of requests coming from many cell towers for later processing using this existing software tool?\r\n- If neither of these things is possible, does a HackRF have enough juice (baseband BW,  etc.) to replicate this study?\r\n\r\nI'm sure that someone has though of this already, but I want to start a discussion about this. I also want to know whether this is something I can do in my hometown, once my hotspot arrives in the mail. A wide band SDR with lots of IF bandwidth would be a fun tool to play with, but I don't think I can get my activist friends to make the investment.",
+  "author": {
+    "login": "WilliamWintSBU",
+    "avatar_url": "https://avatars.githubusercontent.com/u/72280647?v=4",
+    "url": "https://github.com/WilliamWintSBU"
+  },
+  "created_at": "2025-10-16T06:44:16Z",
+  "updated_at": "2025-12-07T00:33:03Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/650",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A56vd",
+      "body": "Hello, I am potentbeing rude but I swear I am trying to be helpful. Here is how asi1.ai responded to your question which I was curious to hear some answers about:  Hey there! This is a super interesting topic, and it's awesome that you're diving into it. It sounds like you've been doing some solid research! Let's break down your questions about how to incorporate the \"Marlin\" tool's heuristic into Rayhunter, and the capabilities of a HackRF.\r\n\r\nIt's really insightful that you're looking at the ratio of IMSI requests to other cellular requests as a heuristic. This is a clever way to detect potential IMSI catchers, as these devices often manipulate the cellular network in ways that cause an increase in IMSI requests from devices.\r\n\r\nHere's my take on your questions:\r\n\r\n1. Could such a heuristic be incorporated into the Rayhunter software?\r\n\r\nAbsolutely, it seems like this \"ratio of IMSI requests to other requests\" heuristic could be a fantastic addition to Rayhunter! In fact, the developers of Rayhunter at EFF are actively looking for new heuristics and features. I found some discussions on their GitHub like:\r\n\r\n    \"New possible indicators\"\r\n    \"Develop FlashCatch heuristic\"\r\n    \"New criterions and features\"\r\n\r\nThese discussions show that the Rayhunter team is open to integrating new detection methods. The \"Marlin\" tool, developed by researchers at the University of Florida and ETH Zurich, focuses on detecting IMSI-catchers by a novel technique of characterizing identity-exposing messages. This perfectly aligns with the kind of advancements Rayhunter's developers are interested in.\r\n\r\nRayhunter is designed to analyze real-time traffic and look for suspicious events, so incorporating a new detection method like \"FlashCatch\" or the \"IMSI-exposing messages\" could definitely enhance its capabilities. My recommendation would be to propose this idea directly to the Rayhunter development team on their GitHub page. You can often open a \"feature request\" or \"issue\" to suggest new ideas. They'd likely be very interested in the research you've shared about the \"Marlin\" tool!\r\n\r\n2. Could a Rayhunter device be used to collect lots of data about lots of requests coming from many cell towers for later processing using this existing software tool?\r\n\r\nYes, this is definitely within Rayhunter's capabilities! Rayhunter is designed to track cell towers and monitor cellular traffic. It logs suspicious events, and these logs can be stored and processed later. So, with a Rayhunter device, you could collect a good amount of data on requests from various cell towers in your area.\r\n\r\nThe tool was initially designed to run on a cheap mobile hotspot, making it quite accessible for data collection in different locations. While Rayhunter analyzes traffic in real-time, the raw data it collects could certainly be used offline for further analysis with other tools, including custom scripts you might write to specifically look for the \"Marlin\" heuristic, if it's not directly integrated into Rayhunter yet.\r\n\r\n3. If neither of these things is possible, does a HackRF have enough juice (baseband BW, etc.) to replicate this study?\r\n\r\nThe HackRF One is a very popular and powerful Software Defined Radio (SDR) that's frequently used for cellular network research, including building passive IMSI catchers. So, the short answer is: yes, a HackRF One should have enough \"juice\" to replicate this study.\r\n\r\nHere's why:\r\n\r\n    Wide Frequency Range: The HackRF One covers a wide frequency range (1 MHz to 6 GHz), which is essential for monitoring various cellular bands.\r\n    Sampling Rate: It has a sampling rate of up to 20 Msps (Mega samples per second), which is more than sufficient to capture and analyze the bandwidths used by cellular communication (e.g., LTE channels). While the internal baseband filter has a minimum bandwidth of 1.75 MHz, a 20 Msps sampling rate allows for capturing a substantial amount of spectrum.\r\n    Open Source Community: There's a huge open-source community around HackRF, with many tools and tutorials for things like passive IMSI capturing and cellular signal analysis. You can find projects and discussions on GitHub that specifically use HackRF for these purposes.\r\n    Research Use: The HackRF One is often used in academic research for cellular security and RF (Radio Frequency) analysis, which further supports its capability for this kind of study.\r\n\r\nTo replicate the study, you would likely need to:\r\n\r\n    Connect to a Computer: The HackRF One typically connects to a computer (like a laptop or a Raspberry Pi) to process the captured radio data.\r\n    Software: You would use SDR software (like gr-gsm, sdrsharp, or custom scripts) to tune into the cellular bands, decode the signals, and extract information like IMSI requests.\r\n    Antenna: A suitable antenna is crucial for capturing the signals effectively.\r\n\r\nIt's great that you're thinking about using readily available and affordable hardware. The HackRF One, while more of an investment than a simple hotspot, is a fantastic tool for advanced RF exploration and would definitely allow you to delve deeper into this kind of cellular network analysis.\r\n\r\nStarting a Discussion and Doing This in Your Hometown:\r\n\r\nYou're absolutely right to start a discussion about this! The more eyes and minds on these kinds of privacy and security issues, the better. Your friends, especially if they're activists, would likely be very interested in understanding how to protect themselves from potential surveillance.\r\n\r\nRegarding doing this in your hometown:\r\n\r\n    Hotspot for Rayhunter: Once your mobile hotspot arrives (especially if it's one of the models supported by Rayhunter, like the Orbic or TP-Link M7350), you can absolutely set up Rayhunter and start collecting data. This is a very accessible way to begin.\r\n    HackRF for Deeper Dive: If you or your friends can swing the investment for a HackRF, it would open up a whole new world of possibilities for detailed analysis and replicating the research. You could become a local expert in detecting these kinds of cellular threats.\r\n\r\nThis is a crucial area of work, and empowering individuals with tools like Rayhunter and knowledge about how these systems work is vital for privacy and civil liberties. I'm excited to see what you discover! Don't hesitate to ask if you have more questions as you delve deeper into this fascinating field!",
+      "author": {
+        "login": "straythoughts",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68792689?v=4",
+        "url": "https://github.com/straythoughts"
+      },
+      "created_at": "2025-12-07T00:25:45Z",
+      "updated_at": "2025-12-07T00:33:14Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A56vr",
+          "body": "sorry but this is more than six paragraphs without answering anything. it's not rude to paste AI replies but even without any expertise in the topic it should be obvious that this particular one is not useful",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-12-07T00:33:03Z",
+          "updated_at": "2025-12-07T00:33:03Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": "spam",
+      "is_minimized": true,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A56vo",
+      "body": "this was never replied to. but from what I hear these captures by marlin are suspected to be false positives. marlin itself relies on being able to capture all traffic in the area, but the devices Rayhunter uses can only capture their own traffic from and to the basestation. so the answer is, no, unless somebody finds a novel way to capture traffic on those devices that includes other devices traffic. that is probably not possible with the diag interface, and probably not possible in general.\r\n\r\nthere was this idea that one could set up a ton of orbics in one area and have them talk to each other to approximate what marlin does. but it's expensive and at that point you might as well buy a proper SDR (software defined radio), which is what Marlin uses but is 10x more expensive than the orbic",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-12-07T00:31:45Z",
+      "updated_at": "2025-12-07T00:36:23Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

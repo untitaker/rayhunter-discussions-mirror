@@ -1,0 +1,614 @@
+{
+  "id": "D_kwDOKrJqmc4Ag_PS",
+  "number": 485,
+  "title": "[Alcatel MW43TM] Orbic Speed alternative",
+  "body": "Alcatel Linkzone 2 (MW43TM):\n\nhttps://us.alcatelmobile.com/alcatel-linkzone-2/\n\nhttps://www.ebay.com/sch/i.html?_nkw=alcatel+mw+43+tm+linkzone+2+wifi+4+g+lte+hotspot&norover=1&mkevt=1&mkrid=711-153677-323661-0&mkcid=2&mkscid=102&keyword=Electronics,SRP&crlp=_&MT_ID=&geo_id=&rlsatarget=dat-2328490750103156:loc-66&adpos=&device=c&mktype=&loc=186981&poi=&abcId=&cmpgn=603518122&sitelnk=&adgroupid=1227055987794418&network=s&matchtype=b\n\nCheaper with a better battery and based on the same Qualcomm chipset.\n\nEdit:\nUnlockable as well.",
+  "author": {
+    "login": "Sami32",
+    "avatar_url": "https://avatars.githubusercontent.com/u/18471069?u=f8b24863417753b20ae2c4374488bb862a7d0fe4&v=4",
+    "url": "https://github.com/Sami32"
+  },
+  "created_at": "2025-03-27T01:13:23Z",
+  "updated_at": "2026-01-04T19:22:22Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/485",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1E3A",
+      "body": "It looks like an interesting device for sure, we would have to think about how to do notifications on it but maybe we could do something with the LEDs. The real question is can we get a shell on it and can we get root? if we can do that I would say its possibly a viable device. ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-03-27T16:50:13Z",
+      "updated_at": "2025-07-28T18:19:04Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A5YSL",
+          "body": "I have one of these as well as the Franklin T9 RT717 T-Mobile Black. are any of these possible to load with rayhunter.  I'm very curious. thanks",
+          "author": {
+            "login": "antecgaming900-web",
+            "avatar_url": "https://avatars.githubusercontent.com/u/245451071?v=4",
+            "url": "https://github.com/antecgaming900-web"
+          },
+          "created_at": "2025-11-21T20:02:47Z",
+          "updated_at": "2025-11-21T20:02:48Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3B",
+      "body": "It seem so but i cannot confirm it:\n\nhttps://github.com/jtanx/LinkZoneRoot\nhttps://alex.studer.dev/2021/01/04/mw41-1\n\nhttps://www.alcatelmobile.com/product/mobile-broadband/mobile-wifi/linkzone-cat4-mobile-wi-fi/\n\n",
+      "author": {
+        "login": "Sami32",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18471069?u=f8b24863417753b20ae2c4374488bb862a7d0fe4&v=4",
+        "url": "https://github.com/Sami32"
+      },
+      "created_at": "2025-03-27T17:57:01Z",
+      "updated_at": "2025-07-28T18:19:04Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3C",
+      "body": "Alex Studer's exploit is for the MW41, not the MW43-- it seems to work to put the MW43 into a debug mode. I can send AT commands after sending `sudo sg_raw /dev/sgX 16 f9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 -v`, although none of them have led to getting a shell yet. I can see an adb interface show up with `lsusb`, but I can't get `adb` to recognise it. I'm unsure if that means I need to change a setting on the actual device to make it accept connections or if there's something I can do on my end (tweak the client to send to a different interface?).\n\nIf I send `16 f5 ...` (shown in the Russian tool screenshot), it will put the device into firmware update mode.\n\nHaving a copy of the firmware would help, then I could reverse atfwd_daemon and see if there's anything like AT+SYSCMD. I've tried some variants I've found online (like AT+QLINUXCMD) without luck. Or if there's a way to properly enable the debug bridge.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-04-21T19:45:50Z",
+      "updated_at": "2025-07-28T18:19:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "Sami32"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3D",
+      "body": "I see. Then i hope that this link could help:\n\nhttps://gofirmware.com/downloads/alcatel-linkzone-2-firmware-update",
+      "author": {
+        "login": "Sami32",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18471069?u=f8b24863417753b20ae2c4374488bb862a7d0fe4&v=4",
+        "url": "https://github.com/Sami32"
+      },
+      "created_at": "2025-04-21T20:21:26Z",
+      "updated_at": "2025-07-28T18:19:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "oopsbagel"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3E",
+      "body": "I was able to root the device by using a modified adb_client and installed rayhunter. It doesn't work out of the box yet, but we at least have a shell and can load software. I've started a thread about it in mattermost.\n\nDo you have one of these yourself Sami32?",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-04-23T18:18:35Z",
+      "updated_at": "2025-07-28T18:19:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "Sami32"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3F",
+      "body": "Great news +1\n\nNo, i don't, not yet at least.\nI recently discovered your great project from a friend's link, and saw the USA limited use case until now so i searched how to extend your project reach with other hardwares.\nThis one is interesting because it can be found for very cheap compared to other alternatives proposed, so the reach and real life test results on cellulars listening would be worldwide spreaded in these difficult times IMHO.",
+      "author": {
+        "login": "Sami32",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18471069?u=f8b24863417753b20ae2c4374488bb862a7d0fe4&v=4",
+        "url": "https://github.com/Sami32"
+      },
+      "created_at": "2025-04-23T18:32:01Z",
+      "updated_at": "2025-07-28T18:19:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1E3G",
+      "body": "I was able to port rayhunter, but the output of `/dev/diag` is useless, even with a SIM card. I will keep investigating in my free time but it's not a priority.",
+      "author": {
+        "login": "oopsbagel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99793478?u=1c5b28aef73a9a44a86adba2b777365ee33e9a11&v=4",
+        "url": "https://github.com/oopsbagel"
+      },
+      "created_at": "2025-07-23T23:23:21Z",
+      "updated_at": "2025-07-28T18:19:05Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6xoc",
+          "body": "Have you had any further luck with getting a usable port on this device? I have one of these hotspots that I'm not using for anything and I am willing to help if I can. ",
+          "author": {
+            "login": "delta911turbo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/6722692?u=734197fb358d84e929e6ff4b4379572f9f8c355d&v=4",
+            "url": "https://github.com/delta911turbo"
+          },
+          "created_at": "2026-01-04T19:22:22Z",
+          "updated_at": "2026-01-04T19:22:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "Sami32"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 2,
+          "users": [
+            "Sami32",
+            "Aeyk"
+          ]
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

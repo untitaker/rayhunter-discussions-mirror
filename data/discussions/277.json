@@ -1,0 +1,538 @@
+{
+  "id": "D_kwDOKrJqmc4AfTp9",
+  "number": 277,
+  "title": "Active sim usage while doing survey",
+  "body": "If an active sim and subscription is in use, assuming this means a tower is connected to and data is working — does that in any way interfere with the other functions of RayHunter? I know it was somewhat mentioned in the readme. In the past with CrocHunter and an SDR the frequencies changed as it was doing surveys, but I think in the case of the hotspot it can stay on a tower and be in use while also doing a survey of surrounding cells? Or does it have to shift and be connected to a cell/tower for decoding and such? ",
+  "author": {
+    "login": "alphafox02",
+    "avatar_url": "https://avatars.githubusercontent.com/u/44436101?v=4",
+    "url": "https://github.com/alphafox02"
+  },
+  "created_at": "2025-04-15T21:03:52Z",
+  "updated_at": "2025-11-16T12:37:41Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/277",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AxCRg",
+      "body": "rayhunter doesn't perform any active surveying, it captures data from regular usage of your modem and looks for activity that looks similar to IMSI catchers. i don't think there's a clear answer to whether it's better to move around or to stand still while rayhunter is active. from my experience, rayhunter can have false-positives when entering and exiting subway tunnels, probably because of (legitimate) femtocells.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-04-16T12:36:54Z",
+      "updated_at": "2025-04-16T12:36:55Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxCV9",
+      "body": "Okay, I was thinking of putting it on my drone but also wanted to use an active sim w/ service so that I could reach the Pi that's on board as well via the modem. Assuming that the usb connection from the Orbit can act as a USB ethernet connection to the Pi, otherwise I guess I'd use the WiFi from the hotspot. I just wasn't certain if RayHunter would at any point interfere with the active service. ",
+      "author": {
+        "login": "alphafox02",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44436101?v=4",
+        "url": "https://github.com/alphafox02"
+      },
+      "created_at": "2025-04-16T13:00:23Z",
+      "updated_at": "2025-04-16T13:00:23Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A5Jh0",
+          "body": "This is from April, but this seems important to note. I wouldn't use the modem with an active plan, attached to a drone. Same reason I would put a phone on a weather balloon operating as a aprs modem for ham radio telemetry in airplane mode. \r\nhttps://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-22/subpart-H/section-22.925\r\n\r\n\r\n```\r\n22.925 Prohibition on airborne operation of cellular telephones.\r\n\r\n\r\nCellular telephones installed in or carried aboard airplanes, balloons or any other type of aircraft must not be \r\noperated while such aircraft are airborne (not touching the ground). When any aircraft leaves the ground, all \r\ncellular telephones on board that aircraft must be turned off. The following notice must be posted on or near \r\neach cellular telephone installed in any aircraft:\r\n\r\n\r\n“The use of cellular telephones while this aircraft is airborne is prohibited by FCC rules, and the violation of \r\nthis rule could result in suspension of service and/or a fine. The use of cellular telephones while this aircraft is \r\non the ground is subject to FAA regulations.\r\n```\r\n\r\nNot that people don't leave their phones on without airplane mode on planes etc every day, but interfacing with a meshtastic or something is probably a better option imho",
+          "author": {
+            "login": "deathzombee",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8412573?u=67483675c9a808804846bb9884d6e8f07c4c3f57&v=4",
+            "url": "https://github.com/deathzombee"
+          },
+          "created_at": "2025-11-16T12:35:16Z",
+          "updated_at": "2025-11-16T12:35:17Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxCWn",
+      "body": "rayhunter definitely won't interfere with service in any way at all other than maybe consuming battery or using too much RAM (unlikely) -- what it does in principle is entirely passive. I don't know if USB tethering works on orbic.\r\n\r\nI'd be more concerned with the noise you get in detection by flying fast and high, but you'd have to play around with that.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-04-16T13:04:33Z",
+      "updated_at": "2025-04-16T13:04:34Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxCXY",
+      "body": "Working out the noise now as there's also a SDR onboard + UPS. I think maybe the UPS is making a lot of EMI as it's got all sorts of exposed chips and what not so I'm going to remove it and have the Pi + SDR powered off the drone's internal battery. I figure that may help. As to the orbit, slightly annoying it can't stay on with it's battery removed and receiving power from say the USB cable. I suppose I could carefully power the Orbit from the drone battery as well.",
+      "author": {
+        "login": "alphafox02",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44436101?v=4",
+        "url": "https://github.com/alphafox02"
+      },
+      "created_at": "2025-04-16T13:07:35Z",
+      "updated_at": "2025-04-16T13:07:35Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AxCYP",
+      "body": "Sorry I don't mean noise in the EE sense. _that_ shouldn't be a problem. I mean that if your modem flies at lets say 40 km/h and very high, it might momentarily downgrade to 2G which is considered suspicious by rayhunter. so the output of rayhunter might be too noisy.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-04-16T13:11:57Z",
+      "updated_at": "2025-04-16T13:11:58Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4AxGEG",
+          "body": "if this is in the US it shouldn't ever downgrade to 2G since US 2G networks have been shut down. I can't speak to the battery issue. I thought I had ran one with out a battery while plugged in but I must be mistaken, but yea its possible you could jumper it to the drone battery to trick it. I would definitely be interested in what kind of results you get off a drone! ",
+          "author": {
+            "login": "cooperq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+            "url": "https://github.com/cooperq"
+          },
+          "created_at": "2025-04-17T16:42:08Z",
+          "updated_at": "2025-04-17T16:42:09Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A5JiA",
+      "body": "I may have mentioned already, but if not, I have FCC approval to do this. I filed for an exemption. I also spoke to the local Verizon spectrum manager who was interested in participating in the tests. I just need to get around to actually doing them.  ",
+      "author": {
+        "login": "alphafox02",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44436101?v=4",
+        "url": "https://github.com/alphafox02"
+      },
+      "created_at": "2025-11-16T12:37:41Z",
+      "updated_at": "2025-11-16T12:41:28Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

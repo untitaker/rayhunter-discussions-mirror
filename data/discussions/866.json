@@ -1,0 +1,365 @@
+{
+  "id": "D_kwDOKrJqmc4AkAxo",
+  "number": 866,
+  "title": "Orbic 400L Non-Responsive, Unable to Tether",
+  "body": "I recently purchased a few Orbic 400L hotspots on eBay that displayed they were on 1.1.5 firmware, but didn't allow any connection via USB or Wifi to allow installation. I was able to solve this via updating the firmware with the RC400L Upgrade Tool (https://www.orbic.us/support/orbicspeed/RC400L_Upgrade_Tool_Setup_20210624.exe). This updated it to 1.2.x and allowed me to tether and do a proper installation via wifi/usb.",
+  "author": {
+    "login": "FusedStamen",
+    "avatar_url": "https://avatars.githubusercontent.com/u/129631594?u=dd7a8badfce90259ae7e8a90f1a4c6264d0b8a5e&v=4",
+    "url": "https://github.com/FusedStamen"
+  },
+  "created_at": "2026-02-07T05:23:07Z",
+  "updated_at": "2026-02-07T21:06:06Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/866",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7-9h",
+      "body": "can you clarify what \"didn't allow\" means? did you get an error from the orbic installer or was there no wifi network to begin with?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-02-07T05:24:45Z",
+      "updated_at": "2026-02-07T05:24:45Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7-95",
+          "body": "> can you clarify what \"didn't allow\" means? did you get an error from the orbic installer or was there no wifi network to begin with?\r\n\r\nThe installer failed, sorry. It allowed connection to the network, but wouldn't pull anything up with 192.168.1.1 nor communicate properly via the installer in powershell. I tried Windows and Linux, it seemed that adb was broken - adb reboot bootloader, setprop and similar didn't work and gave access denied errors. It seemed that the firmware was in a weird state where it didn't respond properly and was only fixed by counter-intuitively updating the firmware",
+          "author": {
+            "login": "FusedStamen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/129631594?u=dd7a8badfce90259ae7e8a90f1a4c6264d0b8a5e&v=4",
+            "url": "https://github.com/FusedStamen"
+          },
+          "created_at": "2026-02-07T05:30:53Z",
+          "updated_at": "2026-02-07T05:30:53Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7_83",
+          "body": "Since you've only tried this on one device (to my knowledge), I suggest it could be an issue with just that device. These are consumer grade devices, and it's possible the flashing of the factory firmware had a problem. \r\n\r\nCan you reproduce this issue on another of your devices (not upgrading via the tool, just trying the install) and reply with the outcome?",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-07T19:03:43Z",
+          "updated_at": "2026-02-07T19:03:43Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8ABk",
+          "body": "> Since you've only tried this on one device (to my knowledge), I suggest it could be an issue with just that device. These are consumer grade devices, and it's possible the flashing of the factory firmware had a problem.\r\n> \r\n> Can you reproduce this issue on another of your devices (not upgrading via the tool, just trying the install) and reply with the outcome?\r\n\r\nI tried it on 5 of the 10 devices that I purchased in a bulk lot and all 10 had similar issues. I worked my way through the first 5, I can provide logs of any information when I proceed with the next 5 after receiving batteries and SIMs for the remainder",
+          "author": {
+            "login": "FusedStamen",
+            "avatar_url": "https://avatars.githubusercontent.com/u/129631594?u=dd7a8badfce90259ae7e8a90f1a4c6264d0b8a5e&v=4",
+            "url": "https://github.com/FusedStamen"
+          },
+          "created_at": "2026-02-07T20:11:26Z",
+          "updated_at": "2026-02-07T20:11:26Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8AGk",
+          "body": "If you've got the logs and they don't contain anything sensitive I don't see any issue with you sharing them.",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-02-07T21:06:06Z",
+          "updated_at": "2026-02-07T21:06:06Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

@@ -1,0 +1,305 @@
+{
+  "id": "D_kwDOKrJqmc4Al27U",
+  "number": 993,
+  "title": "Bricked moxee investigation",
+  "body": "I've taken a look at a bricked Moxee sent to me (#865).\r\n\r\nFirst, the state of the Moxee I tested: RNDIS works, no working DHCP server,\r\nwhen I use static IPs I can ping `192.168.1.1` but all TCP ports are closed\r\n(connection refused), no adb.\r\n\r\nIt seems that Moxee exposes EDL when one:\r\n\r\n1. holds the reset button while the device is powered. The Moxee says \"resetting\", then the display goes dark.\r\n2. once the screen goes dark, hold power + reset. The screen doesn't turn on at all, but you will see it in `dmesg -w` when plugged into a PC:\r\n\r\n```\r\nApr 21 15:04:12 denkpad kernel: usb 2-4.4.1.4: New USB device found, idVendor=05c6, idProduct=9008, bcdDevice= 0.00\r\nApr 21 15:04:12 denkpad kernel: usb 2-4.4.1.4: Product: QHSUSB__BULK\r\nApr 21 15:04:12 denkpad kernel: usb 2-4.4.1.4: Manufacturer: Qualcomm CDMA Technologies MSM\r\nApr 21 15:04:12 denkpad kernel: qcserial 2-4.4.1.4:1.0: Qualcomm USB modem converter detected\r\nApr 21 15:04:12 denkpad kernel: usb 2-4.4.1.4: Qualcomm USB modem converter now attached to ttyUSB0\r\n```\r\n\r\n```\r\n$ lsusb\r\n  Bus 002 Device 063: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)\r\n```\r\n\r\nWith edl.py the Sahara handshake works, but then I get stuck. This is the output of `edl printgpt`:\r\n\r\n```\r\nCapstone library is missing (optional).\r\nKeystone library is missing (optional).\r\nQualcomm Sahara / Firehose Client V3.62 (c) B.Kerler 2018-2025.\r\nmain - Trying with no loader given ...\r\nmain - Waiting for the device\r\nmain - Device detected :)\r\nsahara - Protocol version: 2, Version supported: 1\r\nmain - Mode detected: sahara\r\nsahara -\r\nVersion 0x2\r\n------------------------\r\nHWID:              0x0004a0e10158779a (MSM_ID:0x0004a0e1,OEM_ID:0x0158,MODEL_ID:0x779a)\r\nCPU detected:      \"MDM9607\"\r\nPK_HASH:           0x952f545de71ce37daa0ef295a67223d74a968f6de96ca04be352667337260df8\r\nSerial:            0x3c5fd831\r\n\r\nsahara\r\nsahara - [LIB]: Couldn't find a loader for given hwid and pkhash (0004a0e10158779a_952f545de71ce37d_[FHPRG/ENPRG].bin) :(\r\n```\r\n\r\nThen the command just hangs, and in dmesg I see that the device is kind of gone (`lsusb` still shows it):\r\n\r\n```\r\n[95199.893766] qcserial ttyUSB0: Qualcomm USB modem converter now disconnected from ttyUSB0\r\n[95199.893797] qcserial 2-4.4.1.4:1.0: device disconnected\r\n```\r\n\r\nI've taken apart an Orbic device and haven't found anything that resembles an\r\nUART point, so I would assume there's nothing on Moxee as well. I'm not very\r\nfamiliar with this level of abstraction, so somebody actually experienced in\r\nhardware hacking may try.\r\n",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-04-21T13:45:39Z",
+  "updated_at": "2026-05-10T18:35:57Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/993",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A_lMv",
+      "body": "Tried qc_boot (https://github.com/platform-system-interface/qc_boot). Held power + reset to get into EDL, then:\r\n\r\n```\r\n$ sudo ./target/release/qc_boot info\r\n[2026-04-22T09:07:47Z INFO  qc_boot::protocol] Found Qualcomm CDMA Technologies MSM QHSUSB__BULK\r\nHardware ID: 0004a0e1 (unknown)\r\nSerial number: [31, d8, 5f, 3c, 00, 00, 00, 00]\r\nOEM PK hashes:\r\n  [95, 2f, 54, 5d, e7, 1c, e3, 7d, aa, 0e, f2, 95, a6, 72, 23, d7, 4a, 96, 8f, 6d, e9, 6c, a0, 4b, e3, 52, 66, 73, 37, 26, 0d, f8]\r\n  [95, 2f, 54, 5d, e7, 1c, e3, 7d, aa, 0e, f2, 95, a6, 72, 23, d7, 4a, 96, 8f, 6d, e9, 6c, a0, 4b, e3, 52, 66, 73, 37, 26, 0d, f8]\r\n  [95, 2f, 54, 5d, e7, 1c, e3, 7d, aa, 0e, f2, 95, a6, 72, 23, d7, 4a, 96, 8f, 6d, e9, 6c, a0, 4b, e3, 52, 66, 73, 37, 26, 0d, f8]\r\n```\r\n\r\nRunning this tool again hangs briefly after the first line, then panics:\r\n\r\n```\r\n[2026-04-22T09:08:30Z INFO  qc_boot::protocol] Found Qualcomm CDMA Technologies MSM QHSUSB__BULK\r\n\r\nthread 'main' (674716) panicked at src/protocol.rs:245:5:\r\nassertion `left == right` failed\r\n  left: 0\r\n right: 1\r\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\r\n```\r\n\r\nThen the device needs power cycling.\r\n\r\n`qc_boot` has other subcommands but they don't seem to be implemented yet.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-04-22T09:18:10Z",
+      "updated_at": "2026-04-22T09:18:10Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A_lhL",
+          "body": "yea the EDL protocol is unfortunately stateful and changed over time, so I only implemented as much - any insight would be highly welcome!\r\n\r\nI just remembered that Qualcomm themselves started a new tool, too:\r\nhttps://github.com/qualcomm/qdlrs/",
+          "author": {
+            "login": "orangecms",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4245199?u=ce21be85f1bde3558af8b9f752d237ae1b127fe6&v=4",
+            "url": "https://github.com/orangecms"
+          },
+          "created_at": "2026-04-22T10:01:36Z",
+          "updated_at": "2026-04-22T10:01:36Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A_pXB",
+          "body": "FTR I have also tried the linked official tool, and it didn't work either. All image uploads timeout. Stuck here on getting a working firehose programmer for the moxee.\r\n\r\n<details><summary>programmers I have tried</summary>\r\n\r\nEach test was run on a freshly-booted device, and the device was reest in\r\nbetween. All hung silently after image transfer.\r\n\r\n1. `nprg9x07p.bin` — `bkerler/Loaders/qualcomm/patched/mdm9x07/`\r\n   ```\r\n   edl --loader=nprg9x07p.bin --memory=nand printgpt\r\n   ```\r\n\r\n2. `org/sim7600/NPRG9x07.mbn` — `bkerler/Loaders/qualcomm/patched/mdm9x07/`\r\n   ```\r\n   edl --loader=org/sim7600/NPRG9x07.mbn --memory=nand printgpt\r\n   ```\r\n\r\n3. `update/firehose/prog_nand_firehose_9x07.mbn` — `Biktorgj/quectel_eg25_recovery`\r\n   ```\r\n   edl --loader=update/firehose/prog_nand_firehose_9x07.mbn --memory=nand printgpt\r\n   ```\r\n\r\n4. `update/NPRG9x07.mbn` — `Biktorgj/quectel_eg25_recovery`\r\n   ```\r\n   edl --loader=update/NPRG9x07.mbn --memory=nand printgpt\r\n   ```\r\n\r\n5. `update/ENPRG9x07.mbn` — `Biktorgj/quectel_eg25_recovery`\r\n   ```\r\n   edl --loader=update/ENPRG9x07.mbn --memory=nand printgpt\r\n   ```\r\n\r\n6. `update/firehose/prog_nand_firehose_9x07.mbn` — `Biktorgj/quectel_eg25_recovery` *(tool-independence retry)*\r\n   ```\r\n   qdl-rs --loader-path update/firehose/prog_nand_firehose_9x07.mbn --storage-type nand nop\r\n   ```\r\n\r\n</details>",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-04-23T12:51:01Z",
+          "updated_at": "2026-04-23T12:56:34Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BAXDr",
+      "body": "I've disassembled the device and am able to connect to UART.\r\n\r\n## littlekernel UART\r\n\r\n<img height=200 alt=\"image psd(1)\" src=\"https://github.com/user-attachments/assets/b0ca9712-c361-4dbc-80a8-1f820ad2fdbd\" />\r\n\r\nRotated like in the picture, let's label the contacts:\r\n\r\n```\r\n  A . B\r\n  C . D . E\r\n  . . F . G\r\n```\r\n\r\n`F` is TX, `G` is RX (probably), `E` is GND. I used a raspberry pico, [this firmware](https://github.com/raspberrypi/debugprobe), and a few resistors to connect:\r\n\r\n<img height=\"200\" alt=\"uart-wiring-resistors\" src=\"https://github.com/user-attachments/assets/b88f2353-2df7-4752-b277-3da15d41e749\" />\r\n\r\n* Voltage is 1.8V on the moxee and 3.3V on the pico, hence the resistor stuff. Without resistors (connecting G directly), the moxee crashes.\r\n* `1k` means 1 kohm.\r\n\r\nBut in the end only reading logs worked anyway, and the console was non-responsive to any input. Reading logs you can do without getting resistors anyway, just don't connect TX. So technically I can't be sure that the resistor stuff ever really worked properly.\r\n\r\nHere are the logs: [moxee-boot-uart.txt](https://github.com/user-attachments/files/27572037/moxee-boot-uart.txt) -- note that after linux has booted, there are no logs at all anymore no matter how much I interact with the device.\r\n\r\nSo maybe there's a second UART somewhere:\r\n\r\n## Where is the goddamn linux console?\r\n\r\n<img height=\"200\" alt=\"IMG_20260510_203154~2\" src=\"https://github.com/user-attachments/assets/fc0d5d5f-9b9c-420c-bd2d-9c431ae53ee2\" />\r\n\r\nOn the other side of the PCB, opposite this UART pad cluster, there is a soldered-on heatshield that doesn't come off. I tried to heat up the shield using a soldering iron, and pry it off, but heating up just the edges melts the PCB.\r\n\r\nAnyway, even if I'm able to get under that heatshield it doesn't seem like a viable path for an unbrick procedure. I'd have tolerated a path that \"only\" required disassembling the device and holding some wires onto the UART above. But soldering off a heatshield is too much.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-05-10T18:35:57Z",
+      "updated_at": "2026-05-10T18:42:13Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
