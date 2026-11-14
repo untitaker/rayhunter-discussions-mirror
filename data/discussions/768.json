@@ -1,0 +1,713 @@
+{
+  "id": "D_kwDOKrJqmc4Ajl9X",
+  "number": 768,
+  "title": "telnet unavailable on Orbic Speed RC400L",
+  "body": "hi!\r\n\r\ni recently bought two Orbic Speed RC400L units from amazon (same seller for both); verizon branded, carrier unlocked. \r\n\r\nfor one device the install took all of 20s.  everything works.  green bar.  yeehaw.\r\n\r\nbut with the other i am having no luck.  i've done resets from the admin ui as well as using the reset button next to the battery.  all errors are the same for any of the `orbic*` commands and look like:  \r\n\r\n```\r\n$ ./installer orbic --admin-password wifi_passwd\r\nLogging in and starting telnet... \r\nFailed to install rayhunter on the Orbic RC400L\r\n\r\nCaused by:\r\n    0: failed to start telnet\r\n    1: error sending request\r\n    2: client error (SendRequest)\r\n    3: connection closed before message completed\r\n```\r\nand/or\r\n\r\n```\r\n$ ./installer util orbic-start-telnet --admin-password wifi_passwd\r\nLogging in and starting telnet... \r\nFailed to start telnet on the Orbic RC400L\r\n\r\nCaused by:\r\n    0: failed to start telnet\r\n    1: error sending request\r\n    2: client error (SendRequest)\r\n    3: connection closed before message completed\r\n```\r\n\r\nit's worth noting that the creds are good as i get a different error by altering the password (`Login failed with retcode: 201`).\r\n\r\na port scan looks fine, same results as the working device:\r\n\r\n```\r\n$ nmap -Pn 192.168.1.1\r\nStarting Nmap 7.80 ( https://nmap.org ) at 2026-01-10 19:58 CST\r\nNmap scan report for my.jetpack (192.168.1.1)\r\nHost is up (0.0059s latency).\r\nNot shown: 996 closed ports\r\nPORT     STATE    SERVICE\r\n53/tcp   open     domain\r\n80/tcp   open     http\r\n443/tcp  open     https\r\n5555/tcp filtered freeciv\r\n```\r\n\r\na plain telent fails.  not sure i'm actually testing anything with it or not:\r\n\r\n```\r\n$ telnet 192.168.1.1\r\nTrying 192.168.1.1...\r\ntelnet: Unable to connect to remote host: Connection refused\r\n```\r\n\r\nthe device appears to be fully functional otherwise.  the firmware versions are the same between the two (`ORB400L_V1.3.0_BVZRT`), i can change creds, addresses, etc just fine but the installer just can't get a telnet connection.\r\n\r\ni've dug through discussions and issues here and none of the suggestions i've seen and tried have worked.  i'm thinking i need to re-flash or similar but i'm unsure how that would change anything a factory reset doesn't, nor have i seen instructions.\r\n\r\nany ideas/suggestions?  is there a way to get some debug logging from the installer?  i'm running linux locally if there's better diagnostics to try.",
+  "author": {
+    "login": "kadamwolfe",
+    "avatar_url": "https://avatars.githubusercontent.com/u/20207705?u=b74c1ba8d2249428729dbd95d242339ccc84094b&v=4",
+    "url": "https://github.com/kadamwolfe"
+  },
+  "created_at": "2026-01-11T02:20:20Z",
+  "updated_at": "2026-01-31T18:03:00Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/768",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6_3W",
+      "body": "hey does `installer orbic-usb` work for you? that one would not use telnet at all\r\n\r\n",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-11T02:23:11Z",
+      "updated_at": "2026-01-11T02:50:28Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6_4F",
+          "body": "i hadn't tried that yet (because geography) but will give that a try when i can if that's the best option.",
+          "author": {
+            "login": "kadamwolfe",
+            "avatar_url": "https://avatars.githubusercontent.com/u/20207705?u=b74c1ba8d2249428729dbd95d242339ccc84094b&v=4",
+            "url": "https://github.com/kadamwolfe"
+          },
+          "created_at": "2026-01-11T02:49:24Z",
+          "updated_at": "2026-01-11T02:49:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7F86",
+          "body": "> hey does `installer orbic-usb` work for you? that one would not use telnet at all\r\n\r\nI am receiving the same error. Trying to run orbic-usb returns the following error (see image)\r\n\r\n<img width=\"1219\" height=\"832\" alt=\"orbic error\" src=\"https://github.com/user-attachments/assets/e5672eaf-e290-47d7-9d37-078a2dc1c20d\" />\r\n",
+          "author": {
+            "login": "softshellcrab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/253172237?v=4",
+            "url": "https://github.com/softshellcrab"
+          },
+          "created_at": "2026-01-14T01:23:21Z",
+          "updated_at": "2026-01-14T01:25:35Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7tUI",
+          "body": "@softshellcrab \r\nbelow is some of my findings in relation to your interface error above.\r\nBEWARE: my device appears bricked after making it passed that error, and it could either be from the general warning of orbic-usb carrying this risk, AND / OR the action of these steps to get passed that error to begin with.\r\n\r\nin searching around and trying to troubleshoot, i came across [this](https://github.com/EFForg/rayhunter/wiki/Install-Rayhunter-from-Windows-with-PowerShell) post (note: i'm pretty confident the post's guidance itself is outdated / no longer applicable, BUT...) \r\n\r\nI downloaded the Zadig WinUSB Driver Installer (error indicates incorrect interface, and i confirmed windows was detecting device as the RNDIS type)\r\nI used the Zadig tool to install the WinUSB driver (required toggling \"List all devices\" in Zadig and finding the correct interface before installing driver... be certain you select the correct interface for the orbic)\r\n\r\nAfter doing this, the `orbic-usb` step would proceed beyond this point and didn't repeat the interface driver error... \r\nBut now my orbic appears bricked (as the USB installer warned may occur). I CAN connect to it's wireless signal and access the admin web ui, but I cannot get any devices to successfully tether to it. Attemping to run either the `orbic-usb` or the recommended `orbic` (with admin password) method results in failure and i'm currently unsure how else to attempt repairing it. \r\n\r\nResetting via the hardware button, as well as resetting via the web ui over wireless signal, did not prove successful.\r\nThumping around the interface in Zadig to see what other options I could try did not prove successful.\r\nRemoving battery and reconnecting to different USB port did not prove successful.\r\n\r\nI may have a new paperweight, but I went into this knowing that may be the case...",
+          "author": {
+            "login": "git528-ctrl",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228280264?v=4",
+            "url": "https://github.com/git528-ctrl"
+          },
+          "created_at": "2026-01-30T14:54:58Z",
+          "updated_at": "2026-01-30T14:54:58Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7tVM",
+          "body": "Can you try the network installer `orbic` on linux? we did brick a lot of devices using `orbic-usb` on Windows, but typically they would still work fine with the network-based installer.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-30T15:02:20Z",
+          "updated_at": "2026-01-30T15:02:20Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7tVt",
+          "body": "i've been working 3x as hard trying to get around needing to setup a linux vm because i felt too 'lazy' to do the vm at first... LOL\r\ni may just give in and go that route after all. at current, i don't have a linux machine available to quickly report back.\r\n\r\ni tried from termux on my mobile device but wasn't able to force my way through that mess either..\r\n\r\n\r\nedit: alright @untitaker i've got a linux box running with the package extracted there. USB is passing through, but linux doesn't detect the connection as a tethered network (nor does my OG windows box, since applying the WinUSB driver and bricking it). \r\nonly if you're available and willing - any idea how i might reset the orbic device in a way that would make it appear as a network device to the host? otherwise, running the network installer commands is currently failing\r\n\r\n```\r\nLogging in and starting telnet...\r\nFailed to start telnet on the Orbic RC400L\r\n\r\nCaused by:\r\n      0: Failed to get login info\r\n      1: error sending request\r\n      2: client error (Connect)\r\n      3: tcp connect error\r\n      4: Connection refused (os error 111)\r\n```\r\n",
+          "author": {
+            "login": "git528-ctrl",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228280264?v=4",
+            "url": "https://github.com/git528-ctrl"
+          },
+          "created_at": "2026-01-30T15:05:34Z",
+          "updated_at": "2026-01-30T16:42:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7tk1",
+          "body": "you don't have to connect it using USB tethering. are you able to connect via WiFi, ie without a cable? this is sufficient to run the installer, the Installation can be done wirelessly \r\n\r\nit's reasonable to assume that the USB port is generally busted for all purposes but charging",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-30T16:44:07Z",
+          "updated_at": "2026-01-30T16:44:45Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7tlX",
+          "body": "ah, that makes sense! i don't have a wireless NIC, so WiFi connecting for the install isn't an option unfortunately. i've just been connecting to it's WiFi with my mobile device for confirming the web interface is up and whatever else. \r\n\r\nI'll see what else I can muster up... thanks for the helpful insights thus far!\r\n",
+          "author": {
+            "login": "git528-ctrl",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228280264?v=4",
+            "url": "https://github.com/git528-ctrl"
+          },
+          "created_at": "2026-01-30T16:47:56Z",
+          "updated_at": "2026-01-30T16:47:56Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7t9y",
+          "body": "well... it turned into just haphazardly chucking various attempts and troubleshooting steps at it. \r\ni think one that must've been influential for me was running `RC400L_Upgrade_Tool_Setup_20210624.exe` which i found from searching around for orbic firmware flash/reset utilities. the tool failed, as my device wasn't on the \"only\" version for the tool to execute against, but upon failing, the device was now listed as `4G LTE Wireless HS-USB Ethernet Adapter` in Windows Device Manager...\r\n\r\nthis prompted to trying the rayhunter install again from linux, but i was unsuccessful. then i came back to Windows and continued poking around the 2 install methods, various `util` commands, and so on. i made it back to a state of getting an `\"Interface driver is 'modem', not WinUSB\"` error. so i again ran the Zadig tool, sifted through the various devices until i found the one associated with 'modem' interface, and applied the WinUSB driver to it.\r\n\r\na few more rounds of unsuccessfully getting the web or usb installers to work, i decided to again `reset` the orbic device via it's web interface (from a mobile device), and on the next usb install attempt, it made it beyond the rootshell install and proceeded to reboot... i happened to physically press the POWER button around the time the script finally installed rootshell (my thinking being that the previous output indicates a reboot even though one never happened), and i'm unsure whether my physical press of the button registered or not. but here we are, and it's working...",
+          "author": {
+            "login": "git528-ctrl",
+            "avatar_url": "https://avatars.githubusercontent.com/u/228280264?v=4",
+            "url": "https://github.com/git528-ctrl"
+          },
+          "created_at": "2026-01-30T20:26:59Z",
+          "updated_at": "2026-01-30T20:26:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7vMV",
+          "body": "@git528-ctrl i ended up getting it accomplished through an Ubuntu VM I put together. Thank you for the help! I appreciate you taking the time to respond to me.\r\n\r\n",
+          "author": {
+            "login": "softshellcrab",
+            "avatar_url": "https://avatars.githubusercontent.com/u/253172237?v=4",
+            "url": "https://github.com/softshellcrab"
+          },
+          "created_at": "2026-01-31T18:02:59Z",
+          "updated_at": "2026-01-31T18:02:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A7Ndf",
+      "body": "@untitaker hey! hi!  so sorry for the extended wait after starting the conversation myself.  yes, `./installer orbic-usb` worked just fine.  \r\n\r\nfwiw i tried over wifi on another machine.  the first was pop_os and the other linux mint if that matters.  if there's anything you'd like me to try out and report back insofar as debugging do let me know; happy to help.\r\n\r\nbut as for me and my two orbics, i think i'm in good shape.",
+      "author": {
+        "login": "kadamwolfe",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20207705?u=b74c1ba8d2249428729dbd95d242339ccc84094b&v=4",
+        "url": "https://github.com/kadamwolfe"
+      },
+      "created_at": "2026-01-16T21:13:03Z",
+      "updated_at": "2026-01-16T21:13:03Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "untitaker"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

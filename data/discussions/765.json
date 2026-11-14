@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4Ajk8n",
+  "number": 765,
+  "title": "R562L5",
+  "body": "Putting this one up there for a possible add. Thanks!",
+  "author": {
+    "login": "vanayr",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2695295?v=4",
+    "url": "https://github.com/vanayr"
+  },
+  "created_at": "2026-01-09T15:27:24Z",
+  "updated_at": "2026-01-09T15:27:24Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/765",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

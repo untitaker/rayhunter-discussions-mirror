@@ -1,0 +1,425 @@
+{
+  "id": "D_kwDOKrJqmc4AjoLz",
+  "number": 774,
+  "title": "Inseego Mifi 8800L support???",
+  "body": "I have an old inseego Mifi 8800 and I was wondering if it is supported and how to do it if it is .",
+  "author": {
+    "login": "ManweKingofArda",
+    "avatar_url": "https://avatars.githubusercontent.com/u/210099343?v=4",
+    "url": "https://github.com/ManweKingofArda"
+  },
+  "created_at": "2026-01-13T17:48:05Z",
+  "updated_at": "2026-07-13T23:44:23Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/774",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A8YMA",
+      "body": "I second this!",
+      "author": {
+        "login": "maxhayim",
+        "avatar_url": "https://avatars.githubusercontent.com/u/343602?u=b495a10eebf7015cd9f53fa73b37787a7fc62526&v=4",
+        "url": "https://github.com/maxhayim"
+      },
+      "created_at": "2026-02-16T20:07:00Z",
+      "updated_at": "2026-02-16T20:07:00Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A8Yeg",
+      "body": "Here's some documentation on porting to new devices. We're trying to update the docs but the PR hasn't completed yet.",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-02-16T23:44:58Z",
+      "updated_at": "2026-02-16T23:44:58Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A8asy",
+          "body": "forgot to include link to docs?\r\n\r\nI have a 8800L and can help getting firmware working on it",
+          "author": {
+            "login": "seanmuth",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12852047?v=4",
+            "url": "https://github.com/seanmuth"
+          },
+          "created_at": "2026-02-17T16:46:33Z",
+          "updated_at": "2026-02-17T16:46:33Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "maxhayim"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A8atI",
+          "body": "https://github.com/EFForg/rayhunter/pull/884",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-02-17T16:47:26Z",
+          "updated_at": "2026-02-17T16:47:26Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "seanmuth"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A-GAw",
+      "body": "also interested in this. willing to help in anyway i can",
+      "author": {
+        "login": "creamkingz007",
+        "avatar_url": "https://avatars.githubusercontent.com/u/270390865?v=4",
+        "url": "https://github.com/creamkingz007"
+      },
+      "created_at": "2026-03-23T15:08:14Z",
+      "updated_at": "2026-03-23T15:08:14Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BDP45",
+      "body": "me too, got one from work thats in great condition",
+      "author": {
+        "login": "choaticpixels",
+        "avatar_url": "https://avatars.githubusercontent.com/u/299949693?u=5a54a2dcfd5ac8410749b6989f0b258e59e78f02&v=4",
+        "url": "https://github.com/choaticpixels"
+      },
+      "created_at": "2026-07-13T23:44:23Z",
+      "updated_at": "2026-07-13T23:44:37Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 3
+}

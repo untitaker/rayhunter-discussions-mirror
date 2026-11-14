@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4Ajsbr",
+  "number": 788,
+  "title": "ZTE MU5001",
+  "body": "The ZTE MU5001 seems like an interesting device to support.\r\n\r\n* mainly for Europe (US band coverage is weak)\r\n* 150 GBP used, but there's a large used market so price is going to drop further I hope\r\n* **has 5G**\r\n* preexisting hacks: https://github.com/ZTETool/ZTE-MU5001-HACK (no root though)\r\n\r\nI have no idea if the qualcomm chipset it uses has diag though (it's not MDM* type device)\r\n\r\n",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2026-01-17T15:39:45Z",
+  "updated_at": "2026-11-05T12:21:17Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/788",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BKEuX",
+      "body": "It seems to be based on the Snapdragon X55, which is shared with the Netgear Nighthawk M5 (which is even more expensive).\r\nstv0g has achieved root access to the latter by crafting AT commands over their usb interface https://0l.de/blog/2022/06/netgear-m5-root-access so it may be feasible",
+      "author": {
+        "login": "rgon",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25673263?u=9b1aadce6db3d3f5850bbb452a4e584e9d7da09a&v=4",
+        "url": "https://github.com/rgon"
+      },
+      "created_at": "2026-11-05T12:21:16Z",
+      "updated_at": "2026-11-05T12:21:16Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

@@ -1,0 +1,2648 @@
+{
+  "id": "D_kwDOKrJqmc4Ag8a6",
+  "number": 479,
+  "title": "UZ801 support",
+  "body": "The UZ801 is a 4G/LTE USB modem which is built on top of a Qualcomm Snapdragon 410 (MSM8916, with MDM8916 modem.) It does not have a screen, but it does have LEDs which can be used to signal the same status as the green/red bar on the Orbic hotspot. More info can be found [here](https://github.com/AlienWolfX/UZ801-USB_MODEM/wiki/Overview).\r\n\r\nI can confirm that the stock Android 4.4 KitKat install has a way to enable USB debugging by visiting a specific link on the web interface, and that this device also definitely has a /dev/diag interface that is accessible. I can't remember if it is only accessible after [rooting](https://github.com/AlienWolfX/UZ801-USB_MODEM/wiki/Modifications#root-access-setup) or if it is just randomly accessible as-is.\r\n\r\nI write to ask if anyone has attempted a port before I try it, just in case others have found it to be impossible or not worthwhile. Alternatively, I would like to know if there is any interest in this platform. Thanks in advance!",
+  "author": {
+    "login": "Tunas1337",
+    "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+    "url": "https://github.com/Tunas1337"
+  },
+  "created_at": "2025-07-26T20:08:43Z",
+  "updated_at": "2026-06-25T13:35:20Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/479",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAAB8J8Feg",
+      "name": "new-hardware",
+      "color": "c5def5",
+      "description": "Adding support for new hardware"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1BMM",
+      "body": "I'm not aware of anybody attempting a port for this. I don't think there's anything speaking against adding new devices, especially if somebody contributes the necessary patches and will maintain them. A lot of our devices in the [functional](https://efforg.github.io/rayhunter/supported-devices.html#2-functional-devices) section have rayhunter support \"just for fun.\"\r\n\r\nSome questions:\r\n\r\n* I see that this device has quite a lot of CPU and RAM compared to the other devices we support. That's great because we're usually scratching close to RAM limit.\r\n* It would be good to know what the power usage is and how much storage it has. Most people use rayhunter on the go. If this works for a few hours when plugged into a powerbank, that'd be cool.\r\n* Where do you get this device? I can't find it on aliexpress or amazon.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-26T20:38:16Z",
+      "updated_at": "2025-07-26T20:38:17Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1BND",
+          "body": "Hi @untitaker, thanks for your response!\r\n\r\nIt is worth noting that the CPU has only 2 of the cores enabled on the stock Android-based firmware, probably to avoid overheating as they did not exactly engineer any cooling solution. That being said, I don't think I've felt the device heat up. There is 384MB of RAM on the SoC, I hope that is sufficient.\r\nStorage-wise, it has 4GB of eMMC(?) in the form of an SK Hynix NAND flash chip. I have successfully run it from a power bank for hours and hours, and I would imagine the runtime would improve dramatically if it is not doing its normal task of beaming a Wi-Fi hotspot. \r\nI got the device from a bargain bin for ~$3 a year ago :smile: , which mirrors the origin stories of many I have read from online.\r\n\r\nIt is [available on AliExpress](https://www.aliexpress.us/item/3256807024041233.html) [[2]](https://www.aliexpress.us/item/3256807037359900.html)[[3]](https://www.aliexpress.us/item/3256808061872376.html), at least in the US where I am right now. This means that these specific links may not exist in other countries, I've seen that happen before, but I can almost guarantee that the devices themselves are sold. Any device that is shaped like an oversized USB mass storage drive and says \"4G LTE MODEM\" on the top is 99% going to be the UZ801. eBay is also another place where I have seen them for sale.\r\n\r\nAs an aside, there is a fully functional Debian image for these devices, however I haven't been able to (re)gain access to the QC DIAG interface under Debian for the life of me.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-07-26T20:50:59Z",
+          "updated_at": "2025-07-26T20:51:15Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1BOG",
+          "body": "rayhunter is definitely going to work fine as far as specs go. the devices we currently support have 1 core, <100MB RAM, and much less storage too. the only concern i would have is that this seems to be a whitelabel modem with no specific branding, so you might find that the exact rooting procedure _might_ vary slightly between the various offers on aliexpress, which _might_ make it hard to offer a fully automatic installer.\r\n\r\nbut generally this looks like a great potential addition, especially because of the price.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-07-26T21:04:21Z",
+          "updated_at": "2025-07-26T21:04:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1BXq",
+          "body": "So far, I believe that all of them share a common basis in the web interface. At the very least, all of the ones I have seen have the secret backdoor URL that enables USB debugging, after which you can `adb reboot bootloader`, and failing that, all of them have the magic button you can press to reboot into fastboot. Ideally from there the install script could flash a premade image where rayhunter has already been applied for maximum assurance of compatibility, but there is also potential to simply install it piecewise via ADB as with other platforms.\r\n\r\nI will look into how Rayhunter works in general, then see if I can at least get its functionality working on my UZ801, and when we get to that stage I will think about how to best automate the install steps to fit in the installer script.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-07-27T00:34:54Z",
+          "updated_at": "2025-07-27T00:34:55Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1TUx",
+          "body": "Some updates:\r\n- I restored my UZ801 to the stock Android image for testing, and it appears that adb runs as root(!) This resolves what I was trying to remember before, and is a big win for the automated installer development. The installer can just `curl http://192.168.100.1/usbdebug.html`, wait for a reboot, and then it'll get adb access to copy over the files and do the setup.\r\n- I will most likely modify the `tmobile` (T-Mobile TMOHS1) device target to support this one, seeing as that one also manipulates the /sys/class/leds to do the status indication. This device has `red`, `green` and `wifi` (blue) leds in the folder, all accessible and lighting up fine. I think the red LED is only ever used during startup to indicate the modem isn't \"ready\"/booted up fully yet, so there's little to no possibility of a false warning illumination.\r\n- The band support for this device (at least for my version) is more China-oriented and encompasses bands 1,3,5,8 and 20. This may be a problem, especially for US users (Verizon is the only one that uses LTE band 5, T-Mo has no band overlap at all) but then again, Qualcomm modems of this age are able to get their band support modified as far as I remember.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-02T23:17:47Z",
+          "updated_at": "2025-08-02T23:36:00Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1TWC",
+      "body": "So far so good, rayhunter-daemon runs on the device:\r\n\r\n<img width=\"1280\" height=\"427\" alt=\"image\" src=\"https://github.com/user-attachments/assets/75c700bb-d46b-4327-ac3a-8cf297bce713\" />\r\n\r\nOne problem is that there is no init.d, so I need to find out where all the init scripts live and how to hook misc-daemon and rayhunter-daemon in there.\r\n\r\nEdit 2: It turns out that the error is originating from the `df` included in busybox on the device. It does not have an -h option. This is a weird device that also does not have vi...",
+      "author": {
+        "login": "Tunas1337",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+        "url": "https://github.com/Tunas1337"
+      },
+      "created_at": "2025-08-02T23:54:08Z",
+      "updated_at": "2025-08-02T23:56:25Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1TXm",
+          "body": "All done~! PR incoming in the next 30 minutes :sweat_smile: ",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-03T00:25:48Z",
+          "updated_at": "2025-08-03T00:25:48Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1TYq",
+      "body": "See https://github.com/EFForg/rayhunter/pull/511.\r\n\r\n<img width=\"1280\" height=\"561\" alt=\"image\" src=\"https://github.com/user-attachments/assets/358a2e7d-43a6-49cb-944a-d70ed3fd8722\" />\r\n",
+      "author": {
+        "login": "Tunas1337",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+        "url": "https://github.com/Tunas1337"
+      },
+      "created_at": "2025-08-03T01:02:12Z",
+      "updated_at": "2025-08-03T01:02:13Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1clx",
+      "body": "hey @Tunas1337 i'm looking at aliexpress again and it seems there's a variant of the UZ801 that has two LEDs. did you get this one? it looks identical on the backside.\r\n\r\n<img width=\"914\" height=\"520\" alt=\"image\" src=\"https://github.com/user-attachments/assets/882fae7a-42cb-443b-b373-2eee6f0d15cb\" />\r\n\r\n<img width=\"914\" height=\"520\" alt=\"image\" src=\"https://github.com/user-attachments/assets/dc108824-b805-4462-8f44-bb645b76f4a7\" />\r\n",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-08-05T19:44:30Z",
+      "updated_at": "2025-08-05T19:44:31Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1cqG",
+          "body": "Mine is the black one (if there is only one black one...) I am away from home, but is this one:\r\n\r\n![IMG_20250805_162213_761](https://github.com/user-attachments/assets/a47ea668-a43f-4852-ac61-dd429563f21f)\r\n\r\nIt has three LEDs (or three LED components in two LED housings): red, green and blue. This leads me to believe that even though there are only two icons/light pipes on the model you showed, the mobile bars are red/green and the wifi is blue. Thus it is still compatible.\r\n",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-05T20:25:14Z",
+          "updated_at": "2025-08-05T20:25:39Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "untitaker"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A1c24",
+      "body": "Next step for this device would be to try and figure out if the modem processor's NVRAM can be modified with tools like QPST/QXDM to unlock all the bands. Optimally, that can later be replicated with QCSuper (which is open-source, multiplatform and unencumbered by a need for double-illegal Qualcomm internal software piracy.)",
+      "author": {
+        "login": "Tunas1337",
+        "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+        "url": "https://github.com/Tunas1337"
+      },
+      "created_at": "2025-08-05T21:58:05Z",
+      "updated_at": "2025-08-05T21:58:06Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A1c9V",
+          "body": "Sorry for kidnapping this issue, but can this USB modem send and receive SMS messages?\r\n\r\nWhat about phone calls (like some Huawei USB dongles)?\r\n\r\nI am asking because I am looking fir alternatives to Huawei USB dongles for RasPBX: https://github.com/MatejKovacic/RasPBX-install",
+          "author": {
+            "login": "MatejKovacic",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3339198?u=cabb25f233a032a2e61dd63685a7220ce5bcfd8a&v=4",
+            "url": "https://github.com/MatejKovacic"
+          },
+          "created_at": "2025-08-05T23:08:18Z",
+          "updated_at": "2025-08-05T23:09:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A1c-f",
+          "body": "No phone calls (I tried), and SMS is a maybe. It didn't work when I tried, but there looked to be provisions for it in the firmware.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-05T23:30:22Z",
+          "updated_at": "2025-08-05T23:30:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "eabase"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2WDv",
+      "body": "I have ordered a similiar device (the white red device). However, adb is by default available.\r\n<img width=\"2457\" height=\"860\" alt=\"grafik\" src=\"https://github.com/user-attachments/assets/237eec88-322c-4600-a5b9-6d0e31f12982\" />\r\n<img width=\"2461\" height=\"919\" alt=\"grafik\" src=\"https://github.com/user-attachments/assets/42491279-4e17-4dde-89c5-6637771cd401\" />\r\nThe shielding is missing by factory\r\n[build.prop.txt](https://github.com/user-attachments/files/22027202/build.prop.txt)\r\n\r\n```\r\nadb shell\r\nshell@UFI:/ $ id\r\nuid=2000(shell) gid=2000(shell) groups=1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats) context=u:r:shell:s0\r\n```\r\n\r\nTo get root you need this command `setprop service.adb.root 1; busybox killall adbd`.\r\n\r\nI was trying the 0.6.1 version. This didn't work with the installer.\r\n\r\n1. adb is already enabled (but it should check whether the webserver respond.) \r\n2. adb connection could not be made, it times out. Makes no sense, because it never connects to adb.\r\n3. every following steps fails accordingly\r\n\r\nthe manual way:\r\n\r\n```\r\nadb shell id\r\nuid=0(root) gid=0(root) context=u:r:shell:s0\r\nadb shell mkdir -p /data/rayhunter\r\nadb shell mount -o remount,rw /system\r\n```\r\n\r\ndownload the rayhunter release, extract it and move to the folder:\r\n\r\n```\r\nadb push rayhunter-daemon/rayhunter-daemon /data/rayhunter/\r\nsed 's/#device = \"orbic\"/device = \"uz801\"/g' config.toml.in config.toml\r\nadb push config.toml /data/rayhunter/\r\nadb shell chmod 755 /data/rayhunter/rayhunter-daemon\r\nadb shell chmod 644 /data/rayhunter/config.toml\r\n```\r\n\r\nthe mentioned init script (`/system/bin/initmifiservice.sh`) is missing:\r\n\r\n```\r\nroot@UFI:/system/etc # ls init\r\ninit.ath3k.bt.sh          init.qcom.efs.sync.sh     init.qcom.uicc.sh       \r\ninit.crda.sh              init.qcom.fm.sh           init.qcom.wifi.sh       \r\ninit.qcom.audio.sh        init.qcom.modem_links.sh  init.qcom.zram.sh       \r\ninit.qcom.bt.sh           init.qcom.post_boot.sh    init.qti.video.sh       \r\ninit.qcom.coex.sh         init.qcom.sdio.sh         \r\n```\r\nHowever there is a different entry possible:\r\n\r\n```\r\ntail -n1 /system/etc/init.qcom.post_boot.sh \r\n/data/SelfHost/startRIDL.sh &\r\n```\r\n\r\n\r\n```\r\nadb pull /system/etc/init.qcom.post_boot.sh .  \r\nsed -i 's/\\/data\\/SelfHost\\/startRIDL\\.sh/\\/data\\/rayhunter\\/rayhunter-daemon \\/data\\/rayhunter\\/config\\.toml/g' etc/init.qcom.post_boot.sh\r\nadb push init.qcom.post_boot.sh /system/etc/\r\nadb shell sync\r\nadb shell mount -o remount,ro /system\r\nadb reboot\r\n```\r\n\r\nconnect to the 4G-UFI-XXXX wifi and open `http://192.168.100.1:8080/index.html`\r\nso far soething does not work. either the device reboots after 3 minutes (without sim card) or wifi crashes after 5 minutes (with sim card)",
+      "author": {
+        "login": "coelner",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16364254?u=77d337a75b8dfa4e8c25ab7d2c49f544828e7e38&v=4",
+        "url": "https://github.com/coelner"
+      },
+      "created_at": "2025-08-28T14:24:40Z",
+      "updated_at": "2025-08-28T14:24:42Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2WIG",
+          "body": "Very interesting... Thank you very much for taking the time to experiment and for the in-depth report.\r\n\r\nI will definitely attempt to amend the usbdebug.html request to actually ensure that a webserver is present and that the request worked. If it doesn't, we will skip that step and see if there's adb already.\r\n\r\nAs for the adb connection timing out, make absolutely sure that you don't have an adb daemon running in parallel: you must run `adb kill-server` or else there's contention over which adb daemon is associated to the device.\r\n\r\nI think that at least some of the things you highlighted could help make a more universal installer as originally planned. I have no problem with using init.qcom.post_boot.sh instead, if it is more widely present (I am quite sure it will be -- I will have a chance to check my unit today.)\r\nI think it would be a better idea to tack the Rayhunter launch command line at the end of the init script instead of unit-specific modifications like replacing RIDL (on your unit) or the mifiservice (on my unit.) As far as I've been able to tell, none of the default services conflict with Rayhunter's duties, but maybe this RIDL thing on yours was/will conflict with it.\r\n\r\nOne thing that I want you to try is to run the RIDL service *and* Rayhunter to see if that solves the several-minute reboot issue, as that sounds like a watchdog timer that awaits RIDL (which is now gone as you sedded it out of the script.)",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-08-28T14:52:23Z",
+          "updated_at": "2025-08-28T14:52:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2afU",
+          "body": "- [x] I will check that with the running adb server. Even with no adb server the install does not connect.\r\n\r\nI used the `/data/SelfHost/startRIDL.sh &` because it does not exists. I just took 'post_boot' as best option to add something to not interfere with the boot process.\r\nbut it seems that this place is used by other people too ( https://sswifi.net/tutorial/23-4gwifi410-m8916.html) \r\n",
+          "author": {
+            "login": "coelner",
+            "avatar_url": "https://avatars.githubusercontent.com/u/16364254?u=77d337a75b8dfa4e8c25ab7d2c49f544828e7e38&v=4",
+            "url": "https://github.com/coelner"
+          },
+          "created_at": "2025-08-30T18:41:26Z",
+          "updated_at": "2025-08-31T11:31:36Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2bSN",
+          "body": "In my case `/proc/cpuinfo` shows 4 cores. But so far no reboots. \r\nthe leds are not enabled permanently, they are blinking. But his could be due the main application is running.",
+          "author": {
+            "login": "coelner",
+            "avatar_url": "https://avatars.githubusercontent.com/u/16364254?u=77d337a75b8dfa4e8c25ab7d2c49f544828e7e38&v=4",
+            "url": "https://github.com/coelner"
+          },
+          "created_at": "2025-08-31T12:09:11Z",
+          "updated_at": "2025-08-31T12:09:12Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2eAO",
+      "body": "So I have this device:\r\n<img width=\"544\" height=\"435\" alt=\"image\" src=\"https://github.com/user-attachments/assets/00b1b743-b1da-462d-9166-d05adf134844\" />\r\n\r\n`lsusb` says:\r\n```\r\nBus 005 Device 014: ID 05c6:6000 Qualcomm, Inc. Siemens SG75\r\n```\r\n\r\nWhen I plug in the device, it generates WiFi network, and I need to connect to this network. It seems device does not provide network via USB.\r\n\r\nThis is the webUI interface accesible at `http://192.168.100.1/home.asp:\r\n\r\n<img width=\"812\" height=\"584\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d595bfa2-967c-44cd-8a20-41ce6de235c0\" />\r\n\r\nI ran:\r\n```\r\n~/rayhunter/releases/rayhunter-v0.6.1-linux-x64$ ./installer uz801\r\nActivating USB debugging backdoor... ok\r\nWaiting for device reboot and ADB connection... Failed to install rayhunter on the Uz801. Make sure your computer is connected to the hotspot using USB.\r\n\r\nCaused by:\r\n    Timeout waiting for ADB connection after USB debug activation\r\n```\r\n\r\nP. S. I did not have SIM card in the device.",
+      "author": {
+        "login": "MatejKovacic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3339198?u=cabb25f233a032a2e61dd63685a7220ce5bcfd8a&v=4",
+        "url": "https://github.com/MatejKovacic"
+      },
+      "created_at": "2025-09-01T18:29:52Z",
+      "updated_at": "2025-09-01T18:29:53Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2eWF",
+          "body": "Hmm, perhaps this device doesn't have the USB debugging backdoor or it is named differently. I definitely have never seen this interface before. However, it's also very likely that either we can find the new backdoor, or there's some pins to be bridged on the PCB (or even a button to be pressed!) to boot into fastboot or EDL, at which point you can overwrite the firmware and software image with one from a version of this stick that supports Rayhunter.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-09-01T23:48:36Z",
+          "updated_at": "2025-09-01T23:48:37Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A4AvH",
+          "body": "I also have such a thing (`Bus 003 Device 009: ID 05c6:90b6 Qualcomm, Inc. Android\r\n`) and the installer at least gives me a root shell. Unfortunately something has gone wrong and it's not bringing up wifi or rndis any more ... which is fine. It never worked with my carrier so maybe it's defective\r\n\r\n```\r\nroot@msm8916_32_512:/ # id\r\nuid=0(root) gid=0(root) context=u:r:shell:s0\r\n```\r\n\r\n```\r\n/system/build.prop                       \r\n# begin build properties\r\n# autogenerated by buildinfo.sh\r\nro.build.id=UZ801\r\nro.build.display.id=V2.3.11\r\nro.build.version.incremental=eng..20240426\r\nro.build.version.sdk=19\r\nro.build.version.codename=REL\r\nro.build.version.release=4.4.4\r\nro.build.date=Fri Apr 26 17:50:07 CST 2024\r\nro.build.date.utc=1714125007\r\nro.build.type=userdebug\r\nro.build.user=\r\nro.build.host=cf4c1a952808\r\nro.build.tags=test-keys\r\nro.product.model=UZ801\r\nro.product.brand=qcom\r\nro.product.name=msm8916_32_512\r\nro.product.device=msm8916_32_512\r\nro.product.board=ALK\r\nro.product.cpu.abi=armeabi-v7a\r\nro.product.cpu.abi2=armeabi\r\nro.product.manufacturer=Qualcomm Technology\r\nro.product.locale.language=zh\r\nro.product.locale.region=CN\r\nro.wifi.channels=\r\nro.board.platform=msm8916\r\n# ro.build.product is obsolete; use ro.product.device\r\nro.build.product=msm8916_32_512\r\n# Do not try to parse ro.build.description or .fingerprint\r\nro.build.description=msm8916_32_512-userdebug 4.4.4 KTU84P eng..20240426 test-keys\r\nro.build.fingerprint=qcom/msm8916_32_512/msm8916_32_512:4.4.4/KTU84P/eng..20240426:userdebug/test-keys\r\nro.build.characteristics=default\r\n# end build properties\r\n```",
+          "author": {
+            "login": "ckuethe",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1131751?u=e79d529d1e1aaa881514ab748189479935e4e08a&v=4",
+            "url": "https://github.com/ckuethe"
+          },
+          "created_at": "2025-10-15T05:49:38Z",
+          "updated_at": "2025-10-15T05:49:39Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2gEC",
+      "body": "well...next device. this device is supported via command without any hassle. (adb is available with root id)\r\nThis device has only two cpus active. (In my case the usb cable is only for charging, no data connection.)\r\n[build.prop-mf800.txt](https://github.com/user-attachments/files/22097131/build.prop-mf800.txt)\r\n![mf800_back](https://github.com/user-attachments/assets/2189a3b9-c09b-45be-98e4-79251eb1b48c)\r\n![mf800_case](https://github.com/user-attachments/assets/888faaa2-8dde-46a5-8bd4-b814312e99c5)\r\n![mf800_front](https://github.com/user-attachments/assets/79c30ea3-0adf-46cd-a554-6e690552c958)\r\n\r\nIt is usually sold as H807 pro and should have more lte bands. However there are no leds for rayhunter.",
+      "author": {
+        "login": "coelner",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16364254?u=77d337a75b8dfa4e8c25ab7d2c49f544828e7e38&v=4",
+        "url": "https://github.com/coelner"
+      },
+      "created_at": "2025-09-02T15:29:38Z",
+      "updated_at": "2025-09-02T15:29:39Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2gKS",
+          "body": "Interesting!! This one is probably going to be able to reuse the Orbic display driver and not have to worry about LEDs. Pretty much, draw a line at the top of the screen.\r\n\r\nI don't think it's necessarily related to the UZ801, but maybe it is; do you know what CPU it has in it? You said two cores so it's probably not an MDMxxxx like the Orbic. If it has an MSM8916, then it's definitely a cousin of the UZ801 :)",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-09-02T16:04:31Z",
+          "updated_at": "2025-09-02T16:05:28Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2gXV",
+          "body": "`Machine: Qualcomm Technologies, Inc. MSM 8916 (Flattened Device Tree), model: Qualcomm Technologies, Inc. MSM 8916 512MB MTP`\r\n[mf800_dmesg.txt](https://github.com/user-attachments/files/22100703/mf800_dmesg.txt)\r\n[05_dtbdump_Qualcomm_Technologies,_Inc._MSM_8916_512MB_MTP.dtb.dts.txt](https://github.com/user-attachments/files/22100712/05_dtbdump_Qualcomm_Technologies._Inc._MSM_8916_512MB_MTP.dtb.dts.txt)\r\n\r\nMSM_8916 has always 4 cpus physically , but sometimes two are deactivated. Mostly because of missing a heat spreader and sufficient surge power supply over usb-a.\r\n",
+          "author": {
+            "login": "coelner",
+            "avatar_url": "https://avatars.githubusercontent.com/u/16364254?u=77d337a75b8dfa4e8c25ab7d2c49f544828e7e38&v=4",
+            "url": "https://github.com/coelner"
+          },
+          "created_at": "2025-09-02T17:39:30Z",
+          "updated_at": "2025-09-02T17:39:31Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A2gXq",
+          "body": "Yes indeed, that is the case. In the UZ801 stick that I have, 2 of the cores are disabled on the original (Android Kitkat) system image, and reenabled only in Debian.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-09-02T17:43:05Z",
+          "updated_at": "2025-09-02T17:43:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A2kFV",
+      "body": "So I opened my device and here are the pictures:\r\n![uz801_1](https://github.com/user-attachments/assets/6a14bc28-e49c-4f7d-922e-74919751595c)\r\n\r\n![uz801_2](https://github.com/user-attachments/assets/a20d54b0-69f0-4201-9a46-588eb029f5d8)\r\n\r\nThere is s small plastic cap on the side and under it seems something as a switch:\r\n![uz801_3](https://github.com/user-attachments/assets/f84efd0d-953d-4480-b949-6ebf5e5f0eec)\r\n\r\nIn the cap there is metal:\r\n![uz801_4](https://github.com/user-attachments/assets/60447312-852a-4b42-b7ba-7b154012e1c9)\r\n\r\nI tried to run the exploit with the cap off, but it was still timeout.\r\n\r\nInterestingly, you can bypass password by just opening direct link: `http://192.168.100.1/home.asp` (you can not see that these days much...).\r\n\r\n```\r\n./installer uz801\r\nActivating USB debugging backdoor... ok\r\nWaiting for device reboot and ADB connection... Failed to install rayhunter on the Uz801. Make sure your computer is connected to the hotspot using USB.\r\n\r\nCaused by:\r\n    Timeout waiting for ADB connection after USB debug activation\r\n```\r\n\r\n`lsusb` says:\r\n```\r\nBus 005 Device 027: ID 05c6:6000 Qualcomm, Inc. Siemens SG75\r\n```",
+      "author": {
+        "login": "MatejKovacic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3339198?u=cabb25f233a032a2e61dd63685a7220ce5bcfd8a&v=4",
+        "url": "https://github.com/MatejKovacic"
+      },
+      "created_at": "2025-09-04T06:32:19Z",
+      "updated_at": "2025-09-04T06:32:20Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A2lDK",
+          "body": "The plastic cap is the LTE antenna :) Also, I just re-read your original message that says the device does not provide any network over USB, only Wi-Fi. That means we'd have to find an exploit in the web interface to execute arbitrary shell commands and get wireless adb, or just do the setup that way.",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2025-09-04T13:06:55Z",
+          "updated_at": "2025-09-04T13:07:08Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A29mG",
+      "body": "some interesting links from hackernews today: \r\n\r\nhttps://news.ycombinator.com/item?id=45250676\r\nhttps://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)\r\nhttps://github.com/OpenStick/OpenStick\r\n",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-09-15T20:04:41Z",
+      "updated_at": "2025-09-15T20:04:41Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A35k6",
+      "body": "I didn't have exact model as @coelner did but i have found out the device is mising su binary and, using edl i had a complete dump of the devices if you guys need the dump, I'll including the link later on\r\n\r\nSomething interesting that i found out is that the screen is an actual screen just like an Android phone but striped down so much. Basically this can be use just like any normal android apk to display information.\r\n\r\nOne more interesting thing, the device has pinout for sdcard, i found out H909Pro version have it soldered on by default.\r\n![IMG20251011175326](https://github.com/user-attachments/assets/ba2de830-b224-4744-8ac8-953c502e3c9d)\r\n![IMG_UPLOAD_20251011_161946](https://github.com/user-attachments/assets/4dd178a6-ec9e-447e-ad91-2977e4dfa448)\r\n![IMG_UPLOAD_20251011_161846](https://github.com/user-attachments/assets/9b96fe4b-b002-4a76-853a-a6f3b043e945)\r\n![IMG20251011114811](https://github.com/user-attachments/assets/f0295afc-14da-4f66-baf0-be865117d9c1)\r\n![IMG20251011114807](https://github.com/user-attachments/assets/944849d9-3946-45a2-b099-4c8aa0c4fa93)\r\n",
+      "author": {
+        "login": "PTHyperdrive",
+        "avatar_url": "https://avatars.githubusercontent.com/u/31623186?u=611687e57b764361376b224523b50a8936400bf1&v=4",
+        "url": "https://github.com/PTHyperdrive"
+      },
+      "created_at": "2025-10-11T10:58:50Z",
+      "updated_at": "2025-10-11T11:00:50Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A35lE",
+          "body": "I suggest to make a new thread for this, it's not the Uz801",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-10-11T11:00:26Z",
+          "updated_at": "2025-10-11T11:00:26Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A35lK",
+          "body": "Yes i think we should, the device have such potential, battery, screen, etcs btw the device have a different adb PID/UID ",
+          "author": {
+            "login": "PTHyperdrive",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31623186?u=611687e57b764361376b224523b50a8936400bf1&v=4",
+            "url": "https://github.com/PTHyperdrive"
+          },
+          "created_at": "2025-10-11T11:02:21Z",
+          "updated_at": "2025-10-11T11:02:22Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7IG_",
+          "body": "Did this conversation resume anywhere?\r\nOn a separate note, Maskuratech list this device on their website and say there's an SDK available.  I've contacted them about it and am waiting for a response.  I'll update this thread (or the main thread, if there is one) if/when I get a response.",
+          "author": {
+            "login": "MetaFight",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5166127?v=4",
+            "url": "https://github.com/MetaFight"
+          },
+          "created_at": "2026-01-14T20:17:20Z",
+          "updated_at": "2026-01-14T20:17:44Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7IHJ",
+          "body": "It didn't but i'd urge you to create a new thread and link it here.",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-14T20:18:29Z",
+          "updated_at": "2026-01-14T20:18:29Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A837L",
+      "body": "I just received my UZ801 unit (https://www.aliexpress.com/item/1005009936066487.html), model 4GDONG001. As there are multiple slight variations in HW and SW, I was unable to use the installer. However, I managed to run rayhunter manually. My steps were based on the tutorial by @coelner in this thread, but I had to modify them a bit.\r\n\r\nAs I have no experience with this project or Android, I can't be sure that it is working correctly. So please advise how to check if packet capture works as it should and how to log better.\r\n\r\nOverall, my unit SW-wise is similar to or the same as @coelner's unit: /system/bin/initmifiservice.sh is missing, busybox deployed without symlinks, adb debug on, root available, etc. While testing rayhunter as a standalone it managed to operate for around 3h before rebooting at most; other times it crashes fast as @coelner reports. I am not a programmer or developer, so the lower-level Android environment is new to me. When I understand what logs to collect and how rayhunter works, I will be able to provide more information for fixes and improvements. This device is a very low-cost entry to rayhunter, so investing time in its support is worth it (IMHO).\r\n\r\nHere are the steps I took to get it working manually, with a few pictures and build.prop file as attachments for further inspection. I am using Arch Linux for this deployment.\r\n\r\nI was surprised how easy it was to access the device and enable root, so that is the first step.\r\n\r\n```\r\nadb shell\r\n\r\nsetprop service.adb.root 1; busybox killall adbd\r\n```\r\n\r\nConfirm that root is active.\r\n\r\n```\r\nadb shell id\r\nuid=0(root) gid=0(root) context=u:r:shell:s0\r\n```\r\n\r\nThe next step is to make the rayhunter directory in the /data folder, mount system as R/W, and reinstall busybox with symlinks to needed tools. Otherwise, rayhunter will fail to start.\r\n\r\n```\r\nadb shell mkdir -p /data/rayhunter\r\n\r\nadb shell mount -o remount,rw /system\r\n\r\nadb shell busybox --install -s /system/bin\r\n```\r\n\r\nNow you should be able to run regular tools like \"cat\" or \"free -h\" from the shell so that rayhunter can access them to function properly.\r\n\r\nThe next step is to prepare the environment on your computer to push and pull files. Download the latest rayhunter build for Linux ARM 32-bit version (currently it's rayhunter-v0.10.2-linux-armv7.zip), extract it, and use that directory as a base for further actions - pushing and pulling files.\r\n\r\nLet's push the rayhunter binary and config file to the device. But first, prepare the config file; here is the config I used. It is mostly default config with a defined device for the rayhunter binary to use.\r\n\r\n```\r\n# cat config.toml\r\nqmdl_store_path = \"/data/rayhunter/qmdl\"\r\nport = 8080\r\ndebug_mode = false\r\ncolorblind_mode = false\r\n# Device selection. This will be overwritten by the installer. Defaults to \"orbic\".\r\ndevice = \"uz801\"\r\n# UI Levels:\r\n#\r\n# Orbic and TP-Link with color display:\r\n# 0 = invisible mode, no indicator that rayhunter is running\r\n# 1 = Subtle mode, display a colored line at the top of the screen when rayhunter is running (green=running, white=paused, red=warnings)\r\n# 2 = Demo Mode, display a fun orca gif\r\n# 3 = display the EFF logo\r\n# 4 = High Visibility mode, fill the entire screen with the status color (green=running, white=paused, red=warnings)\r\n#\r\n# TP-Link with one-bit display:\r\n# 0 = invisible mode\r\n# 1..3 = show emoji for status. :) for running, ! for warnings, no mouth for paused.\r\nui_level = 1\r\n\r\n# 0 = rayhunter does not read button presses\r\n# 1 = double-tapping the power button starts/stops recordings\r\nkey_input_mode = 0\r\n\r\n# If set, attempts to send a notification to the url when a new warning is triggered\r\nntfy_url = \"\"\r\n# What notification types to enable. Does nothing if the above ntfy_url is not set.\r\nenabled_notifications = [\"Warning\"]\r\n\r\n# Disk Space Management\r\n# Minimum free space (MB) required to start recording\r\nmin_space_to_start_recording_mb = 1\r\n# Minimum free space (MB) to continue recording (stops if below this)\r\nmin_space_to_continue_recording_mb = 1\r\n\r\n# Analyzer Configuration\r\n# Enable/disable specific IMSI catcher detection heuristics\r\n# See https://github.com/EFForg/rayhunter/blob/main/doc/heuristics.md for details\r\n[analyzers]\r\nimsi_requested = true\r\nconnection_redirect_2g_downgrade = true\r\nlte_sib6_and_7_downgrade = true\r\nnull_cipher = true\r\nnas_null_cipher = true\r\nincomplete_sib = true\r\ntest_analyzer = false\r\ndiagnostic_analyzer = true\r\n```\r\n\r\nSave it as config.toml. Then it's pushing time with correct file permissions.\r\n\r\n```\r\nadb push rayhunter-daemon/rayhunter-daemon /data/rayhunter/\r\n\r\nadb push config.toml /data/rayhunter/\r\n\r\nadb shell chmod 755 /data/rayhunter/rayhunter-daemon\r\n\r\nadb shell chmod 644 /data/rayhunter/config.toml\r\n```\r\n\r\n\r\nAt this point, you can already test rayhunter from the shell, see if it's working, and inspect logs.\r\n\r\n`/data/rayhunter/rayhunter-daemon /data/rayhunter/config.toml &`\r\n\r\nOpen the default link in your browser: http://192.168.100.1:8080/index.html . If it runs, then close the app and let's setup auto-start.\r\n\r\nFirst, you need to pull the current /system/etc/init.qcom.post_boot.sh script bash file that is used by the system to run commands and programs on startup.\r\n\r\n`adb pull /system/etc/init.qcom.post_boot.sh .`\r\n\r\nThen edit that file's last lines.\r\n\r\n```\r\n# Start RIDL/LogKit II client\r\n#/data/SelfHost/startRIDL.sh &\r\n\r\n#rayhunter\r\n/data/rayhunter/rayhunter-daemon /data/rayhunter/config.toml &\r\n```\r\n\r\nThat commented bash script is a non-existent file (at least on my device), so it should be fine. The last line runs rayhunter on device startup.\r\n\r\nThen push it back and set file permissions.\r\n\r\n```\r\nadb push init.qcom.post_boot.sh /system/etc/\r\n\r\nadb shell chmod 644 /system/etc/init.qcom.post_boot.sh\r\n```\r\n\r\nLastly, tidy up things and reboot.\r\n\r\n```\r\nadb shell sync\r\n\r\nadb shell mount -o remount,ro /system\r\n\r\nadb reboot\r\n```\r\n\r\nThe device should reboot and rayhunter should be available.\r\n\r\n\r\nHere is its web interface:\r\n\r\n<img width=\"1331\" height=\"1169\" alt=\"Screenshot_20260228_183714\" src=\"https://github.com/user-attachments/assets/7d979960-e78f-4c10-b0cf-20c4dd265e45\" />\r\n\r\nrayhunter log in standalone mode:\r\n\r\n<img width=\"1663\" height=\"679\" alt=\"Screenshot_20260228_174825\" src=\"https://github.com/user-attachments/assets/9a901f90-50ff-42ec-8f5b-d14cbe893f56\" />\r\n\r\nAnd how it looks on the web:\r\n\r\n<img width=\"2560\" height=\"1069\" alt=\"Screenshot_20260228_174838\" src=\"https://github.com/user-attachments/assets/7832a3b9-c277-4d85-ad9a-4450871de8f4\" />\r\n\r\n\r\nPhysical pictures from device:\r\n\r\n![20260228_231959](https://github.com/user-attachments/assets/49be2374-fdb7-4748-8928-d89ad3da996e)\r\n![20260228_232005](https://github.com/user-attachments/assets/b014d014-831e-414a-bf71-4059ef1ea904)\r\n![20260228_232015_edit](https://github.com/user-attachments/assets/16f96789-5d34-4ffb-b6b1-74a014907ea0)\r\n![20260301_002033_edit](https://github.com/user-attachments/assets/db0c9d29-2f40-43f8-b5be-1174c50e1dc3)\r\n![20260301_002217](https://github.com/user-attachments/assets/68b95245-9e2d-4903-bea1-5ad0485b2525)\r\n\r\n\r\nDevice ID if plugged into USB:\r\n\r\n`Bus 001 Device 074: ID 05c6:9024 Qualcomm, Inc. Android`\r\n\r\nbuild.prop file:\r\n\r\n[build.prop.txt](https://github.com/user-attachments/files/25640183/build.prop.txt)\r\n\r\n\r\nIf I find something interesting to report, I'll edit this post. Feel free to comment and suggest improvements/fixes, as this is my initial impression with rayhunter and Android on this level.",
+      "author": {
+        "login": "maigonis-elleris",
+        "avatar_url": "https://avatars.githubusercontent.com/u/223784372?v=4",
+        "url": "https://github.com/maigonis-elleris"
+      },
+      "created_at": "2026-02-28T22:04:34Z",
+      "updated_at": "2026-02-28T22:31:17Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A84Cy",
+          "body": "Thanks much, let me see what I can find about that PCB. \n\nCould you tell us where you ordered it or better yet include a link?",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-03-01T00:33:01Z",
+          "updated_at": "2026-03-01T00:33:01Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A84Ef",
+          "body": "Could you upload a copy of the init.qcom.post_boot.sh file so I can take a look?",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-03-01T01:03:41Z",
+          "updated_at": "2026-03-01T01:03:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A84GO",
+          "body": "> Could you upload a copy of the init.qcom.post_boot.sh file so I can take a look?\r\n\r\nFor the archive:\r\n\r\n[init.qcom.post_boot.sh](https://github.com/user-attachments/files/25649032/init.qcom.post_boot.sh)\r\n\r\n(it contains my edits)",
+          "author": {
+            "login": "maigonis-elleris",
+            "avatar_url": "https://avatars.githubusercontent.com/u/223784372?v=4",
+            "url": "https://github.com/maigonis-elleris"
+          },
+          "created_at": "2026-03-01T01:44:02Z",
+          "updated_at": "2026-03-01T01:44:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BBApm",
+          "body": "With these instructions I managed to install Rayhunter to UZ801.\r\nWeb interface starts (no SIM in UZ801)\r\nadb shell\r\nsetprop service.adb.root 1; busybox killall adbd\r\n/data/rayhunter/rayhunter-daemon /data/rayhunter/config.toml &\r\n\r\n- my UZ801 model is not root by default, so everytime after plugging: adb shell, setprop ..\r\n\r\n\r\n<img width=\"888\" height=\"251\" alt=\"ray1\" src=\"https://github.com/user-attachments/assets/e2b55075-c9f6-46a9-955a-2ddc670b82ac\" />\r\n\r\n<img width=\"1473\" height=\"804\" alt=\"ray2\" src=\"https://github.com/user-attachments/assets/d74be2e7-8c30-4869-b1e3-03416538228f\" />\r\n\r\nSync clock worked ok\r\n\r\nlsusb shows\r\nQualcomm, Inc. Android\r\n\r\nadb devices \r\ndevice usb:1-2 product:msm8916_32_512 model:msm8916_32_512 device:msm8916_32_512 transport_id:5\r\n\r\n\r\n\r\n",
+          "author": {
+            "login": "OH1GIU-P",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19149088?v=4",
+            "url": "https://github.com/OH1GIU-P"
+          },
+          "created_at": "2026-05-24T17:04:07Z",
+          "updated_at": "2026-05-24T17:08:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A9UMS",
+      "body": "Anyone who is following this thread who has one of the UZ801 variants which aren't working, can you reply to this if you still have one and can test a new Rayhunter installer on the device to see if it works for your varient?",
+      "author": {
+        "login": "BeigeBox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+        "url": "https://github.com/BeigeBox"
+      },
+      "created_at": "2026-03-10T19:34:15Z",
+      "updated_at": "2026-03-10T19:34:15Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A9UP2",
+          "body": "I most definitely can :) I apologize for dropping off the face of the earth. Where do I find it?",
+          "author": {
+            "login": "Tunas1337",
+            "avatar_url": "https://avatars.githubusercontent.com/u/12097904?u=fcfbe8a22926df86fae7b75f2ae04bcb097717ab&v=4",
+            "url": "https://github.com/Tunas1337"
+          },
+          "created_at": "2026-03-10T20:02:07Z",
+          "updated_at": "2026-03-10T20:02:07Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A9bbr",
+          "body": "Can you build from source? I have it on my own repo https://github.com/BeigeBox/rayhunter/tree/feature/improve-uz-installer",
+          "author": {
+            "login": "BeigeBox",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+            "url": "https://github.com/BeigeBox"
+          },
+          "created_at": "2026-03-12T19:23:59Z",
+          "updated_at": "2026-03-12T19:23:59Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BBzAp",
+          "body": "I have same kind of uz801:\r\n\r\n`Bus 003 Device 008: ID 05c6:90b6 Qualcomm, Inc. Android`\r\n ```\r\nadb shell\r\nroot@msm8916_32_512:/ # \r\n```\r\nstarts as root\r\nthe standard install failed with same error message. So i did try your code ( compiled from github):\r\n\r\n```\r\n... Compiling matchit v0.8.4\r\n   Compiling installer v0.10.2 (/home/baddemanax/development/tmp/rayhunter/installer)\r\n   Compiling byteorder v1.5.0\r\nwarning: installer@0.10.2: Firmware binary wpa_supplicant not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/wpa_supplicant; installers that need it will fail\r\nwarning: installer@0.10.2: Firmware binary wpa_cli not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/wpa_cli; installers that need it will fail\r\nwarning: installer@0.10.2: Firmware binary iw not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/iw; installers that need it will fail\r\n   Compiling axum v0.8.4\r\n   Compiling md5crypt v1.0.0\r\n   Compiling futures v0.3.31\r\n   Compiling reqwest v0.12.20\r\n   Compiling clap v4.5.38\r\n   Compiling aes v0.8.4\r\n   Compiling adb_client v2.1.11 (https://github.com/EFForg/adb_client.git?rev=e511662394e4fa32865c154c40f81a3d846f700c#e5116623)\r\n   Compiling tokio-retry2 v0.5.7\r\n   Compiling tokio-stream v0.1.17\r\n   Compiling sha2 v0.10.9\r\n   Compiling termios v0.3.3\r\n   Compiling block-padding v0.3.3\r\n   Compiling md5 v0.7.0\r\n   Compiling base64_light v0.1.5\r\n   Compiling env_logger v0.11.8\r\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 02s\r\n     Running `target/debug/installer uz801 --skip-backdoor`\r\nerror: unexpected argument '--skip-backdoor' found\r\n\r\nUsage: installer uz801 [OPTIONS]\r\n\r\nFor more information, try '--help'.\r\n```\r\n```\r\n`So I tried without the flag :`\r\n\r\n./scripts/install-dev.sh uz801 \r\n   Compiling installer v0.10.2 (/home/baddemanax/development/tmp/rayhunter/installer)\r\nwarning: installer@0.10.2: Firmware binary wpa_supplicant not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/wpa_supplicant; installers that need it will fail\r\nwarning: installer@0.10.2: Firmware binary wpa_cli not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/wpa_cli; installers that need it will fail\r\nwarning: installer@0.10.2: Firmware binary iw not present at /home/baddemanax/development/tmp/rayhunter/installer/../tools/build-wpa-supplicant/out/iw; installers that need it will fail\r\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.16s\r\n     Running `target/debug/installer uz801`\r\nActivating USB debugging backdoor... Checking if device is online... ok\r\nok\r\nWaiting for device reboot and ADB connection... Failed to install rayhunter on the Uz801. Make sure your computer is connected to the hotspot using USB.\r\n\r\nCaused by:\r\n    ADB connection error: Device or resource busy (os error 16)\r\n```\r\n\r\nthe reboot takes time, maybe adb connection starts too early ?",
+          "author": {
+            "login": "tocardos",
+            "avatar_url": "https://avatars.githubusercontent.com/u/94144118?v=4",
+            "url": "https://github.com/tocardos"
+          },
+          "created_at": "2026-06-10T08:30:33Z",
+          "updated_at": "2026-06-10T08:30:33Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BBzc7",
+          "body": "After some other research on forum I tried  : \r\n\r\n[(https://github.com/EFForg/rayhunter/issues/633#issuecomment-3366310939)]\r\n\r\nkilling the adb server made the tricks: `adb kill-server`\r\n\r\nthen I relaunched install from BeigeBox with success.\r\n\r\nI also managed to install latest version from official release. ( official procedure for uz801)\r\n\r\nmy HW version is V 3.31.\r\n\r\n",
+          "author": {
+            "login": "tocardos",
+            "avatar_url": "https://avatars.githubusercontent.com/u/94144118?v=4",
+            "url": "https://github.com/tocardos"
+          },
+          "created_at": "2026-06-10T11:21:52Z",
+          "updated_at": "2026-06-10T11:21:52Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BAbnW",
+      "body": "I confirm that we can change/add bands with this guide (made for UF02 white/red variant, but it works with UZ801): https://github.com/hkfuertes/msm8916-openwrt/tree/enable_bands\r\nBut you have to make edl modem backups in case it gets corrupted. However, unsure if the hardware antenna supports the added bands and there is no calibration data.",
+      "author": {
+        "login": "r1bnc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8337343?u=055a96f875ae9ac24caefcbef610c26b9ca652b9&v=4",
+        "url": "https://github.com/r1bnc"
+      },
+      "created_at": "2026-05-12T09:10:18Z",
+      "updated_at": "2026-05-12T09:10:18Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4BCggY",
+      "body": "Hey yall, so I decided to buy myself one of these devices to turn into a RayHunter device, after examining it, it has a similar looking board to @coelner and firmware seems to be the same structure, only difference is that mine was way more locked down and was harder to root since some fastboot commands didnt work. The stickers on the board shows that it is a JZ02V30_UFI board, also found from this [issue from the OpenStick repo](https://github.com/OpenStick/OpenStick/issues/58). Here's some pictures of the board that I had:\r\n\r\n<img width=\"400\" alt=\"modem_usb_back\" src=\"https://github.com/user-attachments/assets/7fcf0f8e-827e-4f01-b313-2496b76bfc11\" />\r\n<img width=\"400\" alt=\"modem_usb_front\" src=\"https://github.com/user-attachments/assets/45c22d18-41c4-4f37-a762-8e9b91f29c14\" />\r\n\r\nThe casing used was the same as what was on AlienWolfX.\r\n\r\nHere is my /system/build.prop file: [build.prop.txt](https://github.com/user-attachments/files/29339215/build.prop.txt)\r\n\r\nthere was no busybox, but there was toolbox and there was also no su or other commands. But ADB and EDL was available to I went with that. After days of trial and error I was finally able to root it by extracting the android boot image using EDL, pushing it into the device, and uploading both Magisk version 22 and a file explorer app. After patching and flashing I was able to get root at last.\r\n\r\nI made a post on my blog explaining all the things I did: https://maxthecomputerfox.online/post/20260625_when_a_software_hacker_tries_hardware\r\n\r\nDecided to upload this JIC anyone else had any failures with fastboot or have the same board/firmware.\r\n\r\nInstallation steps for ray hunter is the same as @coelner and @maigonis-elleris in their own respective posts. just make sure to run su when accessing the adb shell. For recomendations/suggestions or help, feel free to reply to me on this post.",
+      "author": {
+        "login": "thatITfox",
+        "avatar_url": "https://avatars.githubusercontent.com/u/78403482?u=19e1568295f7f518778d138c1d67695792ec2281&v=4",
+        "url": "https://github.com/thatITfox"
+      },
+      "created_at": "2026-06-25T13:35:20Z",
+      "updated_at": "2026-06-25T13:35:20Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

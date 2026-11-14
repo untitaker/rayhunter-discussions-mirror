@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AgyzE",
+  "number": 461,
+  "title": "USB not connecting to computer",
+  "body": "After installing software via a newer Mac, I am unable to connect to computer (Linux, Windows or Mac). No computer will see the device. USB tethering is turned on. Thoughts?",
+  "author": {
+    "login": "Gitr43",
+    "avatar_url": "https://avatars.githubusercontent.com/u/221425510?v=4",
+    "url": "https://github.com/Gitr43"
+  },
+  "created_at": "2025-07-17T21:22:04Z",
+  "updated_at": "2025-07-18T00:09:20Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/461",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A0o_Q",
+      "body": "This is likely to be a duplicate of #140 ",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-07-18T00:09:20Z",
+      "updated_at": "2025-07-18T00:09:21Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

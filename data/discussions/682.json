@@ -1,0 +1,89 @@
+{
+  "id": "D_kwDOKrJqmc4AioUE",
+  "number": 682,
+  "title": "Which firmware version is best for Orbic RC400L?",
+  "body": "Hello. I want to first say thank you to everyone who made this possible.   With that said, I just got my used Orbic RC400L from ebay.  \n\nAnyways, I set up the Orbic and noticed I am on an outdated firmware.  My current firmware is V1.1.5  And I believe I have seen firmwares at least up to V1.3.0 so my question is, is there a preferred firmware version for running Rayhunter or does it not matter which firmware version I have? \n\nBtw, there's a fella selling factory refurbished Orbics on ebay for $10.45 free s&h if anyone needs one cheap. It's where I got mine.\nAlso, if anyone needs a cheap US based sim that works with verizon locked Orbic units, Tello sells one for $3 on amazon.  It costs $5.14 a month for the cheapest 1gb data-no voice service. There may just be other sims that are cheaper but I haven't found them.  I'm using it right now and it works.",
+  "author": {
+    "login": "Big-Gravy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/240242546?u=9474e36b7b4057cfe4a6aeca6ce9858539ea2de0&v=4",
+    "url": "https://github.com/Big-Gravy"
+  },
+  "created_at": "2025-10-26T00:19:22Z",
+  "updated_at": "2025-10-29T14:34:24Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/682",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4c4x",
+      "body": "moving this issue to a discussion, please review our [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md#filing-issues-and-starting-discussions)\n\nI'm not aware of any major differences between firmware versions, I don't think anybody pays attention to them when installing rayhunter so I think they'll all work the same (in the case of Orbic, TP-Link is a different matter)",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-10-27T22:39:30Z",
+      "updated_at": "2025-10-27T22:39:37Z",
+      "is_answer": true,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A4fhT",
+          "body": "Thanks. I'll stick with firmware 1.1.5 then if there's no real benefit to upgrading.\r\n\r\nAnd Yeah, I should of read contributing.md As you probably guessed,  It's my first time using github.",
+          "author": {
+            "login": "Big-Gravy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/240242546?u=9474e36b7b4057cfe4a6aeca6ce9858539ea2de0&v=4",
+            "url": "https://github.com/Big-Gravy"
+          },
+          "created_at": "2025-10-29T00:20:04Z",
+          "updated_at": "2025-10-29T00:20:05Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A4hbT",
+          "body": "it's on us. the issue templates are not pointing to the right files",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-10-29T14:34:24Z",
+          "updated_at": "2025-10-29T14:59:55Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A4c4x",
+    "body": "moving this issue to a discussion, please review our [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md#filing-issues-and-starting-discussions)\n\nI'm not aware of any major differences between firmware versions, I don't think anybody pays attention to them when installing rayhunter so I think they'll all work the same (in the case of Orbic, TP-Link is a different matter)",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2025-10-27T22:39:30Z",
+    "updated_at": "2025-10-27T22:39:37Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-10-28T18:34:37Z",
+  "state_reason": null
+}

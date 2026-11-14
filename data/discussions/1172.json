@@ -1,0 +1,189 @@
+{
+  "id": "D_kwDOKrJqmc4ApwmJ",
+  "number": 1172,
+  "title": "Hooking real-time alerts into hardware buzzer / SIM requirement questions.",
+  "body": "### What's your question?\r\n\r\nHey everyone,\r\n\r\nWorking on my MiFi 8800L to fire an onboard hardware buzzer/LED sequence whenever a threat is detected, but I've hit a couple of walls with hooks and event formatting:\r\n\r\n1. Rayhunter-daemon is listening on port 8080, but hitting /api/session/current just returns a 404 on my build. Right now it's dumping baseband logs straight into timestamped /opt/rayhunter/recordings/*.ndjson files. What's the recommended way to hook into live alerts? Is there a static log file, local UNIX socket, or a different API/WS endpoint I should be pointing a script at?\r\n\r\n2. What does the actual JSON payload look like inside the events: [] array in the .ndjson stream when something triggers (like a 2G downgrade or null cipher)? Trying to figure out the exact keys/strings to grep for so I don't trigger false alarms.\r\n\r\n3. Does the device actually need an active/provisioned SIM connected to a network to flag an IMSI catcher (for NAS attach/cipher handshakes), or can the heuristics still catch SIB anomalies and rogue cell broadcasts while sitting in limited service / emergency-only mode?\r\n\r\nAppreciate any pointers.\r\n\r\nThanks,\r\n\r\nMike\r\n\r\n### Prerequisites\r\n\r\n- [X] I have read [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md)\r\n- [X] No generative AI (including LLMs) tools were used to write this post.",
+  "author": {
+    "login": "eMikey",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8883777?v=4",
+    "url": "https://github.com/eMikey"
+  },
+  "created_at": "2026-10-04T08:30:37Z",
+  "updated_at": "2026-10-07T01:28:51Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1172",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BHfy-",
+      "body": "Hi, all of these topics have been discussed before, I recommend searching through discussions. `/api/session/current` is not an endpoint we have, and I can't find anything in the docs that implies we do?\r\n\r\nEDIT: this is written by AI.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-10-04T10:36:49Z",
+      "updated_at": "2026-10-06T12:26:35Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BHqo-",
+          "body": "The questions were suggested, and i rearranged and edited the words before i posted., if that's not allowed I'm sorry.  For what its worth I was in remedial classes for my entire live, and  I'm not really good at writing or speaking english.  ai has been a godsend when it comes to organizing my thoughts and getting them out.  Thanks for the tips, i'll search.",
+          "author": {
+            "login": "eMikey",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8883777?v=4",
+            "url": "https://github.com/eMikey"
+          },
+          "created_at": "2026-10-07T01:28:51Z",
+          "updated_at": "2026-10-07T01:40:16Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

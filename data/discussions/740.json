@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AjXS2",
+  "number": 740,
+  "title": "Franklin a 50",
+  "body": "Would I be able to use my Franklin 850? I got from AT&T to make a ray hunter?",
+  "author": {
+    "login": "badkarma714",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46801244?v=4",
+    "url": "https://github.com/badkarma714"
+  },
+  "created_at": "2025-12-22T02:34:05Z",
+  "updated_at": "2025-12-22T02:34:05Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/740",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

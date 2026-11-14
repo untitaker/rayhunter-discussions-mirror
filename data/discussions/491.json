@@ -1,0 +1,44 @@
+{
+  "id": "D_kwDOKrJqmc4AhAxA",
+  "number": 491,
+  "title": "contents of wt_version",
+  "body": "Sharing the contents of my /etc/wt_version as requested.\r\n\r\nWT_INNER_VERSION=SW_Q89527AA1_V045_M11_TMO_USR_MP\r\nWT_PRODUCTION_VERSION=TMOHS1_00.05.20\r\n\r\nWT_HARDWARE_VERSION=89527_1_11\r\nWT_CUSTOMER_NAME=TMobile\r\nWT_PRODUCT_PROJECT=Q89527AA1\r\n\r\n",
+  "author": {
+    "login": "kcherry497",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17479255?u=ab031f73649784d530f90b86c2b68435ee314ccf&v=4",
+    "url": "https://github.com/kcherry497"
+  },
+  "created_at": "2025-07-30T04:04:22Z",
+  "updated_at": "2025-07-31T03:22:04Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/491",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A1Jqi",
+      "body": "context appears to be https://efforg.github.io/rayhunter/wingtech-ct2mhs01.html#developing\r\n\r\n> Please consider sharing the contents of your device's /etc/wt_version file here.\r\n\r\n",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-07-30T10:47:43Z",
+      "updated_at": "2025-07-30T10:47:44Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}

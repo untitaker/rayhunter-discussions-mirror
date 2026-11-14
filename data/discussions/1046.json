@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AmhEM",
+  "number": 1046,
+  "title": "New user",
+  "body": "Alright guys, new user as of a week ago here.  Not very tech savvy as in a bought a 50 dollar laptop just to be able to install this program because I don't own a computer or TV type shit, but I learn quickly.  Definitely got the government following me around for various known and probably unknown reasons, got some whacky stuff constantly going on with my cell phone and I've had quite a few high severity alerts within the first week of using this orbic 400 with a t-Mobile sim.  I'm mainly just looking for a little help understanding what exactly I'm looking at when reading through my logs, how to analyze the zip files Ive downloaded, and how I can potentially help this community gain some knowledge and grow.  Please let me know, looking forward to it.  \r\n\r\nBtw anyone ever had their phone go full out clone mode on them? As in you found yourself on some.sort of cloned account with all the apps in the app list showing 2 versions with one as a clone version? And when trying to access certain features on your phone you were blocked by the admin even tho it's your phone and you have all the admin features unlocked?? Shits trippy lmao I have some screenshots if anyone's interested but all the good ones failed to back up during the last 2 weeks even though they said they were backed up, so when I reset my phone all the good pictures and such were lost (convenient eh). \r\n\r\nSorry that was long  so tldr; new member looking to be worthwhile and might have some interesting stuff to share, while also wanting to learn as much as possible.  ",
+  "author": {
+    "login": "deanslist2026",
+    "avatar_url": "https://avatars.githubusercontent.com/u/286202245?v=4",
+    "url": "https://github.com/deanslist2026"
+  },
+  "created_at": "2026-05-20T03:20:38Z",
+  "updated_at": "2026-06-11T21:07:12Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1046",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BB4ea",
+      "body": "you can submit your logs to EFF for analysis by following the directions from the guidebook: \r\n\r\nIf you've received a Rayhunter warning, please send your Rayhunter data captures (the ZIP file) to us at our [Signal](https://signal.org/) username [ElectronicFrontierFoundation.90](https://signal.me/#eu/HZbPPED5LyMkbTxJsG2PtWc2TXxPUR1OxBMcJGLOPeeCDGPuaTpOi5cfGRY6RrGf) with the following information: capture date, capture location, device, device model, and Rayhunter version.\r\n\r\nNote that the recording files are sensitive data and contain location information, so we strongly recommend against posting them to publicly.\r\n\r\nIf you're unfamiliar with Signal, feel free to check out our [Security Self Defense guide on it](https://ssd.eff.org/module/how-to-use-signal).",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-06-11T21:07:11Z",
+      "updated_at": "2026-06-11T21:07:11Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
