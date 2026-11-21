@@ -1,0 +1,51 @@
+{
+  "id": "D_kwDOKrJqmc4AfQre",
+  "number": 271,
+  "title": "No PCAP or QMDL",
+  "body": "Brand new to this and not exactly the most proficient at Linux. Successfully installed and got RayHunter running on the device however I noticed that all capture files remain empty. Is it safe to say that the SIM I loaded into the device is non-compatible? \r\nAlso the webpage looks similar to the screenshots I've seen however the \"live output\" area at the top has both human readable time as well as the absolute/computer time. Im thinking that's a browser related thing (Using LIbreWolf)\r\nThank you for any input! \r\n\r\nSmall update. After leaving the device running for awhile one of the PCAP/QMDL files is reporting a file size. However when i go to download it i download an empty file. ",
+  "author": {
+    "login": "barryallen2023",
+    "avatar_url": "https://avatars.githubusercontent.com/u/121911554?v=4",
+    "url": "https://github.com/barryallen2023"
+  },
+  "created_at": "2025-04-12T11:37:32Z",
+  "updated_at": "2025-04-14T17:40:15Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/271",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [
+    {
+      "id": "LA_kwDOKrJqmc8AAAABcMZEWw",
+      "name": "question",
+      "color": "d876e3",
+      "description": "Further information is requested"
+    }
+  ],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4Aw86T",
+      "body": "Can you please post a screenshot of your web interface? Also please add the contents of the rayhunter.log file which can be gotten with the following commands:\r\n```\r\nadb shell\r\nrootshell\r\ncd /data/rayhunter\r\ncat rayhunter.log\r\n```",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-04-14T17:40:15Z",
+      "updated_at": "2025-04-14T17:40:16Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

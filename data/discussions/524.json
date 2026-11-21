@@ -1,0 +1,59 @@
+{
+  "id": "D_kwDOKrJqmc4AhLXa",
+  "number": 524,
+  "title": "Support for KaiOS devices",
+  "body": "https://wiki.bananahackers.net/en/devices\r\n\r\nI think it would make sense to look into KaiOS-related devices and whether rayhunter can run on them. There's already some preliminary work done to root those phones, and the rooting procedure seems fairly similar across quite a few devices. The devices are in the same price range as pocket routers, and so they're just cheap enough to buy them for testing, unlike a lot of Android phones.\r\n\r\nMany devices there are EOL though.",
+  "author": {
+    "login": "untitaker",
+    "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+    "url": "https://github.com/untitaker"
+  },
+  "created_at": "2025-08-07T11:03:24Z",
+  "updated_at": "2025-10-03T12:05:36Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/524",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A3If6",
+      "body": "I tried to run rayhunter on a Nokia Banana 8110 4G, and it works easily. \r\nIt should works in the exact same way for Nokia 2720 Flip and Nokia 800 Tough.\r\nI used Wallace Toolbox to get root. The [rooting script](https://gitlab.com/suborg/wallace-toolbox/-/blob/master/js/app.js?ref_type=heads#L46) <s>is easy to embedded in rayhunter, but it use a `adb` daemon binary `adbd` which need to be uploaded on the phone. </s> can only be launched from a KaiOS app ; it use an [undocumented API](https://wiki.bananahackers.net/en/development/device-api/EngmodeExtension) which run root shell commands, so it can be used to obtain an adb root shell.\r\nA KaiOS app will always be needed to obtain root. We could also make a KaiOS app  (it's a simple web app) to be able to get basic info of rayhunter directrly from the phone, and make a notification in case of alert.\r\nAlso, we can't use frame buffer as for tplink or orbic to interract with the screen.\r\n\r\n## How to get one\r\n* ~40€ on Aliexpress in Europe  [link](https://de.aliexpress.com/item/1005009893556717.html)\r\n## Installation process\r\n* Install WallaceToolbox and use it to get an adb root shell.\r\n* Push `rayhunter-daemon` in` /data/rayhunter` and `config.toml`\r\nAt the first run without config file, we got an error because `df -h` that doesn't exist, but` busybox df -h` which is similar for the Uz801. If we change the config file for Uz801 it works.\r\n\r\n\r\n* We need to remount /system with write access `mount -o remount,rw /system`\r\n\r\n* We create a startup script and adb push in /etc/\r\nMany paths have to be modified compared to the original rayhunter startup script. \r\n    * There is even no /etc/init.d folder. Init script in /etc start with init.nameofmyscript \r\n    * `start-stop-daemon` have to be called by `busybox start-stop-daemon`\r\n    * `/tmp` is in `/data/local/tmp/`\r\n\r\n```\r\n#! /system/bin/sh\r\n\r\nset -e\r\n\r\ncase \"$1\" in\r\nstart)\r\n    echo -n \"Starting rayhunter: \"\r\n\r\n    busybox start-stop-daemon -S -b --make-pidfile --pidfile /data/local/tmp/rayhunter.pid \\\r\n    --startas /system/bin/sh  -- -c \"RUST_LOG=info exec /data/rayhunter/rayhunter-daemon /data/rayhunter/config.toml > /data/rayhunter/rayhunter.log 2>&1\"\r\n\r\n    echo \"done\"\r\n    ;;\r\n  stop)\r\n    echo -n \"Stopping rayhunter: \"\r\n    busybox start-stop-daemon -K -p /data/local/tmp/rayhunter.pid\r\n    echo \"done\"\r\n    ;;\r\n  restart)\r\n    $0 stop\r\n    $0 start\r\n    ;;\r\n  *)\r\n    echo \"Usage init.rayhunter_daemon { start | stop | restart }\" >&2\r\n    exit 1\r\n    ;;\r\nesac\r\n\r\nexit 0\r\n```\r\nit can be pushed in /etc/init.rayhunter_daemon\r\nTo auto start that script at boot, it can be put at the end of \r\n /etc/init.qcom.post_boot.sh`\r\n\r\n\r\n**I made an install script**\r\n[banana-rh.tar.gz](https://github.com/user-attachments/files/22442208/banana-rh.tar.gz)\r\n\r\n## Web browser integration\r\nWe can open Rayhunter web page, but it can't load.\r\n<img width=\"236\" height=\"265\" alt=\"(PNG Image, 240 × 320 pixels)\" src=\"https://github.com/user-attachments/assets/a823364a-2830-4794-b4ff-2bc01751b042\" />\r\nMaybe we could make a very web page  to let start and stop rayhunter on that device?\r\n\r\n\r\n",
+      "author": {
+        "login": "Jane6442",
+        "avatar_url": "https://avatars.githubusercontent.com/u/226875147?v=4",
+        "url": "https://github.com/Jane6442"
+      },
+      "created_at": "2025-09-19T07:47:31Z",
+      "updated_at": "2025-09-22T16:03:23Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A3obz",
+      "body": "One advantage of KaiOS phones over routers is that, by default, they can be configured as Wi-Fi clients while still having 4G enabled. This means you can have a SIM card without data and still send alerts using the Wi-Fi internet connection.",
+      "author": {
+        "login": "Jane6442",
+        "avatar_url": "https://avatars.githubusercontent.com/u/226875147?v=4",
+        "url": "https://github.com/Jane6442"
+      },
+      "created_at": "2025-10-03T12:05:36Z",
+      "updated_at": "2025-10-03T12:05:36Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null
+}

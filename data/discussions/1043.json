@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AmfR0",
+  "number": 1043,
+  "title": "Proposal: Heuristic Module for Identifying Anomalous Femtocell Behavior via Qualcomm DIAG Data",
+  "body": "\r\nProposal: Exploratory Heuristic Module for Identifying Anomalous Femtocell Behavior Using Qualcomm DIAG Data\r\n------------------------------------------------------------------------------------------------------------\r\n\r\nHi everyone — I’d like to propose an exploratory module for Rayhunter that focuses on identifying suspicious or anomalous femtocell / small‑cell behavior using the Qualcomm DIAG telemetry Rayhunter already parses.\r\n\r\nThis is not intended as definitive rogue‑cell detection. Instead, the goal is to surface contextual indicators that may warrant further investigation, using lightweight heuristics layered on top of Rayhunter’s existing DIAG pipeline.\r\n\r\nMotivation\r\n----------\r\n\r\nRayhunter already provides strong visibility into OTA signaling through Qualcomm DIAG logs. However, one category of infrastructure that remains difficult for users to understand or contextualize is consumer femtocells / microcells, especially when:\r\n\r\n-   deployed in unexpected locations,\r\n    \r\n-   misconfigured,\r\n    \r\n-   or repurposed for behavior that differs from normal carrier‑managed small cells.\r\n    \r\n\r\nThere is currently no open‑source tool that focuses specifically on identifying anomalous femtocell patterns using DIAG‑level data. This module aims to fill that gap in a cautious, heuristic‑driven way.\r\n\r\nProposed Heuristic Indicators\r\n-----------------------------\r\n\r\nThese are preliminary ideas for patterns that could be surfaced to the user. All would be framed as “potential anomalies”, not as definitive findings.\r\n\r\n### 1. Unmapped or Anomalous PLMN / MCC / MNC Patterns\r\n\r\nExamples include:\r\n\r\n-   PLMN identifiers that do not map cleanly to expected regional carriers.\r\n    \r\n-   MCC/MNC combinations typically associated with consumer femtocell hardware appearing in contexts where they would not normally be deployed.\r\n    \r\n-   PLMN tiers that do not match the expected hierarchy for the region.\r\n    \r\n\r\n### 2. Contextually Implausible Small‑Cell Identifiers\r\n\r\nFor example:\r\n\r\n-   The same small‑cell ID appearing in geographically distant or contextually implausible locations.\r\n    \r\n-   Low‑power cells broadcasting identifiers inconsistent with the surrounding macro network.\r\n    \r\n\r\n### 3. Forced Protocol Downgrades\r\n\r\nSudden transitions to older RATs (e.g., LTE → UMTS → GSM) in situations where the surrounding macro network normally maintains higher‑tier coverage.\r\n\r\n### 4. Suspiciously Static Signal Characteristics\r\n\r\nConsumer femtocells often produce:\r\n\r\n-   unusually stable RSRP/RSSI values,\r\n    \r\n-   minimal fluctuation relative to device movement,\r\n    \r\n-   or consistent high‑strength signals in environments where macro‑cell variability is expected.\r\n    \r\n\r\nThese patterns could be surfaced as “unusual stability” rather than labeled as malicious.\r\n\r\nImplementation Approach\r\n-----------------------\r\n\r\nThe module would:\r\n\r\n-   use the existing DIAG parsing infrastructure,\r\n    \r\n-   add a lightweight heuristic layer,\r\n    \r\n-   avoid introducing new dependencies,\r\n    \r\n-   and operate purely as an analysis module, not a detection engine.\r\n    \r\n\r\nNo changes to Rayhunter’s capture pipeline would be required.\r\n\r\nLimitations\r\n-----------\r\n\r\nTo avoid overclaiming, the module would explicitly acknowledge:\r\n\r\n-   femtocell behavior varies widely by carrier and region,\r\n    \r\n-   anomalies do not imply malicious intent,\r\n    \r\n-   DIAG data can be noisy or incomplete,\r\n    \r\n-   and heuristics must be conservative to avoid false positives.\r\n    \r\n\r\nThe goal is to provide context, not conclusions.\r\n\r\nNext Steps\r\n----------\r\n\r\nI’m currently building out a test environment to gather DIAG logs from a variety of real‑world scenarios. Once the lab is fully operational, I’ll share:\r\n\r\n-   sample DIAG snippets,\r\n    \r\n-   examples of anomalous patterns,\r\n    \r\n-   and early prototype heuristics.\r\n    \r\n\r\nFor now, I’d appreciate feedback on:\r\n\r\n-   whether this direction aligns with Rayhunter’s roadmap,\r\n    \r\n-   which DIAG fields or message types would be most appropriate to target,\r\n    \r\n-   and any prior work or constraints I should be aware of.\r\n    \r\n\r\nThanks for taking the time to review this — looking forward to your thoughts.\r\n\r\n— Eric",
+  "author": {
+    "login": "AuditShadows",
+    "avatar_url": "https://avatars.githubusercontent.com/u/272985666?v=4",
+    "url": "https://github.com/AuditShadows"
+  },
+  "created_at": "2026-05-19T01:22:45Z",
+  "updated_at": "2026-05-19T12:40:01Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1043",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi5",
+    "name": "Ideas",
+    "description": "Share ideas for new features",
+    "emoji": ":bulb:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BAwjE",
+      "body": "Please don't use AI for your written communication, because as a direct result, a lot of this is super vague and not only doesn't consider prior art, but doesn't reference the existing codebase at all.\r\n\r\nWhat makes femtocells special compared to fake base stations in general?\r\n\r\n> The same small‑cell ID appearing in geographically distant or contextually implausible locations.\r\n\r\nDo you want to refer to past recordings to find previous locations of a given ID? Do you want to integrate with public DBs?\r\n\r\n> MCC/MNC combinations typically associated with consumer femtocell hardware appearing in contexts where they would not normally be deployed.\r\n\r\nWhere do you get that \"context\" from? I.e. is the goal here to:\r\n\r\n* write a heuristic that somehow understands on its own whether femtocells are expected in the current area?\r\n* write a heuristic that triggers anytime a femtocell is detected, and it's up to the user to understand whether a femtocell is to be expected in this area?]\r\n\r\n> Consumer femtocells often produce [...] unusually stable RSRP/RSSI values\r\n\r\n> Consumer femtocells often produce [...] minimal fluctuation relative to device movement\r\n\r\nHow did you come to these conclusions?",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-05-19T12:40:01Z",
+      "updated_at": "2026-05-19T12:40:01Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

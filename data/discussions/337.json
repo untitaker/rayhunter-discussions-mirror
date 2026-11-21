@@ -1,0 +1,58 @@
+{
+  "id": "D_kwDOKrJqmc4Af6NG",
+  "number": 337,
+  "title": "Power Saving Mode",
+  "body": "TP-Link M7350 enters Power Saving Mode by default, after being idle for 10 minutes.\r\n\r\nWhen it is in power saving mode and I click the power button, the screen shows that it is not connected to any cell tower. The \"signal strength\" and the \"4G\" icons are not there and only show up after one or two seconds.\r\n\r\nNote that the TP-Link documentation only mentions that it saves the power used for Wi-Fi.\r\n\r\n**My question:** \r\nIs Rayhunter working and recording while the device is in power saving mode? Should I disable it?\r\n\r\nThanks.",
+  "author": {
+    "login": "epif4nio",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26820396?u=4ef9430140fb1b2219ca61cd881f506f0584d0e2&v=4",
+    "url": "https://github.com/epif4nio"
+  },
+  "created_at": "2025-05-23T14:16:01Z",
+  "updated_at": "2025-05-23T14:31:27Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/337",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AyiSc",
+      "body": "yes you should disable it or otherwise ensure it doesn't sleep (such as, keeping your phone connected to it), it will disconnect and upon reconnection potentially trigger false-positives. \r\n\r\nEDIT: added to docs here: https://github.com/EFForg/rayhunter/pull/335",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-05-23T14:20:35Z",
+      "updated_at": "2025-05-23T14:24:05Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4AyiSc",
+    "body": "yes you should disable it or otherwise ensure it doesn't sleep (such as, keeping your phone connected to it), it will disconnect and upon reconnection potentially trigger false-positives. \r\n\r\nEDIT: added to docs here: https://github.com/EFForg/rayhunter/pull/335",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2025-05-23T14:20:35Z",
+    "updated_at": "2025-05-23T14:24:05Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false
+  },
+  "answer_chosen_at": "2025-05-23T14:31:27Z",
+  "state_reason": null
+}

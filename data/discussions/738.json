@@ -1,0 +1,193 @@
+{
+  "id": "D_kwDOKrJqmc4AjWuv",
+  "number": 738,
+  "title": "error building v0.8.0 from main branch",
+  "body": "Hi!\r\n\r\nI would like to be able to build rayhunter at home and possibly contribute to the project.  I cloned the repository and I'm following the build instructions (https://efforg.github.io/rayhunter/installing-from-source.html).  I'm getting two warnings (okay, no big deal) and also getting four compile errors:\r\n\r\n```   \r\nCompiling rayhunter v0.8.0 (/home/gary/rayhunter-dec2025/rayhunter/lib)\r\nwarning: unused import: `error`\r\n --> lib/src/diag.rs:8:11\r\n  |\r\n8 | use log::{error, warn};\r\n  |           ^^^^^\r\n  |\r\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\r\n\r\nwarning: value assigned to `hdr_len` is never read\r\n   --> lib/src/diag.rs:153:14\r\n    |\r\n153 | #[deku(ctx = \"log_type: u16, hdr_len: u16\", id = \"log_type\")]\r\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n    |\r\n    = help: maybe it is overwritten before being read?\r\n    = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\r\n\r\nwarning: `rayhunter` (lib) generated 2 warnings (run `cargo fix --lib -p rayhunter` to apply 1 suggestion)\r\n   Compiling rayhunter-daemon v0.8.0 (/home/gary/rayhunter-dec2025/rayhunter/daemon)\r\nerror: couldn't read `daemon/src/../web/build/rayhunter_orca_only.png`: No such file or directory (os error 2)\r\n  --> daemon/src/server.rs:79:13\r\n   |\r\n79 |             include_bytes!(\"../web/build/rayhunter_orca_only.png\"),\r\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nerror: couldn't read `daemon/src/../web/build/rayhunter_text.png`: No such file or directory (os error 2)\r\n  --> daemon/src/server.rs:84:13\r\n   |\r\n84 |             include_bytes!(\"../web/build/rayhunter_text.png\"),\r\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nerror: couldn't read `daemon/src/../web/build/favicon.png`: No such file or directory (os error 2)\r\n  --> daemon/src/server.rs:89:13\r\n   |\r\n89 |             include_bytes!(\"../web/build/favicon.png\"),\r\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nerror: couldn't read `daemon/src/../web/build/index.html.gz`: No such file or directory (os error 2)\r\n  --> daemon/src/server.rs:97:13\r\n   |\r\n97 |             include_bytes!(\"../web/build/index.html.gz\"),\r\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\nerror: could not compile `rayhunter-daemon` (bin \"rayhunter-daemon\") due to 4 previous errors\r\n```\r\n\r\nI did not see rayhunter_orca_only.png at the location above, but rather at rayhunter/daemon/web/static.\r\n\r\nI've been a programmer for a while, but I'm new to Rust, so apologies if I'm missing a simple fix.\r\n\r\nThank you for the help!\r\n\r\nGary\r\n",
+  "author": {
+    "login": "garyn87048",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14202428?v=4",
+    "url": "https://github.com/garyn87048"
+  },
+  "created_at": "2025-12-21T06:13:33Z",
+  "updated_at": "2025-12-21T07:30:03Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/738",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6ZiK",
+      "body": "You're missing the web UI artifacts. You first need to build the web UI:\r\n\r\n```shell\r\nx@xps:~/workspace/code/rayhunter$ pushd daemon/web && npm install && npm run build && popd\r\n~/workspace/code/rayhunter/daemon/web ~/workspace/code/rayhunter\r\n... <SNIP> ...\r\n.svelte-kit/output/server/remote-entry.js                            27.51 kB\r\n.svelte-kit/output/server/chunks/internal.js                         72.44 kB\r\n.svelte-kit/output/server/index.js                                  126.39 kB\r\n✓ built in 2.58s\r\n\r\nRun npm run preview to preview your production build locally.\r\n\r\n> Using @sveltejs/adapter-static\r\n  Wrote site to \"build\"\r\n  ✔ done\r\n~/workspace/code/rayhunter\r\nx@xps:~/workspace/code/rayhunter$\r\n```\r\nThen you can:\r\n```shell\r\nx@xps:~/workspace/code/rayhunter$ cargo build-daemon-firmware-devel\r\n   Compiling proc-macro2 v1.0.95\r\n   Compiling unicode-ident v1.0.18\r\n... <SNIP> ...\r\n   Compiling pycrate-rs v0.1.0 (https://github.com/EFForg/pycrate-rs#9e72e40b)\r\n   Compiling rayhunter v0.8.0 (/home/x/workspace/code/rayhunter/lib)\r\nwarning: unused import: `error`\r\n --> lib/src/diag.rs:8:11\r\n  |\r\n8 | use log::{error, warn};\r\n  |           ^^^^^\r\n  |\r\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\r\n\r\nwarning: value assigned to `hdr_len` is never read\r\n   --> lib/src/diag.rs:153:14\r\n    |\r\n153 | #[deku(ctx = \"log_type: u16, hdr_len: u16\", id = \"log_type\")]\r\n    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n    |\r\n    = help: maybe it is overwritten before being read?\r\n    = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default\r\n\r\nwarning: `rayhunter` (lib) generated 2 warnings (run `cargo fix --lib -p rayhunter` to apply 1 suggestion)\r\n   Compiling rayhunter-daemon v0.8.0 (/home/x/workspace/code/rayhunter/daemon)\r\n    Finished `firmware-devel` profile [optimized + debuginfo] target(s) in 3m 59s\r\nwarning: the following packages contain code that will be rejected by a future version of Rust: num-bigint-dig v0.8.4\r\nnote: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`\r\nx@xps:~/workspace/code/rayhunter$\r\n```\r\nAnd then build the rootshell:\r\n```shell\r\nx@xps:~/workspace/code/rayhunter$ cargo build -p rootshell --bin rootshell --target armv7-unknown-linux-musleabihf --profile firmware\r\n   Compiling libc v0.2.172\r\n   Compiling cfg_aliases v0.2.1\r\n   Compiling bitflags v2.9.1\r\n   Compiling cfg-if v1.0.0\r\n   Compiling nix v0.29.0\r\n   Compiling rootshell v0.8.0 (/home/x/workspace/code/rayhunter/rootshell)\r\n    Finished `firmware` profile [optimized] target(s) in 3.92s\r\nx@xps:~/workspace/code/rayhunter$\r\n```\r\nFinally, flash onto your device with adb:\r\n```shell\r\nFILE_RAYHUNTER_DAEMON=$PWD/target/armv7-unknown-linux-musleabihf/firmware-devel/rayhunter-daemon cargo run -p installer --bin installer orbic\r\n```",
+      "author": {
+        "login": "stu-spp",
+        "avatar_url": "https://avatars.githubusercontent.com/u/140655677?u=081ca933a5c2c89e829166ef1c8e422c90fbf5e3&v=4",
+        "url": "https://github.com/stu-spp"
+      },
+      "created_at": "2025-12-21T06:35:12Z",
+      "updated_at": "2025-12-21T06:38:00Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6Zk4",
+          "body": "Nice!  Thank you, and \"pilot error\" on my part.  :-)  \r\n\r\nMy Orbic is attached via usb, so I needed to update the final step to \"./target/debug/installer orbic-usb\" (added -usb).\r\n\r\nNow, it's built and re-loaded and I'm interested to start learning how this thing works!\r\n\r\nTHANK YOU AGAIN!\r\n\r\nGary\r\n",
+          "author": {
+            "login": "garyn87048",
+            "avatar_url": "https://avatars.githubusercontent.com/u/14202428?v=4",
+            "url": "https://github.com/garyn87048"
+          },
+          "created_at": "2025-12-21T07:30:03Z",
+          "updated_at": "2025-12-21T07:30:03Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "stu-spp"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 1,
+              "users": [
+                "stu-spp"
+              ]
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

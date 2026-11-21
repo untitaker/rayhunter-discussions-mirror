@@ -1,0 +1,251 @@
+{
+  "id": "D_kwDOKrJqmc4Aii4Q",
+  "number": 669,
+  "title": "Grabbing logs from my Orbic",
+  "body": "Finally managed to get rayhunter working on my orbic, but i am running into the issue of saving logs. The only way I can get the log file to create is by connecting my Orbic, killing all services using the port, and then running the installer again, but that has permission issues. \n\nMy device isn't using an activated sim and i have no way to use wifi. I'm stuck using USB. My issue is that every time I connect my device, something else grabs my device. I then need to set permissions with chmod, but they are lost every time i run the installer to force the log to rewrite. My log only has a note about the device being used by by another application so my logs are not writing properly to my file. \n\nSo once it reboots, all the permissions i set with chmod 666 /dev/bus/usb/... are reset, because USB devices are recreated at the kernel level randomly. \n\nHow do i get the temp logs from the Orbic and bypass this error?\n\n```\nFailed to install Rayhunter on the Orbic RC400L\nCaused by: The Orbic is plugged in but is being used by another program\n```\n\nTL;DR:\nAnother process is holding the USB on Ubuntu.\nRayhunter/ADB needs exclusive access to the Orbic over USB. If anything else has the device open, Rayhunter can’t communicate, and the installer/log write fails.\nAfter a reboot, the Orbic appears as /dev/bus/usb/003/031 one time, then /003/035 the next, etc. \nIf  i manually chmod-ed the old device node, it no longer applies.\nI can kill processes that are holding it hostage, but as soon as the Orbic reboots, it starts the loop over.\n\nHow do I get the logs off of the Orbic? I must be over thinking this or doing something wrong.\n\nUnited States, Orbic RC400L, v1.2.0\nUbuntu 24\n",
+  "author": {
+    "login": "thatirishguyyy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/76852902?u=f749da2924d89ff20860b48094951d5e0c8ea8dd&v=4",
+    "url": "https://github.com/thatirishguyyy"
+  },
+  "created_at": "2025-10-21T00:37:59Z",
+  "updated_at": "2026-03-18T19:26:21Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/669",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A4PZy",
+      "body": "I'm sorry, I cannot make sense of the first two paragraphs at all, and how that relates to the goal of getting logs.\n\nThe error about another program using the orbic comes from the fact that you ran `adb`. you can fix it with `adb kill-server`. I don't understand why you are chmodding devices, please just run the installer with sudo if you have to.\n\nTo get logs you can go to the Rayhunter UI, there's a button in the top right to get logs. You can also `adb shell` into it and run `cat /data/rayhunter/rayhunter.log`, it's the same content.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-10-21T17:54:25Z",
+      "updated_at": "2025-10-21T17:54:40Z",
+      "is_answer": true,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 1,
+          "users": [
+            "GrayHatGuy"
+          ]
+        }
+      ],
+      "upvote_count": 1
+    },
+    {
+      "id": "DC_kwDOKrJqmc4A9yfv",
+      "body": "I reinstalled using native linux and everything is working.\r\n\r\n`adb shell` now works properly.",
+      "author": {
+        "login": "thatirishguyyy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/76852902?u=f749da2924d89ff20860b48094951d5e0c8ea8dd&v=4",
+        "url": "https://github.com/thatirishguyyy"
+      },
+      "created_at": "2026-03-18T19:26:21Z",
+      "updated_at": "2026-03-18T19:26:59Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "untitaker"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": {
+    "id": "DC_kwDOKrJqmc4A4PZy",
+    "body": "I'm sorry, I cannot make sense of the first two paragraphs at all, and how that relates to the goal of getting logs.\n\nThe error about another program using the orbic comes from the fact that you ran `adb`. you can fix it with `adb kill-server`. I don't understand why you are chmodding devices, please just run the installer with sudo if you have to.\n\nTo get logs you can go to the Rayhunter UI, there's a button in the top right to get logs. You can also `adb shell` into it and run `cat /data/rayhunter/rayhunter.log`, it's the same content.",
+    "author": {
+      "login": "untitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+      "url": "https://github.com/untitaker"
+    },
+    "created_at": "2025-10-21T17:54:25Z",
+    "updated_at": "2025-10-21T17:54:40Z",
+    "is_answer": true,
+    "replies": [],
+    "minimized_reason": null,
+    "is_minimized": false,
+    "reactions": [
+      {
+        "content": "THUMBS_UP",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "THUMBS_DOWN",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "LAUGH",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HOORAY",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "CONFUSED",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "HEART",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "ROCKET",
+        "total_count": 0,
+        "users": []
+      },
+      {
+        "content": "EYES",
+        "total_count": 1,
+        "users": [
+          "GrayHatGuy"
+        ]
+      }
+    ],
+    "upvote_count": 0
+  },
+  "answer_chosen_at": "2026-03-18T19:25:28Z",
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}
