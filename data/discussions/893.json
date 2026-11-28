@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4AkMgD",
+  "number": 893,
+  "title": "ADB on Moxee",
+  "body": "# Making ADB Persistent on Moxee K779HSDL\r\n\r\nBy default, enabling ADB via `/sbin/usb/compositions/902D n` is volatile and\r\nresets on reboot. Here's how to make it stick.\r\n\r\n## Prerequisites\r\n\r\n- Moxee K779HSDL with ADB currently enabled\r\n- Or: telnet shell via `./installer util orbic-shell --admin-password 'PASSWORD'`\r\n\r\n## One-liner\r\n\r\n```sh\r\nadb shell \"echo 9 > /usrdata/mode.cfg\"\r\n```\r\n\r\nThat's it. Reboot to verify: `adb reboot`, wait ~30 seconds, then `adb devices`.\r\n\r\n## What this does\r\n\r\nThe Moxee's boot USB composition script (`/sbin/usb/compositions/PRJ_SLT779_9025`)\r\nreads `/usrdata/mode.cfg` to select the USB mode. The default value is `3`\r\n(RNDIS only, product ID `0xF626`).\r\n\r\nSetting it to `9` gives:\r\n- RNDIS (USB network)\r\n- DIAG (Qualcomm diagnostic interface)\r\n- Serial (AT commands)\r\n- ADB\r\n\r\nProduct ID changes from `0xF626` to `0xF622`. ADB runs as root.\r\n\r\n`/usrdata` is a persistent read-write partition, so this survives reboots.\r\n\r\n## To revert\r\n\r\n```sh\r\nadb shell \"echo 3 > /usrdata/mode.cfg\"\r\nadb reboot\r\n```\r\n\r\n## Notes\r\n\r\n- If the device boots from USB power only (`poweronreason=USB`), the boot\r\n  script disables USB entirely regardless of mode.cfg. This is normal --\r\n  just power cycle the device off USB.\r\n- There is also a `/usrdata/mode_tmp.cfg` that takes priority over `mode.cfg`\r\n  but is deleted after one boot. Useful for one-shot mode changes.\r\n",
+  "author": {
+    "login": "BeigeBox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1066823?u=6b667f87093c42638442e799d50e0cc2373dfacc&v=4",
+    "url": "https://github.com/BeigeBox"
+  },
+  "created_at": "2026-02-16T18:20:24Z",
+  "updated_at": "2026-02-16T18:20:24Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/893",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

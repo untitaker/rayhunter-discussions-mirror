@@ -1,0 +1,73 @@
+{
+  "id": "D_kwDOKrJqmc4AnU--",
+  "number": 1075,
+  "title": "Warning?",
+  "body": "Hey everyone. I'll be honest I'm new with this RayHunter and don't know how to read the logs. But I can tell you that I have a very good reason to have it and I need to make sure it's working properly and on the main screen of the RayHunter UI it says 0 warnings but when I open the log I'm getting these Warnings:\r\n\r\nR A Y H U N T E R 🐳\r\n[2026-06-23T23:57:51Z INFO  rayhunter_daemon] Using configuration for device: Orbic\r\n[2026-06-23T23:57:51Z INFO  rayhunter::diag_device] Diag device initialization succeeded after 0 retries\r\n[2026-06-23T23:57:51Z INFO  rayhunter::diag_device] retrieving diag logging capabilities...\r\n[2026-06-23T23:57:51Z WARN  rayhunter::diag] warning: 329 leftover bytes when parsing Message\r\n[2026-06-23T23:57:51Z INFO  rayhunter::diag_device] enabled logging for log type 1\r\n[2026-06-23T23:57:51Z WARN  rayhunter::diag] warning: 298 leftover bytes when parsing Message\r\n[2026-06-23T23:57:51Z INFO  rayhunter::diag_device] enabled logging for log type 4\r\n[2026-06-23T23:57:51Z WARN  rayhunter::diag] warning: 140 leftover bytes when parsing Message\r\n[2026-06-23T23:57:51Z INFO  rayhunter::diag_device] enabled logging for log type 5\r\n\r\nIs this an actual warning? Should I be concerned? And is there any other anti surveillance tools or gadgets anyone can recommend to stay one step ahead of the police. Thanks in advance 🍻",
+  "author": {
+    "login": "lodo5",
+    "avatar_url": "https://avatars.githubusercontent.com/u/70613287?v=4",
+    "url": "https://github.com/lodo5"
+  },
+  "created_at": "2026-06-24T00:19:40Z",
+  "updated_at": "2026-06-24T00:35:38Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1075",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 1,
+      "users": [
+        "lodo5"
+      ]
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

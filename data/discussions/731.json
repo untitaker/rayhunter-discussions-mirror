@@ -1,0 +1,247 @@
+{
+  "id": "D_kwDOKrJqmc4AjMr4",
+  "number": 731,
+  "title": "Installation on pinephone pro",
+  "body": "I successfully installed rayhunter on pinephone pro (running arc linux for arm), I used [this document](https://efforg.github.io/rayhunter/pinephone.html) for instructions\r\n\r\n`adb forward tcp:8080 tcp:8080` gives me the error `adb: error: no devices/emulators found`, I'm not sure whether this should run on the phone or on my device while the phone is connected but I get the same error in both cases.\r\n\r\nI did run `./installer util pinephone-start-adb` to see if it helps with the error but that didn't change anything, no output was shown.\r\n\r\nAny help pointing me out to the right direction is appreciated <3",
+  "author": {
+    "login": "ammaratef45",
+    "avatar_url": "https://avatars.githubusercontent.com/u/13663221?u=73e252c25f5cac63bf0a2865f5277c6787f12e6c&v=4",
+    "url": "https://github.com/ammaratef45"
+  },
+  "created_at": "2025-12-09T04:03:37Z",
+  "updated_at": "2025-12-09T09:35:25Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/731",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi4",
+    "name": "Q&A",
+    "description": "Ask the community for help",
+    "emoji": ":pray:",
+    "is_answerable": true
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A6AR1",
+      "body": "More interesting information (I hope!), I switched to an ubuntu touch OS and tried again, this time I get this error message instead\r\n\r\n```\r\nUnlocking modem ... Failed to install rayhunter on the Pinephone's Quectel modem\r\n\r\nCaused by:\r\n    Received unexpected response: AT+QADBKEY?\r\n```",
+      "author": {
+        "login": "ammaratef45",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13663221?u=73e252c25f5cac63bf0a2865f5277c6787f12e6c&v=4",
+        "url": "https://github.com/ammaratef45"
+      },
+      "created_at": "2025-12-09T07:36:23Z",
+      "updated_at": "2025-12-09T07:36:23Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A6ASc",
+          "body": "hmm, there is a chance this because adb was started already? `adb shell` and `adb forward tcp:8080 tcp:8080` both worked and I have a working rayhunter on my pinephone pro now but I have no idea how I reached there lol",
+          "author": {
+            "login": "ammaratef45",
+            "avatar_url": "https://avatars.githubusercontent.com/u/13663221?u=73e252c25f5cac63bf0a2865f5277c6787f12e6c&v=4",
+            "url": "https://github.com/ammaratef45"
+          },
+          "created_at": "2025-12-09T07:40:41Z",
+          "updated_at": "2025-12-09T07:40:41Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A6Akx",
+          "body": "the adb built into the installer sometimes conflicts with the system adb in weird ways. you can also open adb shell using `installer util shell`, maybe that works more reliably ",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2025-12-09T09:35:24Z",
+          "updated_at": "2025-12-09T09:35:24Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

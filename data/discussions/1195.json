@@ -1,0 +1,71 @@
+{
+  "id": "D_kwDOKrJqmc4ArNZ7",
+  "number": 1195,
+  "title": "Inseego M2100 port:  full code released today (touchscreen UI, Home Assistant add-on, Meshtastic alerts)",
+  "body": "### What would you like to share?\r\n\r\nJust thought I'd make a quick post that we released the full code to the M2100 port + Home Assistant Add-on analyzer / alert with Meshtastic + a custom touchscreen UI for the M2100 at https://github.com/mallorybowes/rayhunter/tree/m2100-support.  The build series is documented at https://tpc.institute/projects/rayhunter-m2100 which describes the port, the HA integration, the device profiles, the Meshtastic integration, and the standalone fixed Sentinel that will most likely turn any stock Rayhunter device into a fixed sensor that learns your neighborhood and alerts with or without Home Assistant.  (Code for a standalone version of the Sentinel will be released soon as we're still developing that branch.)\r\n\r\nOf note in the build, please be aware that it requires third-party firmware that is hosted on XDA.  (As documented in the build series, we tried the best we could to find a way in on the stock firmware and we weren't successful.)  There were 5 issues we had to solve to get things working that I feel would be of some value to the upstream project:\r\n\r\n<details>\r\n<summary>1. the 24-byte diag ioctl struct (msm-4.14)</summary> \r\n\r\nhttps://github.com/mallorybowes/rayhunter/commit/5dbd333\r\n\r\nSolves: DIAG_IOCTL_SWITCH_LOGGING fails (EFAULT, then EINVAL); no capture. Likely affects other 4.14-era Qualcomm devices, not just the M2100, and confirmed the fix worked in our Pixel 4 XL port.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>2. stripping the 8-byte multi-radio header before parsing</summary> \r\n\r\nhttps://github.com/mallorybowes/rayhunter/commit/6a4b0c6\r\n\r\nSolves: every message fails as “ID 408 not found on ResponsePayload” (the 0x98 tag is read as a Response opcode). Affects modems that send it.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>3. keeping log versions the parser doesn't know (0xb114, 0xb063)</summary> \r\n\r\nhttps://github.com/mallorybowes/rayhunter/commit/aa04b06 \r\n\r\nSolves: 0xb114 v161 and MAC DL v49 fail the version == 1 assert; 29,577 of 29,658 skipped messages in a 16-hour capture; the skip log reached 186 MB and filled rootfs. No analyser uses those logs, so detection was never affected.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>4. bounded parse-error logging (the fix-parse-error-log-volume branch)</summary> \r\n\r\nhttps://github.com/mallorybowes/rayhunter/commit/4a094bc\r\n\r\nSolves: each parse error logged the whole payload; run.log reached 334 MB on a 236 MB rootfs, recording died silently, the web UI kept looking normal. The most generally useful of the five: any device can hit it.\r\n\r\n</details>\r\n\r\n<details>\r\n<summary>5. zero-padding short diag structs (the diag-zero-pad branch).</summary> \r\n\r\nhttps://github.com/mallorybowes/rayhunter/commit/9f85107 + https://github.com/mallorybowes/rayhunter/commit/9b0da46 \r\n\r\nSolves: the ioctl carries no length, so the short 12/20-byte attempts handed the driver stack junk; on a Pixel 4 XL that left the driver in a state where every request was refused. Looked like boot timing. Also: the diag task’s setup error was swallowed, so the daemon served its page with /dev/diag closed.\r\n\r\n</details>\r\n\r\nI'm a security researcher and the code was written by Claude which is why I'm not going to create upstream PRs for these fixes.  But if someone does decide to take a look and vouch for the code, I'd appreciate a co-author credit.  \r\n\r\nThe first three have already come in handy as I used those to port a Pixel 4 XL and currently have Rayhunter + a Pixel-centric Sentinel port running on it.  (Code to follow soon.)\r\n\r\nBig shout out to @untitaker, @cooperq, and @lukejenkins for helping me with various parts of the build series!\r\n\r\n### Prerequisites\r\n\r\n- [X] I have read [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md)\r\n- [X] No generative AI (including LLMs) tools were used to write this post.",
+  "author": {
+    "login": "mallorybowes",
+    "avatar_url": "https://avatars.githubusercontent.com/u/24720141?u=94fd8a3498cf75878f21073dc28c80298d1909d4&v=4",
+    "url": "https://github.com/mallorybowes"
+  },
+  "created_at": "2026-11-17T00:58:16Z",
+  "updated_at": "2026-11-17T08:37:49Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1195",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi6",
+    "name": "Show and tell",
+    "description": "Show off something you've made",
+    "emoji": ":raised_hands:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

@@ -1,0 +1,130 @@
+{
+  "id": "D_kwDOKrJqmc4AklIT",
+  "number": 940,
+  "title": "Redacting PCAP Submissions",
+  "body": "Has anyone made a script for redacting at least IMEI/IMSI from PCAPs? I'd like to more openly share the detections I've gotten but I have a fairly unique pattern I'd prefer to not have so easily trackable. There's also been the question of how much to redact without affecting the research value, I'd like to see what people who are looking at the PCAPs think in terms of what would make the data less useful.",
+  "author": {
+    "login": "FusedStamen",
+    "avatar_url": "https://avatars.githubusercontent.com/u/129631594?u=dd7a8badfce90259ae7e8a90f1a4c6264d0b8a5e&v=4",
+    "url": "https://github.com/FusedStamen"
+  },
+  "created_at": "2026-03-06T19:31:03Z",
+  "updated_at": "2026-03-06T20:03:15Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/940",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A9I8U",
+      "body": "closed as a duplicate of https://github.com/EFForg/rayhunter/issues/154",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2026-03-06T20:03:14Z",
+      "updated_at": "2026-03-06T20:03:14Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED",
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

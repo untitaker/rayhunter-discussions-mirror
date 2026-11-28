@@ -1,0 +1,305 @@
+{
+  "id": "D_kwDOKrJqmc4AqwlE",
+  "number": 1186,
+  "title": "Compatibility inquiry – TP-Link TL-MR6400 V1.0",
+  "body": "### What would you like to discuss?\n\nHello.\r\nis the TP-Link TL-MR6400 V1.0 supported or could support potentially be added?\r\nif it isn't supported could you recommend a wired LTE router or modem that is compatible ?\r\nthanks\n\n### Prerequisites\n\n- [X] I have read [CONTRIBUTING.md](https://github.com/EFForg/rayhunter/blob/main/CONTRIBUTING.md)\n- [X] No generative AI (including LLMs) tools were used to write this post.",
+  "author": {
+    "login": "josephonbehin-wq",
+    "avatar_url": "https://avatars.githubusercontent.com/u/257773953?v=4",
+    "url": "https://github.com/josephonbehin-wq"
+  },
+  "created_at": "2026-11-02T16:10:18Z",
+  "updated_at": "2026-11-04T06:41:16Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/1186",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4BJ5x5",
+      "body": "we have no wired (cat) LTE router supported. many mobile routers support USB tethering though, i think with usb-c you can probably charge them at the same time too.",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-11-03T11:53:24Z",
+      "updated_at": "2026-11-03T11:53:24Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4BJ6ki",
+          "body": "how could we port it to our LTE routers? are there any recommended approaches or potential solutions?\r\nany guidance or recommendations would be greatly appreciated.",
+          "author": {
+            "login": "josephonbehin-wq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/257773953?v=4",
+            "url": "https://github.com/josephonbehin-wq"
+          },
+          "created_at": "2026-11-03T14:47:11Z",
+          "updated_at": "2026-11-03T14:47:11Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BJ6mD",
+          "body": "yes please refer to the docs and the countless threads that answer those questions",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-11-03T14:51:40Z",
+          "updated_at": "2026-11-03T14:51:40Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4BJ-Pu",
+          "body": "I've already gone through the documentation and searched through the existing discussions but I haven't found anything that addresses my specific use case a LTE router that connects through an RJ45 ethernet port\r\nI'm trying to understand how we could port or adapt this project to work with such a device\r\ncould you please point me to a relevant document ,implementation guide or discussion thread that explains how to approach this?",
+          "author": {
+            "login": "josephonbehin-wq",
+            "avatar_url": "https://avatars.githubusercontent.com/u/257773953?v=4",
+            "url": "https://github.com/josephonbehin-wq"
+          },
+          "created_at": "2026-11-04T06:41:16Z",
+          "updated_at": "2026-11-04T06:41:16Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 2
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 2
+}

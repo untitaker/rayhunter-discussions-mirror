@@ -1,0 +1,309 @@
+{
+  "id": "D_kwDOKrJqmc4AjuRS",
+  "number": 792,
+  "title": "tp-link 7350 v2.0 (UN/EU) – confirmed working",
+  "body": "Hi, I can confirm that the XYZ v2.0 (UN - should be EU) works. I can access the web interface, there are no top warning bars, but there is a smiley face on the right side of the display.\r\n\r\nUnfortunately, I bought a fairly old device, as no one on eBay mentions the hardware version number. I’ll give it a try without the warning bar, at least I can access the web interface and start my ray hunt that way.\r\n\r\nAs an additional hint for people without a colour display: something like a hyphen or an “X” could be a good indicator when you come across one.",
+  "author": {
+    "login": "xileFK",
+    "avatar_url": "https://avatars.githubusercontent.com/u/168969424?v=4",
+    "url": "https://github.com/xileFK"
+  },
+  "created_at": "2026-01-19T22:49:04Z",
+  "updated_at": "2026-01-19T23:35:19Z",
+  "closed": false,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/792",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4A7Ss-",
+      "body": "great to hear it works on the 2.0. the smiley face is the indicator: https://efforg.github.io/rayhunter/tplink-m7350.html#display-states",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2026-01-19T22:50:54Z",
+      "updated_at": "2026-01-19T22:50:54Z",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOKrJqmc4A7StI",
+          "body": "Thanks, okay, that’s integrated. As I’ve read multiple posts saying that no SIM card is needed, do I need to insert one for the general search, or is it mandatory to have one inserted at least once? \r\nThere are multiple ''How to'' videos, but almost anyone inserts a SIM card.",
+          "author": {
+            "login": "xileFK",
+            "avatar_url": "https://avatars.githubusercontent.com/u/168969424?v=4",
+            "url": "https://github.com/xileFK"
+          },
+          "created_at": "2026-01-19T22:54:24Z",
+          "updated_at": "2026-01-19T22:55:02Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7Su-",
+          "body": "\"no sim card needed\" is false. \"no active sim needed\" (as in, you buy a sim without activating) is sometimes true. whatever sim you use though, you have to keep it in",
+          "author": {
+            "login": "untitaker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+            "url": "https://github.com/untitaker"
+          },
+          "created_at": "2026-01-19T23:25:44Z",
+          "updated_at": "2026-01-19T23:25:44Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 1,
+              "users": [
+                "xileFK"
+              ]
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        },
+        {
+          "id": "DC_kwDOKrJqmc4A7Svv",
+          "body": "Thanks, so I’ll pick one up. Good to know, it might be wise to get a new one that isn’t activated, instead of using a disabled SIM that was previously lost and is still rotting around. I expect it to have my data somehow linked to it, so I won’t touch it at all.\r\nI’m stunned to see what’s behind all the signal downgrades I’m noticing here, going from 5G down to 3G.",
+          "author": {
+            "login": "xileFK",
+            "avatar_url": "https://avatars.githubusercontent.com/u/168969424?v=4",
+            "url": "https://github.com/xileFK"
+          },
+          "created_at": "2026-01-19T23:35:19Z",
+          "updated_at": "2026-01-19T23:35:19Z",
+          "is_answer": false,
+          "replies": [],
+          "minimized_reason": null,
+          "is_minimized": false,
+          "reactions": [
+            {
+              "content": "THUMBS_UP",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "THUMBS_DOWN",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "LAUGH",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HOORAY",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "CONFUSED",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "HEART",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "ROCKET",
+              "total_count": 0,
+              "users": []
+            },
+            {
+              "content": "EYES",
+              "total_count": 0,
+              "users": []
+            }
+          ],
+          "upvote_count": 0
+        }
+      ],
+      "minimized_reason": null,
+      "is_minimized": false,
+      "reactions": [
+        {
+          "content": "THUMBS_UP",
+          "total_count": 1,
+          "users": [
+            "xileFK"
+          ]
+        },
+        {
+          "content": "THUMBS_DOWN",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "LAUGH",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HOORAY",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "CONFUSED",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "HEART",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "ROCKET",
+          "total_count": 0,
+          "users": []
+        },
+        {
+          "content": "EYES",
+          "total_count": 0,
+          "users": []
+        }
+      ],
+      "upvote_count": 1
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": null,
+  "reactions": [
+    {
+      "content": "THUMBS_UP",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "THUMBS_DOWN",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "LAUGH",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HOORAY",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "CONFUSED",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "HEART",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "ROCKET",
+      "total_count": 0,
+      "users": []
+    },
+    {
+      "content": "EYES",
+      "total_count": 0,
+      "users": []
+    }
+  ],
+  "upvote_count": 1
+}

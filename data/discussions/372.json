@@ -1,0 +1,89 @@
+{
+  "id": "D_kwDOKrJqmc4AgIWS",
+  "number": 372,
+  "title": "Got a !!warning!! Today!",
+  "body": "I started this following along with this project back in January and got my own rayhunter set up in February. I drive A LOT for work so it stays with me in the truck. Well this morning I walked out to a warning message for the first time ever. \r\n\r\nI pulled the .pcap file in wireshark and didn’t see an event that corresponded with the date and time on the web gui. I found two red ERROR events that are nowhere close to the date and time the warning appeared. \r\n\r\nSo… what do I do now ¯\\_(ツ)_/¯\r\n![IMG_6983](https://github.com/user-attachments/assets/d1baa9e7-fcf6-46bc-8ad6-b045da8c4d39)\r\n![IMG_7021](https://github.com/user-attachments/assets/e972d0a4-1969-488e-a389-79beff07ed8d)\r\n",
+  "author": {
+    "login": "gsdasovich",
+    "avatar_url": "https://avatars.githubusercontent.com/u/188107161?v=4",
+    "url": "https://github.com/gsdasovich"
+  },
+  "created_at": "2025-06-05T22:27:49Z",
+  "updated_at": "2025-06-06T23:59:18Z",
+  "closed": true,
+  "locked": false,
+  "url": "https://github.com/EFForg/rayhunter/discussions/372",
+  "category": {
+    "id": "DIC_kwDOKrJqmc4Cofi3",
+    "name": "General",
+    "description": "Chat about anything and everything here",
+    "emoji": ":speech_balloon:",
+    "is_answerable": false
+  },
+  "labels": [],
+  "comments": [
+    {
+      "id": "DC_kwDOKrJqmc4AzDui",
+      "body": "I cannot attach the PCAP file so if anybody wants to take a peek, let me know the best way to share it",
+      "author": {
+        "login": "gsdasovich",
+        "avatar_url": "https://avatars.githubusercontent.com/u/188107161?v=4",
+        "url": "https://github.com/gsdasovich"
+      },
+      "created_at": "2025-06-05T22:52:43Z",
+      "updated_at": "2025-06-05T22:52:45Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AzDu3",
+      "body": "please refer to the FAQ https://efforg.github.io/rayhunter/faq.html#help-rayhunters-line-is-red-what-should-i-do",
+      "author": {
+        "login": "untitaker",
+        "avatar_url": "https://avatars.githubusercontent.com/u/837573?u=4b106f1ba83b3028677a861efe31c46d703e77ff&v=4",
+        "url": "https://github.com/untitaker"
+      },
+      "created_at": "2025-06-05T22:59:04Z",
+      "updated_at": "2025-06-05T22:59:05Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AzFtx",
+      "body": "yes please send it to our EFF signal account, the PDF and the qmdl! Or at least the qmdl. Also you should update rayhunter, we have a waaay better web UI now :)",
+      "author": {
+        "login": "cooperq",
+        "avatar_url": "https://avatars.githubusercontent.com/u/64981?v=4",
+        "url": "https://github.com/cooperq"
+      },
+      "created_at": "2025-06-06T17:30:14Z",
+      "updated_at": "2025-06-06T17:30:14Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    },
+    {
+      "id": "DC_kwDOKrJqmc4AzGO7",
+      "body": "Sent to EFF account. Thanks for y’all’s assistance ",
+      "author": {
+        "login": "gsdasovich",
+        "avatar_url": "https://avatars.githubusercontent.com/u/188107161?v=4",
+        "url": "https://github.com/gsdasovich"
+      },
+      "created_at": "2025-06-06T23:59:18Z",
+      "updated_at": "2025-06-06T23:59:19Z",
+      "is_answer": false,
+      "replies": [],
+      "minimized_reason": null,
+      "is_minimized": false
+    }
+  ],
+  "answer": null,
+  "answer_chosen_at": null,
+  "state_reason": "RESOLVED"
+}
